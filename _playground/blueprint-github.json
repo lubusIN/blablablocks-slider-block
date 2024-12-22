@@ -26,6 +26,13 @@
                 "resource": "url",
                 "url": "https://github-proxy.com/proxy/?repo=lubusIN/wordpress-slider-block&branch=add/feat/playground-setup"
             }
+        },
+        {
+            "step": "importWxr",
+            "file": {
+                "resource": "url",
+                "url": "https://raw.githubusercontent.com/lubusIN/wordpress-slider-block/add/feat/playground-setup/_playground/demo-content.xml"
+            }
         }
     ]
 }
