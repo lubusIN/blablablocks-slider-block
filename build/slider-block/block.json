@@ -1,0 +1,223 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lubus/slider",
+  "version": "0.1.0",
+  "title": "Slider",
+  "category": "widgets",
+  "description": "A customizable slider block to display multiple slides with smooth transitions, ideal for showcasing images or content in a dynamic carousel format.",
+  "example": {},
+  "attributes": {
+    "slidesPerView": {
+      "type": "object",
+      "default": {
+        "desktop": 1,
+        "tablet": 1,
+        "mobile": 1,
+        "activeDevice": "desktop"
+      },
+      "properties": {
+        "desktop": {
+          "type": "integer"
+        },
+        "tablet": {
+          "type": "integer"
+        },
+        "mobile": {
+          "type": "integer"
+        },
+        "activeDevice": {
+          "type": "string"
+        }
+      }
+    },
+    "slidesSpacing": {
+      "type": "object",
+      "default": {
+        "desktop": 30,
+        "tablet": 20,
+        "mobile": 10,
+        "activeDevice": "desktop"
+      },
+      "properties": {
+        "desktop": {
+          "type": "integer"
+        },
+        "tablet": {
+          "type": "integer"
+        },
+        "mobile": {
+          "type": "integer"
+        },
+        "activeDevice": {
+          "type": "string"
+        }
+      }
+    },
+    "speed": {
+      "type": "integer",
+      "default": 300
+    },
+    "effects": {
+      "type": "string",
+      "default": "slide"
+    },
+    "autoplay": {
+      "type": "boolean",
+      "default": false
+    },
+    "delay": {
+      "type": "integer",
+      "default": 5000
+    },
+    "navigation": {
+      "type": "boolean",
+      "default": true
+    },
+    "pagination": {
+      "type": "boolean",
+      "default": true
+    },
+    "loop": {
+      "type": "boolean",
+      "default": false
+    },
+    "navigationColor": {
+      "type": "object",
+      "default": {
+        "arrowColor": {
+          "default": "",
+          "hover": ""
+        },
+        "backgroundColor": {
+          "default": "",
+          "hover": ""
+        }
+      },
+      "properties": {
+        "arrowColor": {
+          "type": "object",
+          "properties": {
+            "default": {
+              "type": "string"
+            },
+            "hover": {
+              "type": "string"
+            }
+          }
+        },
+        "backgroundColor": {
+          "type": "object",
+          "properties": {
+            "default": {
+              "type": "string"
+            },
+            "hover": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "navigationPadding": {
+      "type": "object"
+    },
+    "navigationSize": {
+      "type": "string",
+      "default": "40px"
+    },
+    "navigationOffset": {
+      "type": "object",
+      "default": {
+        "top": "50%",
+        "bottom": "0px",
+        "left": "10px",
+        "right": "10px"
+      }
+    },
+    "navigationBorderRadius": {
+      "type": "string",
+      "default": "4px"
+    },
+    "paginationSize": {
+      "type": "string",
+      "default": "8px"
+    },
+    "paginationOffset": {
+      "type": "object",
+      "default": {
+        "top": "auto",
+        "bottom": "8px",
+        "left": "0px",
+        "right": "0px"
+      }
+    },
+    "paginationColor": {
+      "type": "object",
+      "properties": {
+        "activeColor": {
+          "type": "object",
+          "properties": {
+            "default": {
+              "type": "string"
+            }
+          }
+        },
+        "inactiveColor": {
+          "type": "object",
+          "properties": {
+            "default": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "color": {
+      "gradients": true,
+      "link": true,
+      "heading": true,
+      "button": true,
+      "__experimentalDefaultControls": {
+        "background": true,
+        "text": true
+      }
+    },
+    "spacing": {
+      "margin": [
+        "top",
+        "bottom"
+      ],
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "padding": true,
+        "blockGap": true
+      }
+    },
+    "layout": {
+      "allowSwitching": false,
+      "allowInheriting": false,
+      "allowEditing": false,
+      "default": {
+        "type": "flex",
+        "flexWrap": "nowrap"
+      }
+    }
+  },
+  "allowedBlocks": [
+    "lubus/slide"
+  ],
+  "textdomain": "lubus-slider",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

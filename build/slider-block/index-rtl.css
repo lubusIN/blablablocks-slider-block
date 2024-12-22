@@ -1,0 +1,88 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/slider-block/editor.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.slide_effects > .components-base-control {
+  width: 100%;
+}
+
+.autoplay-progress {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--swiper-theme-color);
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  right: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--swiper-theme-color);
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(90deg);
+}
+
+.slider_color_popover .components-popover__content > div {
+  margin: -8px;
+  width: 260px;
+}
+
+.slider_color_popover .components-tab-panel__tab-content,
+.slider_color_popover .ls-color-pallete-container {
+  padding: 18px;
+}
+
+.slider_color-support-panel .components-dropdown {
+  width: 100%;
+}
+.slider_color-support-panel .components-dropdown:nth-child(1) {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.slider_color-support-panel .components-dropdown:nth-child(2) {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.slider_color-support-panel button {
+  width: 100%;
+  padding: 20px 10px;
+}
+.slider_color-support-panel .slider_color_button.isOpen {
+  background-color: #f0f0f0;
+}
+.slider_color-support-panel .slider_color_button:hover span,
+.slider_color-support-panel .slider_color_button.isOpen span {
+  color: var(--wp-components-color-accent, var(--wp-admin-theme-color, #3858e9));
+}
+
+.block-editor-block-preview__container:after {
+  border-radius: 4px;
+  outline: 1px solid rgba(0, 0, 0, 0.1019607843);
+  outline-offset: -1px;
+}
+
+.slider-pattern-item:hover .block-editor-block-preview__container:after {
+  outline-color: rgba(0, 0, 0, 0.3019607843);
+}

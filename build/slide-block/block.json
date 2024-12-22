@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lubus/slide",
+  "version": "0.1.0",
+  "title": "Slide",
+  "description": "A single slide within a slider block.",
+  "parent": [
+    "lubus/slider"
+  ],
+  "supports": {
+    "anchor": true,
+    "html": false
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
