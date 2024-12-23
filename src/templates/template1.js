@@ -5,8 +5,8 @@ import { __ } from '@wordpress/i18n';
 
 const Template1 = {
     name: 'template 1',
-    title: __("Template 1", "lubus-slider"),
-    description: __("A compelling call-to-action with an image aligned to the right.", "lubus-slider"),
+    title: __("Template 1", "slider-block"),
+    description: __("A compelling call-to-action with an image aligned to the right.", "slider-block"),
     content: `
             <!-- wp:group {"metadata":{"name":"Template 1"},"align":"wide","style":{"spacing":{"blockGap":"60px"}},"layout":{"type":"constrained"}} -->
             <div class="wp-block-group alignwide"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|10"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->

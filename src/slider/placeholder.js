@@ -65,7 +65,6 @@ function Placeholder({ clientId, attributes, setAttributes }) {
     };
 
     const skipToDefault = () => {
-        console.log('test');
         const defaultVariation = variations[1]; // Assuming the first variation is the default
         if (defaultVariation) {
             onSelectVariation(defaultVariation);
@@ -88,17 +87,17 @@ function Placeholder({ clientId, attributes, setAttributes }) {
             {!step && (
                 <PlaceholderComponent
                     icon={'slides'}
-                    instructions={__("Choose how you'd like to get started with your slider.", "lubus-slider")}
-                    label={__("Let's Begin Creating Your Slider!", "lubus-slider")}
+                    instructions={__("Choose how you'd like to get started with your slider.", "slider-block")}
+                    label={__("Let's Begin Creating Your Slider!", "slider-block")}
                 >
                     <Button variant="secondary" onClick={() => setStep('variations')}>
-                        {__("Explore Variations", "lubus-slider")}
+                        {__("Explore Variations", "slider-block")}
                     </Button>
                     <Button variant="secondary" onClick={openTemplatesModal}>
-                        {__("Browse Templates", "lubus-slider")}
+                        {__("Browse Templates", "slider-block")}
                     </Button>
                     <Button variant="primary" onClick={skipToDefault}>
-                        {__("Skip and Use Default", "lubus-slider")}
+                        {__("Skip and Use Default", "slider-block")}
                     </Button>
                 </PlaceholderComponent>
             )}
@@ -106,8 +105,8 @@ function Placeholder({ clientId, attributes, setAttributes }) {
             {step === 'variations' && (
                 <BlockVariationPicker
                     icon={SliderLogo}
-                    label={__("Slider", "lubus-slider")}
-                    instructions={__("Select a slide variation to start with", "lubus-slider")}
+                    label={__("Slider", "slider-block")}
+                    instructions={__("Select a slide variation to start with", "slider-block")}
                     variations={variations}
                     onSelect={(variation = variations[1]) => {
                         onSelectVariation(variation);
@@ -118,7 +117,7 @@ function Placeholder({ clientId, attributes, setAttributes }) {
 
             {isModalOpen && (
                 <Modal
-                    title={__("Choose a Template", "lubus-slider")}
+                    title={__("Choose a Template", "slider-block")}
                     isFullScreen
                     onRequestClose={() => setIsModalOpen(false)}
                 >

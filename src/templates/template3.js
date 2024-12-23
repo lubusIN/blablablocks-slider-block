@@ -5,8 +5,8 @@ import { __ } from '@wordpress/i18n';
 
 const Template3 = {
     name: 'template-3',
-    title: __("Template 3", "lubus-slider"),
-    description: __("A simple centered call-to-action for subscribing.", "lubus-slider"),
+    title: __("Template 3", "slider-block"),
+    description: __("A simple centered call-to-action for subscribing.", "slider-block"),
     content: `
             <!-- wp:lubus/slider {"slidesPerView":{"desktop":1,"tablet":2,"mobile":1,"activeDevice":"desktop"},"pagination":false,"navigationColor":{"arrowColor":{"default":"#ffffff"}},"metadata":{"name":"Template 3"},"align":"wide"} -->
             <div style="--navigation-arrow-color:#ffffff;--swiper-navigation-size:40px;--navigation-border-radius:4px;--navigation-padding-top:0px;--navigation-padding-right:0px;--navigation-padding-bottom:0px;--navigation-padding-left:0px;--pagination-size:8px;--pagination-offset-top:0px;--pagination-offset-right:0px;--pagination-offset-bottom:0px;--pagination-offset-left:0px;--navigation-offset-top:0px;--navigation-offset-right:0px;--navigation-offset-bottom:0px;--navigation-offset-left:0px" class="wp-block-lubus-slider alignwide"><div class="swiper" data-swiper="{&quot;slidesPerView&quot;:{&quot;desktop&quot;:1,&quot;tablet&quot;:2,&quot;mobile&quot;:1,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;slidesSpacing&quot;:{&quot;desktop&quot;:30,&quot;tablet&quot;:20,&quot;mobile&quot;:10,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;speed&quot;:300,&quot;effects&quot;:&quot;slide&quot;,&quot;autoplay&quot;:false,&quot;delay&quot;:5000,&quot;navigation&quot;:true,&quot;pagination&quot;:false,&quot;loop&quot;:false,&quot;navigationColor&quot;:{&quot;arrowColor&quot;:{&quot;default&quot;:&quot;#ffffff&quot;}},&quot;navigationSize&quot;:&quot;40px&quot;,&quot;navigationBorderRadius&quot;:&quot;4px&quot;,&quot;paginationSize&quot;:&quot;8px&quot;,&quot;metadata&quot;:{&quot;name&quot;:&quot;Template 3&quot;},&quot;align&quot;:&quot;wide&quot;}"><div class="swiper-wrapper"><!-- wp:lubus/slide -->

@@ -12,7 +12,7 @@ import { Path, SVG } from '@wordpress/components';
 const variations = [
     {
         name: "one-slide",
-        description: __("One Slide"),
+        description: __("One Slide", 'slider-block'),
         icon: (
             <SVG
                 xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@ const variations = [
     },
     {
         name: "two-slide",
-        description: __("Two Slides"),
+        description: __("Two Slides", 'slider-block'),
         icon: (
             <SVG
                 xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +44,7 @@ const variations = [
     },
     {
         name: "three-slide",
-        description: __("Three Slides"),
+        description: __("Three Slides", 'slider-block'),
         icon: (
             <SVG
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@ const variations = [
     },
     {
         name: "four-slide",
-        description: __("Four Slides"),
+        description: __("Four Slides", 'slider-block'),
         icon: (
             <SVG
                 xmlns="http://www.w3.org/2000/svg"

@@ -170,12 +170,12 @@ export default function Edit({ clientId, attributes, setAttributes }) {
                 <BlockControls>
                     <ToolbarGroup>
                         <ToolbarButton icon="plus" onClick={addSlide}>
-                            {__('Add Slide', 'lubus-slider')}
+                            {__('Add Slide', 'slider-block')}
                         </ToolbarButton>
                     </ToolbarGroup>
                 </BlockControls>
                 <InspectorControls>
-                    <PanelBody title={__('Settings', 'lubus-slider')}>
+                    <PanelBody title={__('Settings', 'slider-block')}>
                         <VStack style={{ marginBottom: '8px' }}>
                             <ResponsiveDropdown
                                 label="Slides Per View"
@@ -186,7 +186,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
                             <RangeControl
                                 __nextHasNoMarginBottom
                                 __next40pxDefaultSize
-                                help={__("Number of slides visible at the same time on slider's container.", 'lubus-slider')}
+                                help={__("Number of slides visible at the same time on slider's container.", 'slider-block')}
                                 value={attributes.slidesPerView[attributes.slidesPerView.activeDevice]}
                                 min={1}
                                 max={30}
@@ -202,7 +202,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
                         </VStack>
                         <VStack style={{ marginBottom: '16px' }}>
                             <ResponsiveDropdown
-                                label="Slides Spacing"
+                                label={__("Slides Spacing", 'slider-block')}
                                 attributes={attributes}
                                 setAttributes={setAttributes}
                                 responsiveKey="slidesSpacing"
@@ -210,7 +210,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
                             <RangeControl
                                 __nextHasNoMarginBottom
                                 __next40pxDefaultSize
-                                help={__("Adjust the spacing between slides.", 'lubus-slider')}
+                                help={__("Adjust the spacing between slides.", 'slider-block')}
                                 initialPosition={30}
                                 value={attributes.slidesSpacing[attributes.slidesSpacing.activeDevice]}
                                 min={0}
@@ -227,8 +227,8 @@ export default function Edit({ clientId, attributes, setAttributes }) {
                         <RangeControl
                             __nextHasNoMarginBottom
                             __next40pxDefaultSize
-                            help={__('Set the duration of transition between slides.', 'lubus-slider')}
-                            label={__('Speed (ms)', 'lubus-slider')}
+                            help={__('Set the duration of transition between slides.', 'slider-block')}
+                            label={__('Speed (ms)', 'slider-block')}
                             min={100} // minimum speed in ms
                             max={10000} // maximum speed in ms
                             step={100}
@@ -239,54 +239,54 @@ export default function Edit({ clientId, attributes, setAttributes }) {
                             isBlock
                             __nextHasNoMarginBottom
                             __next40pxDefaultSize
-                            label="Effects"
+                            label={__("Effects", 'slider-block')}
                             value={attributes.effects}
                             onChange={(value) => setAttributes({ effects: value })}
-                            help="Select how slides transition."
+                            help={__("Select how slides transition.", 'slider-block')}
                         >
                             <ToggleGroupControlOption
-                                label="Slide"
+                                label={__("Slide", 'slider-block')}
                                 value="slide"
                             />
                             <ToggleGroupControlOption
-                                label="Fade"
+                                label={__("Fade", 'slider-block')}
                                 value="fade"
                             />
                         </ToggleGroupControl>
                         <ToggleControl
                             __nextHasNoMarginBottom
-                            help={__('Enable navigation arrows to manually move between slides.', 'lubus-slider')}
+                            help={__('Enable navigation arrows to manually move between slides.', 'slider-block')}
                             checked={attributes.navigation}
-                            label={__('Navigation', 'lubus-slider')}
+                            label={__('Navigation', 'slider-block')}
                             onChange={(value) => setAttributes({ navigation: value })}
                         />
                         <ToggleControl
                             __nextHasNoMarginBottom
-                            help={__('Enable pagination indicators to show slide positions.', 'lubus-slider')}
+                            help={__('Enable pagination indicators to show slide positions.', 'slider-block')}
                             checked={attributes.pagination}
-                            label={__('Pagination', 'lubus-slider')}
+                            label={__('Pagination', 'slider-block')}
                             onChange={(value) => setAttributes({ pagination: value })}
                         />
                         <ToggleControl
                             __nextHasNoMarginBottom
-                            help={__('Enable loop to continuously cycle through slides.', 'lubus-slider')}
+                            help={__('Enable loop to continuously cycle through slides.', 'slider-block')}
                             checked={attributes.loop}
-                            label={__('Loop', 'lubus-slider')}
+                            label={__('Loop', 'slider-block')}
                             onChange={(value) => setAttributes({ loop: value })}
                         />
                         <ToggleControl
                             __nextHasNoMarginBottom
-                            help={__('Enable automatic slide transition.', 'lubus-slider')}
+                            help={__('Enable automatic slide transition.', 'slider-block')}
                             checked={attributes.autoplay}
-                            label={__('Autoplay', 'lubus-slider')}
+                            label={__('Autoplay', 'slider-block')}
                             onChange={(value) => setAttributes({ autoplay: value })}
                         />
                         {attributes.autoplay &&
                             <RangeControl
                                 __nextHasNoMarginBottom
                                 __next40pxDefaultSize
-                                help={__('Set the delay between slides in milliseconds.', 'lubus-slider')}
-                                label={__('Delay (ms)', 'lubus-slider')}
+                                help={__('Set the delay between slides in milliseconds.', 'slider-block')}
+                                label={__('Delay (ms)', 'slider-block')}
                                 min={100} // minimum delay in ms
                                 max={10000} // maximum delay in ms
                                 step={100}
@@ -297,7 +297,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
                     </PanelBody>
                 </InspectorControls>
                 <InspectorControls group="styles">
-                    <PanelBody title={__('Navigation', 'lubus-slider')} initialOpen={true}>
+                    <PanelBody title={__('Navigation', 'slider-block')} initialOpen={true}>
                         <VStack spacing={4}>
                             <FontSizePicker
                                 __next40pxDefaultSize
@@ -310,7 +310,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
                                 <Heading lineHeight={1} level={3} weight={500} upperCase>Color</Heading>
                                 <VStack className='slider_color-support-panel' spacing={0}>
                                     <ColorControlDropdown
-                                        label={__('Arrow')}
+                                        label={__('Arrow', 'slider-block')}
                                         colorValue={attributes?.navigationColor?.arrowColor || {}}
                                         onChangeColor={(newColor) =>
                                             setAttributes({
@@ -322,7 +322,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
                                         }
                                     />
                                     <ColorControlDropdown
-                                        label={__('Background')}
+                                        label={__('Background', 'slider-block')}
                                         colorValue={attributes?.navigationColor?.backgroundColor || {}}
                                         onChangeColor={(newColor) =>
                                             setAttributes({
@@ -338,14 +338,14 @@ export default function Edit({ clientId, attributes, setAttributes }) {
                             <SpacingSizesControl
                                 values={attributes.navigationPadding}
                                 onChange={(value) => setAttributes({ navigationPadding: value })}
-                                label={'Padding'}
+                                label={__('Padding', 'slider-block')}
                                 allowReset={false}
                                 splitOnAxis={true}
                             />
                             <SpacingSizesControl
                                 values={attributes.navigationOffset}
                                 onChange={(value) => setAttributes({ navigationOffset: value })}
-                                label={'Offset'}
+                                label={__('Offset', 'slider-block')}
                                 minimumCustomValue={-Infinity}
                                 allowReset={false}
                                 splitOnAxis={true}
@@ -358,7 +358,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
                     </PanelBody>
                 </InspectorControls>
                 <InspectorControls group="styles">
-                    <PanelBody title={__('Pagination', 'lubus-slider')} initialOpen={true}>
+                    <PanelBody title={__('Pagination', 'slider-block')} initialOpen={true}>
                         <VStack spacing={4}>
                             <FontSizePicker
                                 __next40pxDefaultSize
@@ -371,7 +371,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
                                 <Heading lineHeight={1} level={3} weight={500} upperCase>Color</Heading>
                                 <VStack className='slider_color-support-panel' spacing={0}>
                                     <ColorControlDropdown
-                                        label={__('Active')}
+                                        label={__('Active', 'slider-block')}
                                         colorValue={attributes?.paginationColor?.activeColor || {}}
                                         onChangeColor={(newColor) =>
                                             setAttributes({
@@ -383,7 +383,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
                                         }
                                     />
                                     <ColorControlDropdown
-                                        label={__('Inactive')}
+                                        label={__('Inactive', 'slider-block')}
                                         colorValue={attributes?.paginationColor?.inactiveColor || {}}
                                         onChangeColor={(newColor) =>
                                             setAttributes({
@@ -399,7 +399,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
                             <SpacingSizesControl
                                 values={attributes.paginationOffset}
                                 onChange={(value) => setAttributes({ paginationOffset: value })}
-                                label={'Offset'}
+                                label={__('Offset', 'slider-block')}
                                 minimumCustomValue={-Infinity}
                                 allowReset={false}
                                 splitOnAxis={true}

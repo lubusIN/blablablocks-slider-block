@@ -49,8 +49,8 @@ function ColorControlDropdown({ label, colorValue = {}, onChangeColor }) {
                     <TabPanel
                         onSelect={(tab) => setActiveTab(tab)}
                         tabs={[
-                            { name: 'default', title: __('Default', 'text-domain') },
-                            { name: 'hover', title: __('Hover', 'text-domain') },
+                            { name: 'default', title: __('Default', 'slider-block') },
+                            { name: 'hover', title: __('Hover', 'slider-block') },
                         ]}
                     >
                         {(tab) => (

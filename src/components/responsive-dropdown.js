@@ -7,9 +7,9 @@ import { desktop, mobile, tablet } from '@wordpress/icons';
 
 // Devices array
 const devices = [
-    { label: __('Desktop', 'lubus-slider'), value: 'desktop', icon: desktop },
-    { label: __('Tablet', 'lubus-slider'), value: 'tablet', icon: tablet },
-    { label: __('Mobile', 'lubus-slider'), value: 'mobile', icon: mobile },
+    { label: __('Desktop', 'slider-block'), value: 'desktop', icon: desktop },
+    { label: __('Tablet', 'slider-block'), value: 'tablet', icon: tablet },
+    { label: __('Mobile', 'slider-block'), value: 'mobile', icon: mobile },
 ];
 
 /**
@@ -30,7 +30,7 @@ const ResponsiveDropdown = ({ attributes, setAttributes, label = 'Responsive Set
     return (
         <HStack justify="left" spacing={1}>
             <Text size={'11px'} weight={500} upperCase style={{ margin: 0 }}>
-                {__(label, 'lubus-slider')}
+                {__(label, 'slider-block')}
             </Text>
             <DropdownMenu
                 icon={devices.find((device) => device.value === activeDevice)?.icon || desktop}
