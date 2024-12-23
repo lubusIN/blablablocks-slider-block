@@ -2,7 +2,7 @@
 
 [![Try in WordPress Playground](https://img.shields.io/badge/Try%20in%20WordPress%20Playground-blue?style=for-the-badge)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/lubusIN/slider-block/demo/_playground/blueprint-github.json)
 
-Slider Block is a WordPress plugin built specifically for the Gutenberg Editor, allowing you to create responsive sliders effortlessly. 
+Slider Block is a WordPress plugin built specifically for the Block Editor, allowing you to create responsive sliders effortlessly. 
 
 ## Requirements
 
