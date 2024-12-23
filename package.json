@@ -1,7 +1,7 @@
 {
 	"name": "slider-block",
 	"version": "0.1.0",
-	"description": "A customizable slider block for the WordPress block editor, enabling users to create interactive image or content sliders seamlessly.",
+	"description": "Slider Block is a WordPress plugin built specifically for the Block Editor, allowing you to create responsive sliders effortlessly.",
 	"author": "Lubus",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
