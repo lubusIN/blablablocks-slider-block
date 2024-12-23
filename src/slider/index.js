@@ -2,7 +2,6 @@
  * Wordpress dependencies
  */
 import { registerBlockType } from '@wordpress/blocks';
-import { SVG, Path } from '@wordpress/components';
 
 /**
  * Internal dependencies
@@ -11,7 +10,7 @@ import Edit from './edit';
 import save from './save';
 import metadata from './block.json';
 import './style.scss';
-import SliderLogo from '../components/slider-logo';
+import { SliderLogo } from '../components';
 
 /**
  * Register a slider block

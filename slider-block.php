@@ -27,7 +27,7 @@ if (! defined('ABSPATH')) {
  */
 function create_block_slider_block_block_init()
 {
-	register_block_type(__DIR__ . '/build/slider-block');
-	register_block_type(__DIR__ . '/build/slide-block');
+	register_block_type(__DIR__ . '/build/slider');
+	register_block_type(__DIR__ . '/build/slide');
 }
 add_action('init', 'create_block_slider_block_block_init');

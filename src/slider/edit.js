@@ -31,23 +31,15 @@ import {
  * Internal dependencies
  */
 import Placeholder from './placeholder';
-import './editor.scss';
-import ColorControlDropdown from '../components/color-control';
+import { ColorControlDropdown, ResponsiveDropdown } from '../components';
 import { SwiperInit } from './swiper-init';
 import { generateNavigationStyles } from '../utils/style';
-import ResponsiveDropdown from '../components/responsive-dropdown';
+import './editor.scss';
 
 const DEFAULT_BLOCK = {
     name: 'lubus/slide',
 };
 
-/**
- * Simulate device-specific preview for editor.
- *
- * @param {Object} swiperInstance The Swiper instance.
- * @param {string} deviceType     The current editor device type.
- * @param {Object} attributes     The block attributes.
- */
 /**
  * Simulate device-specific preview for editor.
  *
