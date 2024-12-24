@@ -6,11 +6,6 @@ import { useSelect } from '@wordpress/data';
 import { useBlockProps, useInnerBlocksProps, store as blockEditorStore, InnerBlocks } from '@wordpress/block-editor';
 
 /**
- * Internal dependencies
- */
-import './editor.scss';
-
-/**
  * The edit function describes the structure of your block in the context of the
  * editor. This represents what the editor will render when the block is used.
  */
