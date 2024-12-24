@@ -15,8 +15,8 @@ import { SliderLogo } from '../components';
 /**
  * Register a slider block
  */
-registerBlockType(metadata.name, {
-	icon: (SliderLogo),
+registerBlockType( metadata.name, {
+	icon: SliderLogo,
 	/**
 	 * @see ./edit.js
 	 */
@@ -26,4 +26,4 @@ registerBlockType(metadata.name, {
 	 * @see ./save.js
 	 */
 	save,
-});
+} );
