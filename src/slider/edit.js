@@ -111,9 +111,10 @@ const Slider = memo(({ attributes, innerBlocksProps, innerBlocks }) => {
 
     // Inline styles for navigation
     const navigationStyles = generateNavigationStyles(attributes);
+    const applyPadding = innerBlocks.length >= 2 ? "100px" : '';
 
     return (
-        <div {...useBlockProps({ style: navigationStyles })}>
+        <div {...useBlockProps({ style: { ...navigationStyles, padding: applyPadding } })}>
             <div ref={swiperContainerRef}>
                 <div {...innerBlocksProps} />
             </div>
