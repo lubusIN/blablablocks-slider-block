@@ -177,10 +177,7 @@
 	"supports": {
 		"anchor": true,
 		"html": false,
-		"align": [
-			"wide",
-			"full"
-		],
+		"align": [ "wide", "full" ],
 		"color": {
 			"gradients": true,
 			"link": true,
@@ -192,10 +189,7 @@
 			}
 		},
 		"spacing": {
-			"margin": [
-				"top",
-				"bottom"
-			],
+			"margin": [ "top", "bottom" ],
 			"padding": true,
 			"__experimentalDefaultControls": {
 				"padding": true,
@@ -212,9 +206,7 @@
 			}
 		}
 	},
-	"allowedBlocks": [
-		"lubus/slide"
-	],
+	"allowedBlocks": [ "lubus/slide" ],
 	"textdomain": "lubus-slider",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",

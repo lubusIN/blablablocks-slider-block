@@ -5,7 +5,7 @@ import { __ } from '@wordpress/i18n';
 
 const Services = {
 	name: 'services',
-	title: __('Services', 'slider-block'),
+	title: __( 'Services', 'slider-block' ),
 	description: __(
 		'A simple centered call-to-action for subscribing.',
 		'slider-block'
