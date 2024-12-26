@@ -71,12 +71,50 @@
 			"default": 5000
 		},
 		"navigation": {
-			"type": "boolean",
-			"default": true
+			"type": "object",
+			"default": {
+				"desktop": true,
+				"tablet": true,
+				"mobile": true,
+				"activeDevice": "desktop"
+			},
+			"properties": {
+				"desktop": {
+					"type": "boolean"
+				},
+				"tablet": {
+					"type": "boolean"
+				},
+				"mobile": {
+					"type": "boolean"
+				},
+				"activeDevice": {
+					"type": "string"
+				}
+			}
 		},
 		"pagination": {
-			"type": "boolean",
-			"default": true
+			"type": "object",
+			"default": {
+				"desktop": true,
+				"tablet": true,
+				"mobile": true,
+				"activeDevice": "desktop"
+			},
+			"properties": {
+				"desktop": {
+					"type": "boolean"
+				},
+				"tablet": {
+					"type": "boolean"
+				},
+				"mobile": {
+					"type": "boolean"
+				},
+				"activeDevice": {
+					"type": "string"
+				}
+			}
 		},
 		"loop": {
 			"type": "boolean",
@@ -177,7 +215,10 @@
 	"supports": {
 		"anchor": true,
 		"html": false,
-		"align": [ "wide", "full" ],
+		"align": [
+			"wide",
+			"full"
+		],
 		"color": {
 			"gradients": true,
 			"link": true,
@@ -189,7 +230,10 @@
 			}
 		},
 		"spacing": {
-			"margin": [ "top", "bottom" ],
+			"margin": [
+				"top",
+				"bottom"
+			],
 			"padding": true,
 			"__experimentalDefaultControls": {
 				"padding": true,
@@ -206,7 +250,9 @@
 			}
 		}
 	},
-	"allowedBlocks": [ "lubus/slide" ],
+	"allowedBlocks": [
+		"lubus/slide"
+	],
 	"textdomain": "lubus-slider",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",

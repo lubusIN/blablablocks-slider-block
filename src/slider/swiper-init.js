@@ -11,66 +11,96 @@ import {
 } from 'swiper/modules';
 
 /**
- * Initialize the slider.
+ * Get device-specific settings for Swiper.
  *
- * @param {Element} container HTMLElement.
- * @param {Object}  options   Slider parameters.
+ * @param {Object}  options      - Configuration options for the slider.
+ * @param {string}  deviceType   - The current editor device type (Desktop, Tablet, Mobile).
+ * @param {boolean} isFadeEffect - Whether the fade effect is enabled.
  *
- * @return {Object} Returns initialized slider instance.
+ * @return {Object} Device-specific Swiper settings.
  */
-export function SwiperInit( container, options = {} ) {
-	const isFadeEffect = options?.effects === 'fade';
+function getDeviceSettings( options, deviceType, isFadeEffect ) {
+	const defaultSettings = {
+		Desktop: { slidesPerView: 3, spaceBetween: 30 },
+		Tablet: { slidesPerView: 2, spaceBetween: 20 },
+		Mobile: { slidesPerView: 1, spaceBetween: 10 },
+	};
 
+	const deviceSettings =
+		defaultSettings[ deviceType ] || defaultSettings.Desktop;
+
+	return {
+		slidesPerView: isFadeEffect
+			? 1
+			: options?.slidesPerView?.[ deviceType.toLowerCase() ] ??
+			  deviceSettings.slidesPerView,
+		spaceBetween:
+			options?.slidesSpacing?.[ deviceType.toLowerCase() ] ??
+			deviceSettings.spaceBetween,
+		pagination: {
+			enabled: options?.pagination?.[ deviceType.toLowerCase() ] ?? false,
+			clickable: true,
+		},
+		navigation: {
+			enabled: options?.navigation?.[ deviceType.toLowerCase() ] ?? false,
+		},
+	};
+}
+
+/**
+ * Initialize the Swiper slider.
+ *
+ * @param {Element} container  - The HTML container element for the Swiper.
+ * @param {Object}  options    - Configuration options for the slider.
+ * @param {string}  deviceType - The current editor device type (Desktop, Tablet, Mobile).
+ * @param {boolean} isEditor   - Whether the slider is initialized in the editor.
+ *
+ * @return {Object} Returns the initialized Swiper instance.
+ */
+export function SwiperInit(
+	container,
+	options = {},
+	deviceType = 'Desktop',
+	isEditor = false
+) {
+	const isFadeEffect = options.effects === 'fade';
+	const currentDeviceSettings = getDeviceSettings(
+		options,
+		deviceType,
+		isFadeEffect
+	);
+
+	// Base Swiper parameters
 	const parameters = {
+		...currentDeviceSettings,
 		autoplay: {
-			enabled: options?.autoplay ?? true,
-			delay: options?.delay ?? 5000,
+			enabled: options.autoplay ?? true,
+			delay: options.delay ?? 5000,
 		},
-		spaceBetween: options?.slidesSpacing?.desktop ?? 30,
-		slidesPerView: isFadeEffect ? 1 : options?.slidesPerView?.desktop ?? 3, // Set to 1 if effect is 'fade'
-		speed: options?.speed ?? 300,
-		grabCursor: false,
-		keyboard: false,
-		loop: options?.loop ?? false,
-		effect: options?.effects ?? 'slide',
-		fadeEffect: {
-			crossFade: true,
-		},
+		speed: options.speed ?? 300,
+		grabCursor: true,
+		keyboard: true,
+		observer: true,
+		observeParents: true,
+		loop: options.loop ?? false,
+		effect: options.effects ?? 'slide',
+		fadeEffect: { crossFade: true },
 		simulateTouch: false,
 		createElements: true,
 		modules: [ Autoplay, Keyboard, Navigation, Pagination, EffectFade ],
-		navigation: options?.navigation ?? false,
-		pagination: {
-			enabled: options?.pagination ?? false,
-			clickable: true,
-		},
-		breakpoints: {
-			1024: {
-				slidesPerView: isFadeEffect
-					? 1
-					: options?.slidesPerView?.desktop ?? 3,
-				spaceBetween: options?.slidesSpacing?.desktop ?? 30,
-			},
-			768: {
-				slidesPerView: isFadeEffect
-					? 1
-					: options?.slidesPerView?.tablet ?? 2,
-				spaceBetween: options?.slidesSpacing?.tablet ?? 20,
-			},
-			480: {
-				slidesPerView: isFadeEffect
-					? 1
-					: options?.slidesPerView?.mobile ?? 1,
-				spaceBetween: options?.slidesSpacing?.mobile ?? 10,
-			},
-			320: {
-				slidesPerView: isFadeEffect
-					? 1
-					: options?.slidesPerView?.mobile ?? 1,
-				spaceBetween: options?.slidesSpacing?.mobile ?? 10,
-			},
-		},
 	};
+
+	// Add breakpoints and universal settings if not in the editor
+	if ( ! isEditor ) {
+		parameters.pagination = { enabled: true, clickable: true };
+		parameters.navigation = { enabled: true };
+		parameters.breakpoints = {
+			320: getDeviceSettings( options, 'Mobile', isFadeEffect ),
+			480: getDeviceSettings( options, 'Mobile', isFadeEffect ),
+			768: getDeviceSettings( options, 'Tablet', isFadeEffect ),
+			1024: getDeviceSettings( options, 'Desktop', isFadeEffect ),
+		};
+	}
 
 	return new Swiper( container, parameters );
 }

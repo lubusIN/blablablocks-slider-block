@@ -41,45 +41,6 @@ const DEFAULT_BLOCK = {
 };
 
 /**
- * Simulate device-specific preview for editor.
- *
- * @param {Object} swiperInstance The Swiper instance.
- * @param {string} deviceType     The current editor device type.
- * @param {Object} attributes     The block attributes.
- */
-function simulateDevicePreview( swiperInstance, deviceType, attributes ) {
-	const isFadeEffect = attributes?.effects === 'fade';
-
-	const breakpointSettings = {
-		Desktop: {
-			slidesPerView: isFadeEffect
-				? 1
-				: attributes?.slidesPerView?.desktop ?? 3,
-			spaceBetween: attributes?.slidesSpacing?.desktop ?? 30,
-		},
-		Tablet: {
-			slidesPerView: isFadeEffect
-				? 1
-				: attributes?.slidesPerView?.tablet ?? 2,
-			spaceBetween: attributes?.slidesSpacing?.tablet ?? 20,
-		},
-		Mobile: {
-			slidesPerView: isFadeEffect
-				? 1
-				: attributes?.slidesPerView?.mobile ?? 1,
-			spaceBetween: attributes?.slidesSpacing?.mobile ?? 10,
-		},
-	};
-
-	const settings = breakpointSettings[ deviceType ];
-	if ( settings && swiperInstance ) {
-		swiperInstance.params.slidesPerView = settings.slidesPerView;
-		swiperInstance.params.spaceBetween = settings.spaceBetween;
-		swiperInstance.update();
-	}
-}
-
-/**
  * Slider component.
  */
 const Slider = memo( ( { attributes, innerBlocksProps, innerBlocks } ) => {
@@ -92,7 +53,7 @@ const Slider = memo( ( { attributes, innerBlocksProps, innerBlocks } ) => {
 
 	useEffect( () => {
 		if ( swiperContainerRef.current && innerBlocks.length > 0 ) {
-			// Cleanup: Remove any residual Swiper-related classes
+			// Clear existing Swiper classes
 			swiperContainerRef.current.className = 'swiper';
 
 			// Destroy the existing Swiper instance, if any
@@ -101,19 +62,14 @@ const Slider = memo( ( { attributes, innerBlocksProps, innerBlocks } ) => {
 				swiperInstanceRef.current = null;
 			}
 
-			// Reinitialize Swiper with updated attributes
+			// Reinitialize Swiper with device-specific attributes
 			swiperInstanceRef.current = SwiperInit(
 				swiperContainerRef.current,
 				{
 					...attributes,
-				}
-			);
-
-			// Simulate device-specific preview in editor
-			simulateDevicePreview(
-				swiperInstanceRef.current,
-				editorDeviceType,
-				attributes
+				},
+				editorDeviceType, // Pass the current editor device type
+				true
 			);
 		}
 
@@ -301,26 +257,62 @@ export default function Edit( { clientId, attributes, setAttributes } ) {
 					</ToggleGroupControl>
 					<ToggleControl
 						__nextHasNoMarginBottom
+						className='responsive_field_control'
 						help={ __(
 							'Enable navigation arrows to manually move between slides.',
 							'slider-block'
 						) }
-						checked={ attributes.navigation }
-						label={ __( 'Navigation', 'slider-block' ) }
+						checked={
+							attributes.navigation[
+								attributes.navigation.activeDevice
+							]
+						}
+						label={
+							<ResponsiveDropdown
+								label={ __( 'Navigation', 'slider-block' ) }
+								attributes={ attributes }
+								setAttributes={ setAttributes }
+								responsiveKey="navigation"
+							/>
+						}
 						onChange={ ( value ) =>
-							setAttributes( { navigation: value } )
+							setAttributes( {
+								navigation: {
+									...attributes.navigation,
+									[ attributes.navigation.activeDevice ]:
+										value,
+								},
+							} )
 						}
 					/>
 					<ToggleControl
 						__nextHasNoMarginBottom
+						className='responsive_field_control'
 						help={ __(
 							'Enable pagination indicators to show slide positions.',
 							'slider-block'
 						) }
-						checked={ attributes.pagination }
-						label={ __( 'Pagination', 'slider-block' ) }
+						checked={
+							attributes.pagination[
+								attributes.pagination.activeDevice
+							]
+						}
+						label={
+							<ResponsiveDropdown
+								label={ __( 'Pagination', 'slider-block' ) }
+								attributes={ attributes }
+								setAttributes={ setAttributes }
+								responsiveKey="pagination"
+							/>
+						}
 						onChange={ ( value ) =>
-							setAttributes( { pagination: value } )
+							setAttributes( {
+								pagination: {
+									...attributes.pagination,
+									[ attributes.pagination.activeDevice ]:
+										value,
+								},
+							} )
 						}
 					/>
 					<ToggleControl
