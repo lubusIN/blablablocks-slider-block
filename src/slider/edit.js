@@ -364,6 +364,18 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 			<InspectorControls group="styles">
 				<ToolsPanel
 					label={__('Navigation', 'slider-block')}
+					resetAll={() =>
+						setAttributes({
+							navigationSize: undefined,
+							navigationColor: {
+								arrow: { default: undefined, hover: undefined },
+								background: { default: undefined, hover: undefined },
+							},
+							navigationPadding: undefined,
+							navigationOffset: undefined,
+							navigationBorderRadius: undefined,
+						})
+					}
 				>
 					<ToolsPanelItem
 						label={__('Size', 'slider-block')}
@@ -501,7 +513,19 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 				</ToolsPanel>
 			</InspectorControls>
 			<InspectorControls group="styles">
-				<ToolsPanel label={__('Pagination', 'slider-block')}>
+				<ToolsPanel
+					label={__('Pagination', 'slider-block')}
+					resetAll={() =>
+						setAttributes({
+							paginationSize: undefined,
+							paginationColor: {
+								activeColor: undefined,
+								inactiveColor: undefined,
+							},
+							paginationOffset: undefined,
+						})
+					}
+				>
 					<ToolsPanelItem
 						label={__('Size', 'slider-block')}
 						isShownByDefault
