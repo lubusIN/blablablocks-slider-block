@@ -90,24 +90,24 @@ function Placeholder( { clientId, attributes, setAttributes } ) {
 					icon={ 'slides' }
 					instructions={ __(
 						"Choose how you'd like to get started with your slider.",
-						'slider-block'
+						'blablablocks-slider-block'
 					) }
 					label={ __(
 						"Let's Begin Creating Your Slider!",
-						'slider-block'
+						'blablablocks-slider-block'
 					) }
 				>
 					<Button
 						variant="secondary"
 						onClick={ () => setStep( 'variations' ) }
 					>
-						{ __( 'Explore Variations', 'slider-block' ) }
+						{ __( 'Explore Variations', 'blablablocks-slider-block' ) }
 					</Button>
 					<Button variant="secondary" onClick={ openTemplatesModal }>
-						{ __( 'Browse Templates', 'slider-block' ) }
+						{ __( 'Browse Templates', 'blablablocks-slider-block' ) }
 					</Button>
 					<Button variant="primary" onClick={ skipToDefault }>
-						{ __( 'Skip and Use Default', 'slider-block' ) }
+						{ __( 'Skip and Use Default', 'blablablocks-slider-block' ) }
 					</Button>
 				</PlaceholderComponent>
 			) }
@@ -115,10 +115,10 @@ function Placeholder( { clientId, attributes, setAttributes } ) {
 			{ step === 'variations' && (
 				<BlockVariationPicker
 					icon={ SliderLogo }
-					label={ __( 'Slider', 'slider-block' ) }
+					label={ __( 'Slider', 'blablablocks-slider-block' ) }
 					instructions={ __(
 						'Select a slide variation to start with',
-						'slider-block'
+						'blablablocks-slider-block'
 					) }
 					variations={ variations }
 					onSelect={ ( variation = variations[ 1 ] ) => {
@@ -130,7 +130,7 @@ function Placeholder( { clientId, attributes, setAttributes } ) {
 
 			{ isModalOpen && (
 				<Modal
-					title={ __( 'Choose a Template', 'slider-block' ) }
+					title={ __( 'Choose a Template', 'blablablocks-slider-block' ) }
 					isFullScreen
 					onRequestClose={ () => setIsModalOpen( false ) }
 				>

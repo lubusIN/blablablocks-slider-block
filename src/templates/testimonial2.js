@@ -5,10 +5,10 @@ import { __ } from '@wordpress/i18n';
 
 const Testimonial2 = {
 	name: 'testimonial-2',
-	title: __( 'Testimonial 2', 'slider-block' ),
+	title: __( 'Testimonial 2', 'blablablocks-slider-block' ),
 	description: __(
 		'A simple centered call-to-action for subscribing.',
-		'slider-block'
+		'blablablocks-slider-block'
 	),
 	content: `
            <!-- wp:group {"metadata":{"name":"Testimonial 2"},"align":"full","style":{"spacing":{"blockGap":"0px","padding":{"left":"2vw","right":"2vw","top":"8vw","bottom":"8vw"}}},"layout":{"type":"default"}} -->

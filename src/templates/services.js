@@ -5,10 +5,10 @@ import { __ } from '@wordpress/i18n';
 
 const Services = {
 	name: 'services',
-	title: __( 'Services', 'slider-block' ),
+	title: __( 'Services', 'blablablocks-slider-block' ),
 	description: __(
 		'A simple centered call-to-action for subscribing.',
-		'slider-block'
+		'blablablocks-slider-block'
 	),
 	content: `
             <!-- wp:group {"metadata":{"categories":["services"],"name":"Services","patternName":"assembler/services-2"},"align":"full","className":"alignfull is-style-default","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|30","padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}}},"layout":{"type":"default"}} -->

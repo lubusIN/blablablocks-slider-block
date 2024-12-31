@@ -2,45 +2,47 @@
  * Resolves a spacing size value into a usable CSS value.
  *
  * @param {string|number} value - The input spacing size value.
+ * @param {string|number} defaultValue - The default value.
  * @return {string} - A valid CSS spacing size value.
  */
-const resolveSpacingSizeValue = ( value ) => {
-	if ( typeof value === 'string' ) {
-		if ( value.startsWith( 'var:' ) ) {
+const resolveSpacingSizeValue = (value, defaultValue = '0px') => {
+	if (typeof value === 'string') {
+		if (value.startsWith('var:')) {
 			// Convert "var:some|value" into "var(--wp--some--value)"
 			const cssVariable = value
-				.replace( 'var:', '--wp--' )
-				.replace( /\|/g, '--' );
-			return `var(${ cssVariable })`;
+				.replace('var:', '--wp--')
+				.replace(/\|/g, '--');
+			return `var(${cssVariable})`;
 		}
 		return value; // If it's a valid CSS string, return as-is
 	}
 
-	if ( typeof value === 'number' ) {
-		return `${ value }px`; // Convert numbers to pixel values
+	if (typeof value === 'number') {
+		return `${value}px`; // Convert numbers to pixel values
 	}
 
-	// Fallback to '0px' if value is invalid or undefined
-	return '0px';
+	// use defaultValue if value is invalid or undefined
+	return defaultValue;
 };
 
 /**
  * Generates a border-radius string from either a string or an object.
  *
  * @param {string|object} borderRadius - The border radius definition.
+ * @param {string|number} defaultValue - The default value.
  * @return {string} - A valid CSS border-radius value.
  */
-const getBorderRadiusStyles = ( borderRadius ) => {
-	if ( typeof borderRadius === 'string' ) {
+const getBorderRadiusStyles = (borderRadius, defaultValue = '0px') => {
+	if (typeof borderRadius === 'string') {
 		return borderRadius;
 	}
 
 	// If it's an object, return a four-value shorthand for border-radius
-	const topLeft = borderRadius?.topLeft || '0px';
-	const topRight = borderRadius?.topRight || '0px';
-	const bottomRight = borderRadius?.bottomRight || '0px';
-	const bottomLeft = borderRadius?.bottomLeft || '0px';
-	return `${ topLeft } ${ topRight } ${ bottomRight } ${ bottomLeft }`;
+	const topLeft = borderRadius?.topLeft || defaultValue;
+	const topRight = borderRadius?.topRight || defaultValue;
+	const bottomRight = borderRadius?.bottomRight || defaultValue;
+	const bottomLeft = borderRadius?.bottomLeft || defaultValue;
+	return `${topLeft} ${topRight} ${bottomRight} ${bottomLeft}`;
 };
 
 /**
@@ -51,101 +53,113 @@ const getBorderRadiusStyles = ( borderRadius ) => {
  *
  * @return {Object} - An object with CSS variable definitions for the navigation.
  */
-export const generateNavigationStyles = ( attributes = {} ) => {
+export const generateNavigationStyles = (attributes = {}) => {
 	const styles = {};
 
-	// Helper function to add a style only if the value is valid
-	const addStyle = ( key, value ) => {
-		if ( value ) {
-			styles[ key ] = value;
+	// Helper function to add a style with a fallback to default values
+	const addStyle = (key, value, defaultValue = '0px') => {
+		if (value !== undefined && value !== null) {
+			styles[key] = value;
+		} else if (defaultValue) {
+			styles[key] = defaultValue;
 		}
 	};
 
 	addStyle(
 		'--navigation-arrow-color',
-		attributes?.navigationColor?.arrowColor?.default
+		attributes?.navigationColor?.arrowColor?.default,
+		'#000'
 	);
 	addStyle(
 		'--navigation-background-color',
-		attributes?.navigationColor?.backgroundColor?.default
+		attributes?.navigationColor?.backgroundColor?.default,
+		'transparent'
 	);
 	addStyle(
 		'--navigation-arrow-hover-color',
-		attributes?.navigationColor?.arrowColor?.hover
+		attributes?.navigationColor?.arrowColor?.hover,
+		'#333'
 	);
 	addStyle(
 		'--navigation-background-hover-color',
-		attributes?.navigationColor?.backgroundColor?.hover
+		attributes?.navigationColor?.backgroundColor?.hover,
+		'transparent'
 	);
-	addStyle( '--swiper-navigation-size', attributes?.navigationSize );
+	addStyle(
+		'--swiper-navigation-size',
+		attributes?.navigationSize,
+		'40px'
+	);
 	addStyle(
 		'--navigation-border-radius',
-		getBorderRadiusStyles( attributes?.navigationBorderRadius )
+		getBorderRadiusStyles(attributes?.navigationBorderRadius, '4px'),
 	);
 
-	// Padding styles
+	// Padding styles with defaults
 	addStyle(
 		'--navigation-padding-top',
-		resolveSpacingSizeValue( attributes?.navigationPadding?.top )
+		resolveSpacingSizeValue(attributes?.navigationPadding?.top, '10px')
 	);
 	addStyle(
 		'--navigation-padding-right',
-		resolveSpacingSizeValue( attributes?.navigationPadding?.right )
+		resolveSpacingSizeValue(attributes?.navigationPadding?.right, '10px')
 	);
 	addStyle(
 		'--navigation-padding-bottom',
-		resolveSpacingSizeValue( attributes?.navigationPadding?.bottom )
+		resolveSpacingSizeValue(attributes?.navigationPadding?.bottom, '10px')
 	);
 	addStyle(
 		'--navigation-padding-left',
-		resolveSpacingSizeValue( attributes?.navigationPadding?.left )
+		resolveSpacingSizeValue(attributes?.navigationPadding?.left, '10px')
 	);
 
 	// Pagination styles
-	addStyle( '--pagination-size', attributes?.paginationSize );
+	addStyle('--pagination-size', attributes?.paginationSize, '8px');
 	addStyle(
 		'--pagination-active-color',
-		attributes?.paginationColor?.activeColor?.default
+		attributes?.paginationColor?.activeColor?.default,
+		'#000'
 	);
 	addStyle(
 		'--pagination-inactive-color',
-		attributes?.paginationColor?.inactiveColor?.default
+		attributes?.paginationColor?.inactiveColor?.default,
+		'#ccc'
 	);
 
-	// Pagination offset styles
+	// Pagination offset styles with defaults
 	addStyle(
 		'--pagination-offset-top',
-		resolveSpacingSizeValue( attributes?.paginationOffset?.top )
+		resolveSpacingSizeValue(attributes?.paginationOffset?.top, 'auto')
 	);
 	addStyle(
 		'--pagination-offset-right',
-		resolveSpacingSizeValue( attributes?.paginationOffset?.right )
+		resolveSpacingSizeValue(attributes?.paginationOffset?.right)
 	);
 	addStyle(
 		'--pagination-offset-bottom',
-		resolveSpacingSizeValue( attributes?.paginationOffset?.bottom )
+		resolveSpacingSizeValue(attributes?.paginationOffset?.bottom, '8px')
 	);
 	addStyle(
 		'--pagination-offset-left',
-		resolveSpacingSizeValue( attributes?.paginationOffset?.left )
+		resolveSpacingSizeValue(attributes?.paginationOffset?.left)
 	);
 
-	// Navigation offset styles
+	// Navigation offset styles with defaults
 	addStyle(
 		'--navigation-offset-top',
-		resolveSpacingSizeValue( attributes?.navigationOffset?.top )
+		resolveSpacingSizeValue(attributes?.navigationOffset?.top, '50%')
 	);
 	addStyle(
 		'--navigation-offset-right',
-		resolveSpacingSizeValue( attributes?.navigationOffset?.right )
+		resolveSpacingSizeValue(attributes?.navigationOffset?.right, '10px')
 	);
 	addStyle(
 		'--navigation-offset-bottom',
-		resolveSpacingSizeValue( attributes?.navigationOffset?.bottom )
+		resolveSpacingSizeValue(attributes?.navigationOffset?.bottom)
 	);
 	addStyle(
 		'--navigation-offset-left',
-		resolveSpacingSizeValue( attributes?.navigationOffset?.left )
+		resolveSpacingSizeValue(attributes?.navigationOffset?.left, '10px')
 	);
 
 	return styles;

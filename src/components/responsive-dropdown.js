@@ -11,12 +11,12 @@ import {
 } from '@wordpress/components';
 import { Icon } from '@wordpress/components';
 
-// Devices mapping
-const devices = {
-	desktop: { label: __('Desktop', 'slider-block'), icon: desktop },
-	tablet: { label: __('Tablet', 'slider-block'), icon: tablet },
-	mobile: { label: __('Mobile', 'slider-block'), icon: mobile },
-};
+// Devices array
+const devices = [
+	{ label: __( 'Desktop', 'blablablocks-slider-block' ), value: 'desktop', icon: desktop },
+	{ label: __( 'Tablet', 'blablablocks-slider-block' ), value: 'tablet', icon: tablet },
+	{ label: __( 'Mobile', 'blablablocks-slider-block' ), value: 'mobile', icon: mobile },
+];
 
 /**
  * Responsive Icon Component
@@ -50,9 +50,14 @@ const ResponsiveDropdown = ({ label, attributes, setAttributes, responsiveKey })
 	const currentDevice = devices[editorDeviceType.toLowerCase()] || devices.desktop;
 
 	return (
-		<HStack justify="left" spacing={1}>
-			<Text size={'11px'} weight={500} upperCase style={{ margin: 0 }}>
-				{__(label, 'slider-block')}
+		<HStack justify="left" spacing={ 1 }>
+			<Text
+				size={ '11px' }
+				weight={ 500 }
+				upperCase
+				style={ { margin: 0 } }
+			>
+				{ __( label, 'blablablocks-slider-block' ) }
 			</Text>
 			<Icon icon={currentDevice.icon} />
 		</HStack>

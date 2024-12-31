@@ -23,6 +23,8 @@ import {
 	ToolbarGroup,
 	__experimentalVStack as VStack,
 	__experimentalHeading as Heading,
+	__experimentalToolsPanel as ToolsPanel,
+	__experimentalToolsPanelItem as ToolsPanelItem,
 	__experimentalToggleGroupControl as ToggleGroupControl,
 	__experimentalToggleGroupControlOption as ToggleGroupControlOption,
 } from '@wordpress/components';
@@ -43,22 +45,22 @@ const DEFAULT_BLOCK = {
 /**
  * Slider component.
  */
-const Slider = memo( ( { attributes, innerBlocksProps, innerBlocks } ) => {
+const Slider = memo(({ attributes, innerBlocksProps, innerBlocks }) => {
 	const editorDeviceType = useSelect(
-		( select ) => select( 'core/editor' ).getDeviceType(),
+		(select) => select('core/editor').getDeviceType(),
 		[]
 	);
-	const swiperContainerRef = useRef( null );
-	const swiperInstanceRef = useRef( null );
+	const swiperContainerRef = useRef(null);
+	const swiperInstanceRef = useRef(null);
 
-	useEffect( () => {
-		if ( swiperContainerRef.current && innerBlocks.length > 0 ) {
+	useEffect(() => {
+		if (swiperContainerRef.current && innerBlocks.length > 0) {
 			// Clear existing Swiper classes
 			swiperContainerRef.current.className = 'swiper';
 
 			// Destroy the existing Swiper instance, if any
-			if ( swiperInstanceRef.current ) {
-				swiperInstanceRef.current.destroy( true, true );
+			if (swiperInstanceRef.current) {
+				swiperInstanceRef.current.destroy(true, true);
 				swiperInstanceRef.current = null;
 			}
 
@@ -75,28 +77,28 @@ const Slider = memo( ( { attributes, innerBlocksProps, innerBlocks } ) => {
 
 		// Cleanup on unmount
 		return () => {
-			if ( swiperInstanceRef.current ) {
-				swiperInstanceRef.current.destroy( true, true );
+			if (swiperInstanceRef.current) {
+				swiperInstanceRef.current.destroy(true, true);
 			}
 		};
-	}, [ editorDeviceType, attributes, innerBlocks.length ] );
+	}, [editorDeviceType, attributes, innerBlocks.length]);
 
 	// Inline styles for navigation
-	const navigationStyles = generateNavigationStyles( attributes );
+	const navigationStyles = generateNavigationStyles(attributes);
 	const applyPadding = innerBlocks.length >= 2 ? '100px' : '';
 
 	return (
 		<div
-			{ ...useBlockProps( {
+			{...useBlockProps({
 				style: { ...navigationStyles, padding: applyPadding },
-			} ) }
+			})}
 		>
-			<div ref={ swiperContainerRef }>
-				<div { ...innerBlocksProps } />
+			<div ref={swiperContainerRef}>
+				<div {...innerBlocksProps} />
 			</div>
 		</div>
 	);
-} );
+});
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -109,9 +111,9 @@ const Slider = memo( ( { attributes, innerBlocksProps, innerBlocks } ) => {
  *
  * @return {JSX.Element} The component rendering for the block editor.
  */
-export default function Edit( { clientId, attributes, setAttributes } ) {
+export default function Edit({ clientId, attributes, setAttributes }) {
 	const { allowedBlocks } = attributes;
-	const { insertBlock } = useDispatch( blockEditorStore );
+	const { insertBlock } = useDispatch(blockEditorStore);
 
 	const innerBlocksProps = useInnerBlocksProps(
 		{ className: 'swiper-wrapper' },
@@ -125,409 +127,504 @@ export default function Edit( { clientId, attributes, setAttributes } ) {
 
 	// Check if inner blocks exist using useSelect
 	const innerBlocks = useSelect(
-		( select ) => select( blockEditorStore ).getBlocks( clientId ),
-		[ clientId ]
+		(select) => select(blockEditorStore).getBlocks(clientId),
+		[clientId]
 	);
 
 	const hasInnerBlocks = innerBlocks.length > 0;
 
 	const addSlide = () => {
-		const block = createBlock( 'lubus/slide' );
-		insertBlock( block, innerBlocks.length, clientId, false );
+		const block = createBlock('lubus/slide');
+		insertBlock(block, innerBlocks.length, clientId, false);
 	};
 
 	return hasInnerBlocks ? (
 		<>
 			<Slider
-				attributes={ attributes }
-				innerBlocksProps={ innerBlocksProps }
-				innerBlocks={ innerBlocks }
+				attributes={attributes}
+				innerBlocksProps={innerBlocksProps}
+				innerBlocks={innerBlocks}
 			/>
 			<BlockControls>
 				<ToolbarGroup>
-					<ToolbarButton icon="plus" onClick={ addSlide }>
-						{ __( 'Add Slide', 'slider-block' ) }
+					<ToolbarButton icon="plus" onClick={addSlide}>
+						{__('Add Slide', 'blablablocks-slider-block')}
 					</ToolbarButton>
 				</ToolbarGroup>
 			</BlockControls>
 			<InspectorControls>
-				<PanelBody title={ __( 'Settings', 'slider-block' ) }>
-					<VStack style={ { marginBottom: '8px' } }>
+				<PanelBody title={__('Settings', 'blablablocks-slider-block')}>
+					<VStack style={{ marginBottom: '8px' }}>
 						<ResponsiveDropdown
 							label="Slides Per View"
-							attributes={ attributes }
-							setAttributes={ setAttributes }
+							attributes={attributes}
+							setAttributes={setAttributes}
 							responsiveKey="slidesPerView"
 						/>
 						<RangeControl
 							__nextHasNoMarginBottom
 							__next40pxDefaultSize
-							help={ __(
+							help={__(
 								"Number of slides visible at the same time on slider's container.",
-								'slider-block'
-							) }
+								'blablablocks-slider-block'
+							)}
 							value={
 								attributes.slidesPerView[
-									attributes.slidesPerView.activeDevice
+								attributes.slidesPerView.activeDevice
 								]
 							}
-							min={ 1 }
-							max={ 30 }
-							onChange={ ( value ) =>
-								setAttributes( {
+							min={1}
+							max={30}
+							onChange={(value) =>
+								setAttributes({
 									slidesPerView: {
 										...attributes.slidesPerView,
-										[ attributes.slidesPerView
-											.activeDevice ]: value,
+										[attributes.slidesPerView
+											.activeDevice]: value,
 									},
-								} )
+								})
 							}
 						/>
 					</VStack>
-					<VStack style={ { marginBottom: '16px' } }>
+					<VStack style={{ marginBottom: '16px' }}>
 						<ResponsiveDropdown
-							label={ __( 'Slides Spacing', 'slider-block' ) }
-							attributes={ attributes }
-							setAttributes={ setAttributes }
+							label={__('Slides Spacing', 'blablablocks-slider-block')}
+							attributes={attributes}
+							setAttributes={setAttributes}
 							responsiveKey="slidesSpacing"
 						/>
 						<RangeControl
 							__nextHasNoMarginBottom
 							__next40pxDefaultSize
-							help={ __(
+							help={__(
 								'Adjust the spacing between slides.',
-								'slider-block'
-							) }
-							initialPosition={ 30 }
+								'blablablocks-slider-block'
+							)}
+							initialPosition={30}
 							value={
 								attributes.slidesSpacing[
-									attributes.slidesSpacing.activeDevice
+								attributes.slidesSpacing.activeDevice
 								]
 							}
-							min={ 0 }
-							onChange={ ( value ) =>
-								setAttributes( {
+							min={0}
+							onChange={(value) =>
+								setAttributes({
 									slidesSpacing: {
 										...attributes.slidesSpacing,
-										[ attributes.slidesSpacing
-											.activeDevice ]: value,
+										[attributes.slidesSpacing
+											.activeDevice]: value,
 									},
-								} )
+								})
 							}
 						/>
 					</VStack>
 					<RangeControl
 						__nextHasNoMarginBottom
 						__next40pxDefaultSize
-						help={ __(
+						help={__(
 							'Set the duration of transition between slides.',
-							'slider-block'
-						) }
-						label={ __( 'Speed (ms)', 'slider-block' ) }
-						min={ 100 } // minimum speed in ms
-						max={ 10000 } // maximum speed in ms
-						step={ 100 }
-						value={ attributes.speed }
-						onChange={ ( value ) =>
-							setAttributes( { speed: value } )
+							'blablablocks-slider-block'
+						)}
+						label={__('Speed (ms)', 'blablablocks-slider-block')}
+						min={100} // minimum speed in ms
+						max={10000} // maximum speed in ms
+						step={100}
+						value={attributes.speed}
+						onChange={(value) =>
+							setAttributes({ speed: value })
 						}
 					/>
 					<ToggleGroupControl
 						isBlock
 						__nextHasNoMarginBottom
 						__next40pxDefaultSize
-						label={ __( 'Effects', 'slider-block' ) }
-						value={ attributes.effects }
-						onChange={ ( value ) =>
-							setAttributes( { effects: value } )
+						label={__('Effects', 'blablablocks-slider-block')}
+						value={attributes.effects}
+						onChange={(value) =>
+							setAttributes({ effects: value })
 						}
-						help={ __(
+						help={__(
 							'Select how slides transition.',
-							'slider-block'
-						) }
+							'blablablocks-slider-block'
+						)}
 					>
 						<ToggleGroupControlOption
-							label={ __( 'Slide', 'slider-block' ) }
+							label={__('Slide', 'blablablocks-slider-block')}
 							value="slide"
 						/>
 						<ToggleGroupControlOption
-							label={ __( 'Fade', 'slider-block' ) }
+							label={__('Fade', 'blablablocks-slider-block')}
 							value="fade"
 						/>
 					</ToggleGroupControl>
 					<ToggleControl
 						__nextHasNoMarginBottom
 						className='responsive_field_control'
-						help={ __(
+						help={__(
 							'Enable navigation arrows to manually move between slides.',
-							'slider-block'
-						) }
+							'blablablocks-slider-block'
+						)}
 						checked={
 							attributes.navigation[
-								attributes.navigation.activeDevice
+							attributes.navigation.activeDevice
 							]
 						}
 						label={
 							<ResponsiveDropdown
-								label={ __( 'Navigation', 'slider-block' ) }
-								attributes={ attributes }
-								setAttributes={ setAttributes }
+								label={__('Navigation', 'blablablocks-slider-block')}
+								attributes={attributes}
+								setAttributes={setAttributes}
 								responsiveKey="navigation"
 							/>
 						}
-						onChange={ ( value ) =>
-							setAttributes( {
+						onChange={(value) =>
+							setAttributes({
 								navigation: {
 									...attributes.navigation,
-									[ attributes.navigation.activeDevice ]:
+									[attributes.navigation.activeDevice]:
 										value,
 								},
-							} )
+							})
 						}
 					/>
 					<ToggleControl
 						__nextHasNoMarginBottom
 						className='responsive_field_control'
-						help={ __(
+						help={__(
 							'Enable pagination indicators to show slide positions.',
-							'slider-block'
-						) }
+							'blablablocks-slider-block'
+						)}
 						checked={
 							attributes.pagination[
-								attributes.pagination.activeDevice
+							attributes.pagination.activeDevice
 							]
 						}
 						label={
 							<ResponsiveDropdown
-								label={ __( 'Pagination', 'slider-block' ) }
-								attributes={ attributes }
-								setAttributes={ setAttributes }
+								label={__('Pagination', 'blablablocks-slider-block')}
+								attributes={attributes}
+								setAttributes={setAttributes}
 								responsiveKey="pagination"
 							/>
 						}
-						onChange={ ( value ) =>
-							setAttributes( {
+						onChange={(value) =>
+							setAttributes({
 								pagination: {
 									...attributes.pagination,
-									[ attributes.pagination.activeDevice ]:
+									[attributes.pagination.activeDevice]:
 										value,
 								},
-							} )
+							})
 						}
 					/>
 					<ToggleControl
 						__nextHasNoMarginBottom
-						help={ __(
+						help={__(
 							'Enable loop to continuously cycle through slides.',
-							'slider-block'
-						) }
-						checked={ attributes.loop }
-						label={ __( 'Loop', 'slider-block' ) }
-						onChange={ ( value ) =>
-							setAttributes( { loop: value } )
+							'blablablocks-slider-block'
+						)}
+						checked={attributes.loop}
+						label={__('Loop', 'blablablocks-slider-block')}
+						onChange={(value) =>
+							setAttributes({ loop: value })
 						}
 					/>
 					<ToggleControl
 						__nextHasNoMarginBottom
-						help={ __(
+						help={__(
 							'Enable automatic slide transition.',
-							'slider-block'
-						) }
-						checked={ attributes.autoplay }
-						label={ __( 'Autoplay', 'slider-block' ) }
-						onChange={ ( value ) =>
-							setAttributes( { autoplay: value } )
+							'blablablocks-slider-block'
+						)}
+						checked={attributes.autoplay}
+						label={__('Autoplay', 'blablablocks-slider-block')}
+						onChange={(value) =>
+							setAttributes({ autoplay: value })
 						}
 					/>
-					{ attributes.autoplay && (
+					{attributes.autoplay && (
 						<RangeControl
 							__nextHasNoMarginBottom
 							__next40pxDefaultSize
-							help={ __(
+							help={__(
 								'Set the delay between slides in milliseconds.',
-								'slider-block'
-							) }
-							label={ __( 'Delay (ms)', 'slider-block' ) }
-							min={ 100 } // minimum delay in ms
-							max={ 10000 } // maximum delay in ms
-							step={ 100 }
-							value={ attributes.delay }
-							onChange={ ( value ) =>
-								setAttributes( { delay: value } )
+								'blablablocks-slider-block'
+							)}
+							label={__('Delay (ms)', 'blablablocks-slider-block')}
+							min={100} // minimum delay in ms
+							max={10000} // maximum delay in ms
+							step={100}
+							value={attributes.delay}
+							onChange={(value) =>
+								setAttributes({ delay: value })
 							}
 						/>
-					) }
+					)}
 				</PanelBody>
 			</InspectorControls>
 			<InspectorControls group="styles">
-				<PanelBody
-					title={ __( 'Navigation', 'slider-block' ) }
-					initialOpen={ true }
+				<ToolsPanel
+					label={__('Navigation', 'blablablocks-slider-block')}
+					resetAll={() =>
+						setAttributes({
+							navigationSize: undefined,
+							navigationColor: {
+								arrow: { default: undefined, hover: undefined },
+								background: { default: undefined, hover: undefined },
+							},
+							navigationPadding: undefined,
+							navigationOffset: undefined,
+							navigationBorderRadius: undefined,
+						})
+					}
 				>
-					<VStack spacing={ 4 }>
+					<ToolsPanelItem
+						label={__('Size', 'blablablocks-slider-block')}
+						isShownByDefault
+						hasValue={() => !!attributes.navigationSize}
+						onDeselect={() => setAttributes({ navigationSize: undefined })}
+					>
 						<FontSizePicker
 							__next40pxDefaultSize
 							withSlider
-							withReset={ false }
-							onChange={ ( size ) =>
-								setAttributes( { navigationSize: size } )
+							withReset={false}
+							onChange={(size) =>
+								setAttributes({ navigationSize: size })
 							}
-							value={ attributes.navigationSize }
+							value={attributes.navigationSize}
 						/>
-						<VStack spacing={ 0 }>
+					</ToolsPanelItem>
+					<ToolsPanelItem
+						label={__('Color', 'blablablocks-slider-block')}
+						isShownByDefault
+						hasValue={() =>
+							!!attributes?.navigationColor?.arrowColor?.default ||
+							!!attributes?.navigationColor?.arrowColor?.hover ||
+							!!attributes?.navigationColor?.backgroundColor?.default ||
+							!!attributes?.navigationColor?.backgroundColor?.hover
+						}
+						onDeselect={() =>
+							setAttributes({
+								navigationColor: {
+									arrow: {
+										default: undefined,
+										hover: undefined,
+									},
+									background: {
+										default: undefined,
+										hover: undefined,
+									},
+								},
+							})
+						}
+					>
+						<VStack spacing={0}>
 							<Heading
-								lineHeight={ 1 }
-								level={ 3 }
-								weight={ 500 }
+								lineHeight={1}
+								level={3}
+								weight={500}
 								upperCase
 							>
 								Color
 							</Heading>
 							<VStack
 								className="slider_color-support-panel"
-								spacing={ 0 }
+								spacing={0}
 							>
 								<ColorControlDropdown
-									label={ __( 'Arrow', 'slider-block' ) }
+									label={__('Arrow', 'blablablocks-slider-block')}
 									colorValue={
 										attributes?.navigationColor
 											?.arrowColor || {}
 									}
-									onChangeColor={ ( newColor ) =>
-										setAttributes( {
+									onChangeColor={(newColor) =>
+										setAttributes({
 											navigationColor: {
 												...attributes.navigationColor,
 												arrowColor: newColor,
 											},
-										} )
+										})
 									}
+									hasHover={true}
 								/>
 								<ColorControlDropdown
-									label={ __( 'Background', 'slider-block' ) }
+									label={__('Background', 'blablablocks-slider-block')}
 									colorValue={
 										attributes?.navigationColor
 											?.backgroundColor || {}
 									}
-									onChangeColor={ ( newColor ) =>
-										setAttributes( {
+									onChangeColor={(newColor) =>
+										setAttributes({
 											navigationColor: {
 												...attributes?.navigationColor,
 												backgroundColor: newColor,
 											},
-										} )
+										})
 									}
+									hasHover={true}
 								/>
 							</VStack>
 						</VStack>
+					</ToolsPanelItem>
+					<ToolsPanelItem
+						label={__('Padding', 'blablablocks-slider-block')}
+						hasValue={() => !!attributes.navigationPadding}
+						onDeselect={() => setAttributes({ navigationPadding: undefined })}
+					>
 						<SpacingSizesControl
-							values={ attributes.navigationPadding }
-							onChange={ ( value ) =>
-								setAttributes( { navigationPadding: value } )
+							values={attributes.navigationPadding}
+							onChange={(value) =>
+								setAttributes({ navigationPadding: value })
 							}
-							label={ __( 'Padding', 'slider-block' ) }
-							allowReset={ false }
-							splitOnAxis={ true }
+							label={__('Padding', 'blablablocks-slider-block')}
+							allowReset={false}
+							splitOnAxis={true}
 						/>
+					</ToolsPanelItem>
+					<ToolsPanelItem
+						label={__('Offset', 'blablablocks-slider-block')}
+						hasValue={() => !!attributes.navigationOffset}
+						onDeselect={() => setAttributes({ navigationOffset: undefined })}
+					>
 						<SpacingSizesControl
-							values={ attributes.navigationOffset }
-							onChange={ ( value ) =>
-								setAttributes( { navigationOffset: value } )
+							values={attributes.navigationOffset}
+							onChange={(value) =>
+								setAttributes({ navigationOffset: value })
 							}
-							label={ __( 'Offset', 'slider-block' ) }
-							minimumCustomValue={ -Infinity }
-							allowReset={ false }
-							splitOnAxis={ true }
+							label={__('Offset', 'blablablocks-slider-block')}
+							minimumCustomValue={-Infinity}
+							allowReset={false}
+							splitOnAxis={true}
 						/>
+					</ToolsPanelItem>
+					<ToolsPanelItem
+						label={__('Radius', 'blablablocks-slider-block')}
+						hasValue={() => !!attributes.navigationBorderRadius}
+						onDeselect={() => setAttributes({ navigationBorderRadius: undefined })}
+					>
 						<BorderRadiusControl
-							values={ attributes.navigationBorderRadius }
-							onChange={ ( value ) =>
-								setAttributes( {
+							values={attributes.navigationBorderRadius}
+							onChange={(value) =>
+								setAttributes({
 									navigationBorderRadius: value,
-								} )
+								})
 							}
 						/>
-					</VStack>
-				</PanelBody>
+					</ToolsPanelItem>
+				</ToolsPanel>
 			</InspectorControls>
 			<InspectorControls group="styles">
-				<PanelBody
-					title={ __( 'Pagination', 'slider-block' ) }
-					initialOpen={ true }
+				<ToolsPanel
+					label={__('Pagination', 'blablablocks-slider-block')}
+					resetAll={() =>
+						setAttributes({
+							paginationSize: undefined,
+							paginationColor: {
+								activeColor: undefined,
+								inactiveColor: undefined,
+							},
+							paginationOffset: undefined,
+						})
+					}
 				>
-					<VStack spacing={ 4 }>
+					<ToolsPanelItem
+						label={__('Size', 'blablablocks-slider-block')}
+						isShownByDefault
+						hasValue={() => !!attributes.paginationSize}
+						onDeselect={() => setAttributes({ paginationSize: undefined })}
+					>
 						<FontSizePicker
 							__next40pxDefaultSize
 							withSlider
-							withReset={ false }
-							onChange={ ( size ) =>
-								setAttributes( { paginationSize: size } )
+							withReset={false}
+							onChange={(size) =>
+								setAttributes({ paginationSize: size })
 							}
-							value={ attributes.paginationSize }
+							value={attributes.paginationSize}
 						/>
-						<VStack spacing={ 0 }>
+					</ToolsPanelItem>
+					<ToolsPanelItem
+						label={__('Color', 'blablablocks-slider-block')}
+						isShownByDefault
+						hasValue={() => !!attributes?.paginationColor?.activeColor || !!attributes?.paginationColor?.inactiveColor}
+						onDeselect={() =>
+							setAttributes({
+								paginationColor: {
+									activeColor: undefined,
+									inactiveColor: undefined,
+								},
+							})
+						}
+					>
+						<VStack spacing={0}>
 							<Heading
-								lineHeight={ 1 }
-								level={ 3 }
-								weight={ 500 }
+								lineHeight={1}
+								level={3}
+								weight={500}
 								upperCase
 							>
 								Color
 							</Heading>
 							<VStack
 								className="slider_color-support-panel"
-								spacing={ 0 }
+								spacing={0}
 							>
 								<ColorControlDropdown
-									label={ __( 'Active', 'slider-block' ) }
+									label={__('Active', 'blablablocks-slider-block')}
 									colorValue={
 										attributes?.paginationColor
 											?.activeColor || {}
 									}
-									onChangeColor={ ( newColor ) =>
-										setAttributes( {
+									onChangeColor={(newColor) =>
+										setAttributes({
 											paginationColor: {
 												...attributes.paginationColor,
 												activeColor: newColor,
 											},
-										} )
+										})
 									}
 								/>
 								<ColorControlDropdown
-									label={ __( 'Inactive', 'slider-block' ) }
+									label={__('Inactive', 'blablablocks-slider-block')}
 									colorValue={
 										attributes?.paginationColor
 											?.inactiveColor || {}
 									}
-									onChangeColor={ ( newColor ) =>
-										setAttributes( {
+									onChangeColor={(newColor) =>
+										setAttributes({
 											paginationColor: {
 												...attributes?.paginationColor,
 												inactiveColor: newColor,
 											},
-										} )
+										})
 									}
 								/>
 							</VStack>
 						</VStack>
+					</ToolsPanelItem>
+					<ToolsPanelItem
+						label={__('Offset', 'blablablocks-slider-block')}
+						hasValue={() => !!attributes.paginationOffset}
+						onDeselect={() => setAttributes({ paginationOffset: undefined })}
+					>
 						<SpacingSizesControl
-							values={ attributes.paginationOffset }
-							onChange={ ( value ) =>
-								setAttributes( { paginationOffset: value } )
+							values={attributes.paginationOffset}
+							onChange={(value) =>
+								setAttributes({ paginationOffset: value })
 							}
-							label={ __( 'Offset', 'slider-block' ) }
-							minimumCustomValue={ -Infinity }
-							allowReset={ false }
-							splitOnAxis={ true }
+							label={__('Offset', 'blablablocks-slider-block')}
+							minimumCustomValue={-Infinity}
+							allowReset={false}
+							splitOnAxis={true}
 						/>
-					</VStack>
-				</PanelBody>
+					</ToolsPanelItem>
+				</ToolsPanel>
 			</InspectorControls>
 		</>
 	) : (
 		<Placeholder
-			clientId={ clientId }
-			attributes={ attributes }
-			setAttributes={ setAttributes }
+			clientId={clientId}
+			attributes={attributes}
+			setAttributes={setAttributes}
 		/>
 	);
 }
