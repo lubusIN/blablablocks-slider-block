@@ -1,11 +1,11 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "lubus/slide",
+	"name": "blablablocks/slide",
 	"version": "0.1.0",
 	"title": "Slide",
 	"description": "A single slide within a slider block.",
-	"parent": [ "lubus/slider" ],
+	"parent": [ "blablablocks/slider" ],
 	"supports": {
 		"anchor": true,
 		"html": false

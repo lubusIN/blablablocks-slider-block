@@ -12,7 +12,7 @@ import { Path, SVG } from '@wordpress/components';
 const variations = [
 	{
 		name: 'one-slide',
-		description: __( 'One Slide', 'slider-block' ),
+		description: __( 'One Slide', 'blablablocks-slider-block' ),
 		icon: (
 			<SVG
 				xmlns="http://www.w3.org/2000/svg"
@@ -23,12 +23,12 @@ const variations = [
 				<Path d="M0 10a2 2 0 0 1 2-2h44a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V10Z" />
 			</SVG>
 		),
-		innerBlocks: [ [ 'lubus/slide' ] ],
+		innerBlocks: [ [ 'blablablocks/slide' ] ],
 		scope: [ 'block' ],
 	},
 	{
 		name: 'two-slide',
-		description: __( 'Two Slides', 'slider-block' ),
+		description: __( 'Two Slides', 'blablablocks-slider-block' ),
 		icon: (
 			<SVG
 				xmlns="http://www.w3.org/2000/svg"
@@ -39,12 +39,12 @@ const variations = [
 				<Path d="M0 10a2 2 0 0 1 2-2h19a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V10Zm25 0a2 2 0 0 1 2-2h19a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H27a2 2 0 0 1-2-2V10Z" />
 			</SVG>
 		),
-		innerBlocks: [ [ 'lubus/slide' ], [ 'lubus/slide' ] ],
+		innerBlocks: [ [ 'blablablocks/slide' ], [ 'blablablocks/slide' ] ],
 		scope: [ 'block' ],
 	},
 	{
 		name: 'three-slide',
-		description: __( 'Three Slides', 'slider-block' ),
+		description: __( 'Three Slides', 'blablablocks-slider-block' ),
 		icon: (
 			<SVG
 				xmlns="http://www.w3.org/2000/svg"
@@ -56,15 +56,15 @@ const variations = [
 			</SVG>
 		),
 		innerBlocks: [
-			[ 'lubus/slide' ],
-			[ 'lubus/slide' ],
-			[ 'lubus/slide' ],
+			[ 'blablablocks/slide' ],
+			[ 'blablablocks/slide' ],
+			[ 'blablablocks/slide' ],
 		],
 		scope: [ 'block' ],
 	},
 	{
 		name: 'four-slide',
-		description: __( 'Four Slides', 'slider-block' ),
+		description: __( 'Four Slides', 'blablablocks-slider-block' ),
 		icon: (
 			<SVG
 				xmlns="http://www.w3.org/2000/svg"
@@ -77,10 +77,10 @@ const variations = [
 			</SVG>
 		),
 		innerBlocks: [
-			[ 'lubus/slide' ],
-			[ 'lubus/slide' ],
-			[ 'lubus/slide' ],
-			[ 'lubus/slide' ],
+			[ 'blablablocks/slide' ],
+			[ 'blablablocks/slide' ],
+			[ 'blablablocks/slide' ],
+			[ 'blablablocks/slide' ],
 		],
 		scope: [ 'block' ],
 	},
