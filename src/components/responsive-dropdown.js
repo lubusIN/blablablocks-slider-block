@@ -39,7 +39,6 @@ const ResponsiveDropdown = ({ label, attributes, setAttributes, responsiveKey })
 
 	// Update the `activeDevice` attribute when `editorDeviceType` changes
 	useEffect(() => {
-		console.log(editorDeviceType);
 		setAttributes({
 			[responsiveKey]: {
 				...responsiveSettings,
