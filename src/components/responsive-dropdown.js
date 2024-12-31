@@ -11,9 +11,9 @@ import { desktop, mobile, tablet } from '@wordpress/icons';
 
 // Devices array
 const devices = [
-	{ label: __( 'Desktop', 'slider-block' ), value: 'desktop', icon: desktop },
-	{ label: __( 'Tablet', 'slider-block' ), value: 'tablet', icon: tablet },
-	{ label: __( 'Mobile', 'slider-block' ), value: 'mobile', icon: mobile },
+	{ label: __( 'Desktop', 'blablablocks-slider-block' ), value: 'desktop', icon: desktop },
+	{ label: __( 'Tablet', 'blablablocks-slider-block' ), value: 'tablet', icon: tablet },
+	{ label: __( 'Mobile', 'blablablocks-slider-block' ), value: 'mobile', icon: mobile },
 ];
 
 /**
@@ -44,7 +44,7 @@ const ResponsiveDropdown = ( {
 				upperCase
 				style={ { margin: 0 } }
 			>
-				{ __( label, 'slider-block' ) }
+				{ __( label, 'blablablocks-slider-block' ) }
 			</Text>
 			<DropdownMenu
 				icon={

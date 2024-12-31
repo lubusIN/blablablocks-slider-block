@@ -148,12 +148,12 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 			<BlockControls>
 				<ToolbarGroup>
 					<ToolbarButton icon="plus" onClick={addSlide}>
-						{__('Add Slide', 'slider-block')}
+						{__('Add Slide', 'blablablocks-slider-block')}
 					</ToolbarButton>
 				</ToolbarGroup>
 			</BlockControls>
 			<InspectorControls>
-				<PanelBody title={__('Settings', 'slider-block')}>
+				<PanelBody title={__('Settings', 'blablablocks-slider-block')}>
 					<VStack style={{ marginBottom: '8px' }}>
 						<ResponsiveDropdown
 							label="Slides Per View"
@@ -166,7 +166,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 							__next40pxDefaultSize
 							help={__(
 								"Number of slides visible at the same time on slider's container.",
-								'slider-block'
+								'blablablocks-slider-block'
 							)}
 							value={
 								attributes.slidesPerView[
@@ -188,7 +188,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 					</VStack>
 					<VStack style={{ marginBottom: '16px' }}>
 						<ResponsiveDropdown
-							label={__('Slides Spacing', 'slider-block')}
+							label={__('Slides Spacing', 'blablablocks-slider-block')}
 							attributes={attributes}
 							setAttributes={setAttributes}
 							responsiveKey="slidesSpacing"
@@ -198,7 +198,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 							__next40pxDefaultSize
 							help={__(
 								'Adjust the spacing between slides.',
-								'slider-block'
+								'blablablocks-slider-block'
 							)}
 							initialPosition={30}
 							value={
@@ -223,9 +223,9 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 						__next40pxDefaultSize
 						help={__(
 							'Set the duration of transition between slides.',
-							'slider-block'
+							'blablablocks-slider-block'
 						)}
-						label={__('Speed (ms)', 'slider-block')}
+						label={__('Speed (ms)', 'blablablocks-slider-block')}
 						min={100} // minimum speed in ms
 						max={10000} // maximum speed in ms
 						step={100}
@@ -238,22 +238,22 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 						isBlock
 						__nextHasNoMarginBottom
 						__next40pxDefaultSize
-						label={__('Effects', 'slider-block')}
+						label={__('Effects', 'blablablocks-slider-block')}
 						value={attributes.effects}
 						onChange={(value) =>
 							setAttributes({ effects: value })
 						}
 						help={__(
 							'Select how slides transition.',
-							'slider-block'
+							'blablablocks-slider-block'
 						)}
 					>
 						<ToggleGroupControlOption
-							label={__('Slide', 'slider-block')}
+							label={__('Slide', 'blablablocks-slider-block')}
 							value="slide"
 						/>
 						<ToggleGroupControlOption
-							label={__('Fade', 'slider-block')}
+							label={__('Fade', 'blablablocks-slider-block')}
 							value="fade"
 						/>
 					</ToggleGroupControl>
@@ -262,7 +262,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 						className='responsive_field_control'
 						help={__(
 							'Enable navigation arrows to manually move between slides.',
-							'slider-block'
+							'blablablocks-slider-block'
 						)}
 						checked={
 							attributes.navigation[
@@ -271,7 +271,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 						}
 						label={
 							<ResponsiveDropdown
-								label={__('Navigation', 'slider-block')}
+								label={__('Navigation', 'blablablocks-slider-block')}
 								attributes={attributes}
 								setAttributes={setAttributes}
 								responsiveKey="navigation"
@@ -292,7 +292,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 						className='responsive_field_control'
 						help={__(
 							'Enable pagination indicators to show slide positions.',
-							'slider-block'
+							'blablablocks-slider-block'
 						)}
 						checked={
 							attributes.pagination[
@@ -301,7 +301,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 						}
 						label={
 							<ResponsiveDropdown
-								label={__('Pagination', 'slider-block')}
+								label={__('Pagination', 'blablablocks-slider-block')}
 								attributes={attributes}
 								setAttributes={setAttributes}
 								responsiveKey="pagination"
@@ -321,10 +321,10 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 						__nextHasNoMarginBottom
 						help={__(
 							'Enable loop to continuously cycle through slides.',
-							'slider-block'
+							'blablablocks-slider-block'
 						)}
 						checked={attributes.loop}
-						label={__('Loop', 'slider-block')}
+						label={__('Loop', 'blablablocks-slider-block')}
 						onChange={(value) =>
 							setAttributes({ loop: value })
 						}
@@ -333,10 +333,10 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 						__nextHasNoMarginBottom
 						help={__(
 							'Enable automatic slide transition.',
-							'slider-block'
+							'blablablocks-slider-block'
 						)}
 						checked={attributes.autoplay}
-						label={__('Autoplay', 'slider-block')}
+						label={__('Autoplay', 'blablablocks-slider-block')}
 						onChange={(value) =>
 							setAttributes({ autoplay: value })
 						}
@@ -347,9 +347,9 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 							__next40pxDefaultSize
 							help={__(
 								'Set the delay between slides in milliseconds.',
-								'slider-block'
+								'blablablocks-slider-block'
 							)}
-							label={__('Delay (ms)', 'slider-block')}
+							label={__('Delay (ms)', 'blablablocks-slider-block')}
 							min={100} // minimum delay in ms
 							max={10000} // maximum delay in ms
 							step={100}
@@ -363,7 +363,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 			</InspectorControls>
 			<InspectorControls group="styles">
 				<ToolsPanel
-					label={__('Navigation', 'slider-block')}
+					label={__('Navigation', 'blablablocks-slider-block')}
 					resetAll={() =>
 						setAttributes({
 							navigationSize: undefined,
@@ -378,7 +378,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 					}
 				>
 					<ToolsPanelItem
-						label={__('Size', 'slider-block')}
+						label={__('Size', 'blablablocks-slider-block')}
 						isShownByDefault
 						hasValue={() => !!attributes.navigationSize}
 						onDeselect={() => setAttributes({ navigationSize: undefined })}
@@ -394,7 +394,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 						/>
 					</ToolsPanelItem>
 					<ToolsPanelItem
-						label={__('Color', 'slider-block')}
+						label={__('Color', 'blablablocks-slider-block')}
 						isShownByDefault
 						hasValue={() =>
 							!!attributes?.navigationColor?.arrowColor?.default ||
@@ -431,7 +431,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 								spacing={0}
 							>
 								<ColorControlDropdown
-									label={__('Arrow', 'slider-block')}
+									label={__('Arrow', 'blablablocks-slider-block')}
 									colorValue={
 										attributes?.navigationColor
 											?.arrowColor || {}
@@ -447,7 +447,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 									hasHover={true}
 								/>
 								<ColorControlDropdown
-									label={__('Background', 'slider-block')}
+									label={__('Background', 'blablablocks-slider-block')}
 									colorValue={
 										attributes?.navigationColor
 											?.backgroundColor || {}
@@ -466,7 +466,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 						</VStack>
 					</ToolsPanelItem>
 					<ToolsPanelItem
-						label={__('Padding', 'slider-block')}
+						label={__('Padding', 'blablablocks-slider-block')}
 						hasValue={() => !!attributes.navigationPadding}
 						onDeselect={() => setAttributes({ navigationPadding: undefined })}
 					>
@@ -475,13 +475,13 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 							onChange={(value) =>
 								setAttributes({ navigationPadding: value })
 							}
-							label={__('Padding', 'slider-block')}
+							label={__('Padding', 'blablablocks-slider-block')}
 							allowReset={false}
 							splitOnAxis={true}
 						/>
 					</ToolsPanelItem>
 					<ToolsPanelItem
-						label={__('Offset', 'slider-block')}
+						label={__('Offset', 'blablablocks-slider-block')}
 						hasValue={() => !!attributes.navigationOffset}
 						onDeselect={() => setAttributes({ navigationOffset: undefined })}
 					>
@@ -490,14 +490,14 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 							onChange={(value) =>
 								setAttributes({ navigationOffset: value })
 							}
-							label={__('Offset', 'slider-block')}
+							label={__('Offset', 'blablablocks-slider-block')}
 							minimumCustomValue={-Infinity}
 							allowReset={false}
 							splitOnAxis={true}
 						/>
 					</ToolsPanelItem>
 					<ToolsPanelItem
-						label={__('Radius', 'slider-block')}
+						label={__('Radius', 'blablablocks-slider-block')}
 						hasValue={() => !!attributes.navigationBorderRadius}
 						onDeselect={() => setAttributes({ navigationBorderRadius: undefined })}
 					>
@@ -514,7 +514,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 			</InspectorControls>
 			<InspectorControls group="styles">
 				<ToolsPanel
-					label={__('Pagination', 'slider-block')}
+					label={__('Pagination', 'blablablocks-slider-block')}
 					resetAll={() =>
 						setAttributes({
 							paginationSize: undefined,
@@ -527,7 +527,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 					}
 				>
 					<ToolsPanelItem
-						label={__('Size', 'slider-block')}
+						label={__('Size', 'blablablocks-slider-block')}
 						isShownByDefault
 						hasValue={() => !!attributes.paginationSize}
 						onDeselect={() => setAttributes({ paginationSize: undefined })}
@@ -543,7 +543,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 						/>
 					</ToolsPanelItem>
 					<ToolsPanelItem
-						label={__('Color', 'slider-block')}
+						label={__('Color', 'blablablocks-slider-block')}
 						isShownByDefault
 						hasValue={() => !!attributes?.paginationColor?.activeColor || !!attributes?.paginationColor?.inactiveColor}
 						onDeselect={() =>
@@ -569,7 +569,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 								spacing={0}
 							>
 								<ColorControlDropdown
-									label={__('Active', 'slider-block')}
+									label={__('Active', 'blablablocks-slider-block')}
 									colorValue={
 										attributes?.paginationColor
 											?.activeColor || {}
@@ -584,7 +584,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 									}
 								/>
 								<ColorControlDropdown
-									label={__('Inactive', 'slider-block')}
+									label={__('Inactive', 'blablablocks-slider-block')}
 									colorValue={
 										attributes?.paginationColor
 											?.inactiveColor || {}
@@ -602,7 +602,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 						</VStack>
 					</ToolsPanelItem>
 					<ToolsPanelItem
-						label={__('Offset', 'slider-block')}
+						label={__('Offset', 'blablablocks-slider-block')}
 						hasValue={() => !!attributes.paginationOffset}
 						onDeselect={() => setAttributes({ paginationOffset: undefined })}
 					>
@@ -611,7 +611,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 							onChange={(value) =>
 								setAttributes({ paginationOffset: value })
 							}
-							label={__('Offset', 'slider-block')}
+							label={__('Offset', 'blablablocks-slider-block')}
 							minimumCustomValue={-Infinity}
 							allowReset={false}
 							splitOnAxis={true}

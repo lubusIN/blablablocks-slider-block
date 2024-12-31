@@ -60,11 +60,11 @@ function ColorControlDropdown({ label, colorValue = {}, onChangeColor, hasHover 
 						tabs={[
 							{
 								name: 'default',
-								title: __('Default', 'slider-block'),
+								title: __('Default', 'blablablocks-slider-block'),
 							},
 							{
 								name: 'hover',
-								title: __('Hover', 'slider-block'),
+								title: __('Hover', 'blablablocks-slider-block'),
 							},
 						]}
 					>

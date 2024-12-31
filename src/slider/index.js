@@ -9,8 +9,8 @@ import { registerBlockType } from '@wordpress/blocks';
 import Edit from './edit';
 import save from './save';
 import metadata from './block.json';
-import './style.scss';
 import { SliderLogo } from '../components';
+import './style.scss';
 
 /**
  * Register a slider block
