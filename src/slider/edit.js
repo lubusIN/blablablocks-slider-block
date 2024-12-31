@@ -145,7 +145,7 @@ export default function Edit( { clientId, attributes, setAttributes } ) {
 			/>
 			<BlockControls>
 				<ToolbarGroup>
-					<ToolbarButton icon="plus" onClick={ addSlide }>
+					<ToolbarButton onClick={ addSlide }>
 						{ __( 'Add Slide', 'slider-block' ) }
 					</ToolbarButton>
 				</ToolbarGroup>

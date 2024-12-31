@@ -3,12 +3,13 @@
  */
 import { __ } from '@wordpress/i18n';
 import { useState } from '@wordpress/element';
-import { createBlocksFromInnerBlocksTemplate } from '@wordpress/blocks';
+import { createBlock, createBlocksFromInnerBlocksTemplate } from '@wordpress/blocks';
 import { useDispatch } from '@wordpress/data';
 import {
 	Placeholder as PlaceholderComponent,
 	Button,
 	Modal,
+	DropZone,
 	__experimentalGrid as Grid,
 	__experimentalVStack as VStack,
 	__experimentalText as Text,
@@ -19,6 +20,7 @@ import {
 	__experimentalBlockVariationPicker as BlockVariationPicker,
 	store as blockEditorStore,
 } from '@wordpress/block-editor';
+import { uploadMedia } from '@wordpress/media-utils';
 
 /**
  * Internal dependencies
@@ -30,7 +32,7 @@ import SliderLogo from '../components/slider-logo';
 /**
  * Default patterns for modal preview.
  */
-const defaultPatterns = [ Testimonial, Testimonial2, Services ];
+const defaultPatterns = [Testimonial, Testimonial2, Services];
 
 /**
  * This component serves as a placeholder for the Slider block, displaying a block variation picker.
@@ -43,124 +45,189 @@ const defaultPatterns = [ Testimonial, Testimonial2, Services ];
  * @param            props.attributes
  * @return {JSX.Element} The placeholder component for the Slider block.
  */
-function Placeholder( { clientId, attributes, setAttributes } ) {
-	const { replaceInnerBlocks } = useDispatch( blockEditorStore );
+function Placeholder({ clientId, attributes, setAttributes }) {
+	const { replaceInnerBlocks } = useDispatch(blockEditorStore);
 	const blockProps = useBlockProps();
 
-	const [ step, setStep ] = useState( null );
-	const [ isModalOpen, setIsModalOpen ] = useState( false );
+	const [step, setStep] = useState(null);
+	const [isModalOpen, setIsModalOpen] = useState(false);
 
-	const onSelectVariation = ( variation ) => {
-		if ( variation?.attributes ) {
-			setAttributes( variation.attributes );
+	const onSelectVariation = (variation) => {
+		if (variation?.attributes) {
+			setAttributes(variation.attributes);
 		}
-		if ( variation?.innerBlocks ) {
+		if (variation?.innerBlocks) {
 			replaceInnerBlocks(
 				clientId,
-				createBlocksFromInnerBlocksTemplate( variation.innerBlocks ),
+				createBlocksFromInnerBlocksTemplate(variation.innerBlocks),
 				true
 			);
 		}
 	};
 
 	const skipToDefault = () => {
-		const defaultVariation = variations[ 1 ]; // Assuming the first variation is the default
-		if ( defaultVariation ) {
-			onSelectVariation( defaultVariation );
+		const defaultVariation = variations[1]; // Assuming the first variation is the default
+		if (defaultVariation) {
+			onSelectVariation(defaultVariation);
 		}
-		setStep( 'default' );
+		setStep('default');
 	};
 
 	const openTemplatesModal = () => {
-		setIsModalOpen( true );
+		setIsModalOpen(true);
 	};
 
-	const applyPattern = ( pattern ) => {
-		const parsedBlocks = wp.blocks.parse( pattern.content );
+	const applyPattern = (pattern) => {
+		const parsedBlocks = wp.blocks.parse(pattern.content);
 		wp.data
-			.dispatch( 'core/block-editor' )
-			.replaceBlock( clientId, parsedBlocks );
-		setIsModalOpen( false );
+			.dispatch('core/block-editor')
+			.replaceBlock(clientId, parsedBlocks);
+		setIsModalOpen(false);
+	};
+
+	const handleFilesUpload = async (files) => {
+		const validFiles = Array.from(files).filter((file) => file.type.startsWith('image/'));
+
+		if (validFiles.length === 0) {
+			alert(__('Only image files are allowed.', 'slider-block'));
+			return;
+		}
+
+		// Split into existing and new files
+		const existingBlocks = [];
+		const newFiles = [];
+
+		for (const file of validFiles) {
+			const response = await wp.apiFetch({
+				path: `/wp/v2/media?search=${encodeURIComponent(file.name)}&per_page=1`,
+			});
+
+			if (response && response.length > 0) {
+				// Use existing media item
+				const mediaItem = response[0];
+				existingBlocks.push(
+					createBlock('lubus/slide', {}, [
+						createBlock('core/image', { url: mediaItem.source_url }),
+					])
+				);
+			} else {
+				// Queue file for upload
+				newFiles.push(file);
+			}
+		}
+
+		// Add existing media blocks
+		if (existingBlocks.length > 0) {
+			replaceInnerBlocks(clientId, existingBlocks, false);
+		}
+
+		// Upload new files
+		if (newFiles.length > 0) {
+			uploadMedia({
+				filesList: newFiles,
+				onFileChange: (media) => {
+					const newBlocks = media.map((item) =>
+						createBlock('lubus/slide', {}, [
+							createBlock('core/image', { url: item.url }),
+						])
+					);
+					replaceInnerBlocks(clientId, [...existingBlocks, ...newBlocks], false);
+				},
+				onError: (error) => {
+					console.error(__('File upload failed.', 'slider-block'), error);
+				},
+			});
+		}
+	};
+
+	const onFilesDrop = (files) => {
+		if (files && files.length > 0) {
+			handleFilesUpload(files);
+		}
 	};
 
 	return (
-		<div { ...blockProps }>
-			{ ! step && (
+		<div {...blockProps}>
+			{!step && (
 				<PlaceholderComponent
-					icon={ 'slides' }
-					instructions={ __(
+					icon={'slides'}
+					instructions={__(
 						"Choose how you'd like to get started with your slider.",
 						'slider-block'
-					) }
-					label={ __(
+					)}
+					label={__(
 						"Let's Begin Creating Your Slider!",
 						'slider-block'
-					) }
+					)}
 				>
 					<Button
 						variant="secondary"
-						onClick={ () => setStep( 'variations' ) }
+						onClick={() => setStep('variations')}
 					>
-						{ __( 'Explore Variations', 'slider-block' ) }
+						{__('Explore Variations', 'slider-block')}
 					</Button>
-					<Button variant="secondary" onClick={ openTemplatesModal }>
-						{ __( 'Browse Templates', 'slider-block' ) }
+					<Button variant="secondary" onClick={openTemplatesModal}>
+						{__('Browse Templates', 'slider-block')}
 					</Button>
-					<Button variant="primary" onClick={ skipToDefault }>
-						{ __( 'Skip and Use Default', 'slider-block' ) }
+					<Button variant="primary" onClick={skipToDefault}>
+						{__('Skip and Use Default', 'slider-block')}
 					</Button>
+					<DropZone
+						onFilesDrop={onFilesDrop}
+						accept="image/*"
+					/>
 				</PlaceholderComponent>
-			) }
+			)}
 
-			{ step === 'variations' && (
+			{step === 'variations' && (
 				<BlockVariationPicker
-					icon={ SliderLogo }
-					label={ __( 'Slider', 'slider-block' ) }
-					instructions={ __(
+					icon={SliderLogo}
+					label={__('Slider', 'slider-block')}
+					instructions={__(
 						'Select a slide variation to start with',
 						'slider-block'
-					) }
-					variations={ variations }
-					onSelect={ ( variation = variations[ 1 ] ) => {
-						onSelectVariation( variation );
-					} }
+					)}
+					variations={variations}
+					onSelect={(variation = variations[1]) => {
+						onSelectVariation(variation);
+					}}
 					allowSkip
 				/>
-			) }
+			)}
 
-			{ isModalOpen && (
+			{isModalOpen && (
 				<Modal
-					title={ __( 'Choose a Template', 'slider-block' ) }
+					title={__('Choose a Template', 'slider-block')}
 					isFullScreen
-					onRequestClose={ () => setIsModalOpen( false ) }
+					onRequestClose={() => setIsModalOpen(false)}
 				>
-					<Grid gap={ 4 } columns={ [ 1, 2, 3 ] } align="start">
-						{ defaultPatterns.map( ( pattern ) => (
+					<Grid gap={4} columns={[1, 2, 3]} align="start">
+						{defaultPatterns.map((pattern) => (
 							<Button
-								key={ pattern.name }
-								className={ 'slider-pattern-item' }
-								onClick={ () => applyPattern( pattern ) }
-								style={ { width: '100%', height: '100%' } }
+								key={pattern.name}
+								className={'slider-pattern-item'}
+								onClick={() => applyPattern(pattern)}
+								style={{ width: '100%', height: '100%' }}
 							>
 								<VStack
 									alignment="top"
 									align="left"
-									style={ { width: '100%', height: '100%' } }
+									style={{ width: '100%', height: '100%' }}
 								>
 									<BlockPreview
-										blocks={ wp.blocks.parse(
+										blocks={wp.blocks.parse(
 											pattern.content
-										) }
+										)}
 									/>
-									<Text align="left" size={ 12 }>
-										{ pattern.title }
+									<Text align="left" size={12}>
+										{pattern.title}
 									</Text>
 								</VStack>
 							</Button>
-						) ) }
+						))}
 					</Grid>
 				</Modal>
-			) }
+			)}
 		</div>
 	);
 }
