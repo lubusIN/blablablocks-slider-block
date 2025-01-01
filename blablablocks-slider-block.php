@@ -23,9 +23,9 @@ if (! defined('ABSPATH')) {
  * Behind the scenes, it registers also all assets so they can be enqueued
  * through the block editor in the corresponding context.
  */
-function slider_block_init()
+function bbb_slider_block_init()
 {
 	register_block_type(__DIR__ . '/build/slider');
 	register_block_type(__DIR__ . '/build/slide');
 }
-add_action('init', 'slider_block_init');
+add_action('init', 'bbb_slider_block_init');
