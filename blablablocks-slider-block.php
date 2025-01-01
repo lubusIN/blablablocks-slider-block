@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name:       Slider Block
+ * Plugin Name:       BlaBlaBlocks Slider Block
  * Description:       Slider Block is a WordPress plugin built specifically for the Block Editor, allowing you to create responsive sliders effortlessly.
  * Requires at least: 6.6
  * Requires PHP:      7.2
@@ -9,9 +9,9 @@
  * Author:            Lubus
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       slider-block
+ * Text Domain:       blablablocks-slider-block
  *
- * @package slider-block
+ * @package blablablocks-slider-block
  */
 
 if (! defined('ABSPATH')) {
@@ -22,12 +22,10 @@ if (! defined('ABSPATH')) {
  * Registers the block using the metadata loaded from the `block.json` file.
  * Behind the scenes, it registers also all assets so they can be enqueued
  * through the block editor in the corresponding context.
- *
- * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
-function create_block_slider_block_block_init()
+function slider_block_init()
 {
-	register_block_type(__DIR__ . '/build/slider-block');
-	register_block_type(__DIR__ . '/build/slide-block');
+	register_block_type(__DIR__ . '/build/slider');
+	register_block_type(__DIR__ . '/build/slide');
 }
-add_action('init', 'create_block_slider_block_block_init');
+add_action('init', 'slider_block_init');

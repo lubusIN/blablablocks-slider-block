@@ -1,7 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "lubus/slider",
+	"name": "blablablocks/slider",
 	"version": "0.1.0",
 	"title": "Slider",
 	"category": "widgets",
@@ -71,12 +71,50 @@
 			"default": 5000
 		},
 		"navigation": {
-			"type": "boolean",
-			"default": true
+			"type": "object",
+			"default": {
+				"desktop": true,
+				"tablet": true,
+				"mobile": true,
+				"activeDevice": "desktop"
+			},
+			"properties": {
+				"desktop": {
+					"type": "boolean"
+				},
+				"tablet": {
+					"type": "boolean"
+				},
+				"mobile": {
+					"type": "boolean"
+				},
+				"activeDevice": {
+					"type": "string"
+				}
+			}
 		},
 		"pagination": {
-			"type": "boolean",
-			"default": true
+			"type": "object",
+			"default": {
+				"desktop": true,
+				"tablet": true,
+				"mobile": true,
+				"activeDevice": "desktop"
+			},
+			"properties": {
+				"desktop": {
+					"type": "boolean"
+				},
+				"tablet": {
+					"type": "boolean"
+				},
+				"mobile": {
+					"type": "boolean"
+				},
+				"activeDevice": {
+					"type": "string"
+				}
+			}
 		},
 		"loop": {
 			"type": "boolean",
@@ -84,16 +122,6 @@
 		},
 		"navigationColor": {
 			"type": "object",
-			"default": {
-				"arrowColor": {
-					"default": "",
-					"hover": ""
-				},
-				"backgroundColor": {
-					"default": "",
-					"hover": ""
-				}
-			},
 			"properties": {
 				"arrowColor": {
 					"type": "object",
@@ -123,34 +151,19 @@
 			"type": "object"
 		},
 		"navigationSize": {
-			"type": "string",
-			"default": "40px"
+			"type": "string"
 		},
 		"navigationOffset": {
-			"type": "object",
-			"default": {
-				"top": "50%",
-				"bottom": "0px",
-				"left": "10px",
-				"right": "10px"
-			}
+			"type": "object"
 		},
 		"navigationBorderRadius": {
-			"type": "string",
-			"default": "4px"
+			"type": "string"
 		},
 		"paginationSize": {
-			"type": "string",
-			"default": "8px"
+			"type": "string"
 		},
 		"paginationOffset": {
-			"type": "object",
-			"default": {
-				"top": "auto",
-				"bottom": "8px",
-				"left": "0px",
-				"right": "0px"
-			}
+			"type": "object"
 		},
 		"paginationColor": {
 			"type": "object",
@@ -213,7 +226,7 @@
 		}
 	},
 	"allowedBlocks": [
-		"lubus/slide"
+		"blablablocks/slide"
 	],
 	"textdomain": "lubus-slider",
 	"editorScript": "file:./index.js",
