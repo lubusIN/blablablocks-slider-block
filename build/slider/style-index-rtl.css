@@ -1,6 +1,6 @@
-/*!****************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/slider-block/style.scss ***!
-  \****************************************************************************************************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/slider/style.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
 /**
  * The following styles get applied both on the front of your site
  * and in the editor.
@@ -37,14 +37,14 @@
 :host {
   position: relative;
   display: block;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   z-index: 1;
 }
 
 .swiper {
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   position: relative;
   overflow: hidden;
   list-style: none;
@@ -207,7 +207,7 @@
 .swiper-3d .swiper-slide-shadow-top,
 .swiper-3d .swiper-slide-shadow-bottom {
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   width: 100%;
   height: 100%;
@@ -220,11 +220,11 @@
 }
 
 .swiper-3d .swiper-slide-shadow-left {
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-right {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-top {
@@ -239,9 +239,9 @@
   width: 42px;
   height: 42px;
   position: absolute;
-  left: 50%;
+  right: 50%;
   top: 50%;
-  margin-left: -21px;
+  margin-right: -21px;
   margin-top: -21px;
   z-index: 10;
   transform-origin: 50%;
@@ -269,7 +269,7 @@
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
 }
 /* Slide styles end */
@@ -281,7 +281,7 @@
 .swiper-virtual.swiper-css-mode .swiper-wrapper::after {
   content: "";
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   pointer-events: none;
 }
@@ -350,19 +350,19 @@
 
 .swiper-rtl .swiper-button-prev svg,
 .swiper-rtl .swiper-button-next svg {
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
 }
 
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-  left: var(--swiper-navigation-sides-offset, 10px);
-  right: auto;
+  right: var(--swiper-navigation-sides-offset, 10px);
+  left: auto;
 }
 
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
-  right: var(--swiper-navigation-sides-offset, 10px);
-  left: auto;
+  left: var(--swiper-navigation-sides-offset, 10px);
+  right: auto;
 }
 
 .swiper-button-lock {
@@ -387,8 +387,8 @@
 
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
-  right: var(--swiper-navigation-sides-offset, 10px);
-  left: auto;
+  left: var(--swiper-navigation-sides-offset, 10px);
+  right: auto;
 }
 
 .swiper-button-next:after,
@@ -443,7 +443,7 @@
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: var(--swiper-pagination-bottom, 8px);
   top: var(--swiper-pagination-top, auto);
-  left: 0;
+  right: 0;
   width: 100%;
 }
 
@@ -516,8 +516,8 @@ button.swiper-pagination-bullet {
 
 .swiper-vertical > .swiper-pagination-bullets,
 .swiper-pagination-vertical.swiper-pagination-bullets {
-  right: var(--swiper-pagination-right, 8px);
-  left: var(--swiper-pagination-left, auto);
+  left: var(--swiper-pagination-right, 8px);
+  right: var(--swiper-pagination-left, auto);
   top: 50%;
   transform: translate3d(0px, -50%, 0);
 }
@@ -548,18 +548,18 @@ button.swiper-pagination-bullet {
 
 .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
   white-space: nowrap;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-  transition: 200ms transform, 200ms left;
+  transition: 200ms transform, 200ms right;
 }
 
 .swiper-horizontal.swiper-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-  transition: 200ms transform, 200ms right;
+  transition: 200ms transform, 200ms left;
 }
 
 /* Fraction */
@@ -576,16 +576,16 @@ button.swiper-pagination-bullet {
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
   background: var(--swiper-pagination-color, var(--swiper-theme-color));
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   width: 100%;
   height: 100%;
   transform: scale(0);
-  transform-origin: left top;
+  transform-origin: right top;
 }
 
 .swiper-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-  transform-origin: right top;
+  transform-origin: left top;
 }
 
 .swiper-horizontal > .swiper-pagination-progressbar,
@@ -594,7 +594,7 @@ button.swiper-pagination-bullet {
 .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite {
   width: 100%;
   height: var(--swiper-pagination-progressbar-size, 4px);
-  left: 0;
+  right: 0;
   top: 0;
 }
 
@@ -604,7 +604,7 @@ button.swiper-pagination-bullet {
 .swiper-pagination-progressbar.swiper-pagination-horizontal.swiper-pagination-progressbar-opposite {
   width: var(--swiper-pagination-progressbar-size, 4px);
   height: 100%;
-  left: 0;
+  right: 0;
   top: 0;
 }
 
@@ -641,7 +641,7 @@ button.swiper-pagination-bullet {
 .swiper-horizontal > .swiper-scrollbar,
 .swiper-scrollbar.swiper-scrollbar-horizontal {
   position: absolute;
-  left: var(--swiper-scrollbar-sides-offset, 1%);
+  right: var(--swiper-scrollbar-sides-offset, 1%);
   bottom: var(--swiper-scrollbar-bottom, 4px);
   top: var(--swiper-scrollbar-top, auto);
   z-index: 50;
@@ -652,8 +652,8 @@ button.swiper-pagination-bullet {
 .swiper-vertical > .swiper-scrollbar,
 .swiper-scrollbar.swiper-scrollbar-vertical {
   position: absolute;
-  left: var(--swiper-scrollbar-left, auto);
-  right: var(--swiper-scrollbar-right, 4px);
+  right: var(--swiper-scrollbar-left, auto);
+  left: var(--swiper-scrollbar-right, 4px);
   top: var(--swiper-scrollbar-sides-offset, 1%);
   z-index: 50;
   width: var(--swiper-scrollbar-size, 4px);
@@ -666,7 +666,7 @@ button.swiper-pagination-bullet {
   position: relative;
   background: var(--swiper-scrollbar-drag-bg-color, rgba(0, 0, 0, 0.5));
   border-radius: var(--swiper-scrollbar-border-radius, 10px);
-  left: 0;
+  right: 0;
   top: 0;
 }
 
@@ -706,7 +706,7 @@ button.swiper-pagination-bullet {
 /* a11y */
 .swiper .swiper-notification {
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   pointer-events: none;
   opacity: 0;
@@ -757,7 +757,7 @@ button.swiper-pagination-bullet {
   backface-visibility: hidden;
   z-index: 1;
   visibility: hidden;
-  transform-origin: 0 0;
+  transform-origin: 100% 0;
   width: 100%;
   height: 100%;
 }
@@ -767,7 +767,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-cube.swiper-rtl .swiper-slide {
-  transform-origin: 100% 0;
+  transform-origin: 0% 0;
 }
 
 .swiper-cube .swiper-slide-active,
@@ -784,7 +784,7 @@ button.swiper-pagination-bullet {
 
 .swiper-cube .swiper-cube-shadow {
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: 0px;
   width: 100%;
   height: 100%;
@@ -796,10 +796,10 @@ button.swiper-pagination-bullet {
   content: "";
   background: #000;
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   bottom: 0;
-  right: 0;
+  left: 0;
   filter: blur(50px);
 }
 
@@ -864,7 +864,6 @@ button.swiper-pagination-bullet {
 }
 
 .wp-block-lubus-slider {
-  width: 100%;
   position: relative;
 }
 
@@ -879,7 +878,7 @@ button.swiper-pagination-bullet {
   color: var(--navigation-arrow-color, var(--swiper-theme-color));
   background-color: var(--navigation-background-color);
   border-radius: var(--navigation-border-radius);
-  padding: var(--navigation-padding-top) var(--navigation-padding-right) var(--navigation-padding-bottom) var(--navigation-padding-left);
+  padding: var(--navigation-padding-top) var(--navigation-padding-left) var(--navigation-padding-bottom) var(--navigation-padding-right);
   top: var(--navigation-offset-top);
   bottom: var(--navigation-offset-bottom);
 }
@@ -889,16 +888,16 @@ button.swiper-pagination-bullet {
   background-color: var(--navigation-background-hover-color);
 }
 .wp-block-lubus-slider .swiper .swiper-button-prev {
-  left: var(--navigation-offset-left);
+  right: var(--navigation-offset-left);
 }
 .wp-block-lubus-slider .swiper .swiper-button-next {
-  right: var(--navigation-offset-right);
+  left: var(--navigation-offset-right);
 }
 .wp-block-lubus-slider .swiper .swiper-pagination {
   top: var(--pagination-offset-top);
-  right: var(--pagination-offset-right);
+  left: var(--pagination-offset-right);
   bottom: var(--pagination-offset-bottom);
-  left: var(--pagination-offset-left);
+  right: var(--pagination-offset-left);
 }
 .wp-block-lubus-slider .swiper .swiper-pagination-bullet {
   width: var(--pagination-size);
@@ -908,5 +907,3 @@ button.swiper-pagination-bullet {
 .wp-block-lubus-slider .swiper .swiper-pagination-bullet-active {
   background: var(--pagination-active-color, var(--swiper-theme-color)) !important;
 }
-
-/*# sourceMappingURL=style-index.css.map*/
