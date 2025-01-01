@@ -39,7 +39,7 @@ import { generateNavigationStyles } from '../utils/style';
 import './editor.scss';
 
 const DEFAULT_BLOCK = {
-	name: 'lubus/slide',
+	name: 'blablablocks/slide',
 };
 
 /**
@@ -134,7 +134,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 	const hasInnerBlocks = innerBlocks.length > 0;
 
 	const addSlide = () => {
-		const block = createBlock('lubus/slide');
+		const block = createBlock('blablablocks/slide');
 		insertBlock(block, innerBlocks.length, clientId, false);
 	};
 
