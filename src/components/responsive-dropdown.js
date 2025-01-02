@@ -35,6 +35,9 @@ const ResponsiveDropdown = ({ label, attributes, setAttributes, responsiveKey })
 		[]
 	);
 
+	// Default to `desktop` if `editorDeviceType` is unavailable
+	const deviceType = editorDeviceType?.toLowerCase() || 'desktop';
+
 	const responsiveSettings = attributes[responsiveKey] || {};
 
 	// Update the `activeDevice` attribute when `editorDeviceType` changes
@@ -42,12 +45,13 @@ const ResponsiveDropdown = ({ label, attributes, setAttributes, responsiveKey })
 		setAttributes({
 			[responsiveKey]: {
 				...responsiveSettings,
-				activeDevice: editorDeviceType.toLowerCase(),
+				activeDevice: deviceType,
 			},
 		});
-	}, [editorDeviceType]);
+	}, [deviceType]);
 
-	const currentDevice = devices[editorDeviceType.toLowerCase()] || devices.desktop;
+	// Get the current device object based on the type, default to desktop if not found
+	const currentDevice = devices.find((device) => device.value === deviceType) || devices[0];
 
 	return (
 		<HStack justify="left" spacing={1}>
