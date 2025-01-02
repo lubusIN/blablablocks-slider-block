@@ -147,8 +147,8 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 			/>
 			<BlockControls>
 				<ToolbarGroup>
-					<ToolbarButton icon="plus" onClick={addSlide}>
-						{__('Add Slide', 'blablablocks-slider-block')}
+					<ToolbarButton onClick={ addSlide }>
+						{ __( 'Add Slide', 'blablablocks-slider-block' ) }
 					</ToolbarButton>
 				</ToolbarGroup>
 			</BlockControls>
