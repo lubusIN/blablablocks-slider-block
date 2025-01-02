@@ -6,16 +6,16 @@ import { useSelect } from '@wordpress/data';
 import { useEffect } from '@wordpress/element';
 import { desktop, mobile, tablet } from '@wordpress/icons';
 import {
+	Icon,
 	__experimentalHStack as HStack,
 	__experimentalText as Text,
 } from '@wordpress/components';
-import { Icon } from '@wordpress/components';
 
 // Devices array
 const devices = [
-	{ label: __( 'Desktop', 'blablablocks-slider-block' ), value: 'desktop', icon: desktop },
-	{ label: __( 'Tablet', 'blablablocks-slider-block' ), value: 'tablet', icon: tablet },
-	{ label: __( 'Mobile', 'blablablocks-slider-block' ), value: 'mobile', icon: mobile },
+	{ label: __('Desktop', 'blablablocks-slider-block'), value: 'desktop', icon: desktop },
+	{ label: __('Tablet', 'blablablocks-slider-block'), value: 'tablet', icon: tablet },
+	{ label: __('Mobile', 'blablablocks-slider-block'), value: 'mobile', icon: mobile },
 ];
 
 /**
@@ -50,14 +50,14 @@ const ResponsiveDropdown = ({ label, attributes, setAttributes, responsiveKey })
 	const currentDevice = devices[editorDeviceType.toLowerCase()] || devices.desktop;
 
 	return (
-		<HStack justify="left" spacing={ 1 }>
+		<HStack justify="left" spacing={1}>
 			<Text
-				size={ '11px' }
-				weight={ 500 }
+				size={'11px'}
+				weight={500}
 				upperCase
-				style={ { margin: 0 } }
+				style={{ margin: 0 }}
 			>
-				{ __( label, 'blablablocks-slider-block' ) }
+				{__(label, 'blablablocks-slider-block')}
 			</Text>
 			<Icon icon={currentDevice.icon} />
 		</HStack>

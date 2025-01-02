@@ -27,7 +27,7 @@ import { uploadMedia } from '@wordpress/media-utils';
  */
 import variations from './variations';
 import { Testimonial2, Services, Testimonial } from '../templates';
-import SliderLogo from '../components/slider-logo';
+import { SliderLogo } from '../components';
 
 /**
  * Default patterns for modal preview.
@@ -106,7 +106,7 @@ function Placeholder({ clientId, attributes, setAttributes }) {
 				// Use existing media item
 				const mediaItem = response[0];
 				existingBlocks.push(
-					createBlock('lubus/slide', {}, [
+					createBlock('blablablocks/slide', {}, [
 						createBlock('core/image', { url: mediaItem.source_url }),
 					])
 				);
@@ -127,7 +127,7 @@ function Placeholder({ clientId, attributes, setAttributes }) {
 				filesList: newFiles,
 				onFileChange: (media) => {
 					const newBlocks = media.map((item) =>
-						createBlock('lubus/slide', {}, [
+						createBlock('blablablocks/slide', {}, [
 							createBlock('core/image', { url: item.url }),
 						])
 					);
@@ -154,23 +154,23 @@ function Placeholder({ clientId, attributes, setAttributes }) {
 					instructions={__(
 						"Choose how you'd like to get started with your slider.",
 						'blablablocks-slider-block'
-					) }
-					label={ __(
+					)}
+					label={__(
 						"Let's Begin Creating Your Slider!",
 						'blablablocks-slider-block'
-					) }
+					)}
 				>
 					<Button
 						variant="secondary"
 						onClick={() => setStep('variations')}
 					>
-						{ __( 'Explore Variations', 'blablablocks-slider-block' ) }
+						{__('Explore Variations', 'blablablocks-slider-block')}
 					</Button>
-					<Button variant="secondary" onClick={ openTemplatesModal }>
-						{ __( 'Browse Templates', 'blablablocks-slider-block' ) }
+					<Button variant="secondary" onClick={openTemplatesModal}>
+						{__('Browse Templates', 'blablablocks-slider-block')}
 					</Button>
-					<Button variant="primary" onClick={ skipToDefault }>
-						{ __( 'Skip and Use Default', 'blablablocks-slider-block' ) }
+					<Button variant="primary" onClick={skipToDefault}>
+						{__('Skip and Use Default', 'blablablocks-slider-block')}
 					</Button>
 					<DropZone
 						onFilesDrop={onFilesDrop}
@@ -181,23 +181,23 @@ function Placeholder({ clientId, attributes, setAttributes }) {
 
 			{step === 'variations' && (
 				<BlockVariationPicker
-					icon={ SliderLogo }
-					label={ __( 'Slider', 'blablablocks-slider-block' ) }
-					instructions={ __(
+					icon={SliderLogo}
+					label={__('Slider', 'blablablocks-slider-block')}
+					instructions={__(
 						'Select a slide variation to start with',
 						'blablablocks-slider-block'
-					) }
-					variations={ variations }
-					onSelect={ ( variation = variations[ 1 ] ) => {
-						onSelectVariation( variation );
-					} }
+					)}
+					variations={variations}
+					onSelect={(variation = variations[1]) => {
+						onSelectVariation(variation);
+					}}
 					allowSkip
 				/>
 			)}
 
 			{isModalOpen && (
 				<Modal
-					title={ __( 'Choose a Template', 'blablablocks-slider-block' ) }
+					title={__('Choose a Template', 'blablablocks-slider-block')}
 					isFullScreen
 					onRequestClose={() => setIsModalOpen(false)}
 				>
