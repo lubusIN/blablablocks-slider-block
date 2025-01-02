@@ -2,12 +2,14 @@
  * WordPress dependencies
  */
 import { __ } from '@wordpress/i18n';
+import { useSelect } from '@wordpress/data';
+import { useEffect } from '@wordpress/element';
+import { desktop, mobile, tablet } from '@wordpress/icons';
 import {
 	__experimentalHStack as HStack,
 	__experimentalText as Text,
-	DropdownMenu,
 } from '@wordpress/components';
-import { desktop, mobile, tablet } from '@wordpress/icons';
+import { Icon } from '@wordpress/components';
 
 // Devices array
 const devices = [
@@ -17,24 +19,35 @@ const devices = [
 ];
 
 /**
- * ResponsiveDropdown Component
+ * Responsive Icon Component
  *
  * @param {Object}   props               Component props.
  * @param {Object}   props.attributes    Block attributes.
  * @param {Function} props.setAttributes Function to update attributes.
- * @param {string}   props.label         Label for the heading.
  * @param {string}   props.responsiveKey The key in the attributes object for responsive settings (e.g., 'slidesPerView', 'slidesSpacing').
  *
- * @return {JSX.Element} JSX element for responsive dropdown.
+ * @return {JSX.Element} JSX element for responsive icon display.
  */
-const ResponsiveDropdown = ( {
-	attributes,
-	setAttributes,
-	label = 'Responsive Setting',
-	responsiveKey,
-} ) => {
-	const responsiveSettings = attributes[ responsiveKey ] || {};
-	const { activeDevice } = responsiveSettings;
+const ResponsiveDropdown = ({ label, attributes, setAttributes, responsiveKey }) => {
+	// Get the current editor device type from WordPress editor
+	const editorDeviceType = useSelect(
+		(select) => select('core/editor').getDeviceType(),
+		[]
+	);
+
+	const responsiveSettings = attributes[responsiveKey] || {};
+
+	// Update the `activeDevice` attribute when `editorDeviceType` changes
+	useEffect(() => {
+		setAttributes({
+			[responsiveKey]: {
+				...responsiveSettings,
+				activeDevice: editorDeviceType.toLowerCase(),
+			},
+		});
+	}, [editorDeviceType]);
+
+	const currentDevice = devices[editorDeviceType.toLowerCase()] || devices.desktop;
 
 	return (
 		<HStack justify="left" spacing={ 1 }>
@@ -46,28 +59,7 @@ const ResponsiveDropdown = ( {
 			>
 				{ __( label, 'blablablocks-slider-block' ) }
 			</Text>
-			<DropdownMenu
-				icon={
-					devices.find( ( device ) => device.value === activeDevice )
-						?.icon || desktop
-				}
-				label={
-					devices.find( ( device ) => device.value === activeDevice )
-						?.label || 'Desktop'
-				}
-				controls={ devices.map( ( device ) => ( {
-					icon: device.icon,
-					label: device.label,
-					isActive: device.value === activeDevice,
-					onClick: () =>
-						setAttributes( {
-							[ responsiveKey ]: {
-								...responsiveSettings,
-								activeDevice: device.value,
-							},
-						} ),
-				} ) ) }
-			/>
+			<Icon icon={currentDevice.icon} />
 		</HStack>
 	);
 };
