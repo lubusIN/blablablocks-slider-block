@@ -98,19 +98,19 @@ export const generateNavigationStyles = (attributes = {}) => {
 	// Padding styles with defaults
 	addStyle(
 		'--navigation-padding-top',
-		resolveSpacingSizeValue(attributes?.navigationPadding?.top, '10px')
+		resolveSpacingSizeValue(attributes?.navigationPadding?.top, '0px')
 	);
 	addStyle(
 		'--navigation-padding-right',
-		resolveSpacingSizeValue(attributes?.navigationPadding?.right, '10px')
+		resolveSpacingSizeValue(attributes?.navigationPadding?.right, '0px')
 	);
 	addStyle(
 		'--navigation-padding-bottom',
-		resolveSpacingSizeValue(attributes?.navigationPadding?.bottom, '10px')
+		resolveSpacingSizeValue(attributes?.navigationPadding?.bottom, '0px')
 	);
 	addStyle(
 		'--navigation-padding-left',
-		resolveSpacingSizeValue(attributes?.navigationPadding?.left, '10px')
+		resolveSpacingSizeValue(attributes?.navigationPadding?.left, '0px')
 	);
 
 	// Pagination styles
