@@ -1,0 +1,35 @@
+name: Create Plugin Release
+
+on:
+  push:
+    tags:
+      - "v*" # Triggers workflow on tags like v1.0.0
+
+jobs:
+  release:
+    name: Build and Release Plugin
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up PHP (optional for linting or testing)
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "7.4" # Change as per your plugin requirement
+          extensions: mbstring, curl # Add any required PHP extensions
+
+      # Step 3: Build the ZIP file
+      - name: Create Plugin ZIP
+        run: zip -r "${{ github.event.repository.name }}.zip" . -x "*.git*" -x "*.github*"
+
+      # Step 4: Create a Release and Upload the ZIP
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ${{ github.event.repository.name }}.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
