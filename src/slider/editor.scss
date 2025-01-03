@@ -1,0 +1,100 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.slide_effects>.components-base-control {
+	width: 100%;
+}
+
+.autoplay-progress {
+	position: absolute;
+	right: 16px;
+	bottom: 16px;
+	z-index: 10;
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	color: var(--swiper-theme-color);
+}
+
+.autoplay-progress svg {
+	--progress: 0;
+	position: absolute;
+	left: 0;
+	top: 0px;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	stroke-width: 4px;
+	stroke: var(--swiper-theme-color);
+	fill: none;
+	stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+	stroke-dasharray: 125.6;
+	transform: rotate(-90deg);
+}
+
+.slider_color_popover .components-popover__content>div {
+	margin: -8px;
+	width: 260px;
+}
+
+.slider_color_popover {
+
+	.components-tab-panel__tab-content,
+	.ls-color-pallete-container {
+		padding: 18px;
+	}
+}
+
+.slider_color-support-panel {
+	.components-dropdown {
+		width: 100%;
+
+		&:nth-child(1) {
+			border: 1px solid rgba(0, 0, 0, .1);
+			border-top-left-radius: 2px;
+			border-top-right-radius: 2px;
+		}
+
+		&:nth-child(2) {
+			border-left: 1px solid rgba(0, 0, 0, .1);
+			border-bottom: 1px solid rgba(0, 0, 0, .1);
+			border-right: 1px solid rgba(0, 0, 0, .1);
+			border-bottom-left-radius: 2px;
+			border-bottom-right-radius: 2px;
+		}
+	}
+
+	button {
+		width: 100%;
+		padding: 20px 10px;
+	}
+
+	.slider_color_button.isOpen {
+		background-color: #f0f0f0;
+	}
+
+	.slider_color_button:hover span,
+	.slider_color_button.isOpen span {
+		color: var(--wp-components-color-accent, var(--wp-admin-theme-color, #3858e9));
+	}
+}
+
+.block-editor-block-preview__container:after {
+	border-radius: 4px;
+	outline: 1px solid #0000001a;
+	outline-offset: -1px;
+}
+
+.slider-pattern-item:hover .block-editor-block-preview__container:after {
+	outline-color: #0000004d;
+}
+
+.responsive_field_control .components-base-control__help {
+	margin-top: 2px;
+}

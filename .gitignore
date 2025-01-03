@@ -35,6 +35,9 @@ bower_components
 # node-waf configuration
 .lock-wscript
 
+# Coverage directory used by tools like istanbul
+coverage
+
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
@@ -128,3 +131,15 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+# Output of `npm pack`
+*.tgz
+
+# Output of `wp-scripts plugin-zip`
+*.zip
+
+# dotenv environment variables file
+.env
+
+# Build
+build/
+
