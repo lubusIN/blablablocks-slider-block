@@ -534,149 +534,257 @@ function Edit({
         })
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.InspectorControls, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelBody, {
-        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Settings', 'blablablocks-slider-block'),
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalVStack, {
-          style: {
-            marginBottom: '8px'
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanel, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Settings', 'blablablocks-slider-block'),
+        resetAll: () => setAttributes({
+          slidesPerView: {
+            ...attributes.slidesPerView,
+            desktop: 1,
+            tablet: 1,
+            mobile: 1
           },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components__WEBPACK_IMPORTED_MODULE_7__.ResponsiveDropdown, {
-            label: "Slides Per View",
-            attributes: attributes,
-            setAttributes: setAttributes,
-            responsiveKey: "slidesPerView"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.RangeControl, {
-            __nextHasNoMarginBottom: true,
-            __next40pxDefaultSize: true,
-            help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Number of slides visible at the same time on slider's container.", 'blablablocks-slider-block'),
-            value: attributes.slidesPerView[attributes.slidesPerView.activeDevice],
-            min: 1,
-            max: 30,
-            onChange: value => setAttributes({
-              slidesPerView: {
-                ...attributes.slidesPerView,
-                [attributes.slidesPerView.activeDevice]: value
-              }
-            })
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalVStack, {
-          style: {
-            marginBottom: '16px'
+          slidesSpacing: {
+            ...attributes.slidesSpacing,
+            desktop: 30,
+            tablet: 20,
+            mobile: 10
           },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components__WEBPACK_IMPORTED_MODULE_7__.ResponsiveDropdown, {
-            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Slides Spacing', 'blablablocks-slider-block'),
-            attributes: attributes,
-            setAttributes: setAttributes,
-            responsiveKey: "slidesSpacing"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.RangeControl, {
-            __nextHasNoMarginBottom: true,
-            __next40pxDefaultSize: true,
-            help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Adjust the spacing between slides.', 'blablablocks-slider-block'),
-            initialPosition: 30,
-            value: attributes.slidesSpacing[attributes.slidesSpacing.activeDevice],
-            min: 0,
-            onChange: value => setAttributes({
-              slidesSpacing: {
-                ...attributes.slidesSpacing,
-                [attributes.slidesSpacing.activeDevice]: value
-              }
-            })
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.RangeControl, {
-          __nextHasNoMarginBottom: true,
-          __next40pxDefaultSize: true,
-          help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Set the duration of transition between slides.', 'blablablocks-slider-block'),
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Speed (ms)', 'blablablocks-slider-block'),
-          min: 100 // minimum speed in ms
-          ,
-          max: 10000 // maximum speed in ms
-          ,
-          step: 100,
-          value: attributes.speed,
-          onChange: value => setAttributes({
-            speed: value
+          speed: 300,
+          effects: "slide",
+          autoplay: false,
+          delay: 5000,
+          navigation: {
+            ...attributes.navigation,
+            desktop: true,
+            tablet: true,
+            mobile: true
+          },
+          pagination: {
+            ...attributes.pagination,
+            desktop: true,
+            tablet: true,
+            mobile: true
+          },
+          loop: false
+        }),
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanelItem, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Slides Per View', 'blablablocks-slider-block'),
+          isShownByDefault: true,
+          hasValue: () => !!attributes?.slidesPerView?.desktop || !!attributes?.slidesPerView?.mobile || !!attributes?.slidesPerView?.tablet,
+          onDeselect: () => setAttributes({
+            slidesPerView: {
+              ...attributes.slidesPerView,
+              desktop: 1,
+              tablet: 1,
+              mobile: 1
+            }
+          }),
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalVStack, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components__WEBPACK_IMPORTED_MODULE_7__.ResponsiveDropdown, {
+              label: "Slides Per View",
+              attributes: attributes,
+              setAttributes: setAttributes,
+              responsiveKey: "slidesPerView"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.RangeControl, {
+              __nextHasNoMarginBottom: true,
+              __next40pxDefaultSize: true,
+              help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Number of slides visible at the same time on slider's container.", 'blablablocks-slider-block'),
+              value: attributes.slidesPerView[attributes.slidesPerView.activeDevice],
+              min: 1,
+              max: 30,
+              onChange: value => setAttributes({
+                slidesPerView: {
+                  ...attributes.slidesPerView,
+                  [attributes.slidesPerView.activeDevice]: value
+                }
+              })
+            })]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToggleGroupControl, {
-          isBlock: true,
-          __nextHasNoMarginBottom: true,
-          __next40pxDefaultSize: true,
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanelItem, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Slides Spacing', 'blablablocks-slider-block'),
+          isShownByDefault: true,
+          hasValue: () => !!attributes?.slidesSpacing?.desktop || !!attributes?.slidesSpacing?.mobile || !!attributes?.slidesSpacing?.tablet,
+          onDeselect: () => setAttributes({
+            slidesSpacing: {
+              ...attributes.slidesSpacing,
+              desktop: 30,
+              tablet: 20,
+              mobile: 10
+            }
+          }),
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalVStack, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components__WEBPACK_IMPORTED_MODULE_7__.ResponsiveDropdown, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Slides Spacing', 'blablablocks-slider-block'),
+              attributes: attributes,
+              setAttributes: setAttributes,
+              responsiveKey: "slidesSpacing"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.RangeControl, {
+              __nextHasNoMarginBottom: true,
+              __next40pxDefaultSize: true,
+              help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Adjust the spacing between slides.', 'blablablocks-slider-block'),
+              initialPosition: 30,
+              value: attributes.slidesSpacing[attributes.slidesSpacing.activeDevice],
+              min: 0,
+              onChange: value => setAttributes({
+                slidesSpacing: {
+                  ...attributes.slidesSpacing,
+                  [attributes.slidesSpacing.activeDevice]: value
+                }
+              })
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanelItem, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Speed (ms)', 'blablablocks-slider-block'),
+          isShownByDefault: true,
+          hasValue: () => !!attributes.speed,
+          onDeselect: () => setAttributes({
+            speed: 300
+          }),
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.RangeControl, {
+            __nextHasNoMarginBottom: true,
+            __next40pxDefaultSize: true,
+            help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Set the duration of transition between slides.', 'blablablocks-slider-block'),
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Speed (ms)', 'blablablocks-slider-block'),
+            min: 100 // minimum speed in ms
+            ,
+            max: 10000 // maximum speed in ms
+            ,
+            step: 100,
+            value: attributes.speed,
+            onChange: value => setAttributes({
+              speed: value
+            })
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanelItem, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Effects', 'blablablocks-slider-block'),
-          value: attributes.effects,
-          onChange: value => setAttributes({
-            effects: value
+          isShownByDefault: true,
+          hasValue: () => !!attributes.effects,
+          onDeselect: () => setAttributes({
+            effects: 'slide'
           }),
-          help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Select how slides transition.', 'blablablocks-slider-block'),
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToggleGroupControlOption, {
-            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Slide', 'blablablocks-slider-block'),
-            value: "slide"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToggleGroupControlOption, {
-            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Fade', 'blablablocks-slider-block'),
-            value: "fade"
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
-          __nextHasNoMarginBottom: true,
-          className: "responsive_field_control",
-          help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enable navigation arrows to manually move between slides.', 'blablablocks-slider-block'),
-          checked: attributes.navigation[attributes.navigation.activeDevice],
-          label: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components__WEBPACK_IMPORTED_MODULE_7__.ResponsiveDropdown, {
-            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Navigation', 'blablablocks-slider-block'),
-            attributes: attributes,
-            setAttributes: setAttributes,
-            responsiveKey: "navigation"
-          }),
-          onChange: value => setAttributes({
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToggleGroupControl, {
+            isBlock: true,
+            __nextHasNoMarginBottom: true,
+            __next40pxDefaultSize: true,
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Effects', 'blablablocks-slider-block'),
+            value: attributes.effects,
+            onChange: value => setAttributes({
+              effects: value
+            }),
+            help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Select how slides transition.', 'blablablocks-slider-block'),
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToggleGroupControlOption, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Slide', 'blablablocks-slider-block'),
+              value: "slide"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToggleGroupControlOption, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Fade', 'blablablocks-slider-block'),
+              value: "fade"
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanelItem, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Navigation', 'blablablocks-slider-block'),
+          isShownByDefault: true,
+          hasValue: () => !!attributes?.navigation?.desktop || !!attributes?.navigation?.mobile || !!attributes?.navigation?.tablet,
+          onDeselect: () => setAttributes({
             navigation: {
               ...attributes.navigation,
-              [attributes.navigation.activeDevice]: value
+              desktop: true,
+              tablet: true,
+              mobile: true
             }
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
-          __nextHasNoMarginBottom: true,
-          className: "responsive_field_control",
-          help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enable pagination indicators to show slide positions.', 'blablablocks-slider-block'),
-          checked: attributes.pagination[attributes.pagination.activeDevice],
-          label: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components__WEBPACK_IMPORTED_MODULE_7__.ResponsiveDropdown, {
-            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Pagination', 'blablablocks-slider-block'),
-            attributes: attributes,
-            setAttributes: setAttributes,
-            responsiveKey: "pagination"
           }),
-          onChange: value => setAttributes({
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
+            __nextHasNoMarginBottom: true,
+            className: "responsive_field_control",
+            help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enable navigation arrows to manually move between slides.', 'blablablocks-slider-block'),
+            checked: attributes.navigation[attributes.navigation.activeDevice],
+            label: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components__WEBPACK_IMPORTED_MODULE_7__.ResponsiveDropdown, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Navigation', 'blablablocks-slider-block'),
+              attributes: attributes,
+              setAttributes: setAttributes,
+              responsiveKey: "navigation"
+            }),
+            onChange: value => setAttributes({
+              navigation: {
+                ...attributes.navigation,
+                [attributes.navigation.activeDevice]: value
+              }
+            })
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanelItem, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Pagination', 'blablablocks-slider-block'),
+          isShownByDefault: true,
+          hasValue: () => !!attributes?.pagination?.desktop || !!attributes?.pagination?.mobile || !!attributes?.pagination?.tablet,
+          onDeselect: () => setAttributes({
             pagination: {
               ...attributes.pagination,
-              [attributes.pagination.activeDevice]: value
+              desktop: true,
+              tablet: true,
+              mobile: true
             }
+          }),
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
+            __nextHasNoMarginBottom: true,
+            className: "responsive_field_control",
+            help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enable pagination indicators to show slide positions.', 'blablablocks-slider-block'),
+            checked: attributes.pagination[attributes.pagination.activeDevice],
+            label: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components__WEBPACK_IMPORTED_MODULE_7__.ResponsiveDropdown, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Pagination', 'blablablocks-slider-block'),
+              attributes: attributes,
+              setAttributes: setAttributes,
+              responsiveKey: "pagination"
+            }),
+            onChange: value => setAttributes({
+              pagination: {
+                ...attributes.pagination,
+                [attributes.pagination.activeDevice]: value
+              }
+            })
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
-          __nextHasNoMarginBottom: true,
-          help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enable loop to continuously cycle through slides.', 'blablablocks-slider-block'),
-          checked: attributes.loop,
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanelItem, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Loop', 'blablablocks-slider-block'),
-          onChange: value => setAttributes({
-            loop: value
+          hasValue: () => !!attributes.loop,
+          onDeselect: () => setAttributes({
+            loop: false
+          }),
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
+            __nextHasNoMarginBottom: true,
+            help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enable loop to continuously cycle through slides.', 'blablablocks-slider-block'),
+            checked: attributes.loop,
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Loop', 'blablablocks-slider-block'),
+            onChange: value => setAttributes({
+              loop: value
+            })
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
-          __nextHasNoMarginBottom: true,
-          help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enable automatic slide transition.', 'blablablocks-slider-block'),
-          checked: attributes.autoplay,
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanelItem, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Autoplay', 'blablablocks-slider-block'),
-          onChange: value => setAttributes({
-            autoplay: value
-          })
-        }), attributes.autoplay && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.RangeControl, {
-          __nextHasNoMarginBottom: true,
-          __next40pxDefaultSize: true,
-          help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Set the delay between slides in milliseconds.', 'blablablocks-slider-block'),
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Delay (ms)', 'blablablocks-slider-block'),
-          min: 100 // minimum delay in ms
-          ,
-          max: 10000 // maximum delay in ms
-          ,
-          step: 100,
-          value: attributes.delay,
-          onChange: value => setAttributes({
-            delay: value
-          })
+          hasValue: () => !!attributes.autoplay,
+          onDeselect: () => setAttributes({
+            autoplay: false,
+            delay: 5000
+          }),
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
+            __nextHasNoMarginBottom: true,
+            help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enable automatic slide transition.', 'blablablocks-slider-block'),
+            checked: attributes.autoplay,
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Autoplay', 'blablablocks-slider-block'),
+            onChange: value => setAttributes({
+              autoplay: value
+            })
+          }), attributes.autoplay && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.RangeControl, {
+            __nextHasNoMarginBottom: true,
+            __next40pxDefaultSize: true,
+            help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Set the delay between slides in milliseconds.', 'blablablocks-slider-block'),
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Delay (ms)', 'blablablocks-slider-block'),
+            min: 100 // minimum delay in ms
+            ,
+            max: 10000 // maximum delay in ms
+            ,
+            step: 100,
+            value: attributes.delay,
+            onChange: value => setAttributes({
+              delay: value
+            })
+          })]
         })]
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.InspectorControls, {
