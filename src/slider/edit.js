@@ -3,10 +3,8 @@
  */
 import { __ } from '@wordpress/i18n';
 import { useDispatch, useSelect } from '@wordpress/data';
-import { memo, useEffect, useRef } from '@wordpress/element';
 import { createBlock } from '@wordpress/blocks';
 import {
-	useBlockProps,
 	useInnerBlocksProps,
 	InspectorControls,
 	FontSizePicker,
@@ -32,73 +30,14 @@ import {
 /**
  * Internal dependencies
  */
+import Slider from './slider';
 import Placeholder from './placeholder';
 import { ColorControlDropdown, ResponsiveDropdown } from '../components';
-import { SwiperInit } from './swiper-init';
-import { generateNavigationStyles } from '../utils/style';
 import './editor.scss';
 
 const DEFAULT_BLOCK = {
 	name: 'blablablocks/slide',
 };
-
-/**
- * Slider component.
- */
-const Slider = memo(({ attributes, innerBlocksProps, innerBlocks }) => {
-	const editorDeviceType = useSelect(
-		(select) => select('core/editor').getDeviceType(),
-		[]
-	);
-	const swiperContainerRef = useRef(null);
-	const swiperInstanceRef = useRef(null);
-
-	useEffect(() => {
-		if (swiperContainerRef.current && innerBlocks.length > 0) {
-			// Clear existing Swiper classes
-			swiperContainerRef.current.className = 'swiper';
-
-			// Destroy the existing Swiper instance, if any
-			if (swiperInstanceRef.current) {
-				swiperInstanceRef.current.destroy(true, true);
-				swiperInstanceRef.current = null;
-			}
-
-			// Reinitialize Swiper with device-specific attributes
-			swiperInstanceRef.current = SwiperInit(
-				swiperContainerRef.current,
-				{
-					...attributes,
-				},
-				editorDeviceType, // Pass the current editor device type
-				true
-			);
-		}
-
-		// Cleanup on unmount
-		return () => {
-			if (swiperInstanceRef.current) {
-				swiperInstanceRef.current.destroy(true, true);
-			}
-		};
-	}, [editorDeviceType, attributes, innerBlocks.length]);
-
-	// Inline styles for navigation
-	const navigationStyles = generateNavigationStyles(attributes);
-	const applyPadding = innerBlocks.length >= 2 ? '100px' : '';
-
-	return (
-		<div
-			{...useBlockProps({
-				style: { ...navigationStyles, padding: applyPadding },
-			})}
-		>
-			<div ref={swiperContainerRef}>
-				<div {...innerBlocksProps} />
-			</div>
-		</div>
-	);
-});
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -113,7 +52,7 @@ const Slider = memo(({ attributes, innerBlocksProps, innerBlocks }) => {
  */
 export default function Edit({ clientId, attributes, setAttributes }) {
 	const { allowedBlocks } = attributes;
-	const { insertBlock } = useDispatch(blockEditorStore);
+	const { insertBlock, selectBlock } = useDispatch(blockEditorStore);
 
 	const innerBlocksProps = useInnerBlocksProps(
 		{ className: 'swiper-wrapper' },
@@ -136,19 +75,21 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 	const addSlide = () => {
 		const block = createBlock('blablablocks/slide');
 		insertBlock(block, innerBlocks.length, clientId, false);
+		selectBlock(block.clientId);
 	};
 
 	return hasInnerBlocks ? (
 		<>
 			<Slider
+				clientId={clientId}
 				attributes={attributes}
 				innerBlocksProps={innerBlocksProps}
 				innerBlocks={innerBlocks}
 			/>
 			<BlockControls>
 				<ToolbarGroup>
-					<ToolbarButton onClick={ addSlide }>
-						{ __( 'Add Slide', 'blablablocks-slider-block' ) }
+					<ToolbarButton onClick={addSlide}>
+						{__('Add Slide', 'blablablocks-slider-block')}
 					</ToolbarButton>
 				</ToolbarGroup>
 			</BlockControls>
