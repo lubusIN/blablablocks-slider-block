@@ -521,6 +521,37 @@ function Edit({
     const block = (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_3__.createBlock)('blablablocks/slide');
     insertBlock(block, innerBlocks.length, clientId, false);
   };
+  const defaultSettings = {
+    slidesPerView: {
+      ...attributes.slidesPerView,
+      desktop: 1,
+      tablet: 1,
+      mobile: 1
+    },
+    slidesSpacing: {
+      ...attributes.slidesSpacing,
+      desktop: 30,
+      tablet: 20,
+      mobile: 10
+    },
+    speed: 300,
+    effects: "slide",
+    autoplay: false,
+    delay: 5000,
+    navigation: {
+      ...attributes.navigation,
+      desktop: true,
+      tablet: true,
+      mobile: true
+    },
+    pagination: {
+      ...attributes.pagination,
+      desktop: true,
+      tablet: true,
+      mobile: true
+    },
+    loop: false
+  };
   return hasInnerBlocks ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(Slider, {
       attributes: attributes,
@@ -536,47 +567,14 @@ function Edit({
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.InspectorControls, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanel, {
         label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Settings', 'blablablocks-slider-block'),
-        resetAll: () => setAttributes({
-          slidesPerView: {
-            ...attributes.slidesPerView,
-            desktop: 1,
-            tablet: 1,
-            mobile: 1
-          },
-          slidesSpacing: {
-            ...attributes.slidesSpacing,
-            desktop: 30,
-            tablet: 20,
-            mobile: 10
-          },
-          speed: 300,
-          effects: "slide",
-          autoplay: false,
-          delay: 5000,
-          navigation: {
-            ...attributes.navigation,
-            desktop: true,
-            tablet: true,
-            mobile: true
-          },
-          pagination: {
-            ...attributes.pagination,
-            desktop: true,
-            tablet: true,
-            mobile: true
-          },
-          loop: false
-        }),
+        resetAll: () => setAttributes(defaultSettings),
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanelItem, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Slides Per View', 'blablablocks-slider-block'),
           isShownByDefault: true,
-          hasValue: () => !!attributes?.slidesPerView?.desktop || !!attributes?.slidesPerView?.mobile || !!attributes?.slidesPerView?.tablet,
+          hasValue: () => JSON.stringify(attributes.slidesPerView) !== JSON.stringify(defaultSettings.slidesPerView),
           onDeselect: () => setAttributes({
             slidesPerView: {
-              ...attributes.slidesPerView,
-              desktop: 1,
-              tablet: 1,
-              mobile: 1
+              ...defaultSettings.slidesPerView
             }
           }),
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalVStack, {
@@ -603,13 +601,10 @@ function Edit({
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanelItem, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Slides Spacing', 'blablablocks-slider-block'),
           isShownByDefault: true,
-          hasValue: () => !!attributes?.slidesSpacing?.desktop || !!attributes?.slidesSpacing?.mobile || !!attributes?.slidesSpacing?.tablet,
+          hasValue: () => JSON.stringify(attributes.slidesSpacing) !== JSON.stringify(defaultSettings.slidesSpacing),
           onDeselect: () => setAttributes({
             slidesSpacing: {
-              ...attributes.slidesSpacing,
-              desktop: 30,
-              tablet: 20,
-              mobile: 10
+              ...defaultSettings.slidesSpacing
             }
           }),
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalVStack, {
@@ -636,7 +631,7 @@ function Edit({
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanelItem, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Speed (ms)', 'blablablocks-slider-block'),
           isShownByDefault: true,
-          hasValue: () => !!attributes.speed,
+          hasValue: () => attributes.speed !== defaultSettings.speed,
           onDeselect: () => setAttributes({
             speed: 300
           }),
@@ -658,7 +653,7 @@ function Edit({
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanelItem, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Effects', 'blablablocks-slider-block'),
           isShownByDefault: true,
-          hasValue: () => !!attributes.effects,
+          hasValue: () => attributes.effects !== defaultSettings.effects,
           onDeselect: () => setAttributes({
             effects: 'slide'
           }),
@@ -683,13 +678,10 @@ function Edit({
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanelItem, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Navigation', 'blablablocks-slider-block'),
           isShownByDefault: true,
-          hasValue: () => !!attributes?.navigation?.desktop || !!attributes?.navigation?.mobile || !!attributes?.navigation?.tablet,
+          hasValue: () => JSON.stringify(attributes.navigation) !== JSON.stringify(defaultSettings.navigation),
           onDeselect: () => setAttributes({
             navigation: {
-              ...attributes.navigation,
-              desktop: true,
-              tablet: true,
-              mobile: true
+              ...defaultSettings.navigation
             }
           }),
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
@@ -713,13 +705,10 @@ function Edit({
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanelItem, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Pagination', 'blablablocks-slider-block'),
           isShownByDefault: true,
-          hasValue: () => !!attributes?.pagination?.desktop || !!attributes?.pagination?.mobile || !!attributes?.pagination?.tablet,
+          hasValue: () => JSON.stringify(attributes.pagination) !== JSON.stringify(defaultSettings.pagination),
           onDeselect: () => setAttributes({
             pagination: {
-              ...attributes.pagination,
-              desktop: true,
-              tablet: true,
-              mobile: true
+              ...defaultSettings.pagination
             }
           }),
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
@@ -742,7 +731,7 @@ function Edit({
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanelItem, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Loop', 'blablablocks-slider-block'),
-          hasValue: () => !!attributes.loop,
+          hasValue: () => attributes.loop !== defaultSettings.loop,
           onDeselect: () => setAttributes({
             loop: false
           }),
@@ -757,7 +746,7 @@ function Edit({
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanelItem, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Autoplay', 'blablablocks-slider-block'),
-          hasValue: () => !!attributes.autoplay,
+          hasValue: () => attributes.autoplay !== defaultSettings.autoplay,
           onDeselect: () => setAttributes({
             autoplay: false,
             delay: 5000
