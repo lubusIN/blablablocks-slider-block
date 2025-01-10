@@ -138,6 +138,38 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 		insertBlock(block, innerBlocks.length, clientId, false);
 	};
 
+	const defaultSettings = {
+		slidesPerView: {
+			...attributes.slidesPerView,
+			desktop: 1,
+			tablet: 1,
+			mobile: 1,
+		},
+		slidesSpacing: {
+			...attributes.slidesSpacing,
+			desktop: 30,
+			tablet: 20,
+			mobile: 10,
+		},
+		speed: 300,
+		effects: "slide",
+		autoplay: false,
+		delay: 5000,
+		navigation: {
+			...attributes.navigation,
+			desktop: true,
+			tablet: true,
+			mobile: true,
+		},
+		pagination: {
+			...attributes.pagination,
+			desktop: true,
+			tablet: true,
+			mobile: true,
+		},
+		loop: false,
+	};
+
 	return hasInnerBlocks ? (
 		<>
 			<Slider
@@ -155,56 +187,17 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 			<InspectorControls>
 				<ToolsPanel
 					label={__('Settings', 'blablablocks-slider-block')}
-					resetAll={() =>
-						setAttributes({
-							slidesPerView: {
-								...attributes.slidesPerView,
-								desktop: 1,
-								tablet: 1,
-								mobile: 1,
-							},
-							slidesSpacing: {
-								...attributes.slidesSpacing,
-								desktop: 30,
-								tablet: 20,
-								mobile: 10,
-							},
-							speed: 300,
-							effects: "slide",
-							autoplay: false,
-							delay: 5000,
-							navigation: {
-								...attributes.navigation,
-								desktop: true,
-								tablet: true,
-								mobile: true,
-							},
-							pagination: {
-								...attributes.pagination,
-								desktop: true,
-								tablet: true,
-								mobile: true,
-							},
-							loop: false,
-						})
-					}
+					resetAll={() => setAttributes(defaultSettings)}
 				>
 					<ToolsPanelItem
 						label={__('Slides Per View', 'blablablocks-slider-block')}
 						isShownByDefault
 						hasValue={() =>
-							!!attributes?.slidesPerView?.desktop || 
-							!!attributes?.slidesPerView?.mobile ||
-							!!attributes?.slidesPerView?.tablet 
+							JSON.stringify(attributes.slidesPerView) !== JSON.stringify(defaultSettings.slidesPerView)
 						}
 						onDeselect={() =>
 							setAttributes({
-								slidesPerView: {
-									...attributes.slidesPerView,
-									desktop: 1,
-									tablet: 1,
-									mobile: 1,
-								},
+								slidesPerView: { ...defaultSettings.slidesPerView },
 							})
 						}
 					>
@@ -245,18 +238,11 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 						label={__('Slides Spacing', 'blablablocks-slider-block')}
 						isShownByDefault
 						hasValue={() =>
-							!!attributes?.slidesSpacing?.desktop || 
-							!!attributes?.slidesSpacing?.mobile ||
-							!!attributes?.slidesSpacing?.tablet 
+							JSON.stringify(attributes.slidesSpacing) !== JSON.stringify(defaultSettings.slidesSpacing)
 						}
 						onDeselect={() =>
 							setAttributes({
-								slidesSpacing: {
-									...attributes.slidesSpacing,
-									desktop: 30,
-									tablet: 20,
-									mobile: 10,
-								},
+								slidesSpacing: { ...defaultSettings.slidesSpacing },
 							})
 						}
 					>
@@ -296,7 +282,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 					<ToolsPanelItem
 						label={__('Speed (ms)', 'blablablocks-slider-block')}
 						isShownByDefault
-						hasValue={() => !!attributes.speed}
+						hasValue={() => attributes.speed !== defaultSettings.speed}
 						onDeselect={() => setAttributes({ speed: 300 })}
 					>
 						<RangeControl
@@ -319,7 +305,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 					<ToolsPanelItem
 						label={__('Effects', 'blablablocks-slider-block')}
 						isShownByDefault
-						hasValue={() => !!attributes.effects}
+						hasValue={() => attributes.effects !== defaultSettings.effects}
 						onDeselect={() => setAttributes({ effects: 'slide' })}
 					>
 						<ToggleGroupControl
@@ -350,18 +336,11 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 						label={__('Navigation', 'blablablocks-slider-block')}
 						isShownByDefault
 						hasValue={() =>
-							!!attributes?.navigation?.desktop || 
-							!!attributes?.navigation?.mobile ||
-							!!attributes?.navigation?.tablet 
+							JSON.stringify(attributes.navigation) !== JSON.stringify(defaultSettings.navigation)
 						}
 						onDeselect={() =>
 							setAttributes({
-								navigation: {
-									...attributes.navigation,
-									desktop: true,
-									tablet: true,
-									mobile: true,
-								},
+								navigation: { ...defaultSettings.navigation },
 							})
 						}
 					>
@@ -400,18 +379,11 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 						label={__('Pagination', 'blablablocks-slider-block')}
 						isShownByDefault
 						hasValue={() =>
-							!!attributes?.pagination?.desktop || 
-							!!attributes?.pagination?.mobile ||
-							!!attributes?.pagination?.tablet 
+							JSON.stringify(attributes.pagination) !== JSON.stringify(defaultSettings.pagination)
 						}
 						onDeselect={() =>
 							setAttributes({
-								pagination: {
-									...attributes.pagination,
-									desktop: true,
-									tablet: true,
-									mobile: true,
-								},
+								pagination: { ...defaultSettings.pagination },
 							})
 						}
 					>
@@ -448,10 +420,8 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 					</ToolsPanelItem>
 					<ToolsPanelItem
 						label={__('Loop', 'blablablocks-slider-block')}
-						hasValue={() => !!attributes.loop}
-						onDeselect={() =>
-							setAttributes({ loop: false, })
-						}
+						hasValue={() => attributes.loop !== defaultSettings.loop}
+						onDeselect={() => setAttributes({ loop: false, })}
 					>
 						<ToggleControl
 							__nextHasNoMarginBottom
@@ -468,7 +438,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 					</ToolsPanelItem>
 					<ToolsPanelItem
 						label={__('Autoplay', 'blablablocks-slider-block')}
-						hasValue={() => !!attributes.autoplay}
+						hasValue={() => attributes.autoplay !== defaultSettings.autoplay}
 						onDeselect={() =>
 							setAttributes({
 								autoplay: false,
