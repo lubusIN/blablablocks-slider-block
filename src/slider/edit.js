@@ -85,7 +85,7 @@ const Slider = memo(({ attributes, innerBlocksProps, innerBlocks }) => {
 
 	// Inline styles for navigation
 	const navigationStyles = generateNavigationStyles(attributes);
-	const applyPadding = innerBlocks.length >= 2 ? '100px' : '';
+	const applyPadding = innerBlocks.length >= 2 ? '3rem' : '';
 
 	return (
 		<div
