@@ -12,18 +12,17 @@ import { cover, gallery, mediaAndText } from '@wordpress/icons';
  */
 const variations = [
 	{
-		name: 'four-slide-three-view',
-		title: __('Four Slide Three View', 'blablablocks-slider-block'),
-		description: __('4 Slides, 3 in View', 'blablablocks-slider-block'),
+		name: 'blank-carousel',
+		title: __('Blank Carousel', 'blablablocks-slider-block'),
+		description: __('Blank Carousel', 'blablablocks-slider-block'),
 		icon: (
 			<SVG
 				xmlns="http://www.w3.org/2000/svg"
-				width="64"
+				width="48"
 				height="48"
-				viewBox="0 0 64 48"
-				style={{ width: '64px' }}
+				viewBox="0 0 48 48"
 			>
-				<Path d="M0 10a2 2 0 0 1 2-2h10.531c1.105 0 1.969.895 1.969 2v28c0 1.105-.864 2-1.969 2H2a2 2 0 0 1-2-2V10Zm16.5 0c0-1.105.864-2 1.969-2H29.5c1.105 0 1.969.895 1.969 2v28c0 1.105-.864 2-1.969 2H18.5c-1.105 0-1.969-.895-1.969-2V10Zm16.5 0c0-1.105.864-2 1.969-2H46c1.105 0 1.969.895 1.969 2v28c0 1.105-.864 2-1.969 2H35.5c-1.105 0-1.969-.895-1.969-2V10Zm16.5 0c0-1.105.864-2 1.969-2H62c1.105 0 1.969.895 1.969 2v28c0 1.105-.864 2-1.969 2H51.5c-1.105 0-1.969-.895-1.969-2V10Z" />
+				<Path d="M0 10a2 2 0 0 1 2-2h10.531c1.105 0 1.969.895 1.969 2v28c0 1.105-.864 2-1.969 2H2a2 2 0 0 1-2-2V10Zm16.5 0c0-1.105.864-2 1.969-2H29.53c1.105 0 1.969.895 1.969 2v28c0 1.105-.864 2-1.969 2H18.47c-1.105 0-1.969-.895-1.969-2V10Zm17 0c0-1.105.864-2 1.969-2H46a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H35.469c-1.105 0-1.969-.895-1.969-2V10Z" />
 			</SVG>
 		),
 		attributes: { slidesPerView: 3 },
@@ -36,9 +35,9 @@ const variations = [
 		scope: ['block'],
 	},
 	{
-		name: 'cover-blocks',
-		title: __('With Cover Blocks', 'blablablocks-slider-block'),
-		description: __('With Cover Blocks', 'blablablocks-slider-block'),
+		name: 'hero-slider',
+		title: __('Hero', 'blablablocks-slider-block'),
+		description: __('Hero', 'blablablocks-slider-block'),
 		icon: cover,
 		innerBlocks: [
 			['blablablocks/slide', {}, [['core/cover']]],
@@ -49,9 +48,10 @@ const variations = [
 	},
 	{
 		name: 'images-slider',
-		title: __('With Images', 'blablablocks-slider-block'),
-		description: __('With Images', 'blablablocks-slider-block'),
+		title: __('Image Slider', 'blablablocks-slider-block'),
+		description: __('Image Slider', 'blablablocks-slider-block'),
 		icon: gallery,
+		attributes: { slidesPerView: 3 },
 		innerBlocks: [
 			[
 				'blablablocks/slide',
@@ -86,8 +86,8 @@ const variations = [
 	},
 	{
 		name: 'media-text-slider',
-		title: __('With Media and Text', 'blablablocks-slider-block'),
-		description: __('With Media & Text', 'blablablocks-slider-block'),
+		title: __('Media and Text', 'blablablocks-slider-block'),
+		description: __('Media & Text', 'blablablocks-slider-block'),
 		icon: mediaAndText,
 		innerBlocks: [
 			['blablablocks/slide', {}, [['core/media-text']]],
