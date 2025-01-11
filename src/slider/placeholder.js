@@ -41,7 +41,6 @@ const defaultPatterns = [Testimonial, Testimonial2, Services];
  * @param {Object}   props               Component props.
  * @param {string}   props.clientId      The client ID for this block instance.
  * @param {Function} props.setAttributes Function to update block attributes.
- *
  * @param            props.attributes
  * @return {JSX.Element} The placeholder component for the Slider block.
  */
@@ -63,14 +62,6 @@ function Placeholder({ clientId, attributes, setAttributes }) {
 				true
 			);
 		}
-	};
-
-	const skipToDefault = () => {
-		const defaultVariation = variations[1]; // Assuming the first variation is the default
-		if (defaultVariation) {
-			onSelectVariation(defaultVariation);
-		}
-		setStep('default');
 	};
 
 	const openTemplatesModal = () => {
@@ -150,27 +141,24 @@ function Placeholder({ clientId, attributes, setAttributes }) {
 		<div {...blockProps}>
 			{!step && (
 				<PlaceholderComponent
-					icon={'slides'}
+					icon={SliderLogo}
 					instructions={__(
-						"Choose how you'd like to get started with your slider.",
+						"Choose a pattern for the slider, start blank or drag and drop images here.",
 						'blablablocks-slider-block'
 					)}
 					label={__(
-						"Let's Begin Creating Your Slider!",
+						"Slider",
 						'blablablocks-slider-block'
 					)}
 				>
+					<Button variant="primary" onClick={openTemplatesModal}>
+						{__('Choose', 'blablablocks-slider-block')}
+					</Button>
 					<Button
 						variant="secondary"
 						onClick={() => setStep('variations')}
 					>
-						{__('Explore Variations', 'blablablocks-slider-block')}
-					</Button>
-					<Button variant="secondary" onClick={openTemplatesModal}>
-						{__('Browse Templates', 'blablablocks-slider-block')}
-					</Button>
-					<Button variant="primary" onClick={skipToDefault}>
-						{__('Skip and Use Default', 'blablablocks-slider-block')}
+						{__('Start blank', 'blablablocks-slider-block')}
 					</Button>
 					<DropZone
 						onFilesDrop={onFilesDrop}
@@ -184,7 +172,7 @@ function Placeholder({ clientId, attributes, setAttributes }) {
 					icon={SliderLogo}
 					label={__('Slider', 'blablablocks-slider-block')}
 					instructions={__(
-						'Select a slide variation to start with',
+						'Select a variation to start with:',
 						'blablablocks-slider-block'
 					)}
 					variations={variations}
