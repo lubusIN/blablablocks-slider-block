@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blablablocks/slide",
+  "version": "0.1.0",
+  "title": "Slide",
+  "description": "A single slide within a slider block.",
+  "parent": [
+    "blablablocks/slider"
+  ],
+  "supports": {
+    "html": false
+  },
+  "editorScript": "file:./index.js"
+}
