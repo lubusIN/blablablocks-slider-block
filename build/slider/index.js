@@ -1138,7 +1138,7 @@ __webpack_require__.r(__webpack_exports__);
  * Default patterns for modal preview.
  */
 
-const defaultPatterns = [_templates__WEBPACK_IMPORTED_MODULE_8__.Testimonial, _templates__WEBPACK_IMPORTED_MODULE_8__.Testimonial2, _templates__WEBPACK_IMPORTED_MODULE_8__.Services];
+const defaultPatterns = [_templates__WEBPACK_IMPORTED_MODULE_8__.Testimonial, _templates__WEBPACK_IMPORTED_MODULE_8__.HeroSection, _templates__WEBPACK_IMPORTED_MODULE_8__.Services];
 
 /**
  * This component serves as a placeholder for the Slider block, displaying a block variation picker.
@@ -1690,6 +1690,144 @@ const variations = [{
 
 /***/ }),
 
+/***/ "./src/templates/hero-section.js":
+/*!***************************************!*\
+  !*** ./src/templates/hero-section.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
+/**
+ * Wordpress dependencies
+ */
+
+const HeroSection = {
+  name: 'hero-section',
+  title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Hero Section', 'blablablocks-slider-block'),
+  content: `
+        <!-- wp:blablablocks/slider {"autoplay":true,"navigation":{"desktop":false,"tablet":false,"mobile":false,"activeDevice":"desktop"},"loop":true,"paginationColor":{"activeColor":{"default":"#ffffff"}},"metadata":{"name":"Hero Section"},"align":"full","className":"wp-block-lubus-slider","style":{"spacing":{"padding":{"top":"0px","bottom":"0px","left":"0px","right":"0px"}}}} -->
+        <div style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;--navigation-arrow-color:#000;--navigation-background-color:transparent;--navigation-arrow-hover-color:#333;--navigation-background-hover-color:transparent;--swiper-navigation-size:40px;--navigation-border-radius:4px 4px 4px 4px;--navigation-padding-top:0px;--navigation-padding-right:0px;--navigation-padding-bottom:0px;--navigation-padding-left:0px;--pagination-size:8px;--pagination-active-color:#ffffff;--pagination-inactive-color:#ccc;--pagination-offset-top:auto;--pagination-offset-right:0px;--pagination-offset-bottom:8px;--pagination-offset-left:0px;--navigation-offset-top:50%;--navigation-offset-right:10px;--navigation-offset-bottom:0px;--navigation-offset-left:10px" class="wp-block-blablablocks-slider alignfull wp-block-lubus-slider"><div class="swiper" data-swiper="{&quot;slidesPerView&quot;:{&quot;desktop&quot;:1,&quot;tablet&quot;:1,&quot;mobile&quot;:1,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;slidesSpacing&quot;:{&quot;desktop&quot;:30,&quot;tablet&quot;:20,&quot;mobile&quot;:10,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;speed&quot;:300,&quot;effects&quot;:&quot;slide&quot;,&quot;autoplay&quot;:true,&quot;delay&quot;:5000,&quot;navigation&quot;:{&quot;desktop&quot;:false,&quot;tablet&quot;:false,&quot;mobile&quot;:false,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;pagination&quot;:{&quot;desktop&quot;:true,&quot;tablet&quot;:true,&quot;mobile&quot;:true,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;loop&quot;:true,&quot;paginationColor&quot;:{&quot;activeColor&quot;:{&quot;default&quot;:&quot;#ffffff&quot;}},&quot;metadata&quot;:{&quot;name&quot;:&quot;Hero Section&quot;},&quot;align&quot;:&quot;full&quot;,&quot;className&quot;:&quot;wp-block-lubus-slider&quot;,&quot;style&quot;:{&quot;spacing&quot;:{&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;}}}}"><div class="swiper-wrapper"><!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+        <div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:cover {"url":"https://dotcompatterns.files.wordpress.com/2024/01/paint-wide-3.jpg","id":13691,"dimRatio":50,"isUserOverlayColor":false,"minHeight":500,"className":"alignfull is-style-default","style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
+        <div class="wp-block-cover alignfull is-style-default" style="margin-top:0;margin-bottom:0;padding-right:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50);min-height:500px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><img class="wp-block-cover__image-background wp-image-13691" alt="" src="https://dotcompatterns.files.wordpress.com/2024/01/paint-wide-3.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"var:preset|spacing|70"} -->
+        <div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+        <div class="wp-block-group alignwide"><!-- wp:heading {"textAlign":"center","className":"text-balance","style":{"spacing":{"margin":{"top":"0","bottom":"0","left":"0","right":"0"}}},"fontSize":"xx-large"} -->
+        <h2 class="wp-block-heading has-text-align-center text-balance has-xx-large-font-size" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0">Discover a world of possibilities</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:spacer {"height":"var:preset|spacing|40"} -->
+        <div style="height:var(--wp--preset--spacing--40)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- wp:buttons {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->
+        <div class="wp-block-buttons"><!-- wp:button {"width":50} -->
+        <div class="wp-block-button has-custom-width wp-block-button__width-50"><a class="wp-block-button__link wp-element-button">Get Started</a></div>
+        <!-- /wp:button --></div>
+        <!-- /wp:buttons --></div>
+        <!-- /wp:group -->
+
+        <!-- wp:spacer {"height":"var:preset|spacing|70"} -->
+        <div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer --></div></div>
+        <!-- /wp:cover --></div>
+        <!-- /wp:blablablocks/slide -->
+
+        <!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+        <div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:cover {"url":"https://dotcompatterns.files.wordpress.com/2024/01/paint-wide-3.jpg","id":13691,"dimRatio":50,"isUserOverlayColor":false,"minHeight":500,"className":"alignfull is-style-default","style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
+        <div class="wp-block-cover alignfull is-style-default" style="margin-top:0;margin-bottom:0;padding-right:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50);min-height:500px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><img class="wp-block-cover__image-background wp-image-13691" alt="" src="https://dotcompatterns.files.wordpress.com/2024/01/paint-wide-3.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"var:preset|spacing|70"} -->
+        <div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+        <div class="wp-block-group alignwide"><!-- wp:heading {"textAlign":"center","className":"text-balance","style":{"spacing":{"margin":{"top":"0","bottom":"0","left":"0","right":"0"}}},"fontSize":"xx-large"} -->
+        <h2 class="wp-block-heading has-text-align-center text-balance has-xx-large-font-size" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0">Discover a world of possibilities</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:spacer {"height":"var:preset|spacing|40"} -->
+        <div style="height:var(--wp--preset--spacing--40)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- wp:buttons {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->
+        <div class="wp-block-buttons"><!-- wp:button {"width":50} -->
+        <div class="wp-block-button has-custom-width wp-block-button__width-50"><a class="wp-block-button__link wp-element-button">Get Started</a></div>
+        <!-- /wp:button --></div>
+        <!-- /wp:buttons --></div>
+        <!-- /wp:group -->
+
+        <!-- wp:spacer {"height":"var:preset|spacing|70"} -->
+        <div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer --></div></div>
+        <!-- /wp:cover --></div>
+        <!-- /wp:blablablocks/slide -->
+
+        <!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+        <div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:cover {"url":"https://dotcompatterns.files.wordpress.com/2024/01/paint-wide-3.jpg","id":13691,"dimRatio":50,"isUserOverlayColor":false,"minHeight":500,"className":"alignfull is-style-default","style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
+        <div class="wp-block-cover alignfull is-style-default" style="margin-top:0;margin-bottom:0;padding-right:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50);min-height:500px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><img class="wp-block-cover__image-background wp-image-13691" alt="" src="https://dotcompatterns.files.wordpress.com/2024/01/paint-wide-3.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"var:preset|spacing|70"} -->
+        <div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+        <div class="wp-block-group alignwide"><!-- wp:heading {"textAlign":"center","className":"text-balance","style":{"spacing":{"margin":{"top":"0","bottom":"0","left":"0","right":"0"}}},"fontSize":"xx-large"} -->
+        <h2 class="wp-block-heading has-text-align-center text-balance has-xx-large-font-size" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0">Discover a world of possibilities</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:spacer {"height":"var:preset|spacing|40"} -->
+        <div style="height:var(--wp--preset--spacing--40)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- wp:buttons {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->
+        <div class="wp-block-buttons"><!-- wp:button {"width":50} -->
+        <div class="wp-block-button has-custom-width wp-block-button__width-50"><a class="wp-block-button__link wp-element-button">Get Started</a></div>
+        <!-- /wp:button --></div>
+        <!-- /wp:buttons --></div>
+        <!-- /wp:group -->
+
+        <!-- wp:spacer {"height":"var:preset|spacing|70"} -->
+        <div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer --></div></div>
+        <!-- /wp:cover --></div>
+        <!-- /wp:blablablocks/slide -->
+
+        <!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+        <div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:cover {"url":"https://dotcompatterns.files.wordpress.com/2024/01/paint-wide-3.jpg","id":13691,"dimRatio":50,"isUserOverlayColor":false,"minHeight":500,"className":"alignfull is-style-default","style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
+        <div class="wp-block-cover alignfull is-style-default" style="margin-top:0;margin-bottom:0;padding-right:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50);min-height:500px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><img class="wp-block-cover__image-background wp-image-13691" alt="" src="https://dotcompatterns.files.wordpress.com/2024/01/paint-wide-3.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"var:preset|spacing|70"} -->
+        <div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+        <div class="wp-block-group alignwide"><!-- wp:heading {"textAlign":"center","className":"text-balance","style":{"spacing":{"margin":{"top":"0","bottom":"0","left":"0","right":"0"}}},"fontSize":"xx-large"} -->
+        <h2 class="wp-block-heading has-text-align-center text-balance has-xx-large-font-size" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0">Discover a world of possibilities</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:spacer {"height":"var:preset|spacing|40"} -->
+        <div style="height:var(--wp--preset--spacing--40)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- wp:buttons {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->
+        <div class="wp-block-buttons"><!-- wp:button {"width":50} -->
+        <div class="wp-block-button has-custom-width wp-block-button__width-50"><a class="wp-block-button__link wp-element-button">Get Started</a></div>
+        <!-- /wp:button --></div>
+        <!-- /wp:buttons --></div>
+        <!-- /wp:group -->
+
+        <!-- wp:spacer {"height":"var:preset|spacing|70"} -->
+        <div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer --></div></div>
+        <!-- /wp:cover --></div>
+        <!-- /wp:blablablocks/slide --></div></div></div>
+        <!-- /wp:blablablocks/slider -->`
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HeroSection);
+
+/***/ }),
+
 /***/ "./src/templates/index.js":
 /*!********************************!*\
   !*** ./src/templates/index.js ***!
@@ -1698,12 +1836,12 @@ const variations = [{
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   HeroSection: () => (/* reexport safe */ _hero_section__WEBPACK_IMPORTED_MODULE_0__["default"]),
 /* harmony export */   Services: () => (/* reexport safe */ _services__WEBPACK_IMPORTED_MODULE_2__["default"]),
-/* harmony export */   Testimonial: () => (/* reexport safe */ _testimonial__WEBPACK_IMPORTED_MODULE_0__["default"]),
-/* harmony export */   Testimonial2: () => (/* reexport safe */ _testimonial2__WEBPACK_IMPORTED_MODULE_1__["default"])
+/* harmony export */   Testimonial: () => (/* reexport safe */ _testimonial__WEBPACK_IMPORTED_MODULE_1__["default"])
 /* harmony export */ });
-/* harmony import */ var _testimonial__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./testimonial */ "./src/templates/testimonial.js");
-/* harmony import */ var _testimonial2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./testimonial2 */ "./src/templates/testimonial2.js");
+/* harmony import */ var _hero_section__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hero-section */ "./src/templates/hero-section.js");
+/* harmony import */ var _testimonial__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./testimonial */ "./src/templates/testimonial.js");
 /* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./services */ "./src/templates/services.js");
 /**
  * Export Templates.
@@ -1733,158 +1871,157 @@ __webpack_require__.r(__webpack_exports__);
 const Services = {
   name: 'services',
   title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Services', 'blablablocks-slider-block'),
-  description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('A simple centered call-to-action for subscribing.', 'blablablocks-slider-block'),
   content: `
-            <!-- wp:group {"metadata":{"categories":["services"],"name":"Services","patternName":"assembler/services-2"},"align":"full","className":"alignfull is-style-default","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|30","padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}}},"layout":{"type":"default"}} -->
-				<div class="wp-block-group alignfull is-style-default" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--50)"><!-- wp:heading {"align":"wide","style":{"layout":{"selfStretch":"fixed","flexSize":"100%"},"typography":{"fontStyle":"normal","fontWeight":"600"}}} -->
-				<h2 class="wp-block-heading alignwide" style="font-style:normal;font-weight:600">Services</h2>
-				<!-- /wp:heading -->
+           <!-- wp:group {"metadata":{"categories":["services"],"name":"Services","patternName":"assembler/services-2"},"align":"full","className":"alignfull is-style-default","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|30","padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}}},"layout":{"type":"default"}} -->
+			<div class="wp-block-group alignfull is-style-default" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--50)"><!-- wp:heading {"align":"wide","style":{"layout":{"selfStretch":"fixed","flexSize":"100%"},"typography":{"fontStyle":"normal","fontWeight":"600"}}} -->
+			<h2 class="wp-block-heading alignwide" style="font-style:normal;font-weight:600">Services</h2>
+			<!-- /wp:heading -->
 
-				<!-- wp:lubus/slider {"slidesPerView":{"desktop":3,"tablet":2,"mobile":1,"activeDevice":"tablet"},"pagination":false,"navigationColor":{"arrowColor":{"default":"#000000","hover":"#323232"},"backgroundColor":{"hover":""}},"navigationPadding":{},"navigationSize":"2.3rem","navigationOffset":{"top":"50%","bottom":"0px","left":"-6vw","right":"-6vw"},"navigationBorderRadius":"50%","align":"full","style":{"spacing":{"padding":{"top":"0px","bottom":"0px","left":"0px","right":"0px"}}}} -->
-				<div style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;--navigation-arrow-color:#000000;--navigation-arrow-hover-color:#323232;--swiper-navigation-size:2.3rem;--navigation-border-radius:50%;--navigation-padding-top:0px;--navigation-padding-right:0px;--navigation-padding-bottom:0px;--navigation-padding-left:0px;--pagination-size:8px;--pagination-offset-top:auto;--pagination-offset-right:0px;--pagination-offset-bottom:8px;--pagination-offset-left:0px;--navigation-offset-top:50%;--navigation-offset-right:-6vw;--navigation-offset-bottom:0px;--navigation-offset-left:-6vw" class="wp-block-lubus-slider alignfull"><div class="swiper" data-swiper="{&quot;slidesPerView&quot;:{&quot;desktop&quot;:3,&quot;tablet&quot;:2,&quot;mobile&quot;:1,&quot;activeDevice&quot;:&quot;tablet&quot;},&quot;slidesSpacing&quot;:{&quot;desktop&quot;:30,&quot;tablet&quot;:20,&quot;mobile&quot;:10,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;speed&quot;:300,&quot;effects&quot;:&quot;slide&quot;,&quot;autoplay&quot;:false,&quot;delay&quot;:5000,&quot;navigation&quot;:true,&quot;pagination&quot;:false,&quot;loop&quot;:false,&quot;navigationColor&quot;:{&quot;arrowColor&quot;:{&quot;default&quot;:&quot;#000000&quot;,&quot;hover&quot;:&quot;#323232&quot;},&quot;backgroundColor&quot;:{&quot;hover&quot;:&quot;&quot;}},&quot;navigationPadding&quot;:{},&quot;navigationSize&quot;:&quot;2.3rem&quot;,&quot;navigationOffset&quot;:{&quot;top&quot;:&quot;50%&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;-6vw&quot;,&quot;right&quot;:&quot;-6vw&quot;},&quot;navigationBorderRadius&quot;:&quot;50%&quot;,&quot;paginationSize&quot;:&quot;8px&quot;,&quot;paginationOffset&quot;:{&quot;top&quot;:&quot;auto&quot;,&quot;bottom&quot;:&quot;8px&quot;,&quot;left&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;},&quot;align&quot;:&quot;full&quot;,&quot;style&quot;:{&quot;spacing&quot;:{&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;}}}}"><div class="swiper-wrapper"><!-- wp:lubus/slide -->
-				<div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
-				<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
-				<!-- /wp:image -->
+			<!-- wp:blablablocks/slider {"slidesPerView":{"desktop":3,"tablet":2,"mobile":1,"activeDevice":"desktop"},"pagination":{"desktop":false,"tablet":false,"mobile":false,"activeDevice":"desktop"},"navigationColor":{"arrowColor":{"default":"#000000","hover":"#323232"},"backgroundColor":{"hover":""}},"navigationPadding":{},"navigationSize":"2.3rem","navigationOffset":{"top":"50%","bottom":"0px","left":"-6vw","right":"-6vw"},"navigationBorderRadius":"50%","paginationOffset":{"bottom":"-70px"},"align":"full","className":"wp-block-lubus-slider","style":{"spacing":{"padding":{"top":"0px","bottom":"0px","left":"0px","right":"0px"}}}} -->
+			<div style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;--navigation-arrow-color:#000000;--navigation-background-color:transparent;--navigation-arrow-hover-color:#323232;--navigation-background-hover-color:;--swiper-navigation-size:2.3rem;--navigation-border-radius:50%;--navigation-padding-top:0px;--navigation-padding-right:0px;--navigation-padding-bottom:0px;--navigation-padding-left:0px;--pagination-size:8px;--pagination-active-color:#000;--pagination-inactive-color:#ccc;--pagination-offset-top:auto;--pagination-offset-right:0px;--pagination-offset-bottom:-70px;--pagination-offset-left:0px;--navigation-offset-top:50%;--navigation-offset-right:-6vw;--navigation-offset-bottom:0px;--navigation-offset-left:-6vw" class="wp-block-blablablocks-slider alignfull wp-block-lubus-slider"><div class="swiper" data-swiper="{&quot;slidesPerView&quot;:{&quot;desktop&quot;:3,&quot;tablet&quot;:2,&quot;mobile&quot;:1,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;slidesSpacing&quot;:{&quot;desktop&quot;:30,&quot;tablet&quot;:20,&quot;mobile&quot;:10,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;speed&quot;:300,&quot;effects&quot;:&quot;slide&quot;,&quot;autoplay&quot;:false,&quot;delay&quot;:5000,&quot;navigation&quot;:{&quot;desktop&quot;:true,&quot;tablet&quot;:true,&quot;mobile&quot;:true,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;pagination&quot;:{&quot;desktop&quot;:false,&quot;tablet&quot;:false,&quot;mobile&quot;:false,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;loop&quot;:false,&quot;navigationColor&quot;:{&quot;arrowColor&quot;:{&quot;default&quot;:&quot;#000000&quot;,&quot;hover&quot;:&quot;#323232&quot;},&quot;backgroundColor&quot;:{&quot;hover&quot;:&quot;&quot;}},&quot;navigationPadding&quot;:{},&quot;navigationSize&quot;:&quot;2.3rem&quot;,&quot;navigationOffset&quot;:{&quot;top&quot;:&quot;50%&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;-6vw&quot;,&quot;right&quot;:&quot;-6vw&quot;},&quot;navigationBorderRadius&quot;:&quot;50%&quot;,&quot;paginationOffset&quot;:{&quot;bottom&quot;:&quot;-70px&quot;},&quot;align&quot;:&quot;full&quot;,&quot;className&quot;:&quot;wp-block-lubus-slider&quot;,&quot;style&quot;:{&quot;spacing&quot;:{&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;}}}}"><div class="swiper-wrapper"><!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
+			<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<!-- /wp:image -->
 
-				<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
-				<h3 class="wp-block-heading is-service-name">Service 1</h3>
-				<!-- /wp:heading -->
+			<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
+			<h3 class="wp-block-heading is-service-name">Service 1</h3>
+			<!-- /wp:heading -->
 
-				<!-- wp:paragraph {"className":"is-service-description"} -->
-				<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
-				<!-- /wp:paragraph -->
+			<!-- wp:paragraph {"className":"is-service-description"} -->
+			<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
+			<!-- /wp:paragraph -->
 
-				<!-- wp:buttons -->
-				<div class="wp-block-buttons"><!-- wp:button {"className":"is-service-link"} -->
-				<div class="wp-block-button is-service-link"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
-				<!-- /wp:button --></div>
-				<!-- /wp:buttons --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:lubus/slide -->
+			<!-- wp:buttons -->
+			<div class="wp-block-buttons"><!-- wp:button {"className":"is-service-link"} -->
+			<div class="wp-block-button is-service-link"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
+			<!-- /wp:button --></div>
+			<!-- /wp:buttons --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:blablablocks/slide -->
 
-				<!-- wp:lubus/slide -->
-				<div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
-				<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
-				<!-- /wp:image -->
+			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
+			<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<!-- /wp:image -->
 
-				<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
-				<h3 class="wp-block-heading is-service-name">Service 2</h3>
-				<!-- /wp:heading -->
+			<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
+			<h3 class="wp-block-heading is-service-name">Service 2</h3>
+			<!-- /wp:heading -->
 
-				<!-- wp:paragraph {"className":"is-service-description"} -->
-				<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
-				<!-- /wp:paragraph -->
+			<!-- wp:paragraph {"className":"is-service-description"} -->
+			<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
+			<!-- /wp:paragraph -->
 
-				<!-- wp:buttons -->
-				<div class="wp-block-buttons"><!-- wp:button {"className":"is-service-link"} -->
-				<div class="wp-block-button is-service-link"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
-				<!-- /wp:button --></div>
-				<!-- /wp:buttons --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:lubus/slide -->
+			<!-- wp:buttons -->
+			<div class="wp-block-buttons"><!-- wp:button {"className":"is-service-link"} -->
+			<div class="wp-block-button is-service-link"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
+			<!-- /wp:button --></div>
+			<!-- /wp:buttons --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:blablablocks/slide -->
 
-				<!-- wp:lubus/slide -->
-				<div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
-				<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
-				<!-- /wp:image -->
+			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
+			<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<!-- /wp:image -->
 
-				<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
-				<h3 class="wp-block-heading is-service-name">Service 3</h3>
-				<!-- /wp:heading -->
+			<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
+			<h3 class="wp-block-heading is-service-name">Service 3</h3>
+			<!-- /wp:heading -->
 
-				<!-- wp:paragraph {"className":"is-service-description"} -->
-				<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
-				<!-- /wp:paragraph -->
+			<!-- wp:paragraph {"className":"is-service-description"} -->
+			<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
+			<!-- /wp:paragraph -->
 
-				<!-- wp:buttons -->
-				<div class="wp-block-buttons"><!-- wp:button {"className":"is-service-link"} -->
-				<div class="wp-block-button is-service-link"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
-				<!-- /wp:button --></div>
-				<!-- /wp:buttons --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:lubus/slide -->
+			<!-- wp:buttons -->
+			<div class="wp-block-buttons"><!-- wp:button {"className":"is-service-link"} -->
+			<div class="wp-block-button is-service-link"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
+			<!-- /wp:button --></div>
+			<!-- /wp:buttons --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:blablablocks/slide -->
 
-				<!-- wp:lubus/slide -->
-				<div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
-				<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
-				<!-- /wp:image -->
+			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
+			<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<!-- /wp:image -->
 
-				<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
-				<h3 class="wp-block-heading is-service-name">Service 4</h3>
-				<!-- /wp:heading -->
+			<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
+			<h3 class="wp-block-heading is-service-name">Service 4</h3>
+			<!-- /wp:heading -->
 
-				<!-- wp:paragraph {"className":"is-service-description"} -->
-				<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
-				<!-- /wp:paragraph -->
+			<!-- wp:paragraph {"className":"is-service-description"} -->
+			<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
+			<!-- /wp:paragraph -->
 
-				<!-- wp:buttons -->
-				<div class="wp-block-buttons"><!-- wp:button {"className":"is-service-link"} -->
-				<div class="wp-block-button is-service-link"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
-				<!-- /wp:button --></div>
-				<!-- /wp:buttons --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:lubus/slide -->
+			<!-- wp:buttons -->
+			<div class="wp-block-buttons"><!-- wp:button {"className":"is-service-link"} -->
+			<div class="wp-block-button is-service-link"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
+			<!-- /wp:button --></div>
+			<!-- /wp:buttons --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:blablablocks/slide -->
 
-				<!-- wp:lubus/slide -->
-				<div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
-				<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
-				<!-- /wp:image -->
+			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
+			<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<!-- /wp:image -->
 
-				<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
-				<h3 class="wp-block-heading is-service-name">Service 5</h3>
-				<!-- /wp:heading -->
+			<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
+			<h3 class="wp-block-heading is-service-name">Service 5</h3>
+			<!-- /wp:heading -->
 
-				<!-- wp:paragraph {"className":"is-service-description"} -->
-				<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
-				<!-- /wp:paragraph -->
+			<!-- wp:paragraph {"className":"is-service-description"} -->
+			<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
+			<!-- /wp:paragraph -->
 
-				<!-- wp:buttons -->
-				<div class="wp-block-buttons"><!-- wp:button {"className":"is-service-link"} -->
-				<div class="wp-block-button is-service-link"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
-				<!-- /wp:button --></div>
-				<!-- /wp:buttons --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:lubus/slide -->
+			<!-- wp:buttons -->
+			<div class="wp-block-buttons"><!-- wp:button {"className":"is-service-link"} -->
+			<div class="wp-block-button is-service-link"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
+			<!-- /wp:button --></div>
+			<!-- /wp:buttons --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:blablablocks/slide -->
 
-				<!-- wp:lubus/slide -->
-				<div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
-				<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
-				<!-- /wp:image -->
+			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
+			<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<!-- /wp:image -->
 
-				<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
-				<h3 class="wp-block-heading is-service-name">Service 6</h3>
-				<!-- /wp:heading -->
+			<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
+			<h3 class="wp-block-heading is-service-name">Service 6</h3>
+			<!-- /wp:heading -->
 
-				<!-- wp:paragraph {"className":"is-service-description"} -->
-				<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
-				<!-- /wp:paragraph -->
+			<!-- wp:paragraph {"className":"is-service-description"} -->
+			<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
+			<!-- /wp:paragraph -->
 
-				<!-- wp:buttons -->
-				<div class="wp-block-buttons"><!-- wp:button {"className":"is-service-link"} -->
-				<div class="wp-block-button is-service-link"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
-				<!-- /wp:button --></div>
-				<!-- /wp:buttons --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:lubus/slide --></div></div></div>
-				<!-- /wp:lubus/slider --></div>
+			<!-- wp:buttons -->
+			<div class="wp-block-buttons"><!-- wp:button {"className":"is-service-link"} -->
+			<div class="wp-block-button is-service-link"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
+			<!-- /wp:button --></div>
+			<!-- /wp:buttons --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:blablablocks/slide --></div></div></div>
+			<!-- /wp:blablablocks/slider --></div>
 			<!-- /wp:group -->`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Services);
@@ -1910,286 +2047,112 @@ __webpack_require__.r(__webpack_exports__);
 const Testimonial = {
   name: 'testimonial',
   title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Testimonial', 'blablablocks-slider-block'),
-  description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('A compelling call-to-action with an image aligned to the right.', 'blablablocks-slider-block'),
   content: `
-        <!-- wp:group {"metadata":{"name":"Testimonial"},"align":"full","style":{"spacing":{"blockGap":"0px","padding":{"left":"2vw","right":"2vw","top":"8vw","bottom":"8vw"}}},"layout":{"type":"default"}} -->
-                <div class="wp-block-group alignfull" style="padding-top:8vw;padding-right:2vw;padding-bottom:8vw;padding-left:2vw"><!-- wp:heading {"textAlign":"center","level":1,"align":"wide","fontSize":"x-large"} -->
-                <h1 class="wp-block-heading alignwide has-text-align-center has-x-large-font-size"><strong>What people are saying</strong></h1>
-                <!-- /wp:heading -->
+          <!-- wp:group {"metadata":{"name":"Testimonial"},"align":"full","style":{"spacing":{"blockGap":"0px","padding":{"left":"2vw","right":"2vw","top":"8vw","bottom":"8vw"}}},"layout":{"type":"default"}} -->
+			<div class="wp-block-group alignfull" style="padding-top:8vw;padding-right:2vw;padding-bottom:8vw;padding-left:2vw"><!-- wp:heading {"textAlign":"center","level":1,"align":"wide","fontSize":"large"} -->
+			<h1 class="wp-block-heading alignwide has-text-align-center has-large-font-size"><strong>WHAT OUR CLIENTS SAY ABOUT US</strong></h1>
+			<!-- /wp:heading -->
 
-                <!-- wp:lubus/slider {"style":{"spacing":{"padding":{"top":"40px","right":"4vw","left":"4vw","bottom":"80px"}}}} -->
-                <div style="padding-top:40px;padding-right:4vw;padding-bottom:80px;padding-left:4vw;--swiper-navigation-size:40px;--navigation-border-radius:4px;--navigation-padding-top:0px;--navigation-padding-right:0px;--navigation-padding-bottom:0px;--navigation-padding-left:0px;--pagination-size:8px;--pagination-offset-top:auto;--pagination-offset-right:0px;--pagination-offset-bottom:8px;--pagination-offset-left:0px;--navigation-offset-top:50%;--navigation-offset-right:10px;--navigation-offset-bottom:0px;--navigation-offset-left:10px" class="wp-block-lubus-slider"><div class="swiper" data-swiper="{&quot;slidesPerView&quot;:{&quot;desktop&quot;:1,&quot;tablet&quot;:1,&quot;mobile&quot;:1,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;slidesSpacing&quot;:{&quot;desktop&quot;:30,&quot;tablet&quot;:20,&quot;mobile&quot;:10,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;speed&quot;:300,&quot;effects&quot;:&quot;slide&quot;,&quot;autoplay&quot;:false,&quot;delay&quot;:5000,&quot;navigation&quot;:true,&quot;pagination&quot;:true,&quot;loop&quot;:false,&quot;navigationColor&quot;:{&quot;arrowColor&quot;:{&quot;default&quot;:&quot;&quot;,&quot;hover&quot;:&quot;&quot;},&quot;backgroundColor&quot;:{&quot;default&quot;:&quot;&quot;,&quot;hover&quot;:&quot;&quot;}},&quot;navigationSize&quot;:&quot;40px&quot;,&quot;navigationOffset&quot;:{&quot;top&quot;:&quot;50%&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;10px&quot;,&quot;right&quot;:&quot;10px&quot;},&quot;navigationBorderRadius&quot;:&quot;4px&quot;,&quot;paginationSize&quot;:&quot;8px&quot;,&quot;paginationOffset&quot;:{&quot;top&quot;:&quot;auto&quot;,&quot;bottom&quot;:&quot;8px&quot;,&quot;left&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;},&quot;style&quot;:{&quot;spacing&quot;:{&quot;padding&quot;:{&quot;top&quot;:&quot;40px&quot;,&quot;right&quot;:&quot;4vw&quot;,&quot;left&quot;:&quot;4vw&quot;,&quot;bottom&quot;:&quot;80px&quot;}}}}"><div class="swiper-wrapper"><!-- wp:lubus/slide -->
-                <div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"metadata":{},"align":"full","style":{"spacing":{"padding":{"top":"0px","bottom":"0px"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
-                <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:0px;padding-bottom:0px"><!-- wp:paragraph {"align":"center"} -->
-                <p class="has-text-align-center">"Starting my role as a WordPress administrator has been a joy, thanks to its intuitive interface, media management, security, and plugin integration, making website management a breeze."</p>
-                <!-- /wp:paragraph -->
+			<!-- wp:blablablocks/slider {"className":"wp-block-lubus-slider","style":{"spacing":{"padding":{"top":"40px","bottom":"80px","right":"10vw","left":"10vw"}}}} -->
+			<div style="padding-top:40px;padding-right:10vw;padding-bottom:80px;padding-left:10vw;--navigation-arrow-color:#000;--navigation-background-color:transparent;--navigation-arrow-hover-color:#333;--navigation-background-hover-color:transparent;--swiper-navigation-size:40px;--navigation-border-radius:4px 4px 4px 4px;--navigation-padding-top:0px;--navigation-padding-right:0px;--navigation-padding-bottom:0px;--navigation-padding-left:0px;--pagination-size:8px;--pagination-active-color:#000;--pagination-inactive-color:#ccc;--pagination-offset-top:auto;--pagination-offset-right:0px;--pagination-offset-bottom:8px;--pagination-offset-left:0px;--navigation-offset-top:50%;--navigation-offset-right:10px;--navigation-offset-bottom:0px;--navigation-offset-left:10px" class="wp-block-blablablocks-slider wp-block-lubus-slider"><div class="swiper" data-swiper="{&quot;slidesPerView&quot;:{&quot;desktop&quot;:1,&quot;tablet&quot;:1,&quot;mobile&quot;:1,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;slidesSpacing&quot;:{&quot;desktop&quot;:30,&quot;tablet&quot;:20,&quot;mobile&quot;:10,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;speed&quot;:300,&quot;effects&quot;:&quot;slide&quot;,&quot;autoplay&quot;:false,&quot;delay&quot;:5000,&quot;navigation&quot;:{&quot;desktop&quot;:true,&quot;tablet&quot;:true,&quot;mobile&quot;:true,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;pagination&quot;:{&quot;desktop&quot;:true,&quot;tablet&quot;:true,&quot;mobile&quot;:true,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;loop&quot;:false,&quot;className&quot;:&quot;wp-block-lubus-slider&quot;,&quot;style&quot;:{&quot;spacing&quot;:{&quot;padding&quot;:{&quot;top&quot;:&quot;40px&quot;,&quot;bottom&quot;:&quot;80px&quot;,&quot;right&quot;:&quot;10vw&quot;,&quot;left&quot;:&quot;10vw&quot;}}}}"><div class="swiper-wrapper"><!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"15px"}},"layout":{"type":"default"}} -->
+			<div class="wp-block-group"><!-- wp:image {"id":2510,"sizeSlug":"full","linkDestination":"none","align":"center"} -->
+			<figure class="wp-block-image aligncenter size-full"><img src="https://rollingnames.com/wp-content/uploads/2023/08/quote.png" alt="" class="wp-image-2510"/></figure>
+			<!-- /wp:image -->
 
-                <!-- wp:spacer {"height":"calc( 0.25 * var(\u002d\u002dwp\u002d\u002dstyle\u002d\u002droot\u002d\u002dpadding-right, var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dgap\u002d\u002dhorizontal)))"} -->
-                <div style="height:calc( 0.25 * var(--wp--style--root--padding-right, var(--wp--custom--gap--horizontal)))" aria-hidden="true" class="wp-block-spacer"></div>
-                <!-- /wp:spacer -->
+			<!-- wp:image {"width":"150px","height":"150px","scale":"cover","sizeSlug":"large","linkDestination":"none","align":"center","style":{"border":{"radius":"100px"}}} -->
+			<figure class="wp-block-image aligncenter size-large is-resized has-custom-border"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/01/paint-small.jpg" style="border-radius:100px;object-fit:cover;width:150px;height:150px"/></figure>
+			<!-- /wp:image -->
 
-                <!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
-                <div class="wp-block-group"><!-- wp:image {"id":13762,"width":"64px","aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"100px"}}} -->
-                <figure class="wp-block-image size-full is-resized has-custom-border"><img src="https://dotcompatterns.files.wordpress.com/2024/01/paint-small.jpg" alt="" class="wp-image-13762" style="border-radius:100px;aspect-ratio:1;object-fit:cover;width:64px"/></figure>
-                <!-- /wp:image -->
+			<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#8a8a8a"},"typography":{"fontSize":"20px","fontStyle":"normal","fontWeight":"300","lineHeight":2,"letterSpacing":"0px"}},"fontFamily":"montserrat"} -->
+			<p class="has-text-align-center has-text-color has-montserrat-font-family" style="color:#8a8a8a;font-size:20px;font-style:normal;font-weight:300;letter-spacing:0px;line-height:2">"Starting my role as a WordPress administrator has been a joy, thanks to its intuitive interface, media management, security, and plugin integration, making website management a breeze."</p>
+			<!-- /wp:paragraph -->
 
-                <!-- wp:group {"style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"default"}} -->
-                <div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":3,"fontSize":"medium"} -->
-                <h3 class="wp-block-heading has-text-align-center has-medium-font-size">Liz S.</h3>
-                <!-- /wp:heading -->
+			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"600"},"spacing":{"padding":{"bottom":"5px"}}}} -->
+			<p class="has-text-align-center" style="padding-bottom:5px;font-size:16px;font-style:normal;font-weight:600">Pierre</p>
+			<!-- /wp:paragraph -->
 
-                <!-- wp:paragraph {"align":"center","fontSize":"small"} -->
-                <p class="has-text-align-center has-small-font-size">Software engineer</p>
-                <!-- /wp:paragraph --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:lubus/slide -->
+			<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"0px"}},"color":{"text":"#8a8a8a"},"typography":{"fontSize":"12px","fontStyle":"normal","fontWeight":"300"}},"fontFamily":"raleway"} -->
+			<p class="has-text-align-center has-text-color has-raleway-font-family" style="color:#8a8a8a;margin-top:0px;font-size:12px;font-style:normal;font-weight:300">Entrepreneur, Kitchenlogix</p>
+			<!-- /wp:paragraph --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:blablablocks/slide -->
 
-                <!-- wp:lubus/slide -->
-                <div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"metadata":{},"align":"full","style":{"spacing":{"padding":{"top":"0px","bottom":"0px"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
-                <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:0px;padding-bottom:0px"><!-- wp:paragraph {"align":"center"} -->
-                <p class="has-text-align-center">"Starting my role as a WordPress administrator has been a joy, thanks to its intuitive interface, media management, security, and plugin integration, making website management a breeze."</p>
-                <!-- /wp:paragraph -->
+			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"15px"}},"layout":{"type":"default"}} -->
+			<div class="wp-block-group"><!-- wp:image {"id":2510,"sizeSlug":"full","linkDestination":"none","align":"center"} -->
+			<figure class="wp-block-image aligncenter size-full"><img src="https://rollingnames.com/wp-content/uploads/2023/08/quote.png" alt="" class="wp-image-2510"/></figure>
+			<!-- /wp:image -->
 
-                <!-- wp:spacer {"height":"calc( 0.25 * var(\u002d\u002dwp\u002d\u002dstyle\u002d\u002droot\u002d\u002dpadding-right, var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dgap\u002d\u002dhorizontal)))"} -->
-                <div style="height:calc( 0.25 * var(--wp--style--root--padding-right, var(--wp--custom--gap--horizontal)))" aria-hidden="true" class="wp-block-spacer"></div>
-                <!-- /wp:spacer -->
+			<!-- wp:image {"width":"150px","height":"150px","scale":"cover","sizeSlug":"large","linkDestination":"none","align":"center","style":{"border":{"radius":"100px"}}} -->
+			<figure class="wp-block-image aligncenter size-large is-resized has-custom-border"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/01/paint-small.jpg" style="border-radius:100px;object-fit:cover;width:150px;height:150px"/></figure>
+			<!-- /wp:image -->
 
-                <!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
-                <div class="wp-block-group"><!-- wp:image {"id":13762,"width":"64px","aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"100px"}}} -->
-                <figure class="wp-block-image size-full is-resized has-custom-border"><img src="https://dotcompatterns.files.wordpress.com/2024/01/paint-small.jpg" alt="" class="wp-image-13762" style="border-radius:100px;aspect-ratio:1;object-fit:cover;width:64px"/></figure>
-                <!-- /wp:image -->
+			<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#8a8a8a"},"typography":{"fontSize":"20px","fontStyle":"normal","fontWeight":"300","lineHeight":2,"letterSpacing":"0px"}},"fontFamily":"montserrat"} -->
+			<p class="has-text-align-center has-text-color has-montserrat-font-family" style="color:#8a8a8a;font-size:20px;font-style:normal;font-weight:300;letter-spacing:0px;line-height:2">"Starting my role as a WordPress administrator has been a joy, thanks to its intuitive interface, media management, security, and plugin integration, making website management a breeze."</p>
+			<!-- /wp:paragraph -->
 
-                <!-- wp:group {"style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"default"}} -->
-                <div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":3,"fontSize":"medium"} -->
-                <h3 class="wp-block-heading has-text-align-center has-medium-font-size">Mike W.</h3>
-                <!-- /wp:heading -->
+			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"600"},"spacing":{"padding":{"bottom":"5px"}}}} -->
+			<p class="has-text-align-center" style="padding-bottom:5px;font-size:16px;font-style:normal;font-weight:600">Pierre</p>
+			<!-- /wp:paragraph -->
 
-                <!-- wp:paragraph {"align":"center","fontSize":"small"} -->
-                <p class="has-text-align-center has-small-font-size">Software engineer</p>
-                <!-- /wp:paragraph --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:lubus/slide -->
+			<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"0px"}},"color":{"text":"#8a8a8a"},"typography":{"fontSize":"12px","fontStyle":"normal","fontWeight":"300"}},"fontFamily":"raleway"} -->
+			<p class="has-text-align-center has-text-color has-raleway-font-family" style="color:#8a8a8a;margin-top:0px;font-size:12px;font-style:normal;font-weight:300">Entrepreneur, Kitchenlogix</p>
+			<!-- /wp:paragraph --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:blablablocks/slide -->
 
-                <!-- wp:lubus/slide -->
-                <div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"metadata":{},"align":"full","style":{"spacing":{"padding":{"top":"0px","bottom":"0px"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
-                <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:0px;padding-bottom:0px"><!-- wp:paragraph {"align":"center"} -->
-                <p class="has-text-align-center">"Starting my role as a WordPress administrator has been a joy, thanks to its intuitive interface, media management, security, and plugin integration, making website management a breeze."</p>
-                <!-- /wp:paragraph -->
+			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"15px"}},"layout":{"type":"default"}} -->
+			<div class="wp-block-group"><!-- wp:image {"id":2510,"sizeSlug":"full","linkDestination":"none","align":"center"} -->
+			<figure class="wp-block-image aligncenter size-full"><img src="https://rollingnames.com/wp-content/uploads/2023/08/quote.png" alt="" class="wp-image-2510"/></figure>
+			<!-- /wp:image -->
 
-                <!-- wp:spacer {"height":"calc( 0.25 * var(\u002d\u002dwp\u002d\u002dstyle\u002d\u002droot\u002d\u002dpadding-right, var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dgap\u002d\u002dhorizontal)))"} -->
-                <div style="height:calc( 0.25 * var(--wp--style--root--padding-right, var(--wp--custom--gap--horizontal)))" aria-hidden="true" class="wp-block-spacer"></div>
-                <!-- /wp:spacer -->
+			<!-- wp:image {"width":"150px","height":"150px","scale":"cover","sizeSlug":"large","linkDestination":"none","align":"center","style":{"border":{"radius":"100px"}}} -->
+			<figure class="wp-block-image aligncenter size-large is-resized has-custom-border"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/01/paint-small.jpg" style="border-radius:100px;object-fit:cover;width:150px;height:150px"/></figure>
+			<!-- /wp:image -->
 
-                <!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
-                <div class="wp-block-group"><!-- wp:image {"id":13762,"width":"64px","aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"100px"}}} -->
-                <figure class="wp-block-image size-full is-resized has-custom-border"><img src="https://dotcompatterns.files.wordpress.com/2024/01/paint-small.jpg" alt="" class="wp-image-13762" style="border-radius:100px;aspect-ratio:1;object-fit:cover;width:64px"/></figure>
-                <!-- /wp:image -->
+			<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#8a8a8a"},"typography":{"fontSize":"20px","fontStyle":"normal","fontWeight":"300","lineHeight":2,"letterSpacing":"0px"}},"fontFamily":"montserrat"} -->
+			<p class="has-text-align-center has-text-color has-montserrat-font-family" style="color:#8a8a8a;font-size:20px;font-style:normal;font-weight:300;letter-spacing:0px;line-height:2">"Starting my role as a WordPress administrator has been a joy, thanks to its intuitive interface, media management, security, and plugin integration, making website management a breeze."</p>
+			<!-- /wp:paragraph -->
 
-                <!-- wp:group {"style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"default"}} -->
-                <div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":3,"fontSize":"medium"} -->
-                <h3 class="wp-block-heading has-text-align-center has-medium-font-size">Harry T.</h3>
-                <!-- /wp:heading -->
+			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"600"},"spacing":{"padding":{"bottom":"5px"}}}} -->
+			<p class="has-text-align-center" style="padding-bottom:5px;font-size:16px;font-style:normal;font-weight:600">Pierre</p>
+			<!-- /wp:paragraph -->
 
-                <!-- wp:paragraph {"align":"center","fontSize":"small"} -->
-                <p class="has-text-align-center has-small-font-size">Software engineer</p>
-                <!-- /wp:paragraph --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:lubus/slide -->
+			<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"0px"}},"color":{"text":"#8a8a8a"},"typography":{"fontSize":"12px","fontStyle":"normal","fontWeight":"300"}},"fontFamily":"raleway"} -->
+			<p class="has-text-align-center has-text-color has-raleway-font-family" style="color:#8a8a8a;margin-top:0px;font-size:12px;font-style:normal;font-weight:300">Entrepreneur, Kitchenlogix</p>
+			<!-- /wp:paragraph --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:blablablocks/slide -->
 
-                <!-- wp:lubus/slide -->
-                <div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"metadata":{},"align":"full","style":{"spacing":{"padding":{"top":"0px","bottom":"0px"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
-                <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:0px;padding-bottom:0px"><!-- wp:paragraph {"align":"center"} -->
-                <p class="has-text-align-center">"Starting my role as a WordPress administrator has been a joy, thanks to its intuitive interface, media management, security, and plugin integration, making website management a breeze."</p>
-                <!-- /wp:paragraph -->
+			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"15px"}},"layout":{"type":"default"}} -->
+			<div class="wp-block-group"><!-- wp:image {"id":2510,"sizeSlug":"full","linkDestination":"none","align":"center"} -->
+			<figure class="wp-block-image aligncenter size-full"><img src="https://rollingnames.com/wp-content/uploads/2023/08/quote.png" alt="" class="wp-image-2510"/></figure>
+			<!-- /wp:image -->
 
-                <!-- wp:spacer {"height":"calc( 0.25 * var(\u002d\u002dwp\u002d\u002dstyle\u002d\u002droot\u002d\u002dpadding-right, var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dgap\u002d\u002dhorizontal)))"} -->
-                <div style="height:calc( 0.25 * var(--wp--style--root--padding-right, var(--wp--custom--gap--horizontal)))" aria-hidden="true" class="wp-block-spacer"></div>
-                <!-- /wp:spacer -->
+			<!-- wp:image {"width":"150px","height":"150px","scale":"cover","sizeSlug":"large","linkDestination":"none","align":"center","style":{"border":{"radius":"100px"}}} -->
+			<figure class="wp-block-image aligncenter size-large is-resized has-custom-border"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/01/paint-small.jpg" style="border-radius:100px;object-fit:cover;width:150px;height:150px"/></figure>
+			<!-- /wp:image -->
 
-                <!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
-                <div class="wp-block-group"><!-- wp:image {"id":13762,"width":"64px","aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"100px"}}} -->
-                <figure class="wp-block-image size-full is-resized has-custom-border"><img src="https://dotcompatterns.files.wordpress.com/2024/01/paint-small.jpg" alt="" class="wp-image-13762" style="border-radius:100px;aspect-ratio:1;object-fit:cover;width:64px"/></figure>
-                <!-- /wp:image -->
+			<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#8a8a8a"},"typography":{"fontSize":"20px","fontStyle":"normal","fontWeight":"300","lineHeight":2,"letterSpacing":"0px"}},"fontFamily":"montserrat"} -->
+			<p class="has-text-align-center has-text-color has-montserrat-font-family" style="color:#8a8a8a;font-size:20px;font-style:normal;font-weight:300;letter-spacing:0px;line-height:2">"Starting my role as a WordPress administrator has been a joy, thanks to its intuitive interface, media management, security, and plugin integration, making website management a breeze."</p>
+			<!-- /wp:paragraph -->
 
-                <!-- wp:group {"style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"default"}} -->
-                <div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":3,"fontSize":"medium"} -->
-                <h3 class="wp-block-heading has-text-align-center has-medium-font-size">Michael W.</h3>
-                <!-- /wp:heading -->
+			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"600"},"spacing":{"padding":{"bottom":"5px"}}}} -->
+			<p class="has-text-align-center" style="padding-bottom:5px;font-size:16px;font-style:normal;font-weight:600">Pierre</p>
+			<!-- /wp:paragraph -->
 
-                <!-- wp:paragraph {"align":"center","fontSize":"small"} -->
-                <p class="has-text-align-center has-small-font-size">Software engineer</p>
-                <!-- /wp:paragraph --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:lubus/slide -->
-
-                <!-- wp:lubus/slide -->
-                <div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"metadata":{},"align":"full","style":{"spacing":{"padding":{"top":"0px","bottom":"0px"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
-                <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:0px;padding-bottom:0px"><!-- wp:paragraph {"align":"center"} -->
-                <p class="has-text-align-center">"Starting my role as a WordPress administrator has been a joy, thanks to its intuitive interface, media management, security, and plugin integration, making website management a breeze."</p>
-                <!-- /wp:paragraph -->
-
-                <!-- wp:spacer {"height":"calc( 0.25 * var(\u002d\u002dwp\u002d\u002dstyle\u002d\u002droot\u002d\u002dpadding-right, var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dgap\u002d\u002dhorizontal)))"} -->
-                <div style="height:calc( 0.25 * var(--wp--style--root--padding-right, var(--wp--custom--gap--horizontal)))" aria-hidden="true" class="wp-block-spacer"></div>
-                <!-- /wp:spacer -->
-
-                <!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
-                <div class="wp-block-group"><!-- wp:image {"id":13762,"width":"64px","aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"100px"}}} -->
-                <figure class="wp-block-image size-full is-resized has-custom-border"><img src="https://dotcompatterns.files.wordpress.com/2024/01/paint-small.jpg" alt="" class="wp-image-13762" style="border-radius:100px;aspect-ratio:1;object-fit:cover;width:64px"/></figure>
-                <!-- /wp:image -->
-
-                <!-- wp:group {"style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"default"}} -->
-                <div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":3,"fontSize":"medium"} -->
-                <h3 class="wp-block-heading has-text-align-center has-medium-font-size">Shaun P.</h3>
-                <!-- /wp:heading -->
-
-                <!-- wp:paragraph {"align":"center","fontSize":"small"} -->
-                <p class="has-text-align-center has-small-font-size">Software engineer</p>
-                <!-- /wp:paragraph --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:lubus/slide --></div></div></div>
-                <!-- /wp:lubus/slider --></div>
-        <!-- /wp:group -->`
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Testimonial);
-
-/***/ }),
-
-/***/ "./src/templates/testimonial2.js":
-/*!***************************************!*\
-  !*** ./src/templates/testimonial2.js ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
-/**
- * Wordpress dependencies
- */
-
-const Testimonial2 = {
-  name: 'testimonial-2',
-  title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Testimonial 2', 'blablablocks-slider-block'),
-  description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('A simple centered call-to-action for subscribing.', 'blablablocks-slider-block'),
-  content: `
-           <!-- wp:group {"metadata":{"name":"Testimonial 2"},"align":"full","style":{"spacing":{"blockGap":"0px","padding":{"left":"2vw","right":"2vw","top":"8vw","bottom":"8vw"}}},"layout":{"type":"default"}} -->
-				<div class="wp-block-group alignfull" style="padding-top:8vw;padding-right:2vw;padding-bottom:8vw;padding-left:2vw"><!-- wp:heading {"textAlign":"center","level":1,"align":"wide","fontSize":"large"} -->
-				<h1 class="wp-block-heading alignwide has-text-align-center has-large-font-size"><strong>WHAT OUR CLIENTS SAY ABOUT US</strong></h1>
-				<!-- /wp:heading -->
-
-				<!-- wp:lubus/slider {"style":{"spacing":{"padding":{"top":"40px","bottom":"80px","right":"10vw","left":"10vw"}}}} -->
-				<div style="padding-top:40px;padding-right:10vw;padding-bottom:80px;padding-left:10vw;--swiper-navigation-size:40px;--navigation-border-radius:4px;--navigation-padding-top:0px;--navigation-padding-right:0px;--navigation-padding-bottom:0px;--navigation-padding-left:0px;--pagination-size:8px;--pagination-offset-top:auto;--pagination-offset-right:0px;--pagination-offset-bottom:8px;--pagination-offset-left:0px;--navigation-offset-top:50%;--navigation-offset-right:10px;--navigation-offset-bottom:0px;--navigation-offset-left:10px" class="wp-block-lubus-slider"><div class="swiper" data-swiper="{&quot;slidesPerView&quot;:{&quot;desktop&quot;:1,&quot;tablet&quot;:1,&quot;mobile&quot;:1,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;slidesSpacing&quot;:{&quot;desktop&quot;:30,&quot;tablet&quot;:20,&quot;mobile&quot;:10,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;speed&quot;:300,&quot;effects&quot;:&quot;slide&quot;,&quot;autoplay&quot;:false,&quot;delay&quot;:5000,&quot;navigation&quot;:true,&quot;pagination&quot;:true,&quot;loop&quot;:false,&quot;navigationColor&quot;:{&quot;arrowColor&quot;:{&quot;default&quot;:&quot;&quot;,&quot;hover&quot;:&quot;&quot;},&quot;backgroundColor&quot;:{&quot;default&quot;:&quot;&quot;,&quot;hover&quot;:&quot;&quot;}},&quot;navigationSize&quot;:&quot;40px&quot;,&quot;navigationOffset&quot;:{&quot;top&quot;:&quot;50%&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;10px&quot;,&quot;right&quot;:&quot;10px&quot;},&quot;navigationBorderRadius&quot;:&quot;4px&quot;,&quot;paginationSize&quot;:&quot;8px&quot;,&quot;paginationOffset&quot;:{&quot;top&quot;:&quot;auto&quot;,&quot;bottom&quot;:&quot;8px&quot;,&quot;left&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;},&quot;style&quot;:{&quot;spacing&quot;:{&quot;padding&quot;:{&quot;top&quot;:&quot;40px&quot;,&quot;bottom&quot;:&quot;80px&quot;,&quot;right&quot;:&quot;10vw&quot;,&quot;left&quot;:&quot;10vw&quot;}}}}"><div class="swiper-wrapper"><!-- wp:lubus/slide -->
-				<div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"15px"}},"layout":{"type":"default"}} -->
-				<div class="wp-block-group"><!-- wp:image {"id":2510,"sizeSlug":"full","linkDestination":"none","align":"center"} -->
-				<figure class="wp-block-image aligncenter size-full"><img src="https://rollingnames.com/wp-content/uploads/2023/08/quote.png" alt="" class="wp-image-2510"/></figure>
-				<!-- /wp:image -->
-
-				<!-- wp:image {"id":181,"width":"150px","height":"150px","scale":"cover","sizeSlug":"full","linkDestination":"none","align":"center","style":{"border":{"radius":"100px"}}} -->
-				<figure class="wp-block-image aligncenter size-full is-resized has-custom-border"><img src="http://slider-block.local/wp-content/uploads/2024/12/brooke-cagle-wKOKidNT14w-unsplash-scaled.jpg" alt="" class="wp-image-181" style="border-radius:100px;object-fit:cover;width:150px;height:150px"/></figure>
-				<!-- /wp:image -->
-
-				<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#8a8a8a"},"typography":{"fontSize":"20px","fontStyle":"normal","fontWeight":"300","lineHeight":2,"letterSpacing":"0px"}},"fontFamily":"montserrat"} -->
-				<p class="has-text-align-center has-text-color has-montserrat-font-family" style="color:#8a8a8a;font-size:20px;font-style:normal;font-weight:300;letter-spacing:0px;line-height:2">"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."</p>
-				<!-- /wp:paragraph -->
-
-				<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"600"},"spacing":{"padding":{"bottom":"5px"}}}} -->
-				<p class="has-text-align-center" style="padding-bottom:5px;font-size:16px;font-style:normal;font-weight:600">Pierre</p>
-				<!-- /wp:paragraph -->
-
-				<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"0px"}},"color":{"text":"#8a8a8a"},"typography":{"fontSize":"12px","fontStyle":"normal","fontWeight":"300"}},"fontFamily":"raleway"} -->
-				<p class="has-text-align-center has-text-color has-raleway-font-family" style="color:#8a8a8a;margin-top:0px;font-size:12px;font-style:normal;font-weight:300">Entrepreneur, Kitchenlogix</p>
-				<!-- /wp:paragraph --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:lubus/slide -->
-
-				<!-- wp:lubus/slide -->
-				<div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"15px"}},"layout":{"type":"default"}} -->
-				<div class="wp-block-group"><!-- wp:image {"id":2510,"sizeSlug":"full","linkDestination":"none","align":"center"} -->
-				<figure class="wp-block-image aligncenter size-full"><img src="https://rollingnames.com/wp-content/uploads/2023/08/quote.png" alt="" class="wp-image-2510"/></figure>
-				<!-- /wp:image -->
-
-				<!-- wp:image {"id":181,"width":"150px","height":"150px","scale":"cover","sizeSlug":"full","linkDestination":"none","align":"center","style":{"border":{"radius":"100px"}}} -->
-				<figure class="wp-block-image aligncenter size-full is-resized has-custom-border"><img src="http://slider-block.local/wp-content/uploads/2024/12/brooke-cagle-wKOKidNT14w-unsplash-scaled.jpg" alt="" class="wp-image-181" style="border-radius:100px;object-fit:cover;width:150px;height:150px"/></figure>
-				<!-- /wp:image -->
-
-				<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#8a8a8a"},"typography":{"fontSize":"20px","fontStyle":"normal","fontWeight":"300","lineHeight":2,"letterSpacing":"0px"}},"fontFamily":"montserrat"} -->
-				<p class="has-text-align-center has-text-color has-montserrat-font-family" style="color:#8a8a8a;font-size:20px;font-style:normal;font-weight:300;letter-spacing:0px;line-height:2">"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."</p>
-				<!-- /wp:paragraph -->
-
-				<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"600"},"spacing":{"padding":{"bottom":"5px"}}}} -->
-				<p class="has-text-align-center" style="padding-bottom:5px;font-size:16px;font-style:normal;font-weight:600">Pierre</p>
-				<!-- /wp:paragraph -->
-
-				<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"0px"}},"color":{"text":"#8a8a8a"},"typography":{"fontSize":"12px","fontStyle":"normal","fontWeight":"300"}},"fontFamily":"raleway"} -->
-				<p class="has-text-align-center has-text-color has-raleway-font-family" style="color:#8a8a8a;margin-top:0px;font-size:12px;font-style:normal;font-weight:300">Entrepreneur, Kitchenlogix</p>
-				<!-- /wp:paragraph --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:lubus/slide -->
-
-				<!-- wp:lubus/slide -->
-				<div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"15px"}},"layout":{"type":"default"}} -->
-				<div class="wp-block-group"><!-- wp:image {"id":2510,"sizeSlug":"full","linkDestination":"none","align":"center"} -->
-				<figure class="wp-block-image aligncenter size-full"><img src="https://rollingnames.com/wp-content/uploads/2023/08/quote.png" alt="" class="wp-image-2510"/></figure>
-				<!-- /wp:image -->
-
-				<!-- wp:image {"id":181,"width":"150px","height":"150px","scale":"cover","sizeSlug":"full","linkDestination":"none","align":"center","style":{"border":{"radius":"100px"}}} -->
-				<figure class="wp-block-image aligncenter size-full is-resized has-custom-border"><img src="http://slider-block.local/wp-content/uploads/2024/12/brooke-cagle-wKOKidNT14w-unsplash-scaled.jpg" alt="" class="wp-image-181" style="border-radius:100px;object-fit:cover;width:150px;height:150px"/></figure>
-				<!-- /wp:image -->
-
-				<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#8a8a8a"},"typography":{"fontSize":"20px","fontStyle":"normal","fontWeight":"300","lineHeight":2,"letterSpacing":"0px"}},"fontFamily":"montserrat"} -->
-				<p class="has-text-align-center has-text-color has-montserrat-font-family" style="color:#8a8a8a;font-size:20px;font-style:normal;font-weight:300;letter-spacing:0px;line-height:2">"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."</p>
-				<!-- /wp:paragraph -->
-
-				<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"600"},"spacing":{"padding":{"bottom":"5px"}}}} -->
-				<p class="has-text-align-center" style="padding-bottom:5px;font-size:16px;font-style:normal;font-weight:600">Pierre</p>
-				<!-- /wp:paragraph -->
-
-				<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"0px"}},"color":{"text":"#8a8a8a"},"typography":{"fontSize":"12px","fontStyle":"normal","fontWeight":"300"}},"fontFamily":"raleway"} -->
-				<p class="has-text-align-center has-text-color has-raleway-font-family" style="color:#8a8a8a;margin-top:0px;font-size:12px;font-style:normal;font-weight:300">Entrepreneur, Kitchenlogix</p>
-				<!-- /wp:paragraph --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:lubus/slide -->
-
-				<!-- wp:lubus/slide -->
-				<div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"15px"}},"layout":{"type":"default"}} -->
-				<div class="wp-block-group"><!-- wp:image {"id":2510,"sizeSlug":"full","linkDestination":"none","align":"center"} -->
-				<figure class="wp-block-image aligncenter size-full"><img src="https://rollingnames.com/wp-content/uploads/2023/08/quote.png" alt="" class="wp-image-2510"/></figure>
-				<!-- /wp:image -->
-
-				<!-- wp:image {"id":181,"width":"150px","height":"150px","scale":"cover","sizeSlug":"full","linkDestination":"none","align":"center","style":{"border":{"radius":"100px"}}} -->
-				<figure class="wp-block-image aligncenter size-full is-resized has-custom-border"><img src="http://slider-block.local/wp-content/uploads/2024/12/brooke-cagle-wKOKidNT14w-unsplash-scaled.jpg" alt="" class="wp-image-181" style="border-radius:100px;object-fit:cover;width:150px;height:150px"/></figure>
-				<!-- /wp:image -->
-
-				<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#8a8a8a"},"typography":{"fontSize":"20px","fontStyle":"normal","fontWeight":"300","lineHeight":2,"letterSpacing":"0px"}},"fontFamily":"montserrat"} -->
-				<p class="has-text-align-center has-text-color has-montserrat-font-family" style="color:#8a8a8a;font-size:20px;font-style:normal;font-weight:300;letter-spacing:0px;line-height:2">"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."</p>
-				<!-- /wp:paragraph -->
-
-				<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"600"},"spacing":{"padding":{"bottom":"5px"}}}} -->
-				<p class="has-text-align-center" style="padding-bottom:5px;font-size:16px;font-style:normal;font-weight:600">Pierre</p>
-				<!-- /wp:paragraph -->
-
-				<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"0px"}},"color":{"text":"#8a8a8a"},"typography":{"fontSize":"12px","fontStyle":"normal","fontWeight":"300"}},"fontFamily":"raleway"} -->
-				<p class="has-text-align-center has-text-color has-raleway-font-family" style="color:#8a8a8a;margin-top:0px;font-size:12px;font-style:normal;font-weight:300">Entrepreneur, Kitchenlogix</p>
-				<!-- /wp:paragraph --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:lubus/slide --></div></div></div>
-				<!-- /wp:lubus/slider --></div>
+			<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"0px"}},"color":{"text":"#8a8a8a"},"typography":{"fontSize":"12px","fontStyle":"normal","fontWeight":"300"}},"fontFamily":"raleway"} -->
+			<p class="has-text-align-center has-text-color has-raleway-font-family" style="color:#8a8a8a;margin-top:0px;font-size:12px;font-style:normal;font-weight:300">Entrepreneur, Kitchenlogix</p>
+			<!-- /wp:paragraph --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:blablablocks/slide --></div></div></div>
+			<!-- /wp:blablablocks/slider --></div>
 			<!-- /wp:group -->`
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Testimonial2);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Testimonial);
 
 /***/ }),
 

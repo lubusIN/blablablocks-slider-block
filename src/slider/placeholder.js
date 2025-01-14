@@ -26,13 +26,13 @@ import { uploadMedia } from '@wordpress/media-utils';
  * Internal dependencies
  */
 import variations from './variations';
-import { Testimonial2, Services, Testimonial } from '../templates';
+import { Services, Testimonial, HeroSection } from '../templates';
 import { SliderLogo } from '../components';
 
 /**
  * Default patterns for modal preview.
  */
-const defaultPatterns = [Testimonial, Testimonial2, Services];
+const defaultPatterns = [Testimonial, HeroSection, Services];
 
 /**
  * This component serves as a placeholder for the Slider block, displaying a block variation picker.
