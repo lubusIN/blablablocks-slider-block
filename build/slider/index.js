@@ -203,29 +203,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
 /**
  * WordPress dependencies.
  */
 
 
 
-
 /**
  * Renders a color control dropdown for selecting colors.
  *
- * @param {Object} props - The component props.
- * @param {string} props.label - The label for the color control.
- * @param {Object} props.colorValue - The current color values. Should include `default` and optionally `hover` (if `hasHover` is true).
+ * @param {Object}   props               - The component props.
+ * @param {string}   props.label         - The label for the color control.
+ * @param {Object}   props.colorValue    - The current color values. Should include `default` and optionally `hover` (if `hasHover` is true).
  * @param {Function} props.onChangeColor - Callback function to handle color changes. Accepts an object with updated color values.
- * @param {boolean} props.hasHover - Determines if hover color support is enabled. If true, a tab for hover colors is displayed.
+ * @param {boolean}  props.hasHover      - Determines if hover color support is enabled. If true, a tab for hover colors is displayed.
  *
- * @returns {JSX.Element} The rendered ColorControlDropdown component.
+ * @return {JSX.Element} The rendered ColorControlDropdown component.
  */
 
 function ColorControlDropdown({
@@ -234,8 +231,7 @@ function ColorControlDropdown({
   onChangeColor,
   hasHover = false
 }) {
-  const [activeTab, setActiveTab] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.useState)('default');
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Dropdown, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Dropdown, {
     popoverProps: {
       placement: 'left-start',
       offset: 36,
@@ -245,26 +241,25 @@ function ColorControlDropdown({
     renderToggle: ({
       isOpen,
       onToggle
-    }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+    }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Button, {
       className: `slider_color_button ${isOpen ? 'isOpen' : ''}`,
       "aria-expanded": isOpen,
       onClick: onToggle,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.__experimentalHStack, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.__experimentalHStack, {
         justify: "left",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.__experimentalZStack, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.__experimentalZStack, {
           offset: 10,
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorIndicator, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ColorIndicator, {
             colorValue: colorValue.default
-          }), hasHover && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorIndicator, {
+          }), hasHover && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ColorIndicator, {
             colorValue: colorValue.hover
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.__experimentalText, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.__experimentalText, {
           children: label
         })]
       })
     }),
-    renderContent: () => hasHover ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TabPanel, {
-      onSelect: tab => setActiveTab(tab),
+    renderContent: () => hasHover ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.TabPanel, {
       tabs: [{
         name: 'default',
         title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Default', 'blablablocks-slider-block')
@@ -272,7 +267,7 @@ function ColorControlDropdown({
         name: 'hover',
         title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Hover', 'blablablocks-slider-block')
       }],
-      children: tab => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorPalette, {
+      children: tab => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ColorPalette, {
         __experimentalIsRenderedInSidebar: true,
         value: colorValue[tab.name] || '',
         onChange: color => {
@@ -283,7 +278,7 @@ function ColorControlDropdown({
         },
         enableAlpha: true
       })
-    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorPalette, {
+    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ColorPalette, {
       className: "ls-color-pallete-container",
       __experimentalIsRenderedInSidebar: true,
       value: colorValue.default || '',
@@ -380,7 +375,7 @@ const devices = [{
  * @param {Object}   props.attributes    Block attributes.
  * @param {Function} props.setAttributes Function to update attributes.
  * @param {string}   props.responsiveKey The key in the attributes object for responsive settings (e.g., 'slidesPerView', 'slidesSpacing').
- *
+ * @param {string}   props.label         The label of field
  * @return {JSX.Element} JSX element for responsive icon display.
  */
 const ResponsiveDropdown = ({
@@ -418,7 +413,7 @@ const ResponsiveDropdown = ({
       style: {
         margin: 0
       },
-      children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)(label, 'blablablocks-slider-block')
+      children: label
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Icon, {
       icon: currentDevice.icon
     })]
@@ -571,7 +566,7 @@ function Edit({
       mobile: 10
     },
     speed: 300,
-    effects: "slide",
+    effects: 'slide',
     autoplay: false,
     delay: 5000,
     navigation: {
@@ -1035,7 +1030,6 @@ function Edit({
     })]
   }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_placeholder__WEBPACK_IMPORTED_MODULE_6__["default"], {
     clientId: clientId,
-    attributes: attributes,
     setAttributes: setAttributes
   });
 }
@@ -1101,24 +1095,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _wordpress_media_utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @wordpress/media-utils */ "@wordpress/media-utils");
-/* harmony import */ var _wordpress_media_utils__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_wordpress_media_utils__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _variations__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./variations */ "./src/slider/variations.js");
-/* harmony import */ var _templates__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../templates */ "./src/templates/index.js");
-/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components */ "./src/components/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_notices__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/notices */ "@wordpress/notices");
+/* harmony import */ var _wordpress_notices__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_notices__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _wordpress_media_utils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @wordpress/media-utils */ "@wordpress/media-utils");
+/* harmony import */ var _wordpress_media_utils__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_wordpress_media_utils__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _variations__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./variations */ "./src/slider/variations.js");
+/* harmony import */ var _templates__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../templates */ "./src/templates/index.js");
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components */ "./src/components/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__);
 /**
  * Wordpress dependencies
  */
+
 
 
 
@@ -1138,7 +1135,7 @@ __webpack_require__.r(__webpack_exports__);
  * Default patterns for modal preview.
  */
 
-const defaultPatterns = [_templates__WEBPACK_IMPORTED_MODULE_8__.Testimonial, _templates__WEBPACK_IMPORTED_MODULE_8__.HeroSection, _templates__WEBPACK_IMPORTED_MODULE_8__.Services];
+const defaultPatterns = [_templates__WEBPACK_IMPORTED_MODULE_9__.Testimonial, _templates__WEBPACK_IMPORTED_MODULE_9__.HeroSection, _templates__WEBPACK_IMPORTED_MODULE_9__.Services];
 
 /**
  * This component serves as a placeholder for the Slider block, displaying a block variation picker.
@@ -1147,18 +1144,20 @@ const defaultPatterns = [_templates__WEBPACK_IMPORTED_MODULE_8__.Testimonial, _t
  * @param {Object}   props               Component props.
  * @param {string}   props.clientId      The client ID for this block instance.
  * @param {Function} props.setAttributes Function to update block attributes.
- * @param            props.attributes
+ *
  * @return {JSX.Element} The placeholder component for the Slider block.
  */
 function Placeholder({
   clientId,
-  attributes,
   setAttributes
 }) {
   const {
     replaceInnerBlocks
-  } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useDispatch)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__.store);
-  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__.useBlockProps)();
+  } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.useDispatch)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__.store);
+  const {
+    createErrorNotice
+  } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.useDispatch)(_wordpress_notices__WEBPACK_IMPORTED_MODULE_3__.store);
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__.useBlockProps)();
   const [step, setStep] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.useState)(null);
   const [isModalOpen, setIsModalOpen] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
   const onSelectVariation = variation => {
@@ -1166,7 +1165,7 @@ function Placeholder({
       setAttributes(variation.attributes);
     }
     if (variation?.innerBlocks) {
-      replaceInnerBlocks(clientId, (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__.createBlocksFromInnerBlocksTemplate)(variation.innerBlocks), true);
+      replaceInnerBlocks(clientId, (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_4__.createBlocksFromInnerBlocksTemplate)(variation.innerBlocks), true);
     }
   };
   const openTemplatesModal = () => {
@@ -1180,7 +1179,9 @@ function Placeholder({
   const handleFilesUpload = async files => {
     const validFiles = Array.from(files).filter(file => file.type.startsWith('image/'));
     if (validFiles.length === 0) {
-      alert((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Only image files are allowed.', 'slider-block'));
+      createErrorNotice((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Only image files are allowed.', 'slider-block'), {
+        isDismissible: true
+      });
       return;
     }
 
@@ -1194,7 +1195,7 @@ function Placeholder({
       if (response && response.length > 0) {
         // Use existing media item
         const mediaItem = response[0];
-        existingBlocks.push((0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__.createBlock)('blablablocks/slide', {}, [(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__.createBlock)('core/image', {
+        existingBlocks.push((0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_4__.createBlock)('blablablocks/slide', {}, [(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_4__.createBlock)('core/image', {
           url: mediaItem.source_url
         })]));
       } else {
@@ -1210,16 +1211,18 @@ function Placeholder({
 
     // Upload new files
     if (newFiles.length > 0) {
-      (0,_wordpress_media_utils__WEBPACK_IMPORTED_MODULE_6__.uploadMedia)({
+      (0,_wordpress_media_utils__WEBPACK_IMPORTED_MODULE_7__.uploadMedia)({
         filesList: newFiles,
         onFileChange: media => {
-          const newBlocks = media.map(item => (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__.createBlock)('blablablocks/slide', {}, [(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__.createBlock)('core/image', {
+          const newBlocks = media.map(item => (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_4__.createBlock)('blablablocks/slide', {}, [(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_4__.createBlock)('core/image', {
             url: item.url
           })]));
           replaceInnerBlocks(clientId, [...existingBlocks, ...newBlocks], false);
         },
-        onError: error => {
-          console.error((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('File upload failed.', 'slider-block'), error);
+        onError: () => {
+          createErrorNotice((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('File upload failed.', 'slider-block'), {
+            isDismissible: true
+          });
         }
       });
     }
@@ -1229,58 +1232,58 @@ function Placeholder({
       handleFilesUpload(files);
     }
   };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
     ...blockProps,
-    children: [!step && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Placeholder, {
-      icon: _components__WEBPACK_IMPORTED_MODULE_9__.SliderLogo,
-      instructions: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Choose a pattern for the slider, start blank or drag and drop images here.", 'blablablocks-slider-block'),
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Slider", 'blablablocks-slider-block'),
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
+    children: [!step && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.Placeholder, {
+      icon: _components__WEBPACK_IMPORTED_MODULE_10__.SliderLogo,
+      instructions: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Choose a pattern for the slider, start blank or drag and drop images here.', 'blablablocks-slider-block'),
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Slider', 'blablablocks-slider-block'),
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.Button, {
         variant: "primary",
         onClick: openTemplatesModal,
         children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Choose', 'blablablocks-slider-block')
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.Button, {
         variant: "secondary",
         onClick: () => setStep('variations'),
         children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Start blank', 'blablablocks-slider-block')
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.DropZone, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.DropZone, {
         onFilesDrop: onFilesDrop,
         accept: "image/*"
       })]
-    }), step === 'variations' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__.__experimentalBlockVariationPicker, {
-      icon: _components__WEBPACK_IMPORTED_MODULE_9__.SliderLogo,
+    }), step === 'variations' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__.__experimentalBlockVariationPicker, {
+      icon: _components__WEBPACK_IMPORTED_MODULE_10__.SliderLogo,
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Slider', 'blablablocks-slider-block'),
       instructions: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Select a variation to start with:', 'blablablocks-slider-block'),
-      variations: _variations__WEBPACK_IMPORTED_MODULE_7__["default"],
-      onSelect: (variation = _variations__WEBPACK_IMPORTED_MODULE_7__["default"][1]) => {
+      variations: _variations__WEBPACK_IMPORTED_MODULE_8__["default"],
+      onSelect: (variation = _variations__WEBPACK_IMPORTED_MODULE_8__["default"][1]) => {
         onSelectVariation(variation);
       },
       allowSkip: true
-    }), isModalOpen && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Modal, {
+    }), isModalOpen && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.Modal, {
       title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Choose a Template', 'blablablocks-slider-block'),
       isFullScreen: true,
       onRequestClose: () => setIsModalOpen(false),
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalGrid, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalGrid, {
         gap: 4,
         columns: [1, 2, 3],
         align: "start",
-        children: defaultPatterns.map(pattern => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
+        children: defaultPatterns.map(pattern => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.Button, {
           className: 'slider-pattern-item',
           onClick: () => applyPattern(pattern),
           style: {
             width: '100%',
             height: '100%'
           },
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalVStack, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalVStack, {
             alignment: "top",
             align: "left",
             style: {
               width: '100%',
               height: '100%'
             },
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__.BlockPreview, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__.BlockPreview, {
               blocks: wp.blocks.parse(pattern.content)
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalText, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalText, {
               align: "left",
               size: 12,
               children: pattern.title
@@ -1320,10 +1323,10 @@ __webpack_require__.r(__webpack_exports__);
  * The save function defines the way in which the different attributes should
  * be combined into the final markup, which is then serialized by the block
  * editor into `post_content`.
- * 
- * @param {Object}   props                     Component properties.
- * @param {Object}   props.attributes          The block's attributes.
- * @returns {JSX.Element}                      The block's save component.
+ *
+ * @param {Object} props            Component properties.
+ * @param {Object} props.attributes The block's attributes.
+ * @return {JSX.Element}                      The block's save component.
  */
 
 function save({
@@ -1385,12 +1388,14 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Slider Component
  * Responsible for rendering and managing the Swiper slider instance.
- * @param {Object} props - Component properties.
- * @param {string} props.clientId - The client ID for this block instance.
- * @param {Object} props.attributes - The block attributes.
+ *
+ * @param {Object} props                  - Component properties.
+ * @param {string} props.clientId         - The client ID for this block instance.
+ * @param {Object} props.attributes       - The block attributes.
  * @param {Object} props.innerBlocksProps - Properties for inner blocks.
- * @param {Array} props.innerBlocks - List of inner blocks.
- * @returns {JSX.Element} The slider component.
+ * @param {Array}  props.innerBlocks      - List of inner blocks.
+ *
+ * @return {JSX.Element} The slider component.
  */
 
 const Slider = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.memo)(({
@@ -1401,7 +1406,7 @@ const Slider = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.memo)(({
 }) => {
   const swiperContainerRef = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
   const swiperInstanceRef = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-  const editorDeviceType = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(select => select('core/editor').getDeviceType(), []);
+  const editorDeviceType = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(wpSelect => wpSelect('core/editor').getDeviceType(), []);
 
   /**
    * Initialize the Swiper slider instance.
@@ -1425,6 +1430,8 @@ const Slider = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.memo)(({
 
   /**
    * Update the Swiper instance when slides are added, removed, or reordered.
+   *
+   * @param {string[]} slideOrder - Array of block client IDs representing the slide order.
    */
   const manageSwiperUpdates = slideOrder => {
     const currentSlidesOrder = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.select)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.store).getBlockOrder(clientId);
@@ -1456,7 +1463,7 @@ const Slider = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.memo)(({
   };
   (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     initializeSwiper();
-    let slideOrder = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.select)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.store).getBlockOrder(clientId);
+    const slideOrder = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.select)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.store).getBlockOrder(clientId);
 
     // Subscribe to updates in the block editor.
     const unsubscribe = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.subscribe)(() => manageSwiperUpdates(slideOrder));
@@ -1504,7 +1511,7 @@ __webpack_require__.r(__webpack_exports__);
  * Swiper dependencies
  */
 
-
+ // eslint-disable-line
 
 /**
  * Get device-specific settings for Swiper.
@@ -1631,8 +1638,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * Template option choices for predefined slider layouts.
- *
- * @type {WPBlockVariation[]}
  */
 
 const variations = [{
@@ -2169,7 +2174,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Resolves a spacing size value into a usable CSS value.
  *
- * @param {string|number} value - The input spacing size value.
+ * @param {string|number} value        - The input spacing size value.
  * @param {string|number} defaultValue - The default value.
  * @return {string} - A valid CSS spacing size value.
  */
@@ -2364,6 +2369,16 @@ module.exports = window["wp"]["i18n"];
 /***/ ((module) => {
 
 module.exports = window["wp"]["mediaUtils"];
+
+/***/ }),
+
+/***/ "@wordpress/notices":
+/*!*********************************!*\
+  !*** external ["wp","notices"] ***!
+  \*********************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["notices"];
 
 /***/ }),
 

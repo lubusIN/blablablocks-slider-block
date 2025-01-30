@@ -1,7 +1,6 @@
 /**
  * Wordpress dependencies
  */
-import { __ } from '@wordpress/i18n';
 import { useSelect } from '@wordpress/data';
 import {
 	useBlockProps,
@@ -13,8 +12,9 @@ import {
 /**
  * The edit function describes the structure of your block in the context of the
  * editor. This represents what the editor will render when the block is used.
- * @param root0
- * @param root0.clientId
+ *
+ * @param {Object} props          Component props.
+ * @param {string} props.clientId The client ID for this block instance.
  */
 export default function Edit( { clientId } ) {
 	const { hasChildBlocks } = useSelect(

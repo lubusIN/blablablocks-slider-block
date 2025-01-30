@@ -8,7 +8,7 @@ import {
 	Keyboard,
 	Navigation,
 	Pagination,
-} from 'swiper/modules';
+} from 'swiper/modules'; // eslint-disable-line
 
 /**
  * Get device-specific settings for Swiper.

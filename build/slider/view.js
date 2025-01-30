@@ -18,7 +18,7 @@ __webpack_require__.r(__webpack_exports__);
  * Swiper dependencies
  */
 
-
+ // eslint-disable-line
 
 /**
  * Get device-specific settings for Swiper.
@@ -10624,6 +10624,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const slides = element.querySelectorAll('.swiper-wrapper > *');
     const hasContent = Array.from(slides).some(slide => slide.textContent.trim() !== '' || slide.innerHTML.trim() !== '');
     if (!slides.length || !hasContent) {
+      // eslint-disable-next-line no-console
       console.warn('Swiper not initialized: No slides or slides with content found.');
       return;
     }
