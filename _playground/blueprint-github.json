@@ -22,7 +22,7 @@
         },
         {
             "step": "installPlugin",
-            "pluginZipFile": {
+            "pluginData": {
                 "resource": "url",
                 "url": "https://github-proxy.com/proxy/?repo=lubusIN/blablablocks-slider-block&branch=demo"
             }
