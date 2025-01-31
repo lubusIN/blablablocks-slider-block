@@ -9,7 +9,6 @@
     "blablablocks/slider"
   ],
   "supports": {
-    "anchor": true,
     "html": false
   },
   "editorScript": "file:./index.js"

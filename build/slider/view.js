@@ -18,7 +18,7 @@ __webpack_require__.r(__webpack_exports__);
  * Swiper dependencies
  */
 
-
+ // eslint-disable-line
 
 /**
  * Get device-specific settings for Swiper.
@@ -10620,7 +10620,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Loop through all sliders and assign Swiper object.
   containers.forEach(element => {
-    // We could pass in some unique options here.
+    // Check if the slider has slides with content.
+    const slides = element.querySelectorAll('.swiper-wrapper > *');
+    const hasContent = Array.from(slides).some(slide => slide.textContent.trim() !== '' || slide.innerHTML.trim() !== '');
+    if (!slides.length || !hasContent) {
+      // eslint-disable-next-line no-console
+      console.warn('Swiper not initialized: No slides or slides with content found.');
+      return;
+    }
     let options = {};
     try {
       options = JSON.parse(element.dataset.swiper);
@@ -10629,7 +10636,6 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error(e);
       return;
     }
-    console.log((0,_swiper_init__WEBPACK_IMPORTED_MODULE_0__.SwiperInit)(element, options));
 
     // Slider 🚀
     (0,_swiper_init__WEBPACK_IMPORTED_MODULE_0__.SwiperInit)(element, options);

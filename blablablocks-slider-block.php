@@ -4,8 +4,8 @@
  * Plugin Name:       BlaBlaBlocks Slider Block
  * Description:       Slider Block is a WordPress plugin built specifically for the Block Editor, allowing you to create responsive sliders effortlessly.
  * Requires at least: 6.6
- * Requires PHP:      7.2
- * Version:           0.1.0
+ * Requires PHP:      7.4
+ * Version:           1.0.0
  * Author:            Lubus
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html

@@ -1,6 +1,6 @@
 {
 	"name": "blablablocks-slider-block",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"description": "Slider Block is a WordPress plugin built specifically for the Block Editor, allowing you to create responsive sliders effortlessly.",
 	"author": "Lubus",
 	"license": "GPL-2.0-or-later",
@@ -26,6 +26,8 @@
 		"@wordpress/element": "^6.14.0",
 		"@wordpress/i18n": "^5.14.0",
 		"@wordpress/icons": "^10.14.0",
+		"@wordpress/media-utils": "^5.14.0",
+		"@wordpress/notices": "^5.17.0",
 		"swiper": "^11.1.14"
 	}
 }

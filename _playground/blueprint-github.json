@@ -24,7 +24,7 @@
             "step": "installPlugin",
             "pluginZipFile": {
                 "resource": "url",
-                "url": "https://github-proxy.com/proxy/?repo=lubusIN/blablablocks-slider-blockk&branch=demo"
+                "url": "https://github-proxy.com/proxy/?repo=lubusIN/blablablocks-slider-block&branch=demo"
             }
         },
         {

@@ -2,6 +2,37 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/@wordpress/icons/build-module/library/cover.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@wordpress/icons/build-module/library/cover.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/primitives */ "@wordpress/primitives");
+/* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+/**
+ * WordPress dependencies
+ */
+
+
+const cover = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_0__.SVG, {
+  xmlns: "http://www.w3.org/2000/svg",
+  viewBox: "0 0 24 24",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_0__.Path, {
+    d: "M18.7 3H5.3C4 3 3 4 3 5.3v13.4C3 20 4 21 5.3 21h13.4c1.3 0 2.3-1 2.3-2.3V5.3C21 4 20 3 18.7 3zm.8 15.7c0 .4-.4.8-.8.8H5.3c-.4 0-.8-.4-.8-.8V5.3c0-.4.4-.8.8-.8h6.2v8.9l2.5-3.1 2.5 3.1V4.5h2.2c.4 0 .8.4.8.8v13.4z"
+  })
+});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (cover);
+//# sourceMappingURL=cover.js.map
+
+/***/ }),
+
 /***/ "./node_modules/@wordpress/icons/build-module/library/desktop.js":
 /*!***********************************************************************!*\
   !*** ./node_modules/@wordpress/icons/build-module/library/desktop.js ***!
@@ -30,6 +61,71 @@ const desktop = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.j
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (desktop);
 //# sourceMappingURL=desktop.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@wordpress/icons/build-module/library/gallery.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@wordpress/icons/build-module/library/gallery.js ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   gallery: () => (/* binding */ gallery)
+/* harmony export */ });
+/* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/primitives */ "@wordpress/primitives");
+/* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+/**
+ * WordPress dependencies
+ */
+
+
+const gallery = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_0__.SVG, {
+  viewBox: "0 0 24 24",
+  xmlns: "http://www.w3.org/2000/svg",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_0__.Path, {
+    d: "M16.375 4.5H4.625a.125.125 0 0 0-.125.125v8.254l2.859-1.54a.75.75 0 0 1 .68-.016l2.384 1.142 2.89-2.074a.75.75 0 0 1 .874 0l2.313 1.66V4.625a.125.125 0 0 0-.125-.125Zm.125 9.398-2.75-1.975-2.813 2.02a.75.75 0 0 1-.76.067l-2.444-1.17L4.5 14.583v1.792c0 .069.056.125.125.125h11.75a.125.125 0 0 0 .125-.125v-2.477ZM4.625 3C3.728 3 3 3.728 3 4.625v11.75C3 17.273 3.728 18 4.625 18h11.75c.898 0 1.625-.727 1.625-1.625V4.625C18 3.728 17.273 3 16.375 3H4.625ZM20 8v11c0 .69-.31 1-.999 1H6v1.5h13.001c1.52 0 2.499-.982 2.499-2.5V8H20Z",
+    fillRule: "evenodd",
+    clipRule: "evenodd"
+  })
+});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (gallery);
+//# sourceMappingURL=gallery.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@wordpress/icons/build-module/library/media-and-text.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@wordpress/icons/build-module/library/media-and-text.js ***!
+  \******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/primitives */ "@wordpress/primitives");
+/* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+/**
+ * WordPress dependencies
+ */
+
+
+const mediaAndText = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_0__.SVG, {
+  xmlns: "http://www.w3.org/2000/svg",
+  viewBox: "0 0 24 24",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_0__.Path, {
+    d: "M3 6v11.5h8V6H3Zm11 3h7V7.5h-7V9Zm7 3.5h-7V11h7v1.5ZM14 16h7v-1.5h-7V16Z"
+  })
+});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (mediaAndText);
+//# sourceMappingURL=media-and-text.js.map
 
 /***/ }),
 
@@ -107,29 +203,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
 /**
  * WordPress dependencies.
  */
 
 
 
-
 /**
  * Renders a color control dropdown for selecting colors.
  *
- * @param {Object} props - The component props.
- * @param {string} props.label - The label for the color control.
- * @param {Object} props.colorValue - The current color values. Should include `default` and optionally `hover` (if `hasHover` is true).
+ * @param {Object}   props               - The component props.
+ * @param {string}   props.label         - The label for the color control.
+ * @param {Object}   props.colorValue    - The current color values. Should include `default` and optionally `hover` (if `hasHover` is true).
  * @param {Function} props.onChangeColor - Callback function to handle color changes. Accepts an object with updated color values.
- * @param {boolean} props.hasHover - Determines if hover color support is enabled. If true, a tab for hover colors is displayed.
+ * @param {boolean}  props.hasHover      - Determines if hover color support is enabled. If true, a tab for hover colors is displayed.
  *
- * @returns {JSX.Element} The rendered ColorControlDropdown component.
+ * @return {JSX.Element} The rendered ColorControlDropdown component.
  */
 
 function ColorControlDropdown({
@@ -138,8 +231,7 @@ function ColorControlDropdown({
   onChangeColor,
   hasHover = false
 }) {
-  const [activeTab, setActiveTab] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.useState)('default');
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Dropdown, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Dropdown, {
     popoverProps: {
       placement: 'left-start',
       offset: 36,
@@ -149,26 +241,25 @@ function ColorControlDropdown({
     renderToggle: ({
       isOpen,
       onToggle
-    }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+    }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Button, {
       className: `slider_color_button ${isOpen ? 'isOpen' : ''}`,
       "aria-expanded": isOpen,
       onClick: onToggle,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.__experimentalHStack, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.__experimentalHStack, {
         justify: "left",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.__experimentalZStack, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.__experimentalZStack, {
           offset: 10,
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorIndicator, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ColorIndicator, {
             colorValue: colorValue.default
-          }), hasHover && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorIndicator, {
+          }), hasHover && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ColorIndicator, {
             colorValue: colorValue.hover
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.__experimentalText, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.__experimentalText, {
           children: label
         })]
       })
     }),
-    renderContent: () => hasHover ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TabPanel, {
-      onSelect: tab => setActiveTab(tab),
+    renderContent: () => hasHover ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.TabPanel, {
       tabs: [{
         name: 'default',
         title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Default', 'blablablocks-slider-block')
@@ -176,7 +267,7 @@ function ColorControlDropdown({
         name: 'hover',
         title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Hover', 'blablablocks-slider-block')
       }],
-      children: tab => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorPalette, {
+      children: tab => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ColorPalette, {
         __experimentalIsRenderedInSidebar: true,
         value: colorValue[tab.name] || '',
         onChange: color => {
@@ -187,7 +278,7 @@ function ColorControlDropdown({
         },
         enableAlpha: true
       })
-    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorPalette, {
+    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ColorPalette, {
       className: "ls-color-pallete-container",
       __experimentalIsRenderedInSidebar: true,
       value: colorValue.default || '',
@@ -241,16 +332,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_icons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/icons */ "./node_modules/@wordpress/icons/build-module/library/desktop.js");
-/* harmony import */ var _wordpress_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/icons */ "./node_modules/@wordpress/icons/build-module/library/tablet.js");
-/* harmony import */ var _wordpress_icons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/icons */ "./node_modules/@wordpress/icons/build-module/library/mobile.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_icons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/icons */ "./node_modules/@wordpress/icons/build-module/library/desktop.js");
+/* harmony import */ var _wordpress_icons__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @wordpress/icons */ "./node_modules/@wordpress/icons/build-module/library/tablet.js");
+/* harmony import */ var _wordpress_icons__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @wordpress/icons */ "./node_modules/@wordpress/icons/build-module/library/mobile.js");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
 /**
  * WordPress dependencies
  */
+
+
 
 
 
@@ -260,63 +357,65 @@ __webpack_require__.r(__webpack_exports__);
 const devices = [{
   label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Desktop', 'blablablocks-slider-block'),
   value: 'desktop',
-  icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_3__["default"]
+  icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_5__["default"]
 }, {
   label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Tablet', 'blablablocks-slider-block'),
   value: 'tablet',
-  icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_4__["default"]
+  icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_6__["default"]
 }, {
   label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Mobile', 'blablablocks-slider-block'),
   value: 'mobile',
-  icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_5__["default"]
+  icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_7__["default"]
 }];
 
 /**
- * ResponsiveDropdown Component
+ * Responsive Icon Component
  *
  * @param {Object}   props               Component props.
  * @param {Object}   props.attributes    Block attributes.
  * @param {Function} props.setAttributes Function to update attributes.
- * @param {string}   props.label         Label for the heading.
  * @param {string}   props.responsiveKey The key in the attributes object for responsive settings (e.g., 'slidesPerView', 'slidesSpacing').
- *
- * @return {JSX.Element} JSX element for responsive dropdown.
+ * @param {string}   props.label         The label of field
+ * @return {JSX.Element} JSX element for responsive icon display.
  */
 const ResponsiveDropdown = ({
+  label,
   attributes,
   setAttributes,
-  label = 'Responsive Setting',
   responsiveKey
 }) => {
+  // Get the current editor device type from WordPress editor
+  const editorDeviceType = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(select => select('core/editor').getDeviceType(), []);
+
+  // Default to `desktop` if `editorDeviceType` is unavailable
+  const deviceType = editorDeviceType?.toLowerCase() || 'desktop';
   const responsiveSettings = attributes[responsiveKey] || {};
-  const {
-    activeDevice
-  } = responsiveSettings;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.__experimentalHStack, {
+
+  // Update the `activeDevice` attribute when `editorDeviceType` changes
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.useEffect)(() => {
+    setAttributes({
+      [responsiveKey]: {
+        ...responsiveSettings,
+        activeDevice: deviceType
+      }
+    });
+  }, [deviceType]);
+
+  // Get the current device object based on the type, default to desktop if not found
+  const currentDevice = devices.find(device => device.value === deviceType) || devices[0];
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalHStack, {
     justify: "left",
     spacing: 1,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.__experimentalText, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalText, {
       size: '11px',
       weight: 500,
       upperCase: true,
       style: {
         margin: 0
       },
-      children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)(label, 'blablablocks-slider-block')
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.DropdownMenu, {
-      icon: devices.find(device => device.value === activeDevice)?.icon || _wordpress_icons__WEBPACK_IMPORTED_MODULE_3__["default"],
-      label: devices.find(device => device.value === activeDevice)?.label || 'Desktop',
-      controls: devices.map(device => ({
-        icon: device.icon,
-        label: device.label,
-        isActive: device.value === activeDevice,
-        onClick: () => setAttributes({
-          [responsiveKey]: {
-            ...responsiveSettings,
-            activeDevice: device.value
-          }
-        })
-      }))
+      children: label
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Icon, {
+      icon: currentDevice.icon
     })]
   });
 };
@@ -380,25 +479,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./slider */ "./src/slider/slider.js");
 /* harmony import */ var _placeholder__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./placeholder */ "./src/slider/placeholder.js");
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components */ "./src/components/index.js");
-/* harmony import */ var _swiper_init__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./swiper-init */ "./src/slider/swiper-init.js");
-/* harmony import */ var _utils_style__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../utils/style */ "./src/utils/style.js");
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./editor.scss */ "./src/slider/editor.scss");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./editor.scss */ "./src/slider/editor.scss");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__);
 /**
  * WordPress dependencies
  */
-
 
 
 
@@ -413,67 +508,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 const DEFAULT_BLOCK = {
-  name: 'lubus/slide'
+  name: 'blablablocks/slide'
 };
-
-/**
- * Slider component.
- */
-const Slider = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.memo)(({
-  attributes,
-  innerBlocksProps,
-  innerBlocks
-}) => {
-  const editorDeviceType = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(select => select('core/editor').getDeviceType(), []);
-  const swiperContainerRef = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.useRef)(null);
-  const swiperInstanceRef = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.useRef)(null);
-  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.useEffect)(() => {
-    if (swiperContainerRef.current && innerBlocks.length > 0) {
-      // Clear existing Swiper classes
-      swiperContainerRef.current.className = 'swiper';
-
-      // Destroy the existing Swiper instance, if any
-      if (swiperInstanceRef.current) {
-        swiperInstanceRef.current.destroy(true, true);
-        swiperInstanceRef.current = null;
-      }
-
-      // Reinitialize Swiper with device-specific attributes
-      swiperInstanceRef.current = (0,_swiper_init__WEBPACK_IMPORTED_MODULE_8__.SwiperInit)(swiperContainerRef.current, {
-        ...attributes
-      }, editorDeviceType,
-      // Pass the current editor device type
-      true);
-    }
-
-    // Cleanup on unmount
-    return () => {
-      if (swiperInstanceRef.current) {
-        swiperInstanceRef.current.destroy(true, true);
-      }
-    };
-  }, [editorDeviceType, attributes, innerBlocks.length]);
-
-  // Inline styles for navigation
-  const navigationStyles = (0,_utils_style__WEBPACK_IMPORTED_MODULE_9__.generateNavigationStyles)(attributes);
-  const applyPadding = innerBlocks.length >= 2 ? '100px' : '';
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
-    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.useBlockProps)({
-      style: {
-        ...navigationStyles,
-        padding: applyPadding
-      }
-    }),
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
-      ref: swiperContainerRef,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
-        ...innerBlocksProps
-      })
-    })
-  });
-});
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -495,9 +532,10 @@ function Edit({
     allowedBlocks
   } = attributes;
   const {
-    insertBlock
-  } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useDispatch)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.store);
-  const innerBlocksProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.useInnerBlocksProps)({
+    insertBlock,
+    selectBlock
+  } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useDispatch)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.store);
+  const innerBlocksProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useInnerBlocksProps)({
     className: 'swiper-wrapper'
   }, {
     defaultBlock: DEFAULT_BLOCK,
@@ -507,174 +545,272 @@ function Edit({
   });
 
   // Check if inner blocks exist using useSelect
-  const innerBlocks = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(select => select(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.store).getBlocks(clientId), [clientId]);
+  const innerBlocks = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(select => select(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.store).getBlocks(clientId), [clientId]);
   const hasInnerBlocks = innerBlocks.length > 0;
   const addSlide = () => {
-    const block = (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_3__.createBlock)('lubus/slide');
+    const block = (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__.createBlock)('blablablocks/slide');
     insertBlock(block, innerBlocks.length, clientId, false);
+    selectBlock(block.clientId);
   };
-  return hasInnerBlocks ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(Slider, {
+  const defaultSettings = {
+    slidesPerView: {
+      ...attributes.slidesPerView,
+      desktop: 1,
+      tablet: 1,
+      mobile: 1
+    },
+    slidesSpacing: {
+      ...attributes.slidesSpacing,
+      desktop: 30,
+      tablet: 20,
+      mobile: 10
+    },
+    speed: 300,
+    effects: 'slide',
+    autoplay: false,
+    delay: 5000,
+    navigation: {
+      ...attributes.navigation,
+      desktop: true,
+      tablet: true,
+      mobile: true
+    },
+    pagination: {
+      ...attributes.pagination,
+      desktop: true,
+      tablet: true,
+      mobile: true
+    },
+    loop: false
+  };
+  return hasInnerBlocks ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_slider__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      clientId: clientId,
       attributes: attributes,
       innerBlocksProps: innerBlocksProps,
       innerBlocks: innerBlocks
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.BlockControls, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToolbarGroup, {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToolbarButton, {
-          icon: "plus",
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.BlockControls, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.ToolbarGroup, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.ToolbarButton, {
           onClick: addSlide,
           children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Add Slide', 'blablablocks-slider-block')
         })
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.InspectorControls, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelBody, {
-        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Settings', 'blablablocks-slider-block'),
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalVStack, {
-          style: {
-            marginBottom: '8px'
-          },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components__WEBPACK_IMPORTED_MODULE_7__.ResponsiveDropdown, {
-            label: "Slides Per View",
-            attributes: attributes,
-            setAttributes: setAttributes,
-            responsiveKey: "slidesPerView"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.RangeControl, {
-            __nextHasNoMarginBottom: true,
-            __next40pxDefaultSize: true,
-            help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Number of slides visible at the same time on slider's container.", 'blablablocks-slider-block'),
-            value: attributes.slidesPerView[attributes.slidesPerView.activeDevice],
-            min: 1,
-            max: 30,
-            onChange: value => setAttributes({
-              slidesPerView: {
-                ...attributes.slidesPerView,
-                [attributes.slidesPerView.activeDevice]: value
-              }
-            })
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalVStack, {
-          style: {
-            marginBottom: '16px'
-          },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components__WEBPACK_IMPORTED_MODULE_7__.ResponsiveDropdown, {
-            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Slides Spacing', 'blablablocks-slider-block'),
-            attributes: attributes,
-            setAttributes: setAttributes,
-            responsiveKey: "slidesSpacing"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.RangeControl, {
-            __nextHasNoMarginBottom: true,
-            __next40pxDefaultSize: true,
-            help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Adjust the spacing between slides.', 'blablablocks-slider-block'),
-            initialPosition: 30,
-            value: attributes.slidesSpacing[attributes.slidesSpacing.activeDevice],
-            min: 0,
-            onChange: value => setAttributes({
-              slidesSpacing: {
-                ...attributes.slidesSpacing,
-                [attributes.slidesSpacing.activeDevice]: value
-              }
-            })
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.RangeControl, {
-          __nextHasNoMarginBottom: true,
-          __next40pxDefaultSize: true,
-          help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Set the duration of transition between slides.', 'blablablocks-slider-block'),
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalToolsPanel, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Settings', 'blablablocks-slider-block'),
+        resetAll: () => setAttributes(defaultSettings),
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalToolsPanelItem, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Slides Per View', 'blablablocks-slider-block'),
+          isShownByDefault: true,
+          hasValue: () => JSON.stringify(attributes.slidesPerView) !== JSON.stringify(defaultSettings.slidesPerView),
+          onDeselect: () => setAttributes({
+            slidesPerView: {
+              ...defaultSettings.slidesPerView
+            }
+          }),
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalVStack, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components__WEBPACK_IMPORTED_MODULE_7__.ResponsiveDropdown, {
+              label: "Slides Per View",
+              attributes: attributes,
+              setAttributes: setAttributes,
+              responsiveKey: "slidesPerView"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.RangeControl, {
+              __nextHasNoMarginBottom: true,
+              __next40pxDefaultSize: true,
+              help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Number of slides visible at the same time on slider's container.", 'blablablocks-slider-block'),
+              value: attributes.slidesPerView[attributes.slidesPerView.activeDevice],
+              min: 1,
+              max: 30,
+              onChange: value => setAttributes({
+                slidesPerView: {
+                  ...attributes.slidesPerView,
+                  [attributes.slidesPerView.activeDevice]: value
+                }
+              })
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalToolsPanelItem, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Slides Spacing', 'blablablocks-slider-block'),
+          isShownByDefault: true,
+          hasValue: () => JSON.stringify(attributes.slidesSpacing) !== JSON.stringify(defaultSettings.slidesSpacing),
+          onDeselect: () => setAttributes({
+            slidesSpacing: {
+              ...defaultSettings.slidesSpacing
+            }
+          }),
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalVStack, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components__WEBPACK_IMPORTED_MODULE_7__.ResponsiveDropdown, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Slides Spacing', 'blablablocks-slider-block'),
+              attributes: attributes,
+              setAttributes: setAttributes,
+              responsiveKey: "slidesSpacing"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.RangeControl, {
+              __nextHasNoMarginBottom: true,
+              __next40pxDefaultSize: true,
+              help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Adjust the spacing between slides.', 'blablablocks-slider-block'),
+              initialPosition: 30,
+              value: attributes.slidesSpacing[attributes.slidesSpacing.activeDevice],
+              min: 0,
+              onChange: value => setAttributes({
+                slidesSpacing: {
+                  ...attributes.slidesSpacing,
+                  [attributes.slidesSpacing.activeDevice]: value
+                }
+              })
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalToolsPanelItem, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Speed (ms)', 'blablablocks-slider-block'),
-          min: 100 // minimum speed in ms
-          ,
-          max: 10000 // maximum speed in ms
-          ,
-          step: 100,
-          value: attributes.speed,
-          onChange: value => setAttributes({
-            speed: value
+          isShownByDefault: true,
+          hasValue: () => attributes.speed !== defaultSettings.speed,
+          onDeselect: () => setAttributes({
+            speed: 300
+          }),
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.RangeControl, {
+            __nextHasNoMarginBottom: true,
+            __next40pxDefaultSize: true,
+            help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Set the duration of transition between slides.', 'blablablocks-slider-block'),
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Speed (ms)', 'blablablocks-slider-block'),
+            min: 100 // minimum speed in ms
+            ,
+            max: 10000 // maximum speed in ms
+            ,
+            step: 100,
+            value: attributes.speed,
+            onChange: value => setAttributes({
+              speed: value
+            })
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToggleGroupControl, {
-          isBlock: true,
-          __nextHasNoMarginBottom: true,
-          __next40pxDefaultSize: true,
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalToolsPanelItem, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Effects', 'blablablocks-slider-block'),
-          value: attributes.effects,
-          onChange: value => setAttributes({
-            effects: value
+          isShownByDefault: true,
+          hasValue: () => attributes.effects !== defaultSettings.effects,
+          onDeselect: () => setAttributes({
+            effects: 'slide'
           }),
-          help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Select how slides transition.', 'blablablocks-slider-block'),
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToggleGroupControlOption, {
-            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Slide', 'blablablocks-slider-block'),
-            value: "slide"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToggleGroupControlOption, {
-            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Fade', 'blablablocks-slider-block'),
-            value: "fade"
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
-          __nextHasNoMarginBottom: true,
-          className: "responsive_field_control",
-          help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enable navigation arrows to manually move between slides.', 'blablablocks-slider-block'),
-          checked: attributes.navigation[attributes.navigation.activeDevice],
-          label: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components__WEBPACK_IMPORTED_MODULE_7__.ResponsiveDropdown, {
-            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Navigation', 'blablablocks-slider-block'),
-            attributes: attributes,
-            setAttributes: setAttributes,
-            responsiveKey: "navigation"
-          }),
-          onChange: value => setAttributes({
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalToggleGroupControl, {
+            isBlock: true,
+            __nextHasNoMarginBottom: true,
+            __next40pxDefaultSize: true,
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Effects', 'blablablocks-slider-block'),
+            value: attributes.effects,
+            onChange: value => setAttributes({
+              effects: value
+            }),
+            help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Select how slides transition.', 'blablablocks-slider-block'),
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalToggleGroupControlOption, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Slide', 'blablablocks-slider-block'),
+              value: "slide"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalToggleGroupControlOption, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Fade', 'blablablocks-slider-block'),
+              value: "fade"
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalToolsPanelItem, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Navigation', 'blablablocks-slider-block'),
+          isShownByDefault: true,
+          hasValue: () => JSON.stringify(attributes.navigation) !== JSON.stringify(defaultSettings.navigation),
+          onDeselect: () => setAttributes({
             navigation: {
-              ...attributes.navigation,
-              [attributes.navigation.activeDevice]: value
+              ...defaultSettings.navigation
             }
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
-          __nextHasNoMarginBottom: true,
-          className: "responsive_field_control",
-          help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enable pagination indicators to show slide positions.', 'blablablocks-slider-block'),
-          checked: attributes.pagination[attributes.pagination.activeDevice],
-          label: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components__WEBPACK_IMPORTED_MODULE_7__.ResponsiveDropdown, {
-            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Pagination', 'blablablocks-slider-block'),
-            attributes: attributes,
-            setAttributes: setAttributes,
-            responsiveKey: "pagination"
           }),
-          onChange: value => setAttributes({
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.ToggleControl, {
+            __nextHasNoMarginBottom: true,
+            className: "responsive_field_control",
+            help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enable navigation arrows to manually move between slides.', 'blablablocks-slider-block'),
+            checked: attributes.navigation[attributes.navigation.activeDevice],
+            label: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components__WEBPACK_IMPORTED_MODULE_7__.ResponsiveDropdown, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Navigation', 'blablablocks-slider-block'),
+              attributes: attributes,
+              setAttributes: setAttributes,
+              responsiveKey: "navigation"
+            }),
+            onChange: value => setAttributes({
+              navigation: {
+                ...attributes.navigation,
+                [attributes.navigation.activeDevice]: value
+              }
+            })
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalToolsPanelItem, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Pagination', 'blablablocks-slider-block'),
+          isShownByDefault: true,
+          hasValue: () => JSON.stringify(attributes.pagination) !== JSON.stringify(defaultSettings.pagination),
+          onDeselect: () => setAttributes({
             pagination: {
-              ...attributes.pagination,
-              [attributes.pagination.activeDevice]: value
+              ...defaultSettings.pagination
             }
+          }),
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.ToggleControl, {
+            __nextHasNoMarginBottom: true,
+            className: "responsive_field_control",
+            help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enable pagination indicators to show slide positions.', 'blablablocks-slider-block'),
+            checked: attributes.pagination[attributes.pagination.activeDevice],
+            label: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components__WEBPACK_IMPORTED_MODULE_7__.ResponsiveDropdown, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Pagination', 'blablablocks-slider-block'),
+              attributes: attributes,
+              setAttributes: setAttributes,
+              responsiveKey: "pagination"
+            }),
+            onChange: value => setAttributes({
+              pagination: {
+                ...attributes.pagination,
+                [attributes.pagination.activeDevice]: value
+              }
+            })
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
-          __nextHasNoMarginBottom: true,
-          help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enable loop to continuously cycle through slides.', 'blablablocks-slider-block'),
-          checked: attributes.loop,
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalToolsPanelItem, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Loop', 'blablablocks-slider-block'),
-          onChange: value => setAttributes({
-            loop: value
+          hasValue: () => attributes.loop !== defaultSettings.loop,
+          onDeselect: () => setAttributes({
+            loop: false
+          }),
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.ToggleControl, {
+            __nextHasNoMarginBottom: true,
+            help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enable loop to continuously cycle through slides.', 'blablablocks-slider-block'),
+            checked: attributes.loop,
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Loop', 'blablablocks-slider-block'),
+            onChange: value => setAttributes({
+              loop: value
+            })
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
-          __nextHasNoMarginBottom: true,
-          help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enable automatic slide transition.', 'blablablocks-slider-block'),
-          checked: attributes.autoplay,
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalToolsPanelItem, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Autoplay', 'blablablocks-slider-block'),
-          onChange: value => setAttributes({
-            autoplay: value
-          })
-        }), attributes.autoplay && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.RangeControl, {
-          __nextHasNoMarginBottom: true,
-          __next40pxDefaultSize: true,
-          help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Set the delay between slides in milliseconds.', 'blablablocks-slider-block'),
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Delay (ms)', 'blablablocks-slider-block'),
-          min: 100 // minimum delay in ms
-          ,
-          max: 10000 // maximum delay in ms
-          ,
-          step: 100,
-          value: attributes.delay,
-          onChange: value => setAttributes({
-            delay: value
-          })
+          hasValue: () => attributes.autoplay !== defaultSettings.autoplay,
+          onDeselect: () => setAttributes({
+            autoplay: false,
+            delay: 5000
+          }),
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.ToggleControl, {
+            __nextHasNoMarginBottom: true,
+            help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enable automatic slide transition.', 'blablablocks-slider-block'),
+            checked: attributes.autoplay,
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Autoplay', 'blablablocks-slider-block'),
+            onChange: value => setAttributes({
+              autoplay: value
+            })
+          }), attributes.autoplay && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.RangeControl, {
+            __nextHasNoMarginBottom: true,
+            __next40pxDefaultSize: true,
+            help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Set the delay between slides in milliseconds.', 'blablablocks-slider-block'),
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Delay (ms)', 'blablablocks-slider-block'),
+            min: 100 // minimum delay in ms
+            ,
+            max: 10000 // maximum delay in ms
+            ,
+            step: 100,
+            value: attributes.delay,
+            onChange: value => setAttributes({
+              delay: value
+            })
+          })]
         })]
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.InspectorControls, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, {
       group: "styles",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanel, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalToolsPanel, {
         label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Navigation', 'blablablocks-slider-block'),
         resetAll: () => setAttributes({
           navigationSize: undefined,
@@ -692,14 +828,14 @@ function Edit({
           navigationOffset: undefined,
           navigationBorderRadius: undefined
         }),
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanelItem, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalToolsPanelItem, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Size', 'blablablocks-slider-block'),
           isShownByDefault: true,
           hasValue: () => !!attributes.navigationSize,
           onDeselect: () => setAttributes({
             navigationSize: undefined
           }),
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.FontSizePicker, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.FontSizePicker, {
             __next40pxDefaultSize: true,
             withSlider: true,
             withReset: false,
@@ -708,7 +844,7 @@ function Edit({
             }),
             value: attributes.navigationSize
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanelItem, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalToolsPanelItem, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Color', 'blablablocks-slider-block'),
           isShownByDefault: true,
           hasValue: () => !!attributes?.navigationColor?.arrowColor?.default || !!attributes?.navigationColor?.arrowColor?.hover || !!attributes?.navigationColor?.backgroundColor?.default || !!attributes?.navigationColor?.backgroundColor?.hover,
@@ -724,18 +860,18 @@ function Edit({
               }
             }
           }),
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalVStack, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalVStack, {
             spacing: 0,
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalHeading, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalHeading, {
               lineHeight: 1,
               level: 3,
               weight: 500,
               upperCase: true,
               children: "Color"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalVStack, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalVStack, {
               className: "slider_color-support-panel",
               spacing: 0,
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components__WEBPACK_IMPORTED_MODULE_7__.ColorControlDropdown, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components__WEBPACK_IMPORTED_MODULE_7__.ColorControlDropdown, {
                 label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Arrow', 'blablablocks-slider-block'),
                 colorValue: attributes?.navigationColor?.arrowColor || {},
                 onChangeColor: newColor => setAttributes({
@@ -745,7 +881,7 @@ function Edit({
                   }
                 }),
                 hasHover: true
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components__WEBPACK_IMPORTED_MODULE_7__.ColorControlDropdown, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components__WEBPACK_IMPORTED_MODULE_7__.ColorControlDropdown, {
                 label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Background', 'blablablocks-slider-block'),
                 colorValue: attributes?.navigationColor?.backgroundColor || {},
                 onChangeColor: newColor => setAttributes({
@@ -758,13 +894,13 @@ function Edit({
               })]
             })]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanelItem, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalToolsPanelItem, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Padding', 'blablablocks-slider-block'),
           hasValue: () => !!attributes.navigationPadding,
           onDeselect: () => setAttributes({
             navigationPadding: undefined
           }),
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.__experimentalSpacingSizesControl, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.__experimentalSpacingSizesControl, {
             values: attributes.navigationPadding,
             onChange: value => setAttributes({
               navigationPadding: value
@@ -773,13 +909,13 @@ function Edit({
             allowReset: false,
             splitOnAxis: true
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanelItem, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalToolsPanelItem, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Offset', 'blablablocks-slider-block'),
           hasValue: () => !!attributes.navigationOffset,
           onDeselect: () => setAttributes({
             navigationOffset: undefined
           }),
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.__experimentalSpacingSizesControl, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.__experimentalSpacingSizesControl, {
             values: attributes.navigationOffset,
             onChange: value => setAttributes({
               navigationOffset: value
@@ -789,13 +925,13 @@ function Edit({
             allowReset: false,
             splitOnAxis: true
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanelItem, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalToolsPanelItem, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Radius', 'blablablocks-slider-block'),
           hasValue: () => !!attributes.navigationBorderRadius,
           onDeselect: () => setAttributes({
             navigationBorderRadius: undefined
           }),
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.__experimentalBorderRadiusControl, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.__experimentalBorderRadiusControl, {
             values: attributes.navigationBorderRadius,
             onChange: value => setAttributes({
               navigationBorderRadius: value
@@ -803,9 +939,9 @@ function Edit({
           })
         })]
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.InspectorControls, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, {
       group: "styles",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanel, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalToolsPanel, {
         label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Pagination', 'blablablocks-slider-block'),
         resetAll: () => setAttributes({
           paginationSize: undefined,
@@ -815,14 +951,14 @@ function Edit({
           },
           paginationOffset: undefined
         }),
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanelItem, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalToolsPanelItem, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Size', 'blablablocks-slider-block'),
           isShownByDefault: true,
           hasValue: () => !!attributes.paginationSize,
           onDeselect: () => setAttributes({
             paginationSize: undefined
           }),
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.FontSizePicker, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.FontSizePicker, {
             __next40pxDefaultSize: true,
             withSlider: true,
             withReset: false,
@@ -831,7 +967,7 @@ function Edit({
             }),
             value: attributes.paginationSize
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanelItem, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalToolsPanelItem, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Color', 'blablablocks-slider-block'),
           isShownByDefault: true,
           hasValue: () => !!attributes?.paginationColor?.activeColor || !!attributes?.paginationColor?.inactiveColor,
@@ -841,18 +977,18 @@ function Edit({
               inactiveColor: undefined
             }
           }),
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalVStack, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalVStack, {
             spacing: 0,
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalHeading, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalHeading, {
               lineHeight: 1,
               level: 3,
               weight: 500,
               upperCase: true,
               children: "Color"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalVStack, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalVStack, {
               className: "slider_color-support-panel",
               spacing: 0,
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components__WEBPACK_IMPORTED_MODULE_7__.ColorControlDropdown, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components__WEBPACK_IMPORTED_MODULE_7__.ColorControlDropdown, {
                 label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Active', 'blablablocks-slider-block'),
                 colorValue: attributes?.paginationColor?.activeColor || {},
                 onChangeColor: newColor => setAttributes({
@@ -861,7 +997,7 @@ function Edit({
                     activeColor: newColor
                   }
                 })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components__WEBPACK_IMPORTED_MODULE_7__.ColorControlDropdown, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components__WEBPACK_IMPORTED_MODULE_7__.ColorControlDropdown, {
                 label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Inactive', 'blablablocks-slider-block'),
                 colorValue: attributes?.paginationColor?.inactiveColor || {},
                 onChangeColor: newColor => setAttributes({
@@ -873,13 +1009,13 @@ function Edit({
               })]
             })]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalToolsPanelItem, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalToolsPanelItem, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Offset', 'blablablocks-slider-block'),
           hasValue: () => !!attributes.paginationOffset,
           onDeselect: () => setAttributes({
             paginationOffset: undefined
           }),
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.__experimentalSpacingSizesControl, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.__experimentalSpacingSizesControl, {
             values: attributes.paginationOffset,
             onChange: value => setAttributes({
               paginationOffset: value
@@ -892,9 +1028,8 @@ function Edit({
         })]
       })
     })]
-  }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_placeholder__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_placeholder__WEBPACK_IMPORTED_MODULE_6__["default"], {
     clientId: clientId,
-    attributes: attributes,
     setAttributes: setAttributes
   });
 }
@@ -960,22 +1095,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _variations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./variations */ "./src/slider/variations.js");
-/* harmony import */ var _templates__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../templates */ "./src/templates/index.js");
-/* harmony import */ var _components_slider_logo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/slider-logo */ "./src/components/slider-logo.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_notices__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/notices */ "@wordpress/notices");
+/* harmony import */ var _wordpress_notices__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_notices__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _wordpress_media_utils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @wordpress/media-utils */ "@wordpress/media-utils");
+/* harmony import */ var _wordpress_media_utils__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_wordpress_media_utils__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _variations__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./variations */ "./src/slider/variations.js");
+/* harmony import */ var _templates__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../templates */ "./src/templates/index.js");
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components */ "./src/components/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__);
 /**
  * Wordpress dependencies
  */
+
+
 
 
 
@@ -994,7 +1135,7 @@ __webpack_require__.r(__webpack_exports__);
  * Default patterns for modal preview.
  */
 
-const defaultPatterns = [_templates__WEBPACK_IMPORTED_MODULE_7__.Testimonial, _templates__WEBPACK_IMPORTED_MODULE_7__.Testimonial2, _templates__WEBPACK_IMPORTED_MODULE_7__.Services];
+const defaultPatterns = [_templates__WEBPACK_IMPORTED_MODULE_9__.Testimonial, _templates__WEBPACK_IMPORTED_MODULE_9__.HeroSection, _templates__WEBPACK_IMPORTED_MODULE_9__.Services];
 
 /**
  * This component serves as a placeholder for the Slider block, displaying a block variation picker.
@@ -1004,18 +1145,19 @@ const defaultPatterns = [_templates__WEBPACK_IMPORTED_MODULE_7__.Testimonial, _t
  * @param {string}   props.clientId      The client ID for this block instance.
  * @param {Function} props.setAttributes Function to update block attributes.
  *
- * @param            props.attributes
  * @return {JSX.Element} The placeholder component for the Slider block.
  */
 function Placeholder({
   clientId,
-  attributes,
   setAttributes
 }) {
   const {
     replaceInnerBlocks
-  } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useDispatch)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__.store);
-  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__.useBlockProps)();
+  } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.useDispatch)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__.store);
+  const {
+    createErrorNotice
+  } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.useDispatch)(_wordpress_notices__WEBPACK_IMPORTED_MODULE_3__.store);
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__.useBlockProps)();
   const [step, setStep] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.useState)(null);
   const [isModalOpen, setIsModalOpen] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
   const onSelectVariation = variation => {
@@ -1023,15 +1165,8 @@ function Placeholder({
       setAttributes(variation.attributes);
     }
     if (variation?.innerBlocks) {
-      replaceInnerBlocks(clientId, (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__.createBlocksFromInnerBlocksTemplate)(variation.innerBlocks), true);
+      replaceInnerBlocks(clientId, (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_4__.createBlocksFromInnerBlocksTemplate)(variation.innerBlocks), true);
     }
-  };
-  const skipToDefault = () => {
-    const defaultVariation = _variations__WEBPACK_IMPORTED_MODULE_6__["default"][1]; // Assuming the first variation is the default
-    if (defaultVariation) {
-      onSelectVariation(defaultVariation);
-    }
-    setStep('default');
   };
   const openTemplatesModal = () => {
     setIsModalOpen(true);
@@ -1041,59 +1176,114 @@ function Placeholder({
     wp.data.dispatch('core/block-editor').replaceBlock(clientId, parsedBlocks);
     setIsModalOpen(false);
   };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+  const handleFilesUpload = async files => {
+    const validFiles = Array.from(files).filter(file => file.type.startsWith('image/'));
+    if (validFiles.length === 0) {
+      createErrorNotice((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Only image files are allowed.', 'slider-block'), {
+        isDismissible: true
+      });
+      return;
+    }
+
+    // Split into existing and new files
+    const existingBlocks = [];
+    const newFiles = [];
+    for (const file of validFiles) {
+      const response = await wp.apiFetch({
+        path: `/wp/v2/media?search=${encodeURIComponent(file.name)}&per_page=1`
+      });
+      if (response && response.length > 0) {
+        // Use existing media item
+        const mediaItem = response[0];
+        existingBlocks.push((0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_4__.createBlock)('blablablocks/slide', {}, [(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_4__.createBlock)('core/image', {
+          url: mediaItem.source_url
+        })]));
+      } else {
+        // Queue file for upload
+        newFiles.push(file);
+      }
+    }
+
+    // Add existing media blocks
+    if (existingBlocks.length > 0) {
+      replaceInnerBlocks(clientId, existingBlocks, false);
+    }
+
+    // Upload new files
+    if (newFiles.length > 0) {
+      (0,_wordpress_media_utils__WEBPACK_IMPORTED_MODULE_7__.uploadMedia)({
+        filesList: newFiles,
+        onFileChange: media => {
+          const newBlocks = media.map(item => (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_4__.createBlock)('blablablocks/slide', {}, [(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_4__.createBlock)('core/image', {
+            url: item.url
+          })]));
+          replaceInnerBlocks(clientId, [...existingBlocks, ...newBlocks], false);
+        },
+        onError: () => {
+          createErrorNotice((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('File upload failed.', 'slider-block'), {
+            isDismissible: true
+          });
+        }
+      });
+    }
+  };
+  const onFilesDrop = files => {
+    if (files && files.length > 0) {
+      handleFilesUpload(files);
+    }
+  };
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
     ...blockProps,
-    children: [!step && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Placeholder, {
-      icon: 'slides',
-      instructions: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Choose how you'd like to get started with your slider.", 'blablablocks-slider-block'),
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Let's Begin Creating Your Slider!", 'blablablocks-slider-block'),
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
+    children: [!step && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.Placeholder, {
+      icon: _components__WEBPACK_IMPORTED_MODULE_10__.SliderLogo,
+      instructions: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Choose a pattern for the slider, start blank or drag and drop images here.', 'blablablocks-slider-block'),
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Slider', 'blablablocks-slider-block'),
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.Button, {
+        variant: "primary",
+        onClick: openTemplatesModal,
+        children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Choose', 'blablablocks-slider-block')
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.Button, {
         variant: "secondary",
         onClick: () => setStep('variations'),
-        children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Explore Variations', 'blablablocks-slider-block')
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
-        variant: "secondary",
-        onClick: openTemplatesModal,
-        children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Browse Templates', 'blablablocks-slider-block')
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
-        variant: "primary",
-        onClick: skipToDefault,
-        children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Skip and Use Default', 'blablablocks-slider-block')
+        children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Start blank', 'blablablocks-slider-block')
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.DropZone, {
+        onFilesDrop: onFilesDrop,
+        accept: "image/*"
       })]
-    }), step === 'variations' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__.__experimentalBlockVariationPicker, {
-      icon: _components_slider_logo__WEBPACK_IMPORTED_MODULE_8__["default"],
+    }), step === 'variations' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__.__experimentalBlockVariationPicker, {
+      icon: _components__WEBPACK_IMPORTED_MODULE_10__.SliderLogo,
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Slider', 'blablablocks-slider-block'),
-      instructions: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Select a slide variation to start with', 'blablablocks-slider-block'),
-      variations: _variations__WEBPACK_IMPORTED_MODULE_6__["default"],
-      onSelect: (variation = _variations__WEBPACK_IMPORTED_MODULE_6__["default"][1]) => {
+      instructions: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Select a variation to start with:', 'blablablocks-slider-block'),
+      variations: _variations__WEBPACK_IMPORTED_MODULE_8__["default"],
+      onSelect: (variation = _variations__WEBPACK_IMPORTED_MODULE_8__["default"][1]) => {
         onSelectVariation(variation);
       },
       allowSkip: true
-    }), isModalOpen && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Modal, {
+    }), isModalOpen && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.Modal, {
       title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Choose a Template', 'blablablocks-slider-block'),
       isFullScreen: true,
       onRequestClose: () => setIsModalOpen(false),
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalGrid, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalGrid, {
         gap: 4,
         columns: [1, 2, 3],
         align: "start",
-        children: defaultPatterns.map(pattern => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
+        children: defaultPatterns.map(pattern => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.Button, {
           className: 'slider-pattern-item',
           onClick: () => applyPattern(pattern),
           style: {
             width: '100%',
             height: '100%'
           },
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalVStack, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalVStack, {
             alignment: "top",
             align: "left",
             style: {
               width: '100%',
               height: '100%'
             },
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__.BlockPreview, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_6__.BlockPreview, {
               blocks: wp.blocks.parse(pattern.content)
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.__experimentalText, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.__experimentalText, {
               align: "left",
               size: 12,
               children: pattern.title
@@ -1133,8 +1323,10 @@ __webpack_require__.r(__webpack_exports__);
  * The save function defines the way in which the different attributes should
  * be combined into the final markup, which is then serialized by the block
  * editor into `post_content`.
- * @param root0
- * @param root0.attributes
+ *
+ * @param {Object} props            Component properties.
+ * @param {Object} props.attributes The block's attributes.
+ * @return {JSX.Element}                      The block's save component.
  */
 
 function save({
@@ -1160,6 +1352,149 @@ function save({
 
 /***/ }),
 
+/***/ "./src/slider/slider.js":
+/*!******************************!*\
+  !*** ./src/slider/slider.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _swiper_init__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./swiper-init */ "./src/slider/swiper-init.js");
+/* harmony import */ var _utils_style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/style */ "./src/utils/style.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__);
+/**
+ * Wordpress dependencies
+ */
+
+
+
+
+/**
+ * Internal dependencies
+ */
+
+
+
+/**
+ * Slider Component
+ * Responsible for rendering and managing the Swiper slider instance.
+ *
+ * @param {Object} props                  - Component properties.
+ * @param {string} props.clientId         - The client ID for this block instance.
+ * @param {Object} props.attributes       - The block attributes.
+ * @param {Object} props.innerBlocksProps - Properties for inner blocks.
+ * @param {Array}  props.innerBlocks      - List of inner blocks.
+ *
+ * @return {JSX.Element} The slider component.
+ */
+
+const Slider = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.memo)(({
+  clientId,
+  attributes,
+  innerBlocksProps,
+  innerBlocks
+}) => {
+  const swiperContainerRef = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  const swiperInstanceRef = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  const editorDeviceType = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(wpSelect => wpSelect('core/editor').getDeviceType(), []);
+
+  /**
+   * Initialize the Swiper slider instance.
+   */
+  const initializeSwiper = () => {
+    if (swiperContainerRef.current && innerBlocks.length > 0) {
+      swiperContainerRef.current.className = 'swiper';
+
+      // Destroy any existing Swiper instance.
+      if (swiperInstanceRef.current) {
+        swiperInstanceRef.current.destroy(true, true);
+        swiperInstanceRef.current = null;
+      }
+
+      // Create a new Swiper instance.
+      swiperInstanceRef.current = (0,_swiper_init__WEBPACK_IMPORTED_MODULE_3__.SwiperInit)(swiperContainerRef.current, {
+        ...attributes
+      }, editorDeviceType, true);
+    }
+  };
+
+  /**
+   * Update the Swiper instance when slides are added, removed, or reordered.
+   *
+   * @param {string[]} slideOrder - Array of block client IDs representing the slide order.
+   */
+  const manageSwiperUpdates = slideOrder => {
+    const currentSlidesOrder = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.select)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.store).getBlockOrder(clientId);
+    if (currentSlidesOrder.toString() !== slideOrder.toString()) {
+      const selectedBlock = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.select)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.store).getSelectedBlock();
+      const slideAdded = currentSlidesOrder.length > slideOrder.length;
+      const slideRemoved = currentSlidesOrder.length < slideOrder.length;
+      const slideMoved = currentSlidesOrder.length === slideOrder.length;
+
+      // Save the active slide index.
+      const activeIndex = swiperInstanceRef.current?.activeIndex || 0;
+      slideOrder = currentSlidesOrder;
+
+      // Destroy and reinitialize the Swiper instance.
+      swiperInstanceRef.current?.destroy();
+      window.requestAnimationFrame(() => {
+        initializeSwiper();
+        let slideToIndex = activeIndex;
+        if (slideAdded) {
+          slideToIndex = slideOrder.length - 1;
+        } else if (slideRemoved) {
+          slideToIndex = Math.max(activeIndex - 1, 0);
+        } else if (slideMoved) {
+          slideToIndex = slideOrder.findIndex(blockClientId => blockClientId === selectedBlock?.clientId);
+        }
+        swiperInstanceRef.current?.slideTo(slideToIndex >= 0 ? slideToIndex : 0, 0);
+      });
+    }
+  };
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    initializeSwiper();
+    const slideOrder = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.select)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.store).getBlockOrder(clientId);
+
+    // Subscribe to updates in the block editor.
+    const unsubscribe = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.subscribe)(() => manageSwiperUpdates(slideOrder));
+
+    // Cleanup on component unmount.
+    return () => {
+      unsubscribe();
+      swiperInstanceRef.current?.destroy(true, true);
+    };
+  }, [editorDeviceType, attributes, innerBlocks.length]);
+  const navigationStyles = (0,_utils_style__WEBPACK_IMPORTED_MODULE_4__.generateNavigationStyles)(attributes);
+  const applyPadding = innerBlocks.length >= 2 ? '100px' : '';
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
+      style: {
+        ...navigationStyles,
+        padding: applyPadding
+      }
+    }),
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+      ref: swiperContainerRef,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+        ...innerBlocksProps
+      })
+    })
+  });
+});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Slider);
+
+/***/ }),
+
 /***/ "./src/slider/swiper-init.js":
 /*!***********************************!*\
   !*** ./src/slider/swiper-init.js ***!
@@ -1176,7 +1511,7 @@ __webpack_require__.r(__webpack_exports__);
  * Swiper dependencies
  */
 
-
+ // eslint-disable-line
 
 /**
  * Get device-specific settings for Swiper.
@@ -1289,6 +1624,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_icons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/icons */ "./node_modules/@wordpress/icons/build-module/library/cover.js");
+/* harmony import */ var _wordpress_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/icons */ "./node_modules/@wordpress/icons/build-module/library/gallery.js");
+/* harmony import */ var _wordpress_icons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/icons */ "./node_modules/@wordpress/icons/build-module/library/media-and-text.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
 /**
@@ -1297,43 +1635,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 /**
  * Template option choices for predefined slider layouts.
- *
- * @type {WPBlockVariation[]}
  */
 
 const variations = [{
-  name: 'one-slide',
-  description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('One Slide', 'blablablocks-slider-block'),
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.SVG, {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "48",
-    height: "48",
-    viewBox: "0 0 48 48",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Path, {
-      d: "M0 10a2 2 0 0 1 2-2h44a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V10Z"
-    })
-  }),
-  innerBlocks: [['blablablocks/slide']],
-  scope: ['block']
-}, {
-  name: 'two-slide',
-  description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Two Slides', 'blablablocks-slider-block'),
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.SVG, {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "48",
-    height: "48",
-    viewBox: "0 0 48 48",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Path, {
-      d: "M0 10a2 2 0 0 1 2-2h19a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V10Zm25 0a2 2 0 0 1 2-2h19a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H27a2 2 0 0 1-2-2V10Z"
-    })
-  }),
-  innerBlocks: [['blablablocks/slide'], ['blablablocks/slide']],
-  scope: ['block']
-}, {
-  name: 'three-slide',
-  description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Three Slides', 'blablablocks-slider-block'),
+  name: 'blank-carousel',
+  title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Blank Carousel', 'blablablocks-slider-block'),
+  description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Blank Carousel', 'blablablocks-slider-block'),
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.SVG, {
     xmlns: "http://www.w3.org/2000/svg",
     width: "48",
@@ -1343,27 +1653,183 @@ const variations = [{
       d: "M0 10a2 2 0 0 1 2-2h10.531c1.105 0 1.969.895 1.969 2v28c0 1.105-.864 2-1.969 2H2a2 2 0 0 1-2-2V10Zm16.5 0c0-1.105.864-2 1.969-2H29.53c1.105 0 1.969.895 1.969 2v28c0 1.105-.864 2-1.969 2H18.47c-1.105 0-1.969-.895-1.969-2V10Zm17 0c0-1.105.864-2 1.969-2H46a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H35.469c-1.105 0-1.969-.895-1.969-2V10Z"
     })
   }),
-  innerBlocks: [['blablablocks/slide'], ['blablablocks/slide'], ['blablablocks/slide']],
+  attributes: {
+    slidesPerView: 3
+  },
+  innerBlocks: [['blablablocks/slide'], ['blablablocks/slide'], ['blablablocks/slide'], ['blablablocks/slide']],
   scope: ['block']
 }, {
-  name: 'four-slide',
-  description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Four Slides', 'blablablocks-slider-block'),
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.SVG, {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "64",
-    height: "48",
-    viewBox: "0 0 64 48",
-    style: {
-      width: '64px'
-    },
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Path, {
-      d: "M0 10a2 2 0 0 1 2-2h10.531c1.105 0 1.969.895 1.969 2v28c0 1.105-.864 2-1.969 2H2a2 2 0 0 1-2-2V10Zm16.5 0c0-1.105.864-2 1.969-2H29.5c1.105 0 1.969.895 1.969 2v28c0 1.105-.864 2-1.969 2H18.5c-1.105 0-1.969-.895-1.969-2V10Zm16.5 0c0-1.105.864-2 1.969-2H46c1.105 0 1.969.895 1.969 2v28c0 1.105-.864 2-1.969 2H35.5c-1.105 0-1.969-.895-1.969-2V10Zm16.5 0c0-1.105.864-2 1.969-2H62c1.105 0 1.969.895 1.969 2v28c0 1.105-.864 2-1.969 2H51.5c-1.105 0-1.969-.895-1.969-2V10Z"
-    })
-  }),
-  innerBlocks: [['blablablocks/slide'], ['blablablocks/slide'], ['blablablocks/slide'], ['blablablocks/slide']],
+  name: 'hero-slider',
+  title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Hero', 'blablablocks-slider-block'),
+  description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Hero', 'blablablocks-slider-block'),
+  icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_3__["default"],
+  innerBlocks: [['blablablocks/slide', {}, [['core/cover']]], ['blablablocks/slide', {}, [['core/cover']]], ['blablablocks/slide', {}, [['core/cover']]]],
+  scope: ['block']
+}, {
+  name: 'images-slider',
+  title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Image Slider', 'blablablocks-slider-block'),
+  description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Image Slider', 'blablablocks-slider-block'),
+  icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_4__["default"],
+  attributes: {
+    slidesPerView: 3
+  },
+  innerBlocks: [['blablablocks/slide', {}, [['core/image', {
+    url: `https://picsum.photos/seed/${Math.random()}/800/600`
+  }]]], ['blablablocks/slide', {}, [['core/image', {
+    url: `https://picsum.photos/seed/${Math.random()}/800/600`
+  }]]], ['blablablocks/slide', {}, [['core/image', {
+    url: `https://picsum.photos/seed/${Math.random()}/800/600`
+  }]]], ['blablablocks/slide', {}, [['core/image', {
+    url: `https://picsum.photos/seed/${Math.random()}/800/600`
+  }]]]],
+  scope: ['block']
+}, {
+  name: 'media-text-slider',
+  title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Media and Text', 'blablablocks-slider-block'),
+  description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Media & Text', 'blablablocks-slider-block'),
+  icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_5__["default"],
+  innerBlocks: [['blablablocks/slide', {}, [['core/media-text']]], ['blablablocks/slide', {}, [['core/media-text']]], ['blablablocks/slide', {}, [['core/media-text']]]],
   scope: ['block']
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (variations);
+
+/***/ }),
+
+/***/ "./src/templates/hero-section.js":
+/*!***************************************!*\
+  !*** ./src/templates/hero-section.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
+/**
+ * Wordpress dependencies
+ */
+
+const HeroSection = {
+  name: 'hero-section',
+  title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Hero Section', 'blablablocks-slider-block'),
+  content: `
+        <!-- wp:blablablocks/slider {"autoplay":true,"navigation":{"desktop":false,"tablet":false,"mobile":false,"activeDevice":"desktop"},"loop":true,"paginationColor":{"activeColor":{"default":"#ffffff"}},"metadata":{"name":"Hero Section"},"align":"full","className":"wp-block-lubus-slider","style":{"spacing":{"padding":{"top":"0px","bottom":"0px","left":"0px","right":"0px"}}}} -->
+        <div style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;--navigation-arrow-color:#000;--navigation-background-color:transparent;--navigation-arrow-hover-color:#333;--navigation-background-hover-color:transparent;--swiper-navigation-size:40px;--navigation-border-radius:4px 4px 4px 4px;--navigation-padding-top:0px;--navigation-padding-right:0px;--navigation-padding-bottom:0px;--navigation-padding-left:0px;--pagination-size:8px;--pagination-active-color:#ffffff;--pagination-inactive-color:#ccc;--pagination-offset-top:auto;--pagination-offset-right:0px;--pagination-offset-bottom:8px;--pagination-offset-left:0px;--navigation-offset-top:50%;--navigation-offset-right:10px;--navigation-offset-bottom:0px;--navigation-offset-left:10px" class="wp-block-blablablocks-slider alignfull wp-block-lubus-slider"><div class="swiper" data-swiper="{&quot;slidesPerView&quot;:{&quot;desktop&quot;:1,&quot;tablet&quot;:1,&quot;mobile&quot;:1,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;slidesSpacing&quot;:{&quot;desktop&quot;:30,&quot;tablet&quot;:20,&quot;mobile&quot;:10,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;speed&quot;:300,&quot;effects&quot;:&quot;slide&quot;,&quot;autoplay&quot;:true,&quot;delay&quot;:5000,&quot;navigation&quot;:{&quot;desktop&quot;:false,&quot;tablet&quot;:false,&quot;mobile&quot;:false,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;pagination&quot;:{&quot;desktop&quot;:true,&quot;tablet&quot;:true,&quot;mobile&quot;:true,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;loop&quot;:true,&quot;paginationColor&quot;:{&quot;activeColor&quot;:{&quot;default&quot;:&quot;#ffffff&quot;}},&quot;metadata&quot;:{&quot;name&quot;:&quot;Hero Section&quot;},&quot;align&quot;:&quot;full&quot;,&quot;className&quot;:&quot;wp-block-lubus-slider&quot;,&quot;style&quot;:{&quot;spacing&quot;:{&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;}}}}"><div class="swiper-wrapper"><!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+        <div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:cover {"url":"https://dotcompatterns.files.wordpress.com/2024/01/paint-wide-3.jpg","id":13691,"dimRatio":50,"isUserOverlayColor":false,"minHeight":500,"className":"alignfull is-style-default","style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
+        <div class="wp-block-cover alignfull is-style-default" style="margin-top:0;margin-bottom:0;padding-right:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50);min-height:500px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><img class="wp-block-cover__image-background wp-image-13691" alt="" src="https://dotcompatterns.files.wordpress.com/2024/01/paint-wide-3.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"var:preset|spacing|70"} -->
+        <div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+        <div class="wp-block-group alignwide"><!-- wp:heading {"textAlign":"center","className":"text-balance","style":{"spacing":{"margin":{"top":"0","bottom":"0","left":"0","right":"0"}}},"fontSize":"xx-large"} -->
+        <h2 class="wp-block-heading has-text-align-center text-balance has-xx-large-font-size" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0">Discover a world of possibilities</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:spacer {"height":"var:preset|spacing|40"} -->
+        <div style="height:var(--wp--preset--spacing--40)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- wp:buttons {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->
+        <div class="wp-block-buttons"><!-- wp:button {"width":50} -->
+        <div class="wp-block-button has-custom-width wp-block-button__width-50"><a class="wp-block-button__link wp-element-button">Get Started</a></div>
+        <!-- /wp:button --></div>
+        <!-- /wp:buttons --></div>
+        <!-- /wp:group -->
+
+        <!-- wp:spacer {"height":"var:preset|spacing|70"} -->
+        <div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer --></div></div>
+        <!-- /wp:cover --></div>
+        <!-- /wp:blablablocks/slide -->
+
+        <!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+        <div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:cover {"url":"https://dotcompatterns.files.wordpress.com/2024/01/paint-wide-3.jpg","id":13691,"dimRatio":50,"isUserOverlayColor":false,"minHeight":500,"className":"alignfull is-style-default","style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
+        <div class="wp-block-cover alignfull is-style-default" style="margin-top:0;margin-bottom:0;padding-right:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50);min-height:500px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><img class="wp-block-cover__image-background wp-image-13691" alt="" src="https://dotcompatterns.files.wordpress.com/2024/01/paint-wide-3.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"var:preset|spacing|70"} -->
+        <div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+        <div class="wp-block-group alignwide"><!-- wp:heading {"textAlign":"center","className":"text-balance","style":{"spacing":{"margin":{"top":"0","bottom":"0","left":"0","right":"0"}}},"fontSize":"xx-large"} -->
+        <h2 class="wp-block-heading has-text-align-center text-balance has-xx-large-font-size" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0">Discover a world of possibilities</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:spacer {"height":"var:preset|spacing|40"} -->
+        <div style="height:var(--wp--preset--spacing--40)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- wp:buttons {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->
+        <div class="wp-block-buttons"><!-- wp:button {"width":50} -->
+        <div class="wp-block-button has-custom-width wp-block-button__width-50"><a class="wp-block-button__link wp-element-button">Get Started</a></div>
+        <!-- /wp:button --></div>
+        <!-- /wp:buttons --></div>
+        <!-- /wp:group -->
+
+        <!-- wp:spacer {"height":"var:preset|spacing|70"} -->
+        <div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer --></div></div>
+        <!-- /wp:cover --></div>
+        <!-- /wp:blablablocks/slide -->
+
+        <!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+        <div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:cover {"url":"https://dotcompatterns.files.wordpress.com/2024/01/paint-wide-3.jpg","id":13691,"dimRatio":50,"isUserOverlayColor":false,"minHeight":500,"className":"alignfull is-style-default","style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
+        <div class="wp-block-cover alignfull is-style-default" style="margin-top:0;margin-bottom:0;padding-right:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50);min-height:500px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><img class="wp-block-cover__image-background wp-image-13691" alt="" src="https://dotcompatterns.files.wordpress.com/2024/01/paint-wide-3.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"var:preset|spacing|70"} -->
+        <div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+        <div class="wp-block-group alignwide"><!-- wp:heading {"textAlign":"center","className":"text-balance","style":{"spacing":{"margin":{"top":"0","bottom":"0","left":"0","right":"0"}}},"fontSize":"xx-large"} -->
+        <h2 class="wp-block-heading has-text-align-center text-balance has-xx-large-font-size" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0">Discover a world of possibilities</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:spacer {"height":"var:preset|spacing|40"} -->
+        <div style="height:var(--wp--preset--spacing--40)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- wp:buttons {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->
+        <div class="wp-block-buttons"><!-- wp:button {"width":50} -->
+        <div class="wp-block-button has-custom-width wp-block-button__width-50"><a class="wp-block-button__link wp-element-button">Get Started</a></div>
+        <!-- /wp:button --></div>
+        <!-- /wp:buttons --></div>
+        <!-- /wp:group -->
+
+        <!-- wp:spacer {"height":"var:preset|spacing|70"} -->
+        <div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer --></div></div>
+        <!-- /wp:cover --></div>
+        <!-- /wp:blablablocks/slide -->
+
+        <!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+        <div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:cover {"url":"https://dotcompatterns.files.wordpress.com/2024/01/paint-wide-3.jpg","id":13691,"dimRatio":50,"isUserOverlayColor":false,"minHeight":500,"className":"alignfull is-style-default","style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
+        <div class="wp-block-cover alignfull is-style-default" style="margin-top:0;margin-bottom:0;padding-right:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50);min-height:500px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><img class="wp-block-cover__image-background wp-image-13691" alt="" src="https://dotcompatterns.files.wordpress.com/2024/01/paint-wide-3.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"var:preset|spacing|70"} -->
+        <div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+        <div class="wp-block-group alignwide"><!-- wp:heading {"textAlign":"center","className":"text-balance","style":{"spacing":{"margin":{"top":"0","bottom":"0","left":"0","right":"0"}}},"fontSize":"xx-large"} -->
+        <h2 class="wp-block-heading has-text-align-center text-balance has-xx-large-font-size" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0">Discover a world of possibilities</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:spacer {"height":"var:preset|spacing|40"} -->
+        <div style="height:var(--wp--preset--spacing--40)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- wp:buttons {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->
+        <div class="wp-block-buttons"><!-- wp:button {"width":50} -->
+        <div class="wp-block-button has-custom-width wp-block-button__width-50"><a class="wp-block-button__link wp-element-button">Get Started</a></div>
+        <!-- /wp:button --></div>
+        <!-- /wp:buttons --></div>
+        <!-- /wp:group -->
+
+        <!-- wp:spacer {"height":"var:preset|spacing|70"} -->
+        <div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer --></div></div>
+        <!-- /wp:cover --></div>
+        <!-- /wp:blablablocks/slide --></div></div></div>
+        <!-- /wp:blablablocks/slider -->`
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HeroSection);
 
 /***/ }),
 
@@ -1375,12 +1841,12 @@ const variations = [{
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   HeroSection: () => (/* reexport safe */ _hero_section__WEBPACK_IMPORTED_MODULE_0__["default"]),
 /* harmony export */   Services: () => (/* reexport safe */ _services__WEBPACK_IMPORTED_MODULE_2__["default"]),
-/* harmony export */   Testimonial: () => (/* reexport safe */ _testimonial__WEBPACK_IMPORTED_MODULE_0__["default"]),
-/* harmony export */   Testimonial2: () => (/* reexport safe */ _testimonial2__WEBPACK_IMPORTED_MODULE_1__["default"])
+/* harmony export */   Testimonial: () => (/* reexport safe */ _testimonial__WEBPACK_IMPORTED_MODULE_1__["default"])
 /* harmony export */ });
-/* harmony import */ var _testimonial__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./testimonial */ "./src/templates/testimonial.js");
-/* harmony import */ var _testimonial2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./testimonial2 */ "./src/templates/testimonial2.js");
+/* harmony import */ var _hero_section__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hero-section */ "./src/templates/hero-section.js");
+/* harmony import */ var _testimonial__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./testimonial */ "./src/templates/testimonial.js");
 /* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./services */ "./src/templates/services.js");
 /**
  * Export Templates.
@@ -1410,158 +1876,157 @@ __webpack_require__.r(__webpack_exports__);
 const Services = {
   name: 'services',
   title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Services', 'blablablocks-slider-block'),
-  description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('A simple centered call-to-action for subscribing.', 'blablablocks-slider-block'),
   content: `
-            <!-- wp:group {"metadata":{"categories":["services"],"name":"Services","patternName":"assembler/services-2"},"align":"full","className":"alignfull is-style-default","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|30","padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}}},"layout":{"type":"default"}} -->
-				<div class="wp-block-group alignfull is-style-default" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--50)"><!-- wp:heading {"align":"wide","style":{"layout":{"selfStretch":"fixed","flexSize":"100%"},"typography":{"fontStyle":"normal","fontWeight":"600"}}} -->
-				<h2 class="wp-block-heading alignwide" style="font-style:normal;font-weight:600">Services</h2>
-				<!-- /wp:heading -->
+           <!-- wp:group {"metadata":{"categories":["services"],"name":"Services","patternName":"assembler/services-2"},"align":"full","className":"alignfull is-style-default","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|30","padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}}},"layout":{"type":"default"}} -->
+			<div class="wp-block-group alignfull is-style-default" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--50)"><!-- wp:heading {"align":"wide","style":{"layout":{"selfStretch":"fixed","flexSize":"100%"},"typography":{"fontStyle":"normal","fontWeight":"600"}}} -->
+			<h2 class="wp-block-heading alignwide" style="font-style:normal;font-weight:600">Services</h2>
+			<!-- /wp:heading -->
 
-				<!-- wp:lubus/slider {"slidesPerView":{"desktop":3,"tablet":2,"mobile":1,"activeDevice":"tablet"},"pagination":false,"navigationColor":{"arrowColor":{"default":"#000000","hover":"#323232"},"backgroundColor":{"hover":""}},"navigationPadding":{},"navigationSize":"2.3rem","navigationOffset":{"top":"50%","bottom":"0px","left":"-6vw","right":"-6vw"},"navigationBorderRadius":"50%","align":"full","style":{"spacing":{"padding":{"top":"0px","bottom":"0px","left":"0px","right":"0px"}}}} -->
-				<div style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;--navigation-arrow-color:#000000;--navigation-arrow-hover-color:#323232;--swiper-navigation-size:2.3rem;--navigation-border-radius:50%;--navigation-padding-top:0px;--navigation-padding-right:0px;--navigation-padding-bottom:0px;--navigation-padding-left:0px;--pagination-size:8px;--pagination-offset-top:auto;--pagination-offset-right:0px;--pagination-offset-bottom:8px;--pagination-offset-left:0px;--navigation-offset-top:50%;--navigation-offset-right:-6vw;--navigation-offset-bottom:0px;--navigation-offset-left:-6vw" class="wp-block-lubus-slider alignfull"><div class="swiper" data-swiper="{&quot;slidesPerView&quot;:{&quot;desktop&quot;:3,&quot;tablet&quot;:2,&quot;mobile&quot;:1,&quot;activeDevice&quot;:&quot;tablet&quot;},&quot;slidesSpacing&quot;:{&quot;desktop&quot;:30,&quot;tablet&quot;:20,&quot;mobile&quot;:10,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;speed&quot;:300,&quot;effects&quot;:&quot;slide&quot;,&quot;autoplay&quot;:false,&quot;delay&quot;:5000,&quot;navigation&quot;:true,&quot;pagination&quot;:false,&quot;loop&quot;:false,&quot;navigationColor&quot;:{&quot;arrowColor&quot;:{&quot;default&quot;:&quot;#000000&quot;,&quot;hover&quot;:&quot;#323232&quot;},&quot;backgroundColor&quot;:{&quot;hover&quot;:&quot;&quot;}},&quot;navigationPadding&quot;:{},&quot;navigationSize&quot;:&quot;2.3rem&quot;,&quot;navigationOffset&quot;:{&quot;top&quot;:&quot;50%&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;-6vw&quot;,&quot;right&quot;:&quot;-6vw&quot;},&quot;navigationBorderRadius&quot;:&quot;50%&quot;,&quot;paginationSize&quot;:&quot;8px&quot;,&quot;paginationOffset&quot;:{&quot;top&quot;:&quot;auto&quot;,&quot;bottom&quot;:&quot;8px&quot;,&quot;left&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;},&quot;align&quot;:&quot;full&quot;,&quot;style&quot;:{&quot;spacing&quot;:{&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;}}}}"><div class="swiper-wrapper"><!-- wp:lubus/slide -->
-				<div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
-				<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
-				<!-- /wp:image -->
+			<!-- wp:blablablocks/slider {"slidesPerView":{"desktop":3,"tablet":2,"mobile":1,"activeDevice":"desktop"},"pagination":{"desktop":false,"tablet":false,"mobile":false,"activeDevice":"desktop"},"navigationColor":{"arrowColor":{"default":"#000000","hover":"#323232"},"backgroundColor":{"hover":""}},"navigationPadding":{},"navigationSize":"2.3rem","navigationOffset":{"top":"50%","bottom":"0px","left":"-6vw","right":"-6vw"},"navigationBorderRadius":"50%","paginationOffset":{"bottom":"-70px"},"align":"full","className":"wp-block-lubus-slider","style":{"spacing":{"padding":{"top":"0px","bottom":"0px","left":"0px","right":"0px"}}}} -->
+			<div style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;--navigation-arrow-color:#000000;--navigation-background-color:transparent;--navigation-arrow-hover-color:#323232;--navigation-background-hover-color:;--swiper-navigation-size:2.3rem;--navigation-border-radius:50%;--navigation-padding-top:0px;--navigation-padding-right:0px;--navigation-padding-bottom:0px;--navigation-padding-left:0px;--pagination-size:8px;--pagination-active-color:#000;--pagination-inactive-color:#ccc;--pagination-offset-top:auto;--pagination-offset-right:0px;--pagination-offset-bottom:-70px;--pagination-offset-left:0px;--navigation-offset-top:50%;--navigation-offset-right:-6vw;--navigation-offset-bottom:0px;--navigation-offset-left:-6vw" class="wp-block-blablablocks-slider alignfull wp-block-lubus-slider"><div class="swiper" data-swiper="{&quot;slidesPerView&quot;:{&quot;desktop&quot;:3,&quot;tablet&quot;:2,&quot;mobile&quot;:1,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;slidesSpacing&quot;:{&quot;desktop&quot;:30,&quot;tablet&quot;:20,&quot;mobile&quot;:10,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;speed&quot;:300,&quot;effects&quot;:&quot;slide&quot;,&quot;autoplay&quot;:false,&quot;delay&quot;:5000,&quot;navigation&quot;:{&quot;desktop&quot;:true,&quot;tablet&quot;:true,&quot;mobile&quot;:true,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;pagination&quot;:{&quot;desktop&quot;:false,&quot;tablet&quot;:false,&quot;mobile&quot;:false,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;loop&quot;:false,&quot;navigationColor&quot;:{&quot;arrowColor&quot;:{&quot;default&quot;:&quot;#000000&quot;,&quot;hover&quot;:&quot;#323232&quot;},&quot;backgroundColor&quot;:{&quot;hover&quot;:&quot;&quot;}},&quot;navigationPadding&quot;:{},&quot;navigationSize&quot;:&quot;2.3rem&quot;,&quot;navigationOffset&quot;:{&quot;top&quot;:&quot;50%&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;-6vw&quot;,&quot;right&quot;:&quot;-6vw&quot;},&quot;navigationBorderRadius&quot;:&quot;50%&quot;,&quot;paginationOffset&quot;:{&quot;bottom&quot;:&quot;-70px&quot;},&quot;align&quot;:&quot;full&quot;,&quot;className&quot;:&quot;wp-block-lubus-slider&quot;,&quot;style&quot;:{&quot;spacing&quot;:{&quot;padding&quot;:{&quot;top&quot;:&quot;0px&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;}}}}"><div class="swiper-wrapper"><!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
+			<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<!-- /wp:image -->
 
-				<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
-				<h3 class="wp-block-heading is-service-name">Service 1</h3>
-				<!-- /wp:heading -->
+			<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
+			<h3 class="wp-block-heading is-service-name">Service 1</h3>
+			<!-- /wp:heading -->
 
-				<!-- wp:paragraph {"className":"is-service-description"} -->
-				<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
-				<!-- /wp:paragraph -->
+			<!-- wp:paragraph {"className":"is-service-description"} -->
+			<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
+			<!-- /wp:paragraph -->
 
-				<!-- wp:buttons -->
-				<div class="wp-block-buttons"><!-- wp:button {"className":"is-service-link"} -->
-				<div class="wp-block-button is-service-link"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
-				<!-- /wp:button --></div>
-				<!-- /wp:buttons --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:lubus/slide -->
+			<!-- wp:buttons -->
+			<div class="wp-block-buttons"><!-- wp:button {"className":"is-service-link"} -->
+			<div class="wp-block-button is-service-link"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
+			<!-- /wp:button --></div>
+			<!-- /wp:buttons --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:blablablocks/slide -->
 
-				<!-- wp:lubus/slide -->
-				<div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
-				<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
-				<!-- /wp:image -->
+			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
+			<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<!-- /wp:image -->
 
-				<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
-				<h3 class="wp-block-heading is-service-name">Service 2</h3>
-				<!-- /wp:heading -->
+			<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
+			<h3 class="wp-block-heading is-service-name">Service 2</h3>
+			<!-- /wp:heading -->
 
-				<!-- wp:paragraph {"className":"is-service-description"} -->
-				<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
-				<!-- /wp:paragraph -->
+			<!-- wp:paragraph {"className":"is-service-description"} -->
+			<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
+			<!-- /wp:paragraph -->
 
-				<!-- wp:buttons -->
-				<div class="wp-block-buttons"><!-- wp:button {"className":"is-service-link"} -->
-				<div class="wp-block-button is-service-link"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
-				<!-- /wp:button --></div>
-				<!-- /wp:buttons --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:lubus/slide -->
+			<!-- wp:buttons -->
+			<div class="wp-block-buttons"><!-- wp:button {"className":"is-service-link"} -->
+			<div class="wp-block-button is-service-link"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
+			<!-- /wp:button --></div>
+			<!-- /wp:buttons --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:blablablocks/slide -->
 
-				<!-- wp:lubus/slide -->
-				<div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
-				<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
-				<!-- /wp:image -->
+			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
+			<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<!-- /wp:image -->
 
-				<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
-				<h3 class="wp-block-heading is-service-name">Service 3</h3>
-				<!-- /wp:heading -->
+			<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
+			<h3 class="wp-block-heading is-service-name">Service 3</h3>
+			<!-- /wp:heading -->
 
-				<!-- wp:paragraph {"className":"is-service-description"} -->
-				<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
-				<!-- /wp:paragraph -->
+			<!-- wp:paragraph {"className":"is-service-description"} -->
+			<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
+			<!-- /wp:paragraph -->
 
-				<!-- wp:buttons -->
-				<div class="wp-block-buttons"><!-- wp:button {"className":"is-service-link"} -->
-				<div class="wp-block-button is-service-link"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
-				<!-- /wp:button --></div>
-				<!-- /wp:buttons --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:lubus/slide -->
+			<!-- wp:buttons -->
+			<div class="wp-block-buttons"><!-- wp:button {"className":"is-service-link"} -->
+			<div class="wp-block-button is-service-link"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
+			<!-- /wp:button --></div>
+			<!-- /wp:buttons --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:blablablocks/slide -->
 
-				<!-- wp:lubus/slide -->
-				<div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
-				<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
-				<!-- /wp:image -->
+			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
+			<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<!-- /wp:image -->
 
-				<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
-				<h3 class="wp-block-heading is-service-name">Service 4</h3>
-				<!-- /wp:heading -->
+			<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
+			<h3 class="wp-block-heading is-service-name">Service 4</h3>
+			<!-- /wp:heading -->
 
-				<!-- wp:paragraph {"className":"is-service-description"} -->
-				<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
-				<!-- /wp:paragraph -->
+			<!-- wp:paragraph {"className":"is-service-description"} -->
+			<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
+			<!-- /wp:paragraph -->
 
-				<!-- wp:buttons -->
-				<div class="wp-block-buttons"><!-- wp:button {"className":"is-service-link"} -->
-				<div class="wp-block-button is-service-link"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
-				<!-- /wp:button --></div>
-				<!-- /wp:buttons --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:lubus/slide -->
+			<!-- wp:buttons -->
+			<div class="wp-block-buttons"><!-- wp:button {"className":"is-service-link"} -->
+			<div class="wp-block-button is-service-link"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
+			<!-- /wp:button --></div>
+			<!-- /wp:buttons --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:blablablocks/slide -->
 
-				<!-- wp:lubus/slide -->
-				<div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
-				<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
-				<!-- /wp:image -->
+			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
+			<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<!-- /wp:image -->
 
-				<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
-				<h3 class="wp-block-heading is-service-name">Service 5</h3>
-				<!-- /wp:heading -->
+			<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
+			<h3 class="wp-block-heading is-service-name">Service 5</h3>
+			<!-- /wp:heading -->
 
-				<!-- wp:paragraph {"className":"is-service-description"} -->
-				<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
-				<!-- /wp:paragraph -->
+			<!-- wp:paragraph {"className":"is-service-description"} -->
+			<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
+			<!-- /wp:paragraph -->
 
-				<!-- wp:buttons -->
-				<div class="wp-block-buttons"><!-- wp:button {"className":"is-service-link"} -->
-				<div class="wp-block-button is-service-link"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
-				<!-- /wp:button --></div>
-				<!-- /wp:buttons --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:lubus/slide -->
+			<!-- wp:buttons -->
+			<div class="wp-block-buttons"><!-- wp:button {"className":"is-service-link"} -->
+			<div class="wp-block-button is-service-link"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
+			<!-- /wp:button --></div>
+			<!-- /wp:buttons --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:blablablocks/slide -->
 
-				<!-- wp:lubus/slide -->
-				<div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
-				<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
-				<!-- /wp:image -->
+			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
+			<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<!-- /wp:image -->
 
-				<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-				<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
-				<h3 class="wp-block-heading is-service-name">Service 6</h3>
-				<!-- /wp:heading -->
+			<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
+			<h3 class="wp-block-heading is-service-name">Service 6</h3>
+			<!-- /wp:heading -->
 
-				<!-- wp:paragraph {"className":"is-service-description"} -->
-				<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
-				<!-- /wp:paragraph -->
+			<!-- wp:paragraph {"className":"is-service-description"} -->
+			<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
+			<!-- /wp:paragraph -->
 
-				<!-- wp:buttons -->
-				<div class="wp-block-buttons"><!-- wp:button {"className":"is-service-link"} -->
-				<div class="wp-block-button is-service-link"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
-				<!-- /wp:button --></div>
-				<!-- /wp:buttons --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:lubus/slide --></div></div></div>
-				<!-- /wp:lubus/slider --></div>
+			<!-- wp:buttons -->
+			<div class="wp-block-buttons"><!-- wp:button {"className":"is-service-link"} -->
+			<div class="wp-block-button is-service-link"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
+			<!-- /wp:button --></div>
+			<!-- /wp:buttons --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:blablablocks/slide --></div></div></div>
+			<!-- /wp:blablablocks/slider --></div>
 			<!-- /wp:group -->`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Services);
@@ -1587,286 +2052,112 @@ __webpack_require__.r(__webpack_exports__);
 const Testimonial = {
   name: 'testimonial',
   title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Testimonial', 'blablablocks-slider-block'),
-  description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('A compelling call-to-action with an image aligned to the right.', 'blablablocks-slider-block'),
   content: `
-        <!-- wp:group {"metadata":{"name":"Testimonial"},"align":"full","style":{"spacing":{"blockGap":"0px","padding":{"left":"2vw","right":"2vw","top":"8vw","bottom":"8vw"}}},"layout":{"type":"default"}} -->
-                <div class="wp-block-group alignfull" style="padding-top:8vw;padding-right:2vw;padding-bottom:8vw;padding-left:2vw"><!-- wp:heading {"textAlign":"center","level":1,"align":"wide","fontSize":"x-large"} -->
-                <h1 class="wp-block-heading alignwide has-text-align-center has-x-large-font-size"><strong>What people are saying</strong></h1>
-                <!-- /wp:heading -->
+          <!-- wp:group {"metadata":{"name":"Testimonial"},"align":"full","style":{"spacing":{"blockGap":"0px","padding":{"left":"2vw","right":"2vw","top":"8vw","bottom":"8vw"}}},"layout":{"type":"default"}} -->
+			<div class="wp-block-group alignfull" style="padding-top:8vw;padding-right:2vw;padding-bottom:8vw;padding-left:2vw"><!-- wp:heading {"textAlign":"center","level":1,"align":"wide","fontSize":"large"} -->
+			<h1 class="wp-block-heading alignwide has-text-align-center has-large-font-size"><strong>WHAT OUR CLIENTS SAY ABOUT US</strong></h1>
+			<!-- /wp:heading -->
 
-                <!-- wp:lubus/slider {"style":{"spacing":{"padding":{"top":"40px","right":"4vw","left":"4vw","bottom":"80px"}}}} -->
-                <div style="padding-top:40px;padding-right:4vw;padding-bottom:80px;padding-left:4vw;--swiper-navigation-size:40px;--navigation-border-radius:4px;--navigation-padding-top:0px;--navigation-padding-right:0px;--navigation-padding-bottom:0px;--navigation-padding-left:0px;--pagination-size:8px;--pagination-offset-top:auto;--pagination-offset-right:0px;--pagination-offset-bottom:8px;--pagination-offset-left:0px;--navigation-offset-top:50%;--navigation-offset-right:10px;--navigation-offset-bottom:0px;--navigation-offset-left:10px" class="wp-block-lubus-slider"><div class="swiper" data-swiper="{&quot;slidesPerView&quot;:{&quot;desktop&quot;:1,&quot;tablet&quot;:1,&quot;mobile&quot;:1,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;slidesSpacing&quot;:{&quot;desktop&quot;:30,&quot;tablet&quot;:20,&quot;mobile&quot;:10,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;speed&quot;:300,&quot;effects&quot;:&quot;slide&quot;,&quot;autoplay&quot;:false,&quot;delay&quot;:5000,&quot;navigation&quot;:true,&quot;pagination&quot;:true,&quot;loop&quot;:false,&quot;navigationColor&quot;:{&quot;arrowColor&quot;:{&quot;default&quot;:&quot;&quot;,&quot;hover&quot;:&quot;&quot;},&quot;backgroundColor&quot;:{&quot;default&quot;:&quot;&quot;,&quot;hover&quot;:&quot;&quot;}},&quot;navigationSize&quot;:&quot;40px&quot;,&quot;navigationOffset&quot;:{&quot;top&quot;:&quot;50%&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;10px&quot;,&quot;right&quot;:&quot;10px&quot;},&quot;navigationBorderRadius&quot;:&quot;4px&quot;,&quot;paginationSize&quot;:&quot;8px&quot;,&quot;paginationOffset&quot;:{&quot;top&quot;:&quot;auto&quot;,&quot;bottom&quot;:&quot;8px&quot;,&quot;left&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;},&quot;style&quot;:{&quot;spacing&quot;:{&quot;padding&quot;:{&quot;top&quot;:&quot;40px&quot;,&quot;right&quot;:&quot;4vw&quot;,&quot;left&quot;:&quot;4vw&quot;,&quot;bottom&quot;:&quot;80px&quot;}}}}"><div class="swiper-wrapper"><!-- wp:lubus/slide -->
-                <div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"metadata":{},"align":"full","style":{"spacing":{"padding":{"top":"0px","bottom":"0px"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
-                <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:0px;padding-bottom:0px"><!-- wp:paragraph {"align":"center"} -->
-                <p class="has-text-align-center">"Starting my role as a WordPress administrator has been a joy, thanks to its intuitive interface, media management, security, and plugin integration, making website management a breeze."</p>
-                <!-- /wp:paragraph -->
+			<!-- wp:blablablocks/slider {"className":"wp-block-lubus-slider","style":{"spacing":{"padding":{"top":"40px","bottom":"80px","right":"10vw","left":"10vw"}}}} -->
+			<div style="padding-top:40px;padding-right:10vw;padding-bottom:80px;padding-left:10vw;--navigation-arrow-color:#000;--navigation-background-color:transparent;--navigation-arrow-hover-color:#333;--navigation-background-hover-color:transparent;--swiper-navigation-size:40px;--navigation-border-radius:4px 4px 4px 4px;--navigation-padding-top:0px;--navigation-padding-right:0px;--navigation-padding-bottom:0px;--navigation-padding-left:0px;--pagination-size:8px;--pagination-active-color:#000;--pagination-inactive-color:#ccc;--pagination-offset-top:auto;--pagination-offset-right:0px;--pagination-offset-bottom:8px;--pagination-offset-left:0px;--navigation-offset-top:50%;--navigation-offset-right:10px;--navigation-offset-bottom:0px;--navigation-offset-left:10px" class="wp-block-blablablocks-slider wp-block-lubus-slider"><div class="swiper" data-swiper="{&quot;slidesPerView&quot;:{&quot;desktop&quot;:1,&quot;tablet&quot;:1,&quot;mobile&quot;:1,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;slidesSpacing&quot;:{&quot;desktop&quot;:30,&quot;tablet&quot;:20,&quot;mobile&quot;:10,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;speed&quot;:300,&quot;effects&quot;:&quot;slide&quot;,&quot;autoplay&quot;:false,&quot;delay&quot;:5000,&quot;navigation&quot;:{&quot;desktop&quot;:true,&quot;tablet&quot;:true,&quot;mobile&quot;:true,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;pagination&quot;:{&quot;desktop&quot;:true,&quot;tablet&quot;:true,&quot;mobile&quot;:true,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;loop&quot;:false,&quot;className&quot;:&quot;wp-block-lubus-slider&quot;,&quot;style&quot;:{&quot;spacing&quot;:{&quot;padding&quot;:{&quot;top&quot;:&quot;40px&quot;,&quot;bottom&quot;:&quot;80px&quot;,&quot;right&quot;:&quot;10vw&quot;,&quot;left&quot;:&quot;10vw&quot;}}}}"><div class="swiper-wrapper"><!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"15px"}},"layout":{"type":"default"}} -->
+			<div class="wp-block-group"><!-- wp:image {"id":2510,"sizeSlug":"full","linkDestination":"none","align":"center"} -->
+			<figure class="wp-block-image aligncenter size-full"><img src="https://rollingnames.com/wp-content/uploads/2023/08/quote.png" alt="" class="wp-image-2510"/></figure>
+			<!-- /wp:image -->
 
-                <!-- wp:spacer {"height":"calc( 0.25 * var(\u002d\u002dwp\u002d\u002dstyle\u002d\u002droot\u002d\u002dpadding-right, var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dgap\u002d\u002dhorizontal)))"} -->
-                <div style="height:calc( 0.25 * var(--wp--style--root--padding-right, var(--wp--custom--gap--horizontal)))" aria-hidden="true" class="wp-block-spacer"></div>
-                <!-- /wp:spacer -->
+			<!-- wp:image {"width":"150px","height":"150px","scale":"cover","sizeSlug":"large","linkDestination":"none","align":"center","style":{"border":{"radius":"100px"}}} -->
+			<figure class="wp-block-image aligncenter size-large is-resized has-custom-border"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/01/paint-small.jpg" style="border-radius:100px;object-fit:cover;width:150px;height:150px"/></figure>
+			<!-- /wp:image -->
 
-                <!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
-                <div class="wp-block-group"><!-- wp:image {"id":13762,"width":"64px","aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"100px"}}} -->
-                <figure class="wp-block-image size-full is-resized has-custom-border"><img src="https://dotcompatterns.files.wordpress.com/2024/01/paint-small.jpg" alt="" class="wp-image-13762" style="border-radius:100px;aspect-ratio:1;object-fit:cover;width:64px"/></figure>
-                <!-- /wp:image -->
+			<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#8a8a8a"},"typography":{"fontSize":"20px","fontStyle":"normal","fontWeight":"300","lineHeight":2,"letterSpacing":"0px"}},"fontFamily":"montserrat"} -->
+			<p class="has-text-align-center has-text-color has-montserrat-font-family" style="color:#8a8a8a;font-size:20px;font-style:normal;font-weight:300;letter-spacing:0px;line-height:2">"Starting my role as a WordPress administrator has been a joy, thanks to its intuitive interface, media management, security, and plugin integration, making website management a breeze."</p>
+			<!-- /wp:paragraph -->
 
-                <!-- wp:group {"style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"default"}} -->
-                <div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":3,"fontSize":"medium"} -->
-                <h3 class="wp-block-heading has-text-align-center has-medium-font-size">Liz S.</h3>
-                <!-- /wp:heading -->
+			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"600"},"spacing":{"padding":{"bottom":"5px"}}}} -->
+			<p class="has-text-align-center" style="padding-bottom:5px;font-size:16px;font-style:normal;font-weight:600">Pierre</p>
+			<!-- /wp:paragraph -->
 
-                <!-- wp:paragraph {"align":"center","fontSize":"small"} -->
-                <p class="has-text-align-center has-small-font-size">Software engineer</p>
-                <!-- /wp:paragraph --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:lubus/slide -->
+			<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"0px"}},"color":{"text":"#8a8a8a"},"typography":{"fontSize":"12px","fontStyle":"normal","fontWeight":"300"}},"fontFamily":"raleway"} -->
+			<p class="has-text-align-center has-text-color has-raleway-font-family" style="color:#8a8a8a;margin-top:0px;font-size:12px;font-style:normal;font-weight:300">Entrepreneur, Kitchenlogix</p>
+			<!-- /wp:paragraph --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:blablablocks/slide -->
 
-                <!-- wp:lubus/slide -->
-                <div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"metadata":{},"align":"full","style":{"spacing":{"padding":{"top":"0px","bottom":"0px"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
-                <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:0px;padding-bottom:0px"><!-- wp:paragraph {"align":"center"} -->
-                <p class="has-text-align-center">"Starting my role as a WordPress administrator has been a joy, thanks to its intuitive interface, media management, security, and plugin integration, making website management a breeze."</p>
-                <!-- /wp:paragraph -->
+			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"15px"}},"layout":{"type":"default"}} -->
+			<div class="wp-block-group"><!-- wp:image {"id":2510,"sizeSlug":"full","linkDestination":"none","align":"center"} -->
+			<figure class="wp-block-image aligncenter size-full"><img src="https://rollingnames.com/wp-content/uploads/2023/08/quote.png" alt="" class="wp-image-2510"/></figure>
+			<!-- /wp:image -->
 
-                <!-- wp:spacer {"height":"calc( 0.25 * var(\u002d\u002dwp\u002d\u002dstyle\u002d\u002droot\u002d\u002dpadding-right, var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dgap\u002d\u002dhorizontal)))"} -->
-                <div style="height:calc( 0.25 * var(--wp--style--root--padding-right, var(--wp--custom--gap--horizontal)))" aria-hidden="true" class="wp-block-spacer"></div>
-                <!-- /wp:spacer -->
+			<!-- wp:image {"width":"150px","height":"150px","scale":"cover","sizeSlug":"large","linkDestination":"none","align":"center","style":{"border":{"radius":"100px"}}} -->
+			<figure class="wp-block-image aligncenter size-large is-resized has-custom-border"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/01/paint-small.jpg" style="border-radius:100px;object-fit:cover;width:150px;height:150px"/></figure>
+			<!-- /wp:image -->
 
-                <!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
-                <div class="wp-block-group"><!-- wp:image {"id":13762,"width":"64px","aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"100px"}}} -->
-                <figure class="wp-block-image size-full is-resized has-custom-border"><img src="https://dotcompatterns.files.wordpress.com/2024/01/paint-small.jpg" alt="" class="wp-image-13762" style="border-radius:100px;aspect-ratio:1;object-fit:cover;width:64px"/></figure>
-                <!-- /wp:image -->
+			<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#8a8a8a"},"typography":{"fontSize":"20px","fontStyle":"normal","fontWeight":"300","lineHeight":2,"letterSpacing":"0px"}},"fontFamily":"montserrat"} -->
+			<p class="has-text-align-center has-text-color has-montserrat-font-family" style="color:#8a8a8a;font-size:20px;font-style:normal;font-weight:300;letter-spacing:0px;line-height:2">"Starting my role as a WordPress administrator has been a joy, thanks to its intuitive interface, media management, security, and plugin integration, making website management a breeze."</p>
+			<!-- /wp:paragraph -->
 
-                <!-- wp:group {"style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"default"}} -->
-                <div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":3,"fontSize":"medium"} -->
-                <h3 class="wp-block-heading has-text-align-center has-medium-font-size">Mike W.</h3>
-                <!-- /wp:heading -->
+			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"600"},"spacing":{"padding":{"bottom":"5px"}}}} -->
+			<p class="has-text-align-center" style="padding-bottom:5px;font-size:16px;font-style:normal;font-weight:600">Pierre</p>
+			<!-- /wp:paragraph -->
 
-                <!-- wp:paragraph {"align":"center","fontSize":"small"} -->
-                <p class="has-text-align-center has-small-font-size">Software engineer</p>
-                <!-- /wp:paragraph --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:lubus/slide -->
+			<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"0px"}},"color":{"text":"#8a8a8a"},"typography":{"fontSize":"12px","fontStyle":"normal","fontWeight":"300"}},"fontFamily":"raleway"} -->
+			<p class="has-text-align-center has-text-color has-raleway-font-family" style="color:#8a8a8a;margin-top:0px;font-size:12px;font-style:normal;font-weight:300">Entrepreneur, Kitchenlogix</p>
+			<!-- /wp:paragraph --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:blablablocks/slide -->
 
-                <!-- wp:lubus/slide -->
-                <div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"metadata":{},"align":"full","style":{"spacing":{"padding":{"top":"0px","bottom":"0px"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
-                <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:0px;padding-bottom:0px"><!-- wp:paragraph {"align":"center"} -->
-                <p class="has-text-align-center">"Starting my role as a WordPress administrator has been a joy, thanks to its intuitive interface, media management, security, and plugin integration, making website management a breeze."</p>
-                <!-- /wp:paragraph -->
+			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"15px"}},"layout":{"type":"default"}} -->
+			<div class="wp-block-group"><!-- wp:image {"id":2510,"sizeSlug":"full","linkDestination":"none","align":"center"} -->
+			<figure class="wp-block-image aligncenter size-full"><img src="https://rollingnames.com/wp-content/uploads/2023/08/quote.png" alt="" class="wp-image-2510"/></figure>
+			<!-- /wp:image -->
 
-                <!-- wp:spacer {"height":"calc( 0.25 * var(\u002d\u002dwp\u002d\u002dstyle\u002d\u002droot\u002d\u002dpadding-right, var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dgap\u002d\u002dhorizontal)))"} -->
-                <div style="height:calc( 0.25 * var(--wp--style--root--padding-right, var(--wp--custom--gap--horizontal)))" aria-hidden="true" class="wp-block-spacer"></div>
-                <!-- /wp:spacer -->
+			<!-- wp:image {"width":"150px","height":"150px","scale":"cover","sizeSlug":"large","linkDestination":"none","align":"center","style":{"border":{"radius":"100px"}}} -->
+			<figure class="wp-block-image aligncenter size-large is-resized has-custom-border"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/01/paint-small.jpg" style="border-radius:100px;object-fit:cover;width:150px;height:150px"/></figure>
+			<!-- /wp:image -->
 
-                <!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
-                <div class="wp-block-group"><!-- wp:image {"id":13762,"width":"64px","aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"100px"}}} -->
-                <figure class="wp-block-image size-full is-resized has-custom-border"><img src="https://dotcompatterns.files.wordpress.com/2024/01/paint-small.jpg" alt="" class="wp-image-13762" style="border-radius:100px;aspect-ratio:1;object-fit:cover;width:64px"/></figure>
-                <!-- /wp:image -->
+			<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#8a8a8a"},"typography":{"fontSize":"20px","fontStyle":"normal","fontWeight":"300","lineHeight":2,"letterSpacing":"0px"}},"fontFamily":"montserrat"} -->
+			<p class="has-text-align-center has-text-color has-montserrat-font-family" style="color:#8a8a8a;font-size:20px;font-style:normal;font-weight:300;letter-spacing:0px;line-height:2">"Starting my role as a WordPress administrator has been a joy, thanks to its intuitive interface, media management, security, and plugin integration, making website management a breeze."</p>
+			<!-- /wp:paragraph -->
 
-                <!-- wp:group {"style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"default"}} -->
-                <div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":3,"fontSize":"medium"} -->
-                <h3 class="wp-block-heading has-text-align-center has-medium-font-size">Harry T.</h3>
-                <!-- /wp:heading -->
+			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"600"},"spacing":{"padding":{"bottom":"5px"}}}} -->
+			<p class="has-text-align-center" style="padding-bottom:5px;font-size:16px;font-style:normal;font-weight:600">Pierre</p>
+			<!-- /wp:paragraph -->
 
-                <!-- wp:paragraph {"align":"center","fontSize":"small"} -->
-                <p class="has-text-align-center has-small-font-size">Software engineer</p>
-                <!-- /wp:paragraph --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:lubus/slide -->
+			<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"0px"}},"color":{"text":"#8a8a8a"},"typography":{"fontSize":"12px","fontStyle":"normal","fontWeight":"300"}},"fontFamily":"raleway"} -->
+			<p class="has-text-align-center has-text-color has-raleway-font-family" style="color:#8a8a8a;margin-top:0px;font-size:12px;font-style:normal;font-weight:300">Entrepreneur, Kitchenlogix</p>
+			<!-- /wp:paragraph --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:blablablocks/slide -->
 
-                <!-- wp:lubus/slide -->
-                <div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"metadata":{},"align":"full","style":{"spacing":{"padding":{"top":"0px","bottom":"0px"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
-                <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:0px;padding-bottom:0px"><!-- wp:paragraph {"align":"center"} -->
-                <p class="has-text-align-center">"Starting my role as a WordPress administrator has been a joy, thanks to its intuitive interface, media management, security, and plugin integration, making website management a breeze."</p>
-                <!-- /wp:paragraph -->
+			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
+			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"15px"}},"layout":{"type":"default"}} -->
+			<div class="wp-block-group"><!-- wp:image {"id":2510,"sizeSlug":"full","linkDestination":"none","align":"center"} -->
+			<figure class="wp-block-image aligncenter size-full"><img src="https://rollingnames.com/wp-content/uploads/2023/08/quote.png" alt="" class="wp-image-2510"/></figure>
+			<!-- /wp:image -->
 
-                <!-- wp:spacer {"height":"calc( 0.25 * var(\u002d\u002dwp\u002d\u002dstyle\u002d\u002droot\u002d\u002dpadding-right, var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dgap\u002d\u002dhorizontal)))"} -->
-                <div style="height:calc( 0.25 * var(--wp--style--root--padding-right, var(--wp--custom--gap--horizontal)))" aria-hidden="true" class="wp-block-spacer"></div>
-                <!-- /wp:spacer -->
+			<!-- wp:image {"width":"150px","height":"150px","scale":"cover","sizeSlug":"large","linkDestination":"none","align":"center","style":{"border":{"radius":"100px"}}} -->
+			<figure class="wp-block-image aligncenter size-large is-resized has-custom-border"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/01/paint-small.jpg" style="border-radius:100px;object-fit:cover;width:150px;height:150px"/></figure>
+			<!-- /wp:image -->
 
-                <!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
-                <div class="wp-block-group"><!-- wp:image {"id":13762,"width":"64px","aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"100px"}}} -->
-                <figure class="wp-block-image size-full is-resized has-custom-border"><img src="https://dotcompatterns.files.wordpress.com/2024/01/paint-small.jpg" alt="" class="wp-image-13762" style="border-radius:100px;aspect-ratio:1;object-fit:cover;width:64px"/></figure>
-                <!-- /wp:image -->
+			<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#8a8a8a"},"typography":{"fontSize":"20px","fontStyle":"normal","fontWeight":"300","lineHeight":2,"letterSpacing":"0px"}},"fontFamily":"montserrat"} -->
+			<p class="has-text-align-center has-text-color has-montserrat-font-family" style="color:#8a8a8a;font-size:20px;font-style:normal;font-weight:300;letter-spacing:0px;line-height:2">"Starting my role as a WordPress administrator has been a joy, thanks to its intuitive interface, media management, security, and plugin integration, making website management a breeze."</p>
+			<!-- /wp:paragraph -->
 
-                <!-- wp:group {"style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"default"}} -->
-                <div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":3,"fontSize":"medium"} -->
-                <h3 class="wp-block-heading has-text-align-center has-medium-font-size">Michael W.</h3>
-                <!-- /wp:heading -->
+			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"600"},"spacing":{"padding":{"bottom":"5px"}}}} -->
+			<p class="has-text-align-center" style="padding-bottom:5px;font-size:16px;font-style:normal;font-weight:600">Pierre</p>
+			<!-- /wp:paragraph -->
 
-                <!-- wp:paragraph {"align":"center","fontSize":"small"} -->
-                <p class="has-text-align-center has-small-font-size">Software engineer</p>
-                <!-- /wp:paragraph --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:lubus/slide -->
-
-                <!-- wp:lubus/slide -->
-                <div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"metadata":{},"align":"full","style":{"spacing":{"padding":{"top":"0px","bottom":"0px"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
-                <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:0px;padding-bottom:0px"><!-- wp:paragraph {"align":"center"} -->
-                <p class="has-text-align-center">"Starting my role as a WordPress administrator has been a joy, thanks to its intuitive interface, media management, security, and plugin integration, making website management a breeze."</p>
-                <!-- /wp:paragraph -->
-
-                <!-- wp:spacer {"height":"calc( 0.25 * var(\u002d\u002dwp\u002d\u002dstyle\u002d\u002droot\u002d\u002dpadding-right, var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dgap\u002d\u002dhorizontal)))"} -->
-                <div style="height:calc( 0.25 * var(--wp--style--root--padding-right, var(--wp--custom--gap--horizontal)))" aria-hidden="true" class="wp-block-spacer"></div>
-                <!-- /wp:spacer -->
-
-                <!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
-                <div class="wp-block-group"><!-- wp:image {"id":13762,"width":"64px","aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"100px"}}} -->
-                <figure class="wp-block-image size-full is-resized has-custom-border"><img src="https://dotcompatterns.files.wordpress.com/2024/01/paint-small.jpg" alt="" class="wp-image-13762" style="border-radius:100px;aspect-ratio:1;object-fit:cover;width:64px"/></figure>
-                <!-- /wp:image -->
-
-                <!-- wp:group {"style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"default"}} -->
-                <div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":3,"fontSize":"medium"} -->
-                <h3 class="wp-block-heading has-text-align-center has-medium-font-size">Shaun P.</h3>
-                <!-- /wp:heading -->
-
-                <!-- wp:paragraph {"align":"center","fontSize":"small"} -->
-                <p class="has-text-align-center has-small-font-size">Software engineer</p>
-                <!-- /wp:paragraph --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:group --></div>
-                <!-- /wp:lubus/slide --></div></div></div>
-                <!-- /wp:lubus/slider --></div>
-        <!-- /wp:group -->`
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Testimonial);
-
-/***/ }),
-
-/***/ "./src/templates/testimonial2.js":
-/*!***************************************!*\
-  !*** ./src/templates/testimonial2.js ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
-/**
- * Wordpress dependencies
- */
-
-const Testimonial2 = {
-  name: 'testimonial-2',
-  title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Testimonial 2', 'blablablocks-slider-block'),
-  description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('A simple centered call-to-action for subscribing.', 'blablablocks-slider-block'),
-  content: `
-           <!-- wp:group {"metadata":{"name":"Testimonial 2"},"align":"full","style":{"spacing":{"blockGap":"0px","padding":{"left":"2vw","right":"2vw","top":"8vw","bottom":"8vw"}}},"layout":{"type":"default"}} -->
-				<div class="wp-block-group alignfull" style="padding-top:8vw;padding-right:2vw;padding-bottom:8vw;padding-left:2vw"><!-- wp:heading {"textAlign":"center","level":1,"align":"wide","fontSize":"large"} -->
-				<h1 class="wp-block-heading alignwide has-text-align-center has-large-font-size"><strong>WHAT OUR CLIENTS SAY ABOUT US</strong></h1>
-				<!-- /wp:heading -->
-
-				<!-- wp:lubus/slider {"style":{"spacing":{"padding":{"top":"40px","bottom":"80px","right":"10vw","left":"10vw"}}}} -->
-				<div style="padding-top:40px;padding-right:10vw;padding-bottom:80px;padding-left:10vw;--swiper-navigation-size:40px;--navigation-border-radius:4px;--navigation-padding-top:0px;--navigation-padding-right:0px;--navigation-padding-bottom:0px;--navigation-padding-left:0px;--pagination-size:8px;--pagination-offset-top:auto;--pagination-offset-right:0px;--pagination-offset-bottom:8px;--pagination-offset-left:0px;--navigation-offset-top:50%;--navigation-offset-right:10px;--navigation-offset-bottom:0px;--navigation-offset-left:10px" class="wp-block-lubus-slider"><div class="swiper" data-swiper="{&quot;slidesPerView&quot;:{&quot;desktop&quot;:1,&quot;tablet&quot;:1,&quot;mobile&quot;:1,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;slidesSpacing&quot;:{&quot;desktop&quot;:30,&quot;tablet&quot;:20,&quot;mobile&quot;:10,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;speed&quot;:300,&quot;effects&quot;:&quot;slide&quot;,&quot;autoplay&quot;:false,&quot;delay&quot;:5000,&quot;navigation&quot;:true,&quot;pagination&quot;:true,&quot;loop&quot;:false,&quot;navigationColor&quot;:{&quot;arrowColor&quot;:{&quot;default&quot;:&quot;&quot;,&quot;hover&quot;:&quot;&quot;},&quot;backgroundColor&quot;:{&quot;default&quot;:&quot;&quot;,&quot;hover&quot;:&quot;&quot;}},&quot;navigationSize&quot;:&quot;40px&quot;,&quot;navigationOffset&quot;:{&quot;top&quot;:&quot;50%&quot;,&quot;bottom&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;10px&quot;,&quot;right&quot;:&quot;10px&quot;},&quot;navigationBorderRadius&quot;:&quot;4px&quot;,&quot;paginationSize&quot;:&quot;8px&quot;,&quot;paginationOffset&quot;:{&quot;top&quot;:&quot;auto&quot;,&quot;bottom&quot;:&quot;8px&quot;,&quot;left&quot;:&quot;0px&quot;,&quot;right&quot;:&quot;0px&quot;},&quot;style&quot;:{&quot;spacing&quot;:{&quot;padding&quot;:{&quot;top&quot;:&quot;40px&quot;,&quot;bottom&quot;:&quot;80px&quot;,&quot;right&quot;:&quot;10vw&quot;,&quot;left&quot;:&quot;10vw&quot;}}}}"><div class="swiper-wrapper"><!-- wp:lubus/slide -->
-				<div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"15px"}},"layout":{"type":"default"}} -->
-				<div class="wp-block-group"><!-- wp:image {"id":2510,"sizeSlug":"full","linkDestination":"none","align":"center"} -->
-				<figure class="wp-block-image aligncenter size-full"><img src="https://rollingnames.com/wp-content/uploads/2023/08/quote.png" alt="" class="wp-image-2510"/></figure>
-				<!-- /wp:image -->
-
-				<!-- wp:image {"id":181,"width":"150px","height":"150px","scale":"cover","sizeSlug":"full","linkDestination":"none","align":"center","style":{"border":{"radius":"100px"}}} -->
-				<figure class="wp-block-image aligncenter size-full is-resized has-custom-border"><img src="http://slider-block.local/wp-content/uploads/2024/12/brooke-cagle-wKOKidNT14w-unsplash-scaled.jpg" alt="" class="wp-image-181" style="border-radius:100px;object-fit:cover;width:150px;height:150px"/></figure>
-				<!-- /wp:image -->
-
-				<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#8a8a8a"},"typography":{"fontSize":"20px","fontStyle":"normal","fontWeight":"300","lineHeight":2,"letterSpacing":"0px"}},"fontFamily":"montserrat"} -->
-				<p class="has-text-align-center has-text-color has-montserrat-font-family" style="color:#8a8a8a;font-size:20px;font-style:normal;font-weight:300;letter-spacing:0px;line-height:2">"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."</p>
-				<!-- /wp:paragraph -->
-
-				<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"600"},"spacing":{"padding":{"bottom":"5px"}}}} -->
-				<p class="has-text-align-center" style="padding-bottom:5px;font-size:16px;font-style:normal;font-weight:600">Pierre</p>
-				<!-- /wp:paragraph -->
-
-				<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"0px"}},"color":{"text":"#8a8a8a"},"typography":{"fontSize":"12px","fontStyle":"normal","fontWeight":"300"}},"fontFamily":"raleway"} -->
-				<p class="has-text-align-center has-text-color has-raleway-font-family" style="color:#8a8a8a;margin-top:0px;font-size:12px;font-style:normal;font-weight:300">Entrepreneur, Kitchenlogix</p>
-				<!-- /wp:paragraph --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:lubus/slide -->
-
-				<!-- wp:lubus/slide -->
-				<div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"15px"}},"layout":{"type":"default"}} -->
-				<div class="wp-block-group"><!-- wp:image {"id":2510,"sizeSlug":"full","linkDestination":"none","align":"center"} -->
-				<figure class="wp-block-image aligncenter size-full"><img src="https://rollingnames.com/wp-content/uploads/2023/08/quote.png" alt="" class="wp-image-2510"/></figure>
-				<!-- /wp:image -->
-
-				<!-- wp:image {"id":181,"width":"150px","height":"150px","scale":"cover","sizeSlug":"full","linkDestination":"none","align":"center","style":{"border":{"radius":"100px"}}} -->
-				<figure class="wp-block-image aligncenter size-full is-resized has-custom-border"><img src="http://slider-block.local/wp-content/uploads/2024/12/brooke-cagle-wKOKidNT14w-unsplash-scaled.jpg" alt="" class="wp-image-181" style="border-radius:100px;object-fit:cover;width:150px;height:150px"/></figure>
-				<!-- /wp:image -->
-
-				<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#8a8a8a"},"typography":{"fontSize":"20px","fontStyle":"normal","fontWeight":"300","lineHeight":2,"letterSpacing":"0px"}},"fontFamily":"montserrat"} -->
-				<p class="has-text-align-center has-text-color has-montserrat-font-family" style="color:#8a8a8a;font-size:20px;font-style:normal;font-weight:300;letter-spacing:0px;line-height:2">"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."</p>
-				<!-- /wp:paragraph -->
-
-				<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"600"},"spacing":{"padding":{"bottom":"5px"}}}} -->
-				<p class="has-text-align-center" style="padding-bottom:5px;font-size:16px;font-style:normal;font-weight:600">Pierre</p>
-				<!-- /wp:paragraph -->
-
-				<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"0px"}},"color":{"text":"#8a8a8a"},"typography":{"fontSize":"12px","fontStyle":"normal","fontWeight":"300"}},"fontFamily":"raleway"} -->
-				<p class="has-text-align-center has-text-color has-raleway-font-family" style="color:#8a8a8a;margin-top:0px;font-size:12px;font-style:normal;font-weight:300">Entrepreneur, Kitchenlogix</p>
-				<!-- /wp:paragraph --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:lubus/slide -->
-
-				<!-- wp:lubus/slide -->
-				<div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"15px"}},"layout":{"type":"default"}} -->
-				<div class="wp-block-group"><!-- wp:image {"id":2510,"sizeSlug":"full","linkDestination":"none","align":"center"} -->
-				<figure class="wp-block-image aligncenter size-full"><img src="https://rollingnames.com/wp-content/uploads/2023/08/quote.png" alt="" class="wp-image-2510"/></figure>
-				<!-- /wp:image -->
-
-				<!-- wp:image {"id":181,"width":"150px","height":"150px","scale":"cover","sizeSlug":"full","linkDestination":"none","align":"center","style":{"border":{"radius":"100px"}}} -->
-				<figure class="wp-block-image aligncenter size-full is-resized has-custom-border"><img src="http://slider-block.local/wp-content/uploads/2024/12/brooke-cagle-wKOKidNT14w-unsplash-scaled.jpg" alt="" class="wp-image-181" style="border-radius:100px;object-fit:cover;width:150px;height:150px"/></figure>
-				<!-- /wp:image -->
-
-				<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#8a8a8a"},"typography":{"fontSize":"20px","fontStyle":"normal","fontWeight":"300","lineHeight":2,"letterSpacing":"0px"}},"fontFamily":"montserrat"} -->
-				<p class="has-text-align-center has-text-color has-montserrat-font-family" style="color:#8a8a8a;font-size:20px;font-style:normal;font-weight:300;letter-spacing:0px;line-height:2">"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."</p>
-				<!-- /wp:paragraph -->
-
-				<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"600"},"spacing":{"padding":{"bottom":"5px"}}}} -->
-				<p class="has-text-align-center" style="padding-bottom:5px;font-size:16px;font-style:normal;font-weight:600">Pierre</p>
-				<!-- /wp:paragraph -->
-
-				<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"0px"}},"color":{"text":"#8a8a8a"},"typography":{"fontSize":"12px","fontStyle":"normal","fontWeight":"300"}},"fontFamily":"raleway"} -->
-				<p class="has-text-align-center has-text-color has-raleway-font-family" style="color:#8a8a8a;margin-top:0px;font-size:12px;font-style:normal;font-weight:300">Entrepreneur, Kitchenlogix</p>
-				<!-- /wp:paragraph --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:lubus/slide -->
-
-				<!-- wp:lubus/slide -->
-				<div class="wp-block-lubus-slide swiper-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"15px"}},"layout":{"type":"default"}} -->
-				<div class="wp-block-group"><!-- wp:image {"id":2510,"sizeSlug":"full","linkDestination":"none","align":"center"} -->
-				<figure class="wp-block-image aligncenter size-full"><img src="https://rollingnames.com/wp-content/uploads/2023/08/quote.png" alt="" class="wp-image-2510"/></figure>
-				<!-- /wp:image -->
-
-				<!-- wp:image {"id":181,"width":"150px","height":"150px","scale":"cover","sizeSlug":"full","linkDestination":"none","align":"center","style":{"border":{"radius":"100px"}}} -->
-				<figure class="wp-block-image aligncenter size-full is-resized has-custom-border"><img src="http://slider-block.local/wp-content/uploads/2024/12/brooke-cagle-wKOKidNT14w-unsplash-scaled.jpg" alt="" class="wp-image-181" style="border-radius:100px;object-fit:cover;width:150px;height:150px"/></figure>
-				<!-- /wp:image -->
-
-				<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#8a8a8a"},"typography":{"fontSize":"20px","fontStyle":"normal","fontWeight":"300","lineHeight":2,"letterSpacing":"0px"}},"fontFamily":"montserrat"} -->
-				<p class="has-text-align-center has-text-color has-montserrat-font-family" style="color:#8a8a8a;font-size:20px;font-style:normal;font-weight:300;letter-spacing:0px;line-height:2">"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."</p>
-				<!-- /wp:paragraph -->
-
-				<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"600"},"spacing":{"padding":{"bottom":"5px"}}}} -->
-				<p class="has-text-align-center" style="padding-bottom:5px;font-size:16px;font-style:normal;font-weight:600">Pierre</p>
-				<!-- /wp:paragraph -->
-
-				<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"0px"}},"color":{"text":"#8a8a8a"},"typography":{"fontSize":"12px","fontStyle":"normal","fontWeight":"300"}},"fontFamily":"raleway"} -->
-				<p class="has-text-align-center has-text-color has-raleway-font-family" style="color:#8a8a8a;margin-top:0px;font-size:12px;font-style:normal;font-weight:300">Entrepreneur, Kitchenlogix</p>
-				<!-- /wp:paragraph --></div>
-				<!-- /wp:group --></div>
-				<!-- /wp:lubus/slide --></div></div></div>
-				<!-- /wp:lubus/slider --></div>
+			<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"0px"}},"color":{"text":"#8a8a8a"},"typography":{"fontSize":"12px","fontStyle":"normal","fontWeight":"300"}},"fontFamily":"raleway"} -->
+			<p class="has-text-align-center has-text-color has-raleway-font-family" style="color:#8a8a8a;margin-top:0px;font-size:12px;font-style:normal;font-weight:300">Entrepreneur, Kitchenlogix</p>
+			<!-- /wp:paragraph --></div>
+			<!-- /wp:group --></div>
+			<!-- /wp:blablablocks/slide --></div></div></div>
+			<!-- /wp:blablablocks/slider --></div>
 			<!-- /wp:group -->`
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Testimonial2);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Testimonial);
 
 /***/ }),
 
@@ -1883,7 +2174,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Resolves a spacing size value into a usable CSS value.
  *
- * @param {string|number} value - The input spacing size value.
+ * @param {string|number} value        - The input spacing size value.
  * @param {string|number} defaultValue - The default value.
  * @return {string} - A valid CSS spacing size value.
  */
@@ -1951,10 +2242,10 @@ const generateNavigationStyles = (attributes = {}) => {
   addStyle('--navigation-border-radius', getBorderRadiusStyles(attributes?.navigationBorderRadius, '4px'));
 
   // Padding styles with defaults
-  addStyle('--navigation-padding-top', resolveSpacingSizeValue(attributes?.navigationPadding?.top, '10px'));
-  addStyle('--navigation-padding-right', resolveSpacingSizeValue(attributes?.navigationPadding?.right, '10px'));
-  addStyle('--navigation-padding-bottom', resolveSpacingSizeValue(attributes?.navigationPadding?.bottom, '10px'));
-  addStyle('--navigation-padding-left', resolveSpacingSizeValue(attributes?.navigationPadding?.left, '10px'));
+  addStyle('--navigation-padding-top', resolveSpacingSizeValue(attributes?.navigationPadding?.top, '0px'));
+  addStyle('--navigation-padding-right', resolveSpacingSizeValue(attributes?.navigationPadding?.right, '0px'));
+  addStyle('--navigation-padding-bottom', resolveSpacingSizeValue(attributes?.navigationPadding?.bottom, '0px'));
+  addStyle('--navigation-padding-left', resolveSpacingSizeValue(attributes?.navigationPadding?.left, '0px'));
 
   // Pagination styles
   addStyle('--pagination-size', attributes?.paginationSize, '8px');
@@ -2068,6 +2359,26 @@ module.exports = window["wp"]["element"];
 /***/ ((module) => {
 
 module.exports = window["wp"]["i18n"];
+
+/***/ }),
+
+/***/ "@wordpress/media-utils":
+/*!************************************!*\
+  !*** external ["wp","mediaUtils"] ***!
+  \************************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["mediaUtils"];
+
+/***/ }),
+
+/***/ "@wordpress/notices":
+/*!*********************************!*\
+  !*** external ["wp","notices"] ***!
+  \*********************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["notices"];
 
 /***/ }),
 

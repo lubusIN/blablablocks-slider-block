@@ -863,18 +863,18 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
-.wp-block-lubus-slider {
+.wp-block-blablablocks-slider {
   position: relative;
 }
 
-.wp-block-lubus-slider .swiper {
+.wp-block-blablablocks-slider .swiper {
   position: initial;
 }
-.wp-block-lubus-slider .swiper .swiper-wrapper {
+.wp-block-blablablocks-slider .swiper .swiper-wrapper {
   gap: 0px;
 }
-.wp-block-lubus-slider .swiper .swiper-button-prev,
-.wp-block-lubus-slider .swiper .swiper-button-next {
+.wp-block-blablablocks-slider .swiper .swiper-button-prev,
+.wp-block-blablablocks-slider .swiper .swiper-button-next {
   color: var(--navigation-arrow-color, var(--swiper-theme-color));
   background-color: var(--navigation-background-color);
   border-radius: var(--navigation-border-radius);
@@ -882,28 +882,28 @@ button.swiper-pagination-bullet {
   top: var(--navigation-offset-top);
   bottom: var(--navigation-offset-bottom);
 }
-.wp-block-lubus-slider .swiper .swiper-button-prev:hover,
-.wp-block-lubus-slider .swiper .swiper-button-next:hover {
+.wp-block-blablablocks-slider .swiper .swiper-button-prev:hover,
+.wp-block-blablablocks-slider .swiper .swiper-button-next:hover {
   color: var(--navigation-arrow-hover-color, var(--swiper-theme-color));
   background-color: var(--navigation-background-hover-color);
 }
-.wp-block-lubus-slider .swiper .swiper-button-prev {
+.wp-block-blablablocks-slider .swiper .swiper-button-prev {
   right: var(--navigation-offset-left);
 }
-.wp-block-lubus-slider .swiper .swiper-button-next {
+.wp-block-blablablocks-slider .swiper .swiper-button-next {
   left: var(--navigation-offset-right);
 }
-.wp-block-lubus-slider .swiper .swiper-pagination {
+.wp-block-blablablocks-slider .swiper .swiper-pagination {
   top: var(--pagination-offset-top);
   left: var(--pagination-offset-right);
   bottom: var(--pagination-offset-bottom);
   right: var(--pagination-offset-left);
 }
-.wp-block-lubus-slider .swiper .swiper-pagination-bullet {
+.wp-block-blablablocks-slider .swiper .swiper-pagination-bullet {
   width: var(--pagination-size);
   height: var(--pagination-size);
   background: var(--pagination-inactive-color, #000);
 }
-.wp-block-lubus-slider .swiper .swiper-pagination-bullet-active {
+.wp-block-blablablocks-slider .swiper .swiper-pagination-bullet-active {
   background: var(--pagination-active-color, var(--swiper-theme-color)) !important;
 }

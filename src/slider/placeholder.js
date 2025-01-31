@@ -3,34 +3,40 @@
  */
 import { __ } from '@wordpress/i18n';
 import { useState } from '@wordpress/element';
-import { createBlocksFromInnerBlocksTemplate } from '@wordpress/blocks';
 import { useDispatch } from '@wordpress/data';
+import { store as noticesStore } from '@wordpress/notices';
+import {
+	createBlock,
+	createBlocksFromInnerBlocksTemplate,
+} from '@wordpress/blocks';
 import {
 	Placeholder as PlaceholderComponent,
 	Button,
 	Modal,
-	__experimentalGrid as Grid,
-	__experimentalVStack as VStack,
-	__experimentalText as Text,
+	DropZone,
+	__experimentalGrid as Grid, // eslint-disable-line
+	__experimentalVStack as VStack, // eslint-disable-line
+	__experimentalText as Text, // eslint-disable-line
 } from '@wordpress/components';
 import {
 	useBlockProps,
 	BlockPreview,
-	__experimentalBlockVariationPicker as BlockVariationPicker,
+	__experimentalBlockVariationPicker as BlockVariationPicker, // eslint-disable-line
 	store as blockEditorStore,
 } from '@wordpress/block-editor';
+import { uploadMedia } from '@wordpress/media-utils';
 
 /**
  * Internal dependencies
  */
 import variations from './variations';
-import { Testimonial2, Services, Testimonial } from '../templates';
-import SliderLogo from '../components/slider-logo';
+import { Services, Testimonial, HeroSection } from '../templates';
+import { SliderLogo } from '../components';
 
 /**
  * Default patterns for modal preview.
  */
-const defaultPatterns = [ Testimonial, Testimonial2, Services ];
+const defaultPatterns = [ Testimonial, HeroSection, Services ];
 
 /**
  * This component serves as a placeholder for the Slider block, displaying a block variation picker.
@@ -40,11 +46,11 @@ const defaultPatterns = [ Testimonial, Testimonial2, Services ];
  * @param {string}   props.clientId      The client ID for this block instance.
  * @param {Function} props.setAttributes Function to update block attributes.
  *
- * @param            props.attributes
  * @return {JSX.Element} The placeholder component for the Slider block.
  */
-function Placeholder( { clientId, attributes, setAttributes } ) {
+function Placeholder( { clientId, setAttributes } ) {
 	const { replaceInnerBlocks } = useDispatch( blockEditorStore );
+	const { createErrorNotice } = useDispatch( noticesStore );
 	const blockProps = useBlockProps();
 
 	const [ step, setStep ] = useState( null );
@@ -63,14 +69,6 @@ function Placeholder( { clientId, attributes, setAttributes } ) {
 		}
 	};
 
-	const skipToDefault = () => {
-		const defaultVariation = variations[ 1 ]; // Assuming the first variation is the default
-		if ( defaultVariation ) {
-			onSelectVariation( defaultVariation );
-		}
-		setStep( 'default' );
-	};
-
 	const openTemplatesModal = () => {
 		setIsModalOpen( true );
 	};
@@ -83,32 +81,108 @@ function Placeholder( { clientId, attributes, setAttributes } ) {
 		setIsModalOpen( false );
 	};
 
+	const handleFilesUpload = async ( files ) => {
+		const validFiles = Array.from( files ).filter( ( file ) =>
+			file.type.startsWith( 'image/' )
+		);
+
+		if ( validFiles.length === 0 ) {
+			createErrorNotice(
+				__( 'Only image files are allowed.', 'slider-block' ),
+				{
+					isDismissible: true,
+				}
+			);
+			return;
+		}
+
+		// Split into existing and new files
+		const existingBlocks = [];
+		const newFiles = [];
+
+		for ( const file of validFiles ) {
+			const response = await wp.apiFetch( {
+				path: `/wp/v2/media?search=${ encodeURIComponent(
+					file.name
+				) }&per_page=1`,
+			} );
+
+			if ( response && response.length > 0 ) {
+				// Use existing media item
+				const mediaItem = response[ 0 ];
+				existingBlocks.push(
+					createBlock( 'blablablocks/slide', {}, [
+						createBlock( 'core/image', {
+							url: mediaItem.source_url,
+						} ),
+					] )
+				);
+			} else {
+				// Queue file for upload
+				newFiles.push( file );
+			}
+		}
+
+		// Add existing media blocks
+		if ( existingBlocks.length > 0 ) {
+			replaceInnerBlocks( clientId, existingBlocks, false );
+		}
+
+		// Upload new files
+		if ( newFiles.length > 0 ) {
+			uploadMedia( {
+				filesList: newFiles,
+				onFileChange: ( media ) => {
+					const newBlocks = media.map( ( item ) =>
+						createBlock( 'blablablocks/slide', {}, [
+							createBlock( 'core/image', { url: item.url } ),
+						] )
+					);
+					replaceInnerBlocks(
+						clientId,
+						[ ...existingBlocks, ...newBlocks ],
+						false
+					);
+				},
+				onError: () => {
+					createErrorNotice(
+						__( 'File upload failed.', 'slider-block' ),
+						{
+							isDismissible: true,
+						}
+					);
+				},
+			} );
+		}
+	};
+
+	const onFilesDrop = ( files ) => {
+		if ( files && files.length > 0 ) {
+			handleFilesUpload( files );
+		}
+	};
+
 	return (
 		<div { ...blockProps }>
 			{ ! step && (
 				<PlaceholderComponent
-					icon={ 'slides' }
+					icon={ SliderLogo }
 					instructions={ __(
-						"Choose how you'd like to get started with your slider.",
+						'Choose a pattern for the slider, start blank or drag and drop images here.',
 						'blablablocks-slider-block'
 					) }
-					label={ __(
-						"Let's Begin Creating Your Slider!",
-						'blablablocks-slider-block'
-					) }
+					label={ __( 'Slider', 'blablablocks-slider-block' ) }
 				>
+					<Button variant="primary" onClick={ openTemplatesModal }>
+						{ __( 'Choose', 'blablablocks-slider-block' ) }
+					</Button>
 					<Button
 						variant="secondary"
 						onClick={ () => setStep( 'variations' ) }
 					>
-						{ __( 'Explore Variations', 'blablablocks-slider-block' ) }
+						{ __( 'Start blank', 'blablablocks-slider-block' ) }
 					</Button>
-					<Button variant="secondary" onClick={ openTemplatesModal }>
-						{ __( 'Browse Templates', 'blablablocks-slider-block' ) }
-					</Button>
-					<Button variant="primary" onClick={ skipToDefault }>
-						{ __( 'Skip and Use Default', 'blablablocks-slider-block' ) }
-					</Button>
+					<DropZone onFilesDrop={ onFilesDrop } accept="image/*" />
 				</PlaceholderComponent>
 			) }
 
@@ -117,7 +191,7 @@ function Placeholder( { clientId, attributes, setAttributes } ) {
 					icon={ SliderLogo }
 					label={ __( 'Slider', 'blablablocks-slider-block' ) }
 					instructions={ __(
-						'Select a slide variation to start with',
+						'Select a variation to start with:',
 						'blablablocks-slider-block'
 					) }
 					variations={ variations }
@@ -130,7 +204,10 @@ function Placeholder( { clientId, attributes, setAttributes } ) {
 
 			{ isModalOpen && (
 				<Modal
-					title={ __( 'Choose a Template', 'blablablocks-slider-block' ) }
+					title={ __(
+						'Choose a Template',
+						'blablablocks-slider-block'
+					) }
 					isFullScreen
 					onRequestClose={ () => setIsModalOpen( false ) }
 				>
