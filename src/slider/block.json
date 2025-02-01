@@ -228,7 +228,7 @@
 	"allowedBlocks": [
 		"blablablocks/slide"
 	],
-	"textdomain": "lubus-slider",
+	"textdomain": "blablablocks-slider",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
