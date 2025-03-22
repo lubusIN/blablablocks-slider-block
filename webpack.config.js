@@ -1,10 +1,10 @@
-const defaultConfig = require('@wordpress/scripts/config/webpack.config');
-const path = require('path');
+const defaultConfig = require( '@wordpress/scripts/config/webpack.config' );
 
 module.exports = {
-    ...defaultConfig,
-    optimization: {
-        usedExports: true, // Enables tree shaking
-        minimize: true, // Minimizes final bundle
-    }
+	...defaultConfig,
+	optimization: {
+		...defaultConfig.optimization,
+		usedExports: true, // Enables tree shaking
+		minimize: true, // Minimizes final bundle
+	},
 };
