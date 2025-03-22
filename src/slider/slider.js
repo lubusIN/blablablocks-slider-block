@@ -132,6 +132,9 @@ const Slider = memo(
 		return (
 			<div
 				{ ...useBlockProps( {
+					role: 'region',
+					'aria-roledescription': 'carousel',
+					'aria-label': 'Slider block',
 					style: { ...navigationStyles, padding: applyPadding },
 				} ) }
 			>
