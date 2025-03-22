@@ -871,7 +871,13 @@ button.swiper-pagination-bullet {
   position: initial;
 }
 .wp-block-blablablocks-slider .swiper .swiper-wrapper {
-  gap: 0px;
+  gap: 0;
+}
+.wp-block-blablablocks-slider .swiper .swiper-button-prev {
+  left: var(--navigation-offset-left);
+}
+.wp-block-blablablocks-slider .swiper .swiper-button-next {
+  right: var(--navigation-offset-right);
 }
 .wp-block-blablablocks-slider .swiper .swiper-button-prev,
 .wp-block-blablablocks-slider .swiper .swiper-button-next {
@@ -886,12 +892,6 @@ button.swiper-pagination-bullet {
 .wp-block-blablablocks-slider .swiper .swiper-button-next:hover {
   color: var(--navigation-arrow-hover-color, var(--swiper-theme-color));
   background-color: var(--navigation-background-hover-color);
-}
-.wp-block-blablablocks-slider .swiper .swiper-button-prev {
-  left: var(--navigation-offset-left);
-}
-.wp-block-blablablocks-slider .swiper .swiper-button-next {
-  right: var(--navigation-offset-right);
 }
 .wp-block-blablablocks-slider .swiper .swiper-pagination {
   top: var(--pagination-offset-top);
