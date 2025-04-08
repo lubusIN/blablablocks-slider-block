@@ -54,6 +54,10 @@
 		background: var(--pagination-inactive-color, #000);
 	}
 
+	.swiper-pagination-bullet:focus {
+		outline: none;
+	}
+
 	.swiper-pagination-bullet-active {
 		background: var(--pagination-active-color, var(--swiper-theme-color)) !important;
 	}

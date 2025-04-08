@@ -904,6 +904,9 @@ button.swiper-pagination-bullet {
   height: var(--pagination-size);
   background: var(--pagination-inactive-color, #000);
 }
+.wp-block-blablablocks-slider .swiper .swiper-pagination-bullet:focus {
+  outline: none;
+}
 .wp-block-blablablocks-slider .swiper .swiper-pagination-bullet-active {
   background: var(--pagination-active-color, var(--swiper-theme-color)) !important;
 }
