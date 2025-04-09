@@ -43,3 +43,21 @@ jobs:
             echo "exists=false" >> $GITHUB_OUTPUT
             echo "::notice::Branch 'testing' does not exist. Skipping merge."
           fi
+
+      - name: Attempt merge dev → testing
+        id: merge_attempt
+        if: steps.check_testing.outputs.exists == 'true'
+        run: |
+          git checkout testing
+          git reset --hard origin/testing
+          git clean -fd
+          if git merge origin/dev --no-edit; then
+            echo "merged=true" >> $GITHUB_OUTPUT
+            echo "::notice::Merge successful. Pushing to testing."
+          else
+            echo "merged=false" >> $GITHUB_OUTPUT
+            echo "::warning::Merge conflict detected. Falling back to PR creation."
+            git merge --abort || true
+            git reset --hard
+            git clean -fd
+          fi
