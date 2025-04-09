@@ -27,47 +27,35 @@ jobs:
       - name: Fetch all branches
         run: git fetch --all
 
-      - name: Check if 'testing' branch exists
+      - name: Check if testing branch exists
         id: check_testing
         run: |
           if git show-ref --verify --quiet refs/remotes/origin/testing; then
             echo "exists=true" >> $GITHUB_OUTPUT
           else
-            echo "Testing branch doesn't exist. Skipping."
             echo "exists=false" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Attempt merge
+            echo "::notice::Branch 'testing' does not exist. Skipping merge."
+          
+      - name: Attempt merge dev → testing
         id: merge_attempt
         if: steps.check_testing.outputs.exists == 'true'
         run: |
           git checkout testing
-          if git merge origin/dev; then
+          git reset --hard origin/testing
+          git clean -fd
+          if git merge origin/dev --no-edit; then
             echo "merged=true" >> $GITHUB_OUTPUT
           else
             echo "merged=false" >> $GITHUB_OUTPUT
-            echo "❌ Merge conflict detected. Cleaning up..."
+            echo "::warning::Merge conflict detected. Falling back to PR creation."
             git merge --abort || true
             git reset --hard
             git clean -fd
           fi
 
-      - name: Log successful merge
-        if: steps.merge_attempt.outputs.merged == 'true'
-        run: |
-          echo "✅ Merge from dev to testing was successful."
-          git log --oneline -5
-
       - name: Push changes to testing
         if: steps.merge_attempt.outputs.merged == 'true'
         run: git push origin testing
-
-      - name: Log failed merge state
-        if: steps.merge_attempt.outputs.merged == 'false'
-        run: |
-          echo "🔍 Merge failed. Here's the status before creating a PR:"
-          git status
-          git diff || true
 
       - name: Create pull request from dev to testing
         if: steps.merge_attempt.outputs.merged == 'false'
@@ -76,7 +64,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           title: "Sync dev to testing"
-          body: "This pull request was automatically generated because a fast-forward merge from `dev` to `testing` was not possible."
+          body: "This pull request was automatically generated because an automatic merge from `dev` to `testing` failed."
           base: testing
           head: dev
           draft: false
