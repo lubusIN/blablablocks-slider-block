@@ -8,53 +8,57 @@
 @use "swiper/css/bundle";
 
 .wp-block-blablablocks-slider {
-    position: relative;
+	position: relative;
 }
 
 .wp-block-blablablocks-slider .swiper {
-    position: initial;
+	position: initial;
 
-    .swiper-wrapper {
-        gap: 0px;
-    }
+	.swiper-wrapper {
+		gap: 0;
+	}
 
-    .swiper-button-prev,
-    .swiper-button-next {
-        color: var(--navigation-arrow-color, var(--swiper-theme-color));
-        background-color: var(--navigation-background-color);
-        border-radius: var(--navigation-border-radius);
-        padding: var(--navigation-padding-top) var(--navigation-padding-right) var(--navigation-padding-bottom) var(--navigation-padding-left);
-        top: var(--navigation-offset-top);
-        bottom: var(--navigation-offset-bottom);
+	.swiper-button-prev {
+		left: var(--navigation-offset-left);
+	}
 
-        &:hover {
-            color: var(--navigation-arrow-hover-color, var(--swiper-theme-color));
-            background-color: var(--navigation-background-hover-color);
-        }
-    }
+	.swiper-button-next {
+		right: var(--navigation-offset-right);
+	}
 
-    .swiper-button-prev {
-        left: var(--navigation-offset-left);
-    }
+	.swiper-button-prev,
+	.swiper-button-next {
+		color: var(--navigation-arrow-color, var(--swiper-theme-color));
+		background-color: var(--navigation-background-color);
+		border-radius: var(--navigation-border-radius);
+		padding: var(--navigation-padding-top) var(--navigation-padding-right) var(--navigation-padding-bottom) var(--navigation-padding-left);
+		top: var(--navigation-offset-top);
+		bottom: var(--navigation-offset-bottom);
 
-    .swiper-button-next {
-        right: var(--navigation-offset-right);
-    }
+		&:hover {
+			color: var(--navigation-arrow-hover-color, var(--swiper-theme-color));
+			background-color: var(--navigation-background-hover-color);
+		}
+	}
 
-    .swiper-pagination {
-        top: var(--pagination-offset-top);
-        right: var(--pagination-offset-right);
-        bottom: var(--pagination-offset-bottom);
-        left: var(--pagination-offset-left);
-    }
+	.swiper-pagination {
+		top: var(--pagination-offset-top);
+		right: var(--pagination-offset-right);
+		bottom: var(--pagination-offset-bottom);
+		left: var(--pagination-offset-left);
+	}
 
-    .swiper-pagination-bullet {
-        width: var(--pagination-size);
-        height: var(--pagination-size);
-        background: var(--pagination-inactive-color, #000);
-    }
+	.swiper-pagination-bullet {
+		width: var(--pagination-size);
+		height: var(--pagination-size);
+		background: var(--pagination-inactive-color, #000);
+	}
 
-    .swiper-pagination-bullet-active {
-        background: var(--pagination-active-color, var(--swiper-theme-color)) !important;
-    }
+	.swiper-pagination-bullet:focus {
+		outline: none;
+	}
+
+	.swiper-pagination-bullet-active {
+		background: var(--pagination-active-color, var(--swiper-theme-color)) !important;
+	}
 }

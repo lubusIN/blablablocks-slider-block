@@ -1,6 +1,6 @@
 {
 	"name": "blablablocks-slider-block",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Slider Block is a WordPress plugin built specifically for the Block Editor, allowing you to create responsive sliders effortlessly.",
 	"author": "Lubus",
 	"license": "GPL-2.0-or-later",
@@ -8,7 +8,9 @@
 	"scripts": {
 		"build": "wp-scripts build",
 		"format": "wp-scripts format",
+		"format:src": "wp-scripts format ./src",
 		"lint:css": "wp-scripts lint-style",
+		"lint:css:fix": "wp-scripts lint-style --fix",
 		"lint:js": "wp-scripts lint-js",
 		"lint:js:fix": "wp-scripts lint-js --fix",
 		"packages-update": "wp-scripts packages-update",

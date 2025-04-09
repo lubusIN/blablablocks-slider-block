@@ -190,10 +190,7 @@
 	"supports": {
 		"anchor": true,
 		"html": false,
-		"align": [
-			"wide",
-			"full"
-		],
+		"align": [ "wide", "full" ],
 		"color": {
 			"gradients": true,
 			"link": true,
@@ -205,10 +202,7 @@
 			}
 		},
 		"spacing": {
-			"margin": [
-				"top",
-				"bottom"
-			],
+			"margin": [ "top", "bottom" ],
 			"padding": true,
 			"__experimentalDefaultControls": {
 				"padding": true,
@@ -225,12 +219,11 @@
 			}
 		}
 	},
-	"allowedBlocks": [
-		"blablablocks/slide"
-	],
-	"textdomain": "lubus-slider",
+	"allowedBlocks": [ "blablablocks/slide" ],
+	"textdomain": "blablablocks-slider",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
+	"render": "file:./render.php",
 	"viewScript": "file:./view.js"
 }

@@ -8,6 +8,7 @@ import {
 	Keyboard,
 	Navigation,
 	Pagination,
+	A11y,
 } from 'swiper/modules'; // eslint-disable-line
 
 /**
@@ -73,6 +74,7 @@ export function SwiperInit(
 	// Base Swiper parameters
 	const parameters = {
 		...currentDeviceSettings,
+		a11y: true,
 		autoplay: {
 			enabled: options.autoplay ?? true,
 			delay: options.delay ?? 5000,
@@ -87,7 +89,14 @@ export function SwiperInit(
 		fadeEffect: { crossFade: true },
 		simulateTouch: false,
 		createElements: true,
-		modules: [ Autoplay, Keyboard, Navigation, Pagination, EffectFade ],
+		modules: [
+			Autoplay,
+			Keyboard,
+			Navigation,
+			Pagination,
+			EffectFade,
+			A11y,
+		],
 	};
 
 	// Add breakpoints and universal settings if not in the editor

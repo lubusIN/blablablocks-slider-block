@@ -440,42 +440,43 @@ export default function Edit( { clientId, attributes, setAttributes } ) {
 							} )
 						}
 					>
-						<ToggleControl
-							__nextHasNoMarginBottom
-							help={ __(
-								'Enable automatic slide transition.',
-								'blablablocks-slider-block'
-							) }
-							checked={ attributes.autoplay }
-							label={ __(
-								'Autoplay',
-								'blablablocks-slider-block'
-							) }
-							onChange={ ( value ) =>
-								setAttributes( { autoplay: value } )
-							}
-						/>
-						{ attributes.autoplay && (
-							<RangeControl
-								__nextHasNoMarginBottom
-								__next40pxDefaultSize
+						<VStack spacing={ 4 }>
+							<ToggleControl
 								help={ __(
-									'Set the delay between slides in milliseconds.',
+									'Enable automatic slide transition.',
 									'blablablocks-slider-block'
 								) }
+								checked={ attributes.autoplay }
 								label={ __(
-									'Delay (ms)',
+									'Autoplay',
 									'blablablocks-slider-block'
 								) }
-								min={ 100 } // minimum delay in ms
-								max={ 10000 } // maximum delay in ms
-								step={ 100 }
-								value={ attributes.delay }
 								onChange={ ( value ) =>
-									setAttributes( { delay: value } )
+									setAttributes( { autoplay: value } )
 								}
 							/>
-						) }
+							{ attributes.autoplay && (
+								<RangeControl
+									__nextHasNoMarginBottom
+									__next40pxDefaultSize
+									help={ __(
+										'Set the delay between slides in milliseconds.',
+										'blablablocks-slider-block'
+									) }
+									label={ __(
+										'Delay (ms)',
+										'blablablocks-slider-block'
+									) }
+									min={ 100 } // minimum delay in ms
+									max={ 10000 } // maximum delay in ms
+									step={ 100 }
+									value={ attributes.delay }
+									onChange={ ( value ) =>
+										setAttributes( { delay: value } )
+									}
+								/>
+							) }
+						</VStack>
 					</ToolsPanelItem>
 				</ToolsPanel>
 			</InspectorControls>

@@ -20,7 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
+  font-weight: 700;
   color: var(--swiper-theme-color);
 }
 
@@ -28,7 +28,7 @@
   --progress: 0;
   position: absolute;
   left: 0;
-  top: 0px;
+  top: 0;
   z-index: 10;
   width: 100%;
   height: 100%;
@@ -77,13 +77,13 @@
   color: var(--wp-components-color-accent, var(--wp-admin-theme-color, #3858e9));
 }
 
-.block-editor-block-preview__container:after {
+.block-editor-block-preview__container::after {
   border-radius: 4px;
   outline: 1px solid rgba(0, 0, 0, 0.1019607843);
   outline-offset: -1px;
 }
 
-.slider-pattern-item:hover .block-editor-block-preview__container:after {
+.slider-pattern-item:hover .block-editor-block-preview__container::after {
   outline-color: rgba(0, 0, 0, 0.3019607843);
 }
 
