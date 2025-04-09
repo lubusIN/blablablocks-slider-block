@@ -1,0 +1,64 @@
+name: Safe Sync dev to testing (with PR fallback)
+
+on:
+  push:
+    branches:
+      - dev
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Fetch all branches
+        run: git fetch --all
+
+      - name: Check if 'testing' branch exists
+        id: check_testing
+        run: |
+          if git show-ref --verify --quiet refs/remotes/origin/testing; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "Testing branch doesn't exist. Skipping."
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Attempt fast-forward merge
+        id: merge_attempt
+        if: steps.check_testing.outputs.exists == 'true'
+        run: |
+          git checkout testing
+          if git merge --ff-only origin/dev; then
+            echo "merged=true" >> $GITHUB_OUTPUT
+          else
+            echo "merged=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Push changes to testing
+        if: steps.merge_attempt.outputs.merged == 'true'
+        run: |
+          git push origin testing
+
+      - name: Create pull request from dev to testing
+        if: steps.merge_attempt.outputs.merged == 'false'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: "Sync dev to testing"
+          body: "This pull request was automatically generated because a fast-forward merge from `dev` to `testing` was not possible."
+          base: testing
+          head: dev
+          draft: false
