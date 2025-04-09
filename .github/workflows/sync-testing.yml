@@ -49,6 +49,7 @@ jobs:
             echo "❌ Merge conflict detected. Cleaning up..."
             git merge --abort || true
             git reset --hard
+            git clean -fd
           fi
 
       - name: Log successful merge
