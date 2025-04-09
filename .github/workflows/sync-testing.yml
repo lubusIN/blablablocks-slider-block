@@ -67,5 +67,5 @@ jobs:
           title: "Sync dev to testing"
           body: "This pull request was automatically generated because an automatic merge from `dev` to `testing` failed."
           base: testing
-          head: dev
+          branch: sync/dev-to-testing 
           draft: false
