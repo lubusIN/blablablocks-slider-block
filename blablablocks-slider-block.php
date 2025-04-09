@@ -21,7 +21,7 @@ if (! defined('ABSPATH')) {
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
  * Behind the scenes, it registers also all assets so they can be enqueued
- * through the block editor in the corresponding context...
+ * through the block editor in the corresponding context....
  */
 function bbb_slider_block_init()
 {
