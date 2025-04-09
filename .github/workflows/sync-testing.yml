@@ -56,8 +56,16 @@ jobs:
             echo "::notice::Merge successful. Pushing to testing."
           else
             echo "merged=false" >> $GITHUB_OUTPUT
-            echo "::warning::Merge conflict detected. Falling back to PR creation."
+            echo "::warning::Merge conflict detected."
             git merge --abort || true
+            echo "::group::Attempting Rebuild"
+            make build || echo "::error::Build failed. Attempting to replace files."
+            if [ $? -ne 0 ]; then
+              echo "::group::Copying Build Files from dev"
+              git checkout origin/dev -- path/to/build/files
+              git commit -m "Replace build files from dev due to build failure."
+            fi
+            echo "::endgroup::"
             git reset --hard
             git clean -fd
           fi
