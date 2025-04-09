@@ -33,3 +33,13 @@ jobs:
 
       - name: Fetch all branches
         run: git fetch --all
+
+      - name: Check if 'testing' branch exists on remote
+        id: check_testing
+        run: |
+          if git ls-remote --exit-code origin testing; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+            echo "::notice::Branch 'testing' does not exist. Skipping merge."
+          fi
