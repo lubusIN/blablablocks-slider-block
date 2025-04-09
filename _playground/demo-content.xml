@@ -47,9 +47,7 @@
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://playground.wordpress.net/scope:0.1352806806153402/?page_id=4</guid>
 		<description></description>
-		<content:encoded><![CDATA[<!-- wp:blablablocks/slider -->
-<div style="--navigation-arrow-color:#000;--navigation-background-color:transparent;--navigation-arrow-hover-color:#333;--navigation-background-hover-color:transparent;--swiper-navigation-size:40px;--navigation-border-radius:4px 4px 4px 4px;--navigation-padding-top:0px;--navigation-padding-right:0px;--navigation-padding-bottom:0px;--navigation-padding-left:0px;--pagination-size:8px;--pagination-active-color:#000;--pagination-inactive-color:#ccc;--pagination-offset-top:auto;--pagination-offset-right:0px;--pagination-offset-bottom:8px;--pagination-offset-left:0px;--navigation-offset-top:50%;--navigation-offset-right:10px;--navigation-offset-bottom:0px;--navigation-offset-left:10px" class="wp-block-blablablocks-slider"><div class="swiper" data-swiper="{&quot;slidesPerView&quot;:{&quot;desktop&quot;:1,&quot;tablet&quot;:1,&quot;mobile&quot;:1,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;slidesSpacing&quot;:{&quot;desktop&quot;:30,&quot;tablet&quot;:20,&quot;mobile&quot;:10,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;speed&quot;:300,&quot;effects&quot;:&quot;slide&quot;,&quot;autoplay&quot;:false,&quot;delay&quot;:5000,&quot;navigation&quot;:{&quot;desktop&quot;:true,&quot;tablet&quot;:true,&quot;mobile&quot;:true,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;pagination&quot;:{&quot;desktop&quot;:true,&quot;tablet&quot;:true,&quot;mobile&quot;:true,&quot;activeDevice&quot;:&quot;desktop&quot;},&quot;loop&quot;:false}"><div class="swiper-wrapper"></div></div></div>
-<!-- /wp:blablablocks/slider -->]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:blablablocks/slider {"className":"wp-block-blablablocks-slider"} /-->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>4</wp:post_id>
 		<wp:post_date><![CDATA[2024-12-22 13:04:22]]></wp:post_date>
