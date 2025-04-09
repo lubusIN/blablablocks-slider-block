@@ -45,6 +45,9 @@ jobs:
             echo "merged=true" >> $GITHUB_OUTPUT
           else
             echo "merged=false" >> $GITHUB_OUTPUT
+            # Clean up the merge state so future steps (like PR creation) don’t fail
+            git merge --abort || true
+            git reset --hard
           fi
 
       - name: Push changes to testing
