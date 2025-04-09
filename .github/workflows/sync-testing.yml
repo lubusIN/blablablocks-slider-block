@@ -45,18 +45,33 @@ jobs:
             echo "merged=true" >> $GITHUB_OUTPUT
           else
             echo "merged=false" >> $GITHUB_OUTPUT
-            # Clean up the merge state so future steps (like PR creation) don’t fail
             git merge --abort || true
             git reset --hard
           fi
+
+      # ✅ Add this: logs after successful merge
+      - name: Log merge status
+        if: steps.merge_attempt.outputs.merged == 'true'
+        run: |
+          echo "✅ Merge from dev to testing was successful."
+          git log --oneline -5
 
       - name: Push changes to testing
         if: steps.merge_attempt.outputs.merged == 'true'
         run: |
           git push origin testing
 
+      # ✅ Add this: logs after failed merge (before PR creation)
+      - name: Log failed merge state
+        if: steps.merge_attempt.outputs.merged == 'false'
+        run: |
+          echo "❌ Merge failed. A PR will be created instead."
+          git status
+          git diff
+
       - name: Create pull request from dev to testing
         if: steps.merge_attempt.outputs.merged == 'false'
+        id: create_pr # ✅ Add this to capture PR number
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
