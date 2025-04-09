@@ -63,7 +63,6 @@ jobs:
           fi
 
       - name: Commit and push changes to testing
-        if: steps.merge_attempt.outputs.merged == 'true'
         run: |
           git add -A
           git commit -m "Merge dev into testing [skip ci]" || echo "No changes to commit"
