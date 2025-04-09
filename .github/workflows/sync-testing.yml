@@ -36,12 +36,12 @@ jobs:
             echo "exists=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Attempt fast-forward merge
+      - name: Attempt merge
         id: merge_attempt
         if: steps.check_testing.outputs.exists == 'true'
         run: |
           git checkout testing
-          if git merge --ff-only origin/dev; then
+          if git merge origin/dev; then
             echo "merged=true" >> $GITHUB_OUTPUT
           else
             echo "merged=false" >> $GITHUB_OUTPUT
