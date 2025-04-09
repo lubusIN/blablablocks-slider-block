@@ -35,6 +35,7 @@ jobs:
           else
             echo "exists=false" >> $GITHUB_OUTPUT
             echo "::notice::Branch 'testing' does not exist. Skipping merge."
+          fi
           
       - name: Attempt merge dev → testing
         id: merge_attempt
