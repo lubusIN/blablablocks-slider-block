@@ -56,16 +56,27 @@ jobs:
             echo "::notice::Merge successful. Pushing to testing."
           else
             echo "merged=false" >> $GITHUB_OUTPUT
-            echo "::warning::Merge conflict detected."
+            echo "::warning::Merge conflict detected. Falling back to PR creation."
             git merge --abort || true
-            echo "::group::Attempting Rebuild"
-            make build || echo "::error::Build failed. Attempting to replace files."
-            if [ $? -ne 0 ]; then
-              echo "::group::Copying Build Files from dev"
-              git checkout origin/dev -- path/to/build/files
-              git commit -m "Replace build files from dev due to build failure."
-            fi
-            echo "::endgroup::"
             git reset --hard
             git clean -fd
           fi
+
+      - name: Commit and push changes to testing
+        if: steps.merge_attempt.outputs.merged == 'true'
+        run: |
+          git add -A
+          git commit -m "Merge dev into testing [skip ci]" || echo "No changes to commit"
+          git push origin testing
+  
+      - name: Create pull request from dev to testing
+        if: steps.merge_attempt.outputs.merged == 'false'
+        id: create_pr
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: "Sync dev to testing"
+          body: "This pull request was automatically generated because an automatic merge from dev to testing failed."
+          base: testing
+          branch: sync/dev-to-testing 
+          draft: false
