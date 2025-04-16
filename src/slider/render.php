@@ -146,10 +146,10 @@ $wrapper_attributes = get_block_wrapper_attributes(
 );
 
 ?>
-<div <?php echo $wrapper_attributes; ?> role="region" aria-roledescription="carousel" aria-label="Slider block">
+<div <?php echo wp_kses_data($wrapper_attributes); ?> role="region" aria-roledescription="carousel" aria-label="Slider block">
     <div class="swiper" <?php echo 'data-swiper="' . esc_attr(wp_json_encode($attributes)) . '"'; ?>>
         <div class="swiper-wrapper">
-            <?php echo $content; ?>
+            <?php echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped  ?>
         </div>
     </div>
 </div>
