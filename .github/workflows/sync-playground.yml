@@ -1,4 +1,4 @@
-name: Sync to WP Playground
+name: Sync to Playground
 
 on:
   push:
@@ -33,7 +33,7 @@ jobs:
       - name: Set target branch and force folder
         id: set-vars
         run: |
-          TARGET_BRANCH=${{ github.event_name == 'workflow_call' && inputs.target-branch || 'wp-playground' }}
+          TARGET_BRANCH=${{ github.event_name == 'workflow_call' && inputs.target-branch || 'playground' }}
           FORCE_FOLDER=${{ github.event_name == 'workflow_call' && inputs.force-folder || 'build/' }}
           echo "target-branch=$TARGET_BRANCH" >> $GITHUB_OUTPUT
           echo "force-folder=$FORCE_FOLDER" >> $GITHUB_OUTPUT
