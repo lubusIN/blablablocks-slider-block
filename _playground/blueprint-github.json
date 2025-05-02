@@ -24,14 +24,14 @@
             "step": "installPlugin",
             "pluginData": {
                 "resource": "url",
-                "url": "https://github-proxy.com/proxy/?repo=lubusIN/blablablocks-slider-block&branch=wp-playground"
+                "url": "https://github-proxy.com/proxy/?repo=lubusIN/blablablocks-slider-block&branch=playground"
             }
         },
         {
             "step": "importWxr",
             "file": {
                 "resource": "url",
-                "url": "https://raw.githubusercontent.com/lubusIN/blablablocks-slider-block/wp-playground/_playground/demo-content.xml"
+                "url": "https://raw.githubusercontent.com/lubusIN/blablablocks-slider-block/playground/_playground/demo-content.xml"
             }
         }
     ]
