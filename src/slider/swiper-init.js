@@ -78,6 +78,7 @@ export function SwiperInit(
 		autoplay: {
 			enabled: options.autoplay ?? true,
 			delay: options.delay ?? 5000,
+			pauseOnMouseEnter: true,
 		},
 		speed: options.speed ?? 300,
 		grabCursor: true,
