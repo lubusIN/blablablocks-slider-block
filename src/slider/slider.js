@@ -42,12 +42,10 @@ const Slider = memo(
 				return false;
 			}
 
-			// if they clicked the slider container itself
 			if (selected === clientId) {
 				return true;
 			}
 
-			// otherwise see who the “root” of the selected block is:
 			const root = select(blockEditorStore).getBlockHierarchyRootClientId(selected);
 			return root === clientId;
 		}, [clientId]);
