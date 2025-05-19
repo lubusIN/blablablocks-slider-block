@@ -153,8 +153,14 @@
 		"navigationSize": {
 			"type": "string"
 		},
+		"navigationSpacing": {
+			"type": "object"
+		},
 		"navigationOffset": {
 			"type": "object"
+		},
+		"navigationPosition": {
+			"type": "string"
 		},
 		"navigationBorderRadius": {
 			"type": "string"
@@ -164,6 +170,9 @@
 		},
 		"paginationOffset": {
 			"type": "object"
+		},
+		"paginationPosition": {
+			"type": "string"
 		},
 		"paginationColor": {
 			"type": "object",
@@ -190,7 +199,10 @@
 	"supports": {
 		"anchor": true,
 		"html": false,
-		"align": [ "wide", "full" ],
+		"align": [
+			"wide",
+			"full"
+		],
 		"color": {
 			"gradients": true,
 			"link": true,
@@ -202,7 +214,10 @@
 			}
 		},
 		"spacing": {
-			"margin": [ "top", "bottom" ],
+			"margin": [
+				"top",
+				"bottom"
+			],
 			"padding": true,
 			"__experimentalDefaultControls": {
 				"padding": true,
@@ -219,7 +234,9 @@
 			}
 		}
 	},
-	"allowedBlocks": [ "blablablocks/slide" ],
+	"allowedBlocks": [
+		"blablablocks/slide"
+	],
 	"textdomain": "blablablocks-slider",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",

@@ -20,7 +20,7 @@ import {
  *
  * @return {Object} Device-specific Swiper settings.
  */
-function getDeviceSettings( options, deviceType, isFadeEffect ) {
+function getDeviceSettings(options, deviceType, isFadeEffect, container) {
 	const defaultSettings = {
 		Desktop: { slidesPerView: 3, spaceBetween: 30 },
 		Tablet: { slidesPerView: 2, spaceBetween: 20 },
@@ -28,22 +28,24 @@ function getDeviceSettings( options, deviceType, isFadeEffect ) {
 	};
 
 	const deviceSettings =
-		defaultSettings[ deviceType ] || defaultSettings.Desktop;
+		defaultSettings[deviceType] || defaultSettings.Desktop;
 
 	return {
 		slidesPerView: isFadeEffect
 			? 1
-			: options?.slidesPerView?.[ deviceType.toLowerCase() ] ??
-			  deviceSettings.slidesPerView,
+			: options?.slidesPerView?.[deviceType.toLowerCase()] ??
+			deviceSettings.slidesPerView,
 		spaceBetween:
-			options?.slidesSpacing?.[ deviceType.toLowerCase() ] ??
+			options?.slidesSpacing?.[deviceType.toLowerCase()] ??
 			deviceSettings.spaceBetween,
 		pagination: {
-			enabled: options?.pagination?.[ deviceType.toLowerCase() ] ?? false,
+			enabled: options?.pagination?.[deviceType.toLowerCase()] ?? false,
 			clickable: true,
 		},
 		navigation: {
-			enabled: options?.navigation?.[ deviceType.toLowerCase() ] ?? false,
+			enabled: options?.navigation?.[deviceType.toLowerCase()] ?? false,
+			nextEl: container.querySelector('.swiper-button-next'),
+			prevEl: container.querySelector('.swiper-button-prev'),
 		},
 	};
 }
@@ -68,7 +70,8 @@ export function SwiperInit(
 	const currentDeviceSettings = getDeviceSettings(
 		options,
 		deviceType,
-		isFadeEffect
+		isFadeEffect,
+		container
 	);
 
 	// Base Swiper parameters
@@ -101,16 +104,20 @@ export function SwiperInit(
 	};
 
 	// Add breakpoints and universal settings if not in the editor
-	if ( ! isEditor ) {
+	if (!isEditor) {
 		parameters.pagination = { enabled: true, clickable: true };
-		parameters.navigation = { enabled: true };
+		parameters.navigation = {
+			enabled: true,
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		};
 		parameters.breakpoints = {
-			320: getDeviceSettings( options, 'Mobile', isFadeEffect ),
-			480: getDeviceSettings( options, 'Mobile', isFadeEffect ),
-			768: getDeviceSettings( options, 'Tablet', isFadeEffect ),
-			1024: getDeviceSettings( options, 'Desktop', isFadeEffect ),
+			320: getDeviceSettings(options, 'Mobile', isFadeEffect, container),
+			480: getDeviceSettings(options, 'Mobile', isFadeEffect, container),
+			768: getDeviceSettings(options, 'Tablet', isFadeEffect, container),
+			1024: getDeviceSettings(options, 'Desktop', isFadeEffect, container),
 		};
 	}
 
-	return new Swiper( container, parameters );
+	return new Swiper(container, parameters);
 }

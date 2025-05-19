@@ -4,7 +4,7 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.slide_effects > .components-base-control {
+.slide_effects>.components-base-control {
 	width: 100%;
 }
 
@@ -38,7 +38,7 @@
 	transform: rotate(-90deg);
 }
 
-.slider_color_popover .components-popover__content > div {
+.slider_color_popover .components-popover__content>div {
 	margin: -8px;
 	width: 260px;
 }
@@ -98,4 +98,16 @@
 
 .responsive_field_control .components-base-control__help {
 	margin-top: 2px;
+}
+
+.bbb-slider-navigation-position>div[role="row"]:nth-child(2)>span:not(:nth-child(2)) {
+	visibility: hidden;
+}
+
+.bbb-slider-pagination-position {
+	grid-template-rows: repeat(2, 1fr) !important;
+}
+
+.bbb-slider-pagination-position>div[role="row"]:nth-child(2) {
+	display: none;
 }
