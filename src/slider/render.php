@@ -115,10 +115,13 @@ if (!function_exists('bbb_generate_navigation_styles')) {
 
         // Navigation offset
         $navigation_offset = $attributes['navigationOffset'] ?? [];
+        $navigationSpacing = $attributes['navigationSpacing'] ?? [];
         $add_style('--navigation-offset-top', bbb_resolve_spacing_size_value($navigation_offset['top'] ?? null, '0px'));
         $add_style('--navigation-offset-right', bbb_resolve_spacing_size_value($navigation_offset['right'] ?? null, '0px'));
         $add_style('--navigation-offset-bottom', bbb_resolve_spacing_size_value($navigation_offset['bottom'] ?? null));
         $add_style('--navigation-offset-left', bbb_resolve_spacing_size_value($navigation_offset['left'] ?? null, '0px'));
+       
+        $add_style('--navigation-spacing', bbb_resolve_spacing_size_value($navigationSpacing['left'] ?? null, '0px'));
 
         return $styles;
     }
