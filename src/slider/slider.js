@@ -1,6 +1,7 @@
 /**
  * Wordpress dependencies
  */
+import clsx from 'clsx';
 import { memo, useEffect, useRef } from '@wordpress/element';
 import { useSelect, subscribe, select } from '@wordpress/data';
 import {
@@ -150,7 +151,7 @@ const Slider = memo(
 			} else if (attributes.autoplay) {
 				swiper.autoplay.start();
 			}
-		}, [ isAnySlideFocused, attributes ]);
+		}, [isAnySlideFocused, attributes]);
 
 		const navigationStyles = generateNavigationStyles(attributes);
 		const applyPadding = innerBlocks.length >= 2 ? '100px' : '';
@@ -158,6 +159,10 @@ const Slider = memo(
 		return (
 			<div
 				{...useBlockProps({
+					className: clsx(
+						'bbb-slider-nav-position-' + (attributes.navigationPosition?.replace(/\s+/g, '-') ?? 'center'),
+						'bbb-slider-pag-position-' + (attributes.paginationPosition?.replace(/\s+/g, '-') ?? 'bottom-center')
+					),
 					role: 'region',
 					'aria-roledescription': 'carousel',
 					'aria-label': 'Slider block',
@@ -166,6 +171,10 @@ const Slider = memo(
 			>
 				<div ref={swiperContainerRef}>
 					<div {...innerBlocksProps} />
+					<div className='bbb-slider-nav-container'>
+						<div className="swiper-button-prev"></div>
+						<div className="swiper-button-next"></div>
+					</div>
 				</div>
 			</div>
 		);

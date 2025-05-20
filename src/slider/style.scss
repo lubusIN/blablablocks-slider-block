@@ -11,6 +11,81 @@
 	position: relative;
 }
 
+// Navigation Position
+.bbb-slider-nav-position-top-left .bbb-slider-nav-container {
+	top: 0;
+	justify-content: flex-start;
+}
+
+.bbb-slider-nav-position-bottom-left .bbb-slider-nav-container {
+	top: auto;
+	bottom: 0;
+	justify-content: flex-start;
+}
+
+.bbb-slider-nav-position-top-right .bbb-slider-nav-container {
+	top: 0;
+	justify-content: flex-end;
+}
+
+.bbb-slider-nav-position-bottom-right .bbb-slider-nav-container {
+	top: auto;
+	bottom: 0;
+	justify-content: flex-end;
+}
+
+.bbb-slider-nav-position-top-center .bbb-slider-nav-container {
+	top: 0;
+	justify-content: center;
+}
+
+.bbb-slider-nav-position-bottom-center .bbb-slider-nav-container {
+	top: auto;
+	bottom: 0;
+	justify-content: center;
+}
+
+.bbb-slider-nav-position-center .bbb-slider-nav-container,
+.bbb-slider-nav-position-center-center .bbb-slider-nav-container {
+	transform: translateY(-50%);
+	top: 50%;
+	justify-content: space-between;
+}
+
+// Pagination Position
+.bbb-slider-pag-position-top-left .swiper-pagination {
+	top: 0;
+	justify-content: flex-start;
+}
+
+.bbb-slider-pag-position-bottom-left .swiper-pagination {
+	top: auto;
+	bottom: 0;
+	justify-content: flex-start;
+}
+
+.bbb-slider-pag-position-top-right .swiper-pagination {
+	top: 0;
+	justify-content: flex-end;
+}
+
+.bbb-slider-pag-position-bottom-right .swiper-pagination {
+	top: auto;
+	bottom: 0;
+	justify-content: flex-end;
+}
+
+.bbb-slider-pag-position-top-center .swiper-pagination {
+	top: 0;
+	justify-content: center;
+}
+
+.bbb-slider-pag-position-bottom-center .swiper-pagination {
+	top: auto;
+	bottom: 0;
+	justify-content: center;
+}
+
 .wp-block-blablablocks-slider .swiper {
 	position: initial;
 
@@ -18,22 +93,30 @@
 		gap: 0;
 	}
 
-	.swiper-button-prev {
-		left: var(--navigation-offset-left);
-	}
-
-	.swiper-button-next {
-		right: var(--navigation-offset-right);
+	.bbb-slider-nav-container {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		transform: translateX(-50%);
+		left: 50%;
+		gap: var(--navigation-spacing);
+		position: absolute;
+		margin-top: var(--navigation-offset-top);
+		margin-bottom: var(--navigation-offset-bottom);
+		margin-left: var(--navigation-offset-left);
+		margin-right: var(--navigation-offset-right);
+		z-index: 1000;
 	}
 
 	.swiper-button-prev,
 	.swiper-button-next {
+		position: relative;
+		left: 0;
+		right: 0;
 		color: var(--navigation-arrow-color, var(--swiper-theme-color));
 		background-color: var(--navigation-background-color);
 		border-radius: var(--navigation-border-radius);
 		padding: var(--navigation-padding-top) var(--navigation-padding-right) var(--navigation-padding-bottom) var(--navigation-padding-left);
-		top: var(--navigation-offset-top);
-		bottom: var(--navigation-offset-bottom);
 
 		&:hover {
 			color: var(--navigation-arrow-hover-color, var(--swiper-theme-color));
@@ -42,10 +125,11 @@
 	}
 
 	.swiper-pagination {
-		top: var(--pagination-offset-top);
-		right: var(--pagination-offset-right);
-		bottom: var(--pagination-offset-bottom);
-		left: var(--pagination-offset-left);
+		margin-top: var(--pagination-offset-top);
+		margin-right: var(--pagination-offset-right);
+		margin-bottom: var(--pagination-offset-bottom);
+		margin-left: var(--pagination-offset-left);
+		display: flex;
 	}
 
 	.swiper-pagination-bullet {
