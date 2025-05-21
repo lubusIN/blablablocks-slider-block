@@ -28,7 +28,7 @@ import { generateNavigationStyles } from '../utils/style';
  * @return {JSX.Element} The slider component.
  */
 const Slider = memo(
-	({ clientId, attributes, innerBlocksProps, innerBlocks }) => {
+	({ clientId, attributes, setAttributes, innerBlocksProps, innerBlocks }) => {
 		const swiperContainerRef = useRef(null);
 		const swiperInstanceRef = useRef(null);
 
@@ -108,6 +108,24 @@ const Slider = memo(
 						slideToIndex = slideOrder.length - 1;
 					} else if (slideRemoved) {
 						slideToIndex = Math.max(activeIndex - 1, 0);
+						const totalSlides = slideOrder.length;
+						const updated = { ...attributes.slidesPerView };
+						let hasChanges = false;
+				
+						['desktop', 'tablet', 'mobile'].forEach((device) => {
+							const current = updated[device] ?? 1;
+							const maxAllowed = Math.max(totalSlides - 1, 1); // always minimum of 1
+							const newVal = Math.min(current, maxAllowed); // auto-restrict if over limit
+				
+							if (newVal !== current) {
+								updated[device] = newVal;
+								hasChanges = true;
+							}
+						});
+				
+						if (hasChanges) {
+							setAttributes({ slidesPerView: updated });
+						}
 					} else if (slideMoved) {
 						slideToIndex = slideOrder.findIndex(
 							(blockClientId) =>

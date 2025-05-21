@@ -35,6 +35,7 @@ import Slider from './slider';
 import Placeholder from './placeholder';
 import { ColorControlDropdown, ResponsiveDropdown } from '../components';
 import './editor.scss';
+import { useEffect } from '@wordpress/element';
 
 const DEFAULT_BLOCK = {
 	name: 'blablablocks/slide',
@@ -118,6 +119,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 				attributes={attributes}
 				innerBlocksProps={innerBlocksProps}
 				innerBlocks={innerBlocks}
+				setAttributes={setAttributes}
 			/>
 			<BlockControls>
 				<ToolbarGroup>
@@ -169,7 +171,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 									]
 								}
 								min={1}
-								max={30}
+								max={Math.max(innerBlocks.length - 1, 1)}
 								onChange={(value) =>
 									setAttributes({
 										slidesPerView: {

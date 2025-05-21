@@ -91,6 +91,7 @@
 
 	.swiper-wrapper {
 		gap: 0;
+		z-index: 100;
 	}
 
 	.bbb-slider-nav-container {
@@ -105,7 +106,7 @@
 		margin-bottom: var(--navigation-offset-bottom);
 		margin-left: var(--navigation-offset-left);
 		margin-right: var(--navigation-offset-right);
-		z-index: 1000;
+		z-index: 10;
 	}
 
 	.swiper-button-prev,
