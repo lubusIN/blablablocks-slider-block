@@ -108,17 +108,20 @@ if (!function_exists('bbb_generate_navigation_styles')) {
 
         // Pagination offset
         $pagination_offset = $attributes['paginationOffset'] ?? [];
-        $add_style('--pagination-offset-top', bbb_resolve_spacing_size_value($pagination_offset['top'] ?? null, 'auto'));
+        $add_style('--pagination-offset-top', bbb_resolve_spacing_size_value($pagination_offset['top'] ?? null, '0px'));
         $add_style('--pagination-offset-right', bbb_resolve_spacing_size_value($pagination_offset['right'] ?? null));
-        $add_style('--pagination-offset-bottom', bbb_resolve_spacing_size_value($pagination_offset['bottom'] ?? null, '8px'));
+        $add_style('--pagination-offset-bottom', bbb_resolve_spacing_size_value($pagination_offset['bottom'] ?? null, '0px'));
         $add_style('--pagination-offset-left', bbb_resolve_spacing_size_value($pagination_offset['left'] ?? null));
 
         // Navigation offset
         $navigation_offset = $attributes['navigationOffset'] ?? [];
-        $add_style('--navigation-offset-top', bbb_resolve_spacing_size_value($navigation_offset['top'] ?? null, '50%'));
-        $add_style('--navigation-offset-right', bbb_resolve_spacing_size_value($navigation_offset['right'] ?? null, '10px'));
+        $navigationSpacing = $attributes['navigationSpacing'] ?? [];
+        $add_style('--navigation-offset-top', bbb_resolve_spacing_size_value($navigation_offset['top'] ?? null, '0px'));
+        $add_style('--navigation-offset-right', bbb_resolve_spacing_size_value($navigation_offset['right'] ?? null, '0px'));
         $add_style('--navigation-offset-bottom', bbb_resolve_spacing_size_value($navigation_offset['bottom'] ?? null));
-        $add_style('--navigation-offset-left', bbb_resolve_spacing_size_value($navigation_offset['left'] ?? null, '10px'));
+        $add_style('--navigation-offset-left', bbb_resolve_spacing_size_value($navigation_offset['left'] ?? null, '0px'));
+       
+        $add_style('--navigation-spacing', bbb_resolve_spacing_size_value($navigationSpacing['left'] ?? null, '0px'));
 
         return $styles;
     }
@@ -139,8 +142,17 @@ if ($slide_count >= 2) {
     $style_string .= 'padding:100px;';
 }
 
+$nav_position = isset($attributes['navigationPosition']) ? str_replace(' ', '-', $attributes['navigationPosition']) : 'center';
+$pag_position = isset($attributes['paginationPosition']) ? str_replace(' ', '-', $attributes['paginationPosition']) : 'bottom-center';
+
+$wrapper_classes = [
+    "bbb-slider-nav-position-$nav_position",
+    "bbb-slider-pag-position-$pag_position"
+];
+
 $wrapper_attributes = get_block_wrapper_attributes(
     [
+        'class' => implode(' ', $wrapper_classes),
         'style' => $style_string,
     ]
 );
@@ -149,7 +161,12 @@ $wrapper_attributes = get_block_wrapper_attributes(
 <div <?php echo wp_kses_data($wrapper_attributes); ?> role="region" aria-roledescription="carousel" aria-label="Slider block">
     <div class="swiper" <?php echo 'data-swiper="' . esc_attr(wp_json_encode($attributes)) . '"'; ?>>
         <div class="swiper-wrapper">
-            <?php echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped  ?>
+            <?php echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped  
+            ?>
+        </div>
+        <div class="bbb-slider-nav-container">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </div>
 </div>

@@ -12,7 +12,7 @@ const Testimonial = {
 			<h1 class="wp-block-heading alignwide has-text-align-center has-large-font-size"><strong>WHAT OUR CLIENTS SAY ABOUT US</strong></h1>
 			<!-- /wp:heading -->
 
-			<!-- wp:blablablocks/slider {"className":"wp-block-blablablocks-slider wp-block-lubus-slider","style":{"spacing":{"padding":{"top":"40px","bottom":"80px","right":"10vw","left":"10vw"}}}} -->
+			<!-- wp:blablablocks/slider {"loop":true,"navigationSize":"2.15rem","navigationSpacing":{"right":"var:preset|spacing|30","left":"var:preset|spacing|30"},"navigationPosition":"center center","paginationOffset":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"className":"wp-block-blablablocks-slider wp-block-lubus-slider","style":{"spacing":{"padding":{"top":"40px","bottom":"80px","right":"10vw","left":"10vw"}}}} -->
 			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
 			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"15px"}},"layout":{"type":"default"}} -->
 			<div class="wp-block-group"><!-- wp:image {"id":2510,"sizeSlug":"full","linkDestination":"none","align":"center"} -->
@@ -109,7 +109,7 @@ const Testimonial = {
 			<!-- /wp:group --></div>
 			<!-- /wp:blablablocks/slide -->
 			<!-- /wp:blablablocks/slider --></div>
-			<!-- /wp:group -->`,
+		<!-- /wp:group -->`,
 };
 
 export default Testimonial;

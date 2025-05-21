@@ -867,26 +867,108 @@ button.swiper-pagination-bullet {
   position: relative;
 }
 
+.bbb-slider-nav-position-top-left .bbb-slider-nav-container {
+  top: 0;
+  justify-content: flex-start;
+}
+
+.bbb-slider-nav-position-bottom-left .bbb-slider-nav-container {
+  top: auto;
+  bottom: 0;
+  justify-content: flex-start;
+}
+
+.bbb-slider-nav-position-top-right .bbb-slider-nav-container {
+  top: 0;
+  justify-content: flex-end;
+}
+
+.bbb-slider-nav-position-bottom-right .bbb-slider-nav-container {
+  top: auto;
+  bottom: 0;
+  justify-content: flex-end;
+}
+
+.bbb-slider-nav-position-top-center .bbb-slider-nav-container {
+  top: 0;
+  justify-content: center;
+}
+
+.bbb-slider-nav-position-bottom-center .bbb-slider-nav-container {
+  top: auto;
+  bottom: 0;
+  justify-content: center;
+}
+
+.bbb-slider-nav-position-center .bbb-slider-nav-container,
+.bbb-slider-nav-position-center-center .bbb-slider-nav-container {
+  transform: translateY(-50%);
+  top: 50%;
+  justify-content: space-between;
+}
+
+.bbb-slider-pag-position-top-left .swiper-pagination {
+  top: 0;
+  justify-content: flex-start;
+}
+
+.bbb-slider-pag-position-bottom-left .swiper-pagination {
+  top: auto;
+  bottom: 0;
+  justify-content: flex-start;
+}
+
+.bbb-slider-pag-position-top-right .swiper-pagination {
+  top: 0;
+  justify-content: flex-end;
+}
+
+.bbb-slider-pag-position-bottom-right .swiper-pagination {
+  top: auto;
+  bottom: 0;
+  justify-content: flex-end;
+}
+
+.bbb-slider-pag-position-top-center .swiper-pagination {
+  top: 0;
+  justify-content: center;
+}
+
+.bbb-slider-pag-position-bottom-center .swiper-pagination {
+  top: auto;
+  bottom: 0;
+  justify-content: center;
+}
+
 .wp-block-blablablocks-slider .swiper {
   position: initial;
 }
 .wp-block-blablablocks-slider .swiper .swiper-wrapper {
   gap: 0;
 }
-.wp-block-blablablocks-slider .swiper .swiper-button-prev {
-  right: var(--navigation-offset-left);
-}
-.wp-block-blablablocks-slider .swiper .swiper-button-next {
-  left: var(--navigation-offset-right);
+.wp-block-blablablocks-slider .swiper .bbb-slider-nav-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  transform: translateX(50%);
+  right: 50%;
+  gap: var(--navigation-spacing);
+  position: absolute;
+  margin-top: var(--navigation-offset-top);
+  margin-bottom: var(--navigation-offset-bottom);
+  margin-right: var(--navigation-offset-left);
+  margin-left: var(--navigation-offset-right);
+  z-index: 1000;
 }
 .wp-block-blablablocks-slider .swiper .swiper-button-prev,
 .wp-block-blablablocks-slider .swiper .swiper-button-next {
+  position: relative;
+  right: 0;
+  left: 0;
   color: var(--navigation-arrow-color, var(--swiper-theme-color));
   background-color: var(--navigation-background-color);
   border-radius: var(--navigation-border-radius);
   padding: var(--navigation-padding-top) var(--navigation-padding-left) var(--navigation-padding-bottom) var(--navigation-padding-right);
-  top: var(--navigation-offset-top);
-  bottom: var(--navigation-offset-bottom);
 }
 .wp-block-blablablocks-slider .swiper .swiper-button-prev:hover,
 .wp-block-blablablocks-slider .swiper .swiper-button-next:hover {
@@ -894,10 +976,11 @@ button.swiper-pagination-bullet {
   background-color: var(--navigation-background-hover-color);
 }
 .wp-block-blablablocks-slider .swiper .swiper-pagination {
-  top: var(--pagination-offset-top);
-  left: var(--pagination-offset-right);
-  bottom: var(--pagination-offset-bottom);
-  right: var(--pagination-offset-left);
+  margin-top: var(--pagination-offset-top);
+  margin-left: var(--pagination-offset-right);
+  margin-bottom: var(--pagination-offset-bottom);
+  margin-right: var(--pagination-offset-left);
+  display: flex;
 }
 .wp-block-blablablocks-slider .swiper .swiper-pagination-bullet {
   width: var(--pagination-size);

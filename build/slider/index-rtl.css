@@ -90,3 +90,15 @@
 .responsive_field_control .components-base-control__help {
   margin-top: 2px;
 }
+
+.bbb-slider-navigation-position > div[role=row]:nth-child(2) > span:not(:nth-child(2)) {
+  visibility: hidden;
+}
+
+.bbb-slider-pagination-position {
+  grid-template-rows: repeat(2, 1fr) !important;
+}
+
+.bbb-slider-pagination-position > div[role=row]:nth-child(2) {
+  display: none;
+}

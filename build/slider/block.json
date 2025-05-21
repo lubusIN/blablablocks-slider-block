@@ -153,8 +153,14 @@
     "navigationSize": {
       "type": "string"
     },
+    "navigationSpacing": {
+      "type": "object"
+    },
     "navigationOffset": {
       "type": "object"
+    },
+    "navigationPosition": {
+      "type": "string"
     },
     "navigationBorderRadius": {
       "type": "string"
@@ -164,6 +170,9 @@
     },
     "paginationOffset": {
       "type": "object"
+    },
+    "paginationPosition": {
+      "type": "string"
     },
     "paginationColor": {
       "type": "object",
