@@ -1,26 +1,75 @@
-# BlaBlaBlocks Slider Block
+<p align="center"><img width="300" src=".github/bsb-logo.svg"></p>
 
-![Plugin Screenshot](https://raw.githubusercontent.com/lubusIN/blablablocks-slider-block/main/.github/screenshot.jpg)
+![BlaBlaBlocks Slider Block](.github/blablablocks-slider-block.jpg)
 
-[![Try in WordPress Playground](https://img.shields.io/badge/Try%20in%20WordPress%20Playground-blue?style=for-the-badge)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/lubusIN/blablablocks-slider-block/playground/_playground/blueprint-github.json)
+[![Playground Demo Link](https://img.shields.io/badge/Playground_Demo-blue?logo=wordpress&logoColor=%23fff&labelColor=%233858e9&color=%233858e9)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/lubusIN/blablablocks-slider-block/playground/_playground/blueprint-github.json)
 
+## Overview
 BlaBlaBlocks Slider Block is a WordPress plugin built specifically for the Block Editor, allowing you to create responsive sliders effortlessly. 
-
-## Installation
-
- 1. Visit 'Plugins > Add New'
- 2. [Download](https://github.com/lubusIN/blablablocks-slider-block/archive/refs/tags/v1.0.2.zip) and upload zip file
- 3. Activate `BlaBlaBlocks Slider Block` from your Plugins page
 
 ## Requirements
 
 - WordPress 6.5+
 - PHP 7.4+
 
+## Installation
+
+1. [Download](https://github.com/lubusIN/blablablocks-slider-block/archive/refs/tags/v1.0.2.zip) latest release from GitHub
+2. Visit `Plugins > Add New`
+3. Upload `blablablocks-slider-block.zip` file
+4. Activate `BlaBlaBlocks Slider Block` from plugins page
+
 ## Development
 
-1. Set up a local WordPress environment.
-2. In the `wp-content/plugins` folder, clone the repository: `git clone git@github.com:lubusIN/blablablocks-slider-block.git`
-3. Navigate to folder `cd wp-content/plugins/blablablocks-slider-block`.
-4. Run `npm install` command to install the plugin's dependencies within a `/node_modules/` folder.
-5. Run `npm run build` or `npm run start` command to compile and watch source files for changes while developing.
+### 1. Clone the Repository
+Clone the repository to your local system:
+
+```bash
+git clone git@github.com:lubusIN/blablablocks-slider-block.git 
+```
+
+### 2. Go to package folder
+
+```bash
+cd blablablocks-slider-block
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Build Plugin
+Build or start the development environment:
+
+```bash
+npm run build       # Compile the source files
+# OR
+npm run start       # Watch for changes and auto-compile
+```
+
+### 5. Launch Playground
+Start a local WordPress playground using wp-now:
+
+```bash
+npx @wp-now/wp-now start
+```
+> [!NOTE]
+> Refer to `package.json` for additional available npm commands.
+
+## Meet Your Artisans
+
+[LUBUS](http://lubus.in) is a web design agency based in Mumbai.
+
+<img src="https://user-images.githubusercontent.com/1039236/40877801-3fa8ccf6-66a4-11e8-8f42-19ed4e883ce9.png" />
+
+## Credits
+
+<a href="https://github.com/lubusIN/blablablocks-slider-block/graphs/contributors">
+  <img height="36px" src="https://contrib.rocks/image?repo=lubusIN/blablablocks-slider-block" />
+</a>
+
+## License
+
+BlaBlaBlocks Slider Block is open-sourced plugin licensed under the [MIT license](LICENSE)
