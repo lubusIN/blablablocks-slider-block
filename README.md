@@ -1,4 +1,4 @@
-<p align="center"><img width="300" src=".github/bsb-logo.svg"></p>
+<p align="center"><img width="250" src=".github/bsb-logo.svg"></p>
 
 ![BlaBlaBlocks Slider Block](.github/blablablocks-slider-block.jpg)
 
