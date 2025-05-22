@@ -111,18 +111,18 @@ const Slider = memo(
 						const totalSlides = slideOrder.length;
 						const updated = { ...attributes.slidesPerView };
 						let hasChanges = false;
-				
+
 						['desktop', 'tablet', 'mobile'].forEach((device) => {
 							const current = updated[device] ?? 1;
 							const maxAllowed = Math.max(totalSlides - 1, 1); // always minimum of 1
 							const newVal = Math.min(current, maxAllowed); // auto-restrict if over limit
-				
+
 							if (newVal !== current) {
 								updated[device] = newVal;
 								hasChanges = true;
 							}
 						});
-				
+
 						if (hasChanges) {
 							setAttributes({ slidesPerView: updated });
 						}
