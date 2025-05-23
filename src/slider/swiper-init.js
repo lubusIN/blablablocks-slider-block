@@ -102,8 +102,6 @@ export function SwiperInit(
 		],
 	};
 
-	const swiperInstance = new Swiper(container, parameters);
-
 	// Add breakpoints and universal settings if not in the editor
 	if (!isEditor) {
 		parameters.pagination = { enabled: true, clickable: true };
@@ -119,15 +117,20 @@ export function SwiperInit(
 			768: getDeviceSettings(options, 'Tablet', isFadeEffect, container),
 			1024: getDeviceSettings(options, 'Desktop', isFadeEffect, container),
 		};
+	}
 
+	const swiperInstance = new Swiper(container, parameters);
+
+	if (!isEditor) {
 		container.addEventListener('focusin', () => {
 			swiperInstance?.keyboard?.enable();
 		});
-		
+
 		container.addEventListener('focusout', () => {
 			swiperInstance?.keyboard?.disable();
 		});
 	}
+
 
 	return swiperInstance;
 }
