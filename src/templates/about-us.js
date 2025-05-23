@@ -3,11 +3,11 @@
  */
 import { __ } from '@wordpress/i18n';
 
-const Portfolio = {
-    name: 'portfolio',
-    title: __('Portfolio', 'blablablocks-slider-block'),
+const AboutUs = {
+    name: 'about-us',
+    title: __('About Us', 'blablablocks-slider-block'),
     content: `
-            <!-- wp:group {"metadata":{"name":"Portfolio"},"align":"full","style":{"spacing":{"blockGap":"0px","padding":{"left":"2vw","right":"2vw","top":"8vw","bottom":"8vw"}}},"backgroundColor":"contrast","layout":{"type":"constrained","contentSize":"1000px"}} -->
+            <!-- wp:group {"metadata":{"name":"About Us"},"align":"full","style":{"spacing":{"blockGap":"0px","padding":{"left":"2vw","right":"2vw","top":"8vw","bottom":"8vw"}}},"backgroundColor":"contrast","layout":{"type":"constrained","contentSize":"1000px"}} -->
             <div class="wp-block-group alignfull has-contrast-background-color has-background" style="padding-top:8vw;padding-right:2vw;padding-bottom:8vw;padding-left:2vw"><!-- wp:blablablocks/slider {"pagination":{"desktop":false,"tablet":true,"mobile":false,"activeDevice":"desktop"},"loop":true,"navigationColor":{"arrowColor":{"default":"#ffffff","hover":"#ffffff"},"backgroundColor":{"default":"#000000","hover":"#000000"}},"navigationPadding":{"top":"8px","right":"12px","bottom":"8px","left":"12px"},"navigationSize":"20px","navigationSpacing":{"right":"24px","left":"24px"},"navigationOffset":{"left":"-30px","bottom":"30px"},"navigationPosition":"bottom right","navigationBorderRadius":"50%","style":{"spacing":{"padding":{"top":"40px","bottom":"80px","right":"5vw","left":"5vw"}}},"backgroundColor":"base"} -->
             <!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
             <div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:media-text {"mediaPosition":"right","mediaId":29,"mediaLink":"https://slidertemplates.instawp.xyz/templates/wordpress-log/","mediaType":"image","mediaWidth":30,"style":{"spacing":{"blockGap":"15px"}}} -->
@@ -56,4 +56,4 @@ const Portfolio = {
             <!-- /wp:group -->`,
 };
 
-export default Portfolio;
+export default AboutUs;
