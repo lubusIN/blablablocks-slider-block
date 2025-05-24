@@ -5,7 +5,7 @@ import { __ } from '@wordpress/i18n';
 
 const Testimonial = {
 	name: 'testimonial',
-	title: __('Testimonial', 'blablablocks-slider-block'),
+	title: __( 'Testimonial', 'blablablocks-slider-block' ),
 	content: `
         	<!-- wp:group {"metadata":{"name":"Testimonial"},"align":"full","style":{"spacing":{"blockGap":"0px","padding":{"left":"2vw","right":"2vw","top":"8vw","bottom":"8vw"}}},"layout":{"type":"default"}} -->
 			<div class="wp-block-group alignfull" style="padding-top:8vw;padding-right:2vw;padding-bottom:8vw;padding-left:2vw"><!-- wp:blablablocks/slider {"loop":true,"navigationSize":"2.15rem","navigationSpacing":{"right":"var:preset|spacing|30","left":"var:preset|spacing|30"},"navigationPosition":"center center","paginationOffset":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"className":"wp-block-blablablocks-slider wp-block-lubus-slider","style":{"spacing":{"padding":{"top":"40px","bottom":"40px","right":"10vw","left":"10vw"}}}} -->

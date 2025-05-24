@@ -5,20 +5,20 @@
  * @param {string|number} defaultValue - The default value.
  * @return {string} - A valid CSS spacing size value.
  */
-const resolveSpacingSizeValue = (value, defaultValue = '0px') => {
-	if (typeof value === 'string') {
-		if (value.startsWith('var:')) {
+const resolveSpacingSizeValue = ( value, defaultValue = '0px' ) => {
+	if ( typeof value === 'string' ) {
+		if ( value.startsWith( 'var:' ) ) {
 			// Convert "var:some|value" into "var(--wp--some--value)"
 			const cssVariable = value
-				.replace('var:', '--wp--')
-				.replace(/\|/g, '--');
-			return `var(${cssVariable})`;
+				.replace( 'var:', '--wp--' )
+				.replace( /\|/g, '--' );
+			return `var(${ cssVariable })`;
 		}
 		return value; // If it's a valid CSS string, return as-is
 	}
 
-	if (typeof value === 'number') {
-		return `${value}px`; // Convert numbers to pixel values
+	if ( typeof value === 'number' ) {
+		return `${ value }px`; // Convert numbers to pixel values
 	}
 
 	// use defaultValue if value is invalid or undefined
@@ -32,8 +32,8 @@ const resolveSpacingSizeValue = (value, defaultValue = '0px') => {
  * @param {string|number} defaultValue - The default value.
  * @return {string} - A valid CSS border-radius value.
  */
-const getBorderRadiusStyles = (borderRadius, defaultValue = '0px') => {
-	if (typeof borderRadius === 'string') {
+const getBorderRadiusStyles = ( borderRadius, defaultValue = '0px' ) => {
+	if ( typeof borderRadius === 'string' ) {
 		return borderRadius;
 	}
 
@@ -42,7 +42,7 @@ const getBorderRadiusStyles = (borderRadius, defaultValue = '0px') => {
 	const topRight = borderRadius?.topRight || defaultValue;
 	const bottomRight = borderRadius?.bottomRight || defaultValue;
 	const bottomLeft = borderRadius?.bottomLeft || defaultValue;
-	return `${topLeft} ${topRight} ${bottomRight} ${bottomLeft}`;
+	return `${ topLeft } ${ topRight } ${ bottomRight } ${ bottomLeft }`;
 };
 
 /**
@@ -53,15 +53,15 @@ const getBorderRadiusStyles = (borderRadius, defaultValue = '0px') => {
  *
  * @return {Object} - An object with CSS variable definitions for the navigation.
  */
-export const generateNavigationStyles = (attributes = {}) => {
+export const generateNavigationStyles = ( attributes = {} ) => {
 	const styles = {};
 
 	// Helper function to add a style with a fallback to default values
-	const addVar = (key, value, defaultValue = '0px') => {
-		if (value !== undefined && value !== null) {
-			styles[key] = value;
-		} else if (defaultValue) {
-			styles[key] = defaultValue;
+	const addVar = ( key, value, defaultValue = '0px' ) => {
+		if ( value !== undefined && value !== null ) {
+			styles[ key ] = value;
+		} else if ( defaultValue ) {
+			styles[ key ] = defaultValue;
 		}
 	};
 
@@ -85,26 +85,41 @@ export const generateNavigationStyles = (attributes = {}) => {
 		attributes?.navigationColor?.backgroundColor?.hover,
 		'transparent'
 	);
-	addVar('--swiper-navigation-size', attributes?.navigationSize, '40px');
+	addVar( '--swiper-navigation-size', attributes?.navigationSize, '40px' );
 	addVar(
 		'--navigation-border-radius',
-		getBorderRadiusStyles(attributes?.navigationBorderRadius, '4px')
+		getBorderRadiusStyles( attributes?.navigationBorderRadius, '4px' )
 	);
 
 	// Padding styles with defaults
-	['top', 'right', 'bottom', 'left'].forEach((dir) => {
-		addVar(`--navigation-padding-${dir}`, resolveSpacingSizeValue(attributes?.navigationPadding?.[dir], '0px'));
-	});
+	[ 'top', 'right', 'bottom', 'left' ].forEach( ( dir ) => {
+		addVar(
+			`--navigation-padding-${ dir }`,
+			resolveSpacingSizeValue(
+				attributes?.navigationPadding?.[ dir ],
+				'0px'
+			)
+		);
+	} );
 
 	// Navigation offset styles with defaults
-	['top', 'right', 'bottom', 'left'].forEach((dir) => {
-		addVar(`--navigation-offset-${dir}`, resolveSpacingSizeValue(attributes?.navigationOffset?.[dir], '0px'));
-	});
+	[ 'top', 'right', 'bottom', 'left' ].forEach( ( dir ) => {
+		addVar(
+			`--navigation-offset-${ dir }`,
+			resolveSpacingSizeValue(
+				attributes?.navigationOffset?.[ dir ],
+				'0px'
+			)
+		);
+	} );
 
-	addVar(`--navigation-spacing`, resolveSpacingSizeValue(attributes?.navigationSpacing?.left, '20px'));
+	addVar(
+		`--navigation-spacing`,
+		resolveSpacingSizeValue( attributes?.navigationSpacing?.left, '20px' )
+	);
 
 	// Pagination styles
-	addVar('--pagination-size', attributes?.paginationSize, '8px');
+	addVar( '--pagination-size', attributes?.paginationSize, '8px' );
 	addVar(
 		'--pagination-active-color',
 		attributes?.paginationColor?.activeColor?.default,
@@ -117,9 +132,15 @@ export const generateNavigationStyles = (attributes = {}) => {
 	);
 
 	// Pagination offset styles with defaults
-	['top', 'right', 'bottom', 'left'].forEach((dir) => {
-		addVar(`--pagination-offset-${dir}`, resolveSpacingSizeValue(attributes?.paginationOffset?.[dir], dir === 'bottom' ? '8px' : 'auto'));
-	});
+	[ 'top', 'right', 'bottom', 'left' ].forEach( ( dir ) => {
+		addVar(
+			`--pagination-offset-${ dir }`,
+			resolveSpacingSizeValue(
+				attributes?.paginationOffset?.[ dir ],
+				dir === 'bottom' ? '8px' : 'auto'
+			)
+		);
+	} );
 
 	return styles;
 };
