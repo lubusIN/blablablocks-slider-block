@@ -3,29 +3,29 @@
  */
 import { __ } from '@wordpress/i18n';
 
-const Services = {
-	name: 'services',
-	title: __( 'Services', 'blablablocks-slider-block' ),
+const Features = {
+	name: 'features',
+	title: __( 'Features', 'blablablocks-slider-block' ),
 	content: `
-          <!-- wp:group {"metadata":{"categories":["services"],"name":"Services","patternName":"assembler/services-2"},"align":"full","className":"alignfull is-style-default","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|30","padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"15px","right":"15px"}}},"layout":{"type":"constrained","contentSize":"1280px"}} -->
-			<div class="wp-block-group alignfull is-style-default" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--40);padding-right:15px;padding-bottom:var(--wp--preset--spacing--40);padding-left:15px"><!-- wp:heading {"align":"wide","style":{"layout":{"selfStretch":"fixed","flexSize":"100%"},"typography":{"fontStyle":"normal","fontWeight":"600"}}} -->
-			<h2 class="wp-block-heading alignwide" style="font-style:normal;font-weight:600">Services</h2>
+			<!-- wp:group {"metadata":{"categories":["services"],"name":"Features","patternName":"assembler/services-2"},"align":"full","className":"alignfull is-style-default","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|30","padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"15px","right":"15px"}}},"layout":{"type":"constrained","contentSize":"1280px"}} -->
+			<div class="wp-block-group alignfull is-style-default" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--40);padding-right:15px;padding-bottom:var(--wp--preset--spacing--40);padding-left:15px"><!-- wp:heading {"textAlign":"center","level":1,"align":"wide","style":{"layout":{"selfStretch":"fixed","flexSize":"100%"},"typography":{"fontStyle":"normal","fontWeight":"600"}}} -->
+			<h1 class="wp-block-heading alignwide has-text-align-center" style="font-style:normal;font-weight:600">Features</h1>
 			<!-- /wp:heading -->
 
-			<!-- wp:blablablocks/slider {"slidesPerView":{"desktop":3,"tablet":2,"mobile":1,"activeDevice":"desktop"},"pagination":{"desktop":false,"tablet":false,"mobile":false,"activeDevice":"desktop"},"loop":true,"navigationColor":{"arrowColor":{"default":"#000000","hover":"#323232"},"backgroundColor":{"hover":""}},"navigationSize":"2.3rem","navigationSpacing":{"right":"0px","left":"0px"},"navigationOffset":{"top":"0px","bottom":"0px","left":"0px"},"navigationPosition":"center center","paginationOffset":{"bottom":"0px"},"className":"wp-block-blablablocks-slider alignfull wp-block-lubus-slider","style":{"spacing":{"padding":{"top":"0px","bottom":"0px","left":"5vw","right":"5vw"}}}} -->
+			<!-- wp:blablablocks/slider {"slidesPerView":{"desktop":3,"tablet":1,"mobile":1,"activeDevice":"desktop"},"pagination":{"desktop":false,"tablet":false,"mobile":false,"activeDevice":"desktop"},"loop":true,"navigationColor":{"arrowColor":{"default":"#000000","hover":"#323232"},"backgroundColor":{"hover":""}},"navigationSize":"2.5rem","navigationSpacing":{"right":"0px","left":"0px"},"navigationOffset":{"top":"0px","bottom":"0px","left":"var:preset|spacing|30","right":"var:preset|spacing|30"},"navigationPosition":"center center","paginationOffset":{"bottom":"0px"},"className":"wp-block-blablablocks-slider alignfull wp-block-lubus-slider","style":{"spacing":{"padding":{"top":"0px","bottom":"0px","left":"6vw","right":"6vw"}}}} -->
 			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
 			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-			<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
-			<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<div class="wp-block-group"><!-- wp:image {"scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
+			<figure class="wp-block-image size-large"><img src="https://i0.wp.com/wordpress.org/files/2024/10/design-visual-6-7.png?w=720&amp;ssl=1" alt="" style="object-fit:cover"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
 			<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
-			<h3 class="wp-block-heading is-service-name">Service 1</h3>
+			<h3 class="wp-block-heading is-service-name"><strong><strong><strong>Design</strong></strong></strong></h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"className":"is-service-description"} -->
-			<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
+			<p class="is-service-description">Create any website with flexible design tools and the power of&nbsp;blocks. Start with a blank canvas or choose a&nbsp;theme. Customize every detail—no code needed.</p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:buttons -->
@@ -39,17 +39,17 @@ const Services = {
 
 			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
 			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-			<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
-			<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<div class="wp-block-group"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
+			<figure class="wp-block-image size-large"><img src="https://i0.wp.com/wordpress.org/files/2024/10/build-visual-6-7.png?w=720&amp;ssl=1" alt=""/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
 			<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
-			<h3 class="wp-block-heading is-service-name">Service 2</h3>
+			<h3 class="wp-block-heading is-service-name"><strong><strong><strong>Build</strong></strong></strong></h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"className":"is-service-description"} -->
-			<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
+			<p class="is-service-description">See how your site will look in real time, even as you add, edit, and rearrange content—with intuitive editing and integrated features to manage it all.</p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:buttons -->
@@ -63,17 +63,17 @@ const Services = {
 
 			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
 			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-			<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
-			<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<div class="wp-block-group"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
+			<figure class="wp-block-image size-large"><img src="https://i0.wp.com/wordpress.org/files/2024/10/extend-visual-6-7.png?w=720&amp;ssl=1" alt=""/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
 			<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
-			<h3 class="wp-block-heading is-service-name">Service 3</h3>
+			<h3 class="wp-block-heading is-service-name"><strong><strong>Extend</strong></strong></h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"className":"is-service-description"} -->
-			<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
+			<p class="is-service-description">Make your site do whatever you need it to. Add a store, analytics, newsletter, social media integration; you’re in control with an extensive library of&nbsp;plugins.</p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:buttons -->
@@ -87,17 +87,17 @@ const Services = {
 
 			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
 			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-			<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
-			<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<div class="wp-block-group"><!-- wp:image {"scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
+			<figure class="wp-block-image size-large"><img src="https://i0.wp.com/wordpress.org/files/2024/10/design-visual-6-7.png?w=720&amp;ssl=1" alt="" style="object-fit:cover"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
 			<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
-			<h3 class="wp-block-heading is-service-name">Service 4</h3>
+			<h3 class="wp-block-heading is-service-name"><strong><strong><strong>Design</strong></strong></strong></h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"className":"is-service-description"} -->
-			<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
+			<p class="is-service-description">Create any website with flexible design tools and the power of&nbsp;blocks. Start with a blank canvas or choose a&nbsp;theme. Customize every detail—no code needed.</p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:buttons -->
@@ -111,17 +111,17 @@ const Services = {
 
 			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
 			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-			<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
-			<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<div class="wp-block-group"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
+			<figure class="wp-block-image size-large"><img src="https://i0.wp.com/wordpress.org/files/2024/10/build-visual-6-7.png?w=720&amp;ssl=1" alt=""/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
 			<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
-			<h3 class="wp-block-heading is-service-name">Service 5</h3>
+			<h3 class="wp-block-heading is-service-name"><strong><strong><strong>Build</strong></strong></strong></h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"className":"is-service-description"} -->
-			<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
+			<p class="is-service-description">See how your site will look in real time, even as you add, edit, and rearrange content—with intuitive editing and integrated features to manage it all.</p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:buttons -->
@@ -135,17 +135,17 @@ const Services = {
 
 			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
 			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
-			<div class="wp-block-group"><!-- wp:image {"id":16531,"aspectRatio":"4/3","scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
-			<figure class="wp-block-image size-large"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/09/2-1.jpg?w=717" alt="" class="wp-image-16531" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<div class="wp-block-group"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
+			<figure class="wp-block-image size-large"><img src="https://i0.wp.com/wordpress.org/files/2024/10/extend-visual-6-7.png?w=720&amp;ssl=1" alt=""/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
 			<div class="wp-block-group"><!-- wp:heading {"level":3,"className":"is-service-name"} -->
-			<h3 class="wp-block-heading is-service-name">Service 6</h3>
+			<h3 class="wp-block-heading is-service-name"><strong><strong>Extend</strong></strong></h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"className":"is-service-description"} -->
-			<p class="is-service-description">Navigating life's intricate fabric, choices unfold paths to the extraordinary, demanding creativity, curiosity, and courage for a truly fulfilling journey. </p>
+			<p class="is-service-description">Make your site do whatever you need it to. Add a store, analytics, newsletter, social media integration; you’re in control with an extensive library of&nbsp;plugins.</p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:buttons -->
@@ -160,4 +160,4 @@ const Services = {
 			<!-- /wp:group -->`,
 };
 
-export default Services;
+export default Features;
