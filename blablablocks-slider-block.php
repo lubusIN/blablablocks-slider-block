@@ -7,8 +7,8 @@
  * Requires PHP:      7.4
  * Version:           1.0.2
  * Author:            Lubus
- * License:           GPL-2.0-or-later
- * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * License:           MIT
+ * License URI:       https://www.gnu.org/licenses/MIT
  * Text Domain:       blablablocks-slider-block
  *
  * @package blablablocks-slider-block

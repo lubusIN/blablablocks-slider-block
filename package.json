@@ -3,7 +3,7 @@
 	"version": "1.0.2",
 	"description": "Slider Block is a WordPress plugin built specifically for the Block Editor, allowing you to create responsive sliders effortlessly.",
 	"author": "Lubus",
-	"license": "GPL-2.0-or-later",
+	"license": "MIT",
 	"main": "build/index.js",
 	"scripts": {
 		"build": "wp-scripts build",
