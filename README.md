@@ -14,7 +14,7 @@ BlaBlaBlocks Slider Block is a WordPress plugin built specifically for the Block
 
 ## Installation
 
-1. [Download](https://github.com/lubusIN/blablablocks-slider-block/archive/refs/tags/v1.0.2.zip) latest release from GitHub
+1. [Download](https://github.com/lubusIN/blablablocks-slider-block/archive/refs/tags/v1.1.0.zip) latest release from GitHub
 2. Visit `Plugins > Add New`
 3. Upload `blablablocks-slider-block.zip` file
 4. Activate `BlaBlaBlocks Slider Block` from plugins page
