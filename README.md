@@ -9,7 +9,7 @@ BlaBlaBlocks Slider Block is a WordPress plugin built specifically for the Block
 
 ## Requirements
 
-- WordPress 6.5+
+- WordPress 6.6+
 - PHP 7.4+
 
 ## Installation
