@@ -121,7 +121,7 @@ if (!function_exists('bbb_generate_navigation_styles')) {
         $add_style('--navigation-offset-bottom', bbb_resolve_spacing_size_value($navigation_offset['bottom'] ?? null));
         $add_style('--navigation-offset-left', bbb_resolve_spacing_size_value($navigation_offset['left'] ?? null, '0px'));
        
-        $add_style('--navigation-spacing', bbb_resolve_spacing_size_value($navigationSpacing['left'] ?? null, '0px'));
+        $add_style('--navigation-spacing', bbb_resolve_spacing_size_value($navigationSpacing['left'] ?? null, '20px'));
 
         return $styles;
     }
