@@ -14,41 +14,51 @@
 // Navigation Position
 .bbb-slider-nav-position-top-left .bbb-slider-nav-container {
 	top: 0;
+	left: 0;
 	justify-content: flex-start;
 }
 
 .bbb-slider-nav-position-bottom-left .bbb-slider-nav-container {
 	top: auto;
 	bottom: 0;
+	left: 0;
 	justify-content: flex-start;
 }
 
 .bbb-slider-nav-position-top-right .bbb-slider-nav-container {
 	top: 0;
+	right: 0;
 	justify-content: flex-end;
 }
 
 .bbb-slider-nav-position-bottom-right .bbb-slider-nav-container {
 	top: auto;
 	bottom: 0;
+	right: 0;
 	justify-content: flex-end;
 }
 
 .bbb-slider-nav-position-top-center .bbb-slider-nav-container {
 	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
 	justify-content: center;
 }
 
 .bbb-slider-nav-position-bottom-center .bbb-slider-nav-container {
 	top: auto;
 	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
 	justify-content: center;
 }
 
 .bbb-slider-nav-position-center .bbb-slider-nav-container,
 .bbb-slider-nav-position-center-center .bbb-slider-nav-container {
-	transform: translateY(-50%);
+	width: 100% !important;
 	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) !important;
 	justify-content: space-between;
 	margin-left: 0 !important;
 	margin-right: 0 !important;
@@ -58,11 +68,20 @@
 .bbb-slider-nav-position-center .bbb-slider-nav-container .swiper-button-prev,
 .bbb-slider-nav-position-center-center .bbb-slider-nav-container .swiper-button-prev {
 	margin-left: var(--navigation-offset-left) !important;
+	position: absolute !important;
+    left: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%);
 }
 
 .bbb-slider-nav-position-center .bbb-slider-nav-container .swiper-button-next,
 .bbb-slider-nav-position-center-center .bbb-slider-nav-container .swiper-button-next {
 	margin-right: var(--navigation-offset-right) !important;
+	position: absolute !important;
+    right: 0 !important;
+	left: auto !important;
+    top: 50% !important;
+    transform: translateY(-50%);
 }
 
 // Pagination Position
@@ -110,9 +129,7 @@
 	.bbb-slider-nav-container {
 		display: flex;
 		align-items: center;
-		width: 100%;
-		transform: translateX(-50%);
-		left: 50%;
+		width: max-content;
 		gap: var(--navigation-spacing);
 		position: absolute;
 		margin-top: var(--navigation-offset-top);

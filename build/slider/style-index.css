@@ -869,42 +869,73 @@ button.swiper-pagination-bullet {
 
 .bbb-slider-nav-position-top-left .bbb-slider-nav-container {
   top: 0;
+  left: 0;
   justify-content: flex-start;
 }
 
 .bbb-slider-nav-position-bottom-left .bbb-slider-nav-container {
   top: auto;
   bottom: 0;
+  left: 0;
   justify-content: flex-start;
 }
 
 .bbb-slider-nav-position-top-right .bbb-slider-nav-container {
   top: 0;
+  right: 0;
   justify-content: flex-end;
 }
 
 .bbb-slider-nav-position-bottom-right .bbb-slider-nav-container {
   top: auto;
   bottom: 0;
+  right: 0;
   justify-content: flex-end;
 }
 
 .bbb-slider-nav-position-top-center .bbb-slider-nav-container {
   top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   justify-content: center;
 }
 
 .bbb-slider-nav-position-bottom-center .bbb-slider-nav-container {
   top: auto;
   bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   justify-content: center;
 }
 
 .bbb-slider-nav-position-center .bbb-slider-nav-container,
 .bbb-slider-nav-position-center-center .bbb-slider-nav-container {
-  transform: translateY(-50%);
+  width: 100% !important;
   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
   justify-content: space-between;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.bbb-slider-nav-position-center .bbb-slider-nav-container .swiper-button-prev,
+.bbb-slider-nav-position-center-center .bbb-slider-nav-container .swiper-button-prev {
+  margin-left: var(--navigation-offset-left) !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%);
+}
+
+.bbb-slider-nav-position-center .bbb-slider-nav-container .swiper-button-next,
+.bbb-slider-nav-position-center-center .bbb-slider-nav-container .swiper-button-next {
+  margin-right: var(--navigation-offset-right) !important;
+  position: absolute !important;
+  right: 0 !important;
+  left: auto !important;
+  top: 50% !important;
+  transform: translateY(-50%);
 }
 
 .bbb-slider-pag-position-top-left .swiper-pagination {
@@ -945,26 +976,28 @@ button.swiper-pagination-bullet {
 }
 .wp-block-blablablocks-slider .swiper .swiper-wrapper {
   gap: 0;
+  z-index: 100;
 }
 .wp-block-blablablocks-slider .swiper .bbb-slider-nav-container {
   display: flex;
   align-items: center;
-  width: 100%;
-  transform: translateX(-50%);
-  left: 50%;
+  width: -moz-max-content;
+  width: max-content;
   gap: var(--navigation-spacing);
   position: absolute;
   margin-top: var(--navigation-offset-top);
   margin-bottom: var(--navigation-offset-bottom);
   margin-left: var(--navigation-offset-left);
   margin-right: var(--navigation-offset-right);
-  z-index: 1000;
+  z-index: 10000;
 }
 .wp-block-blablablocks-slider .swiper .swiper-button-prev,
 .wp-block-blablablocks-slider .swiper .swiper-button-next {
   position: relative;
   left: 0;
   right: 0;
+  margin: 0;
+  top: 0;
   color: var(--navigation-arrow-color, var(--swiper-theme-color));
   background-color: var(--navigation-background-color);
   border-radius: var(--navigation-border-radius);
@@ -981,6 +1014,7 @@ button.swiper-pagination-bullet {
   margin-bottom: var(--pagination-offset-bottom);
   margin-left: var(--pagination-offset-left);
   display: flex;
+  z-index: 10000;
 }
 .wp-block-blablablocks-slider .swiper .swiper-pagination-bullet {
   width: var(--pagination-size);
