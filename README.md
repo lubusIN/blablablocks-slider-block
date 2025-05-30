@@ -28,7 +28,7 @@ Clone the repository to your local system:
 git clone git@github.com:lubusIN/blablablocks-slider-block.git 
 ```
 
-### 2. Go to package folder
+### 2. Go to plugin folder
 
 ```bash
 cd blablablocks-slider-block
