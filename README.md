@@ -62,14 +62,16 @@ npx @wp-now/wp-now start
 
 [LUBUS](http://lubus.in) is a web design agency based in Mumbai.
 
-<img src="https://user-images.githubusercontent.com/1039236/40877801-3fa8ccf6-66a4-11e8-8f42-19ed4e883ce9.png" />
+<a href="https://cal.com/lubus">
+<img src="https://raw.githubusercontent.com/lubusIN/.github/refs/heads/main/profile/banner.png" />
+</a>
 
 ## Credits
 
 <a href="https://github.com/lubusIN/blablablocks-slider-block/graphs/contributors">
-  <img height="36px" src="https://contrib.rocks/image?repo=lubusIN/blablablocks-slider-block" />
+  <img height="36px" src="https://contrib.rocks/image?repo=lubusIN/blablablocks-slider-block"/>
 </a>
 
 ## License
 
-BlaBlaBlocks Slider Block is open-sourced plugin licensed under the [MIT license](LICENSE)
+BlaBlaBlocks Slider Block is an open-sourced plugin licensed under the [MIT license](LICENSE)
