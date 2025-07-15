@@ -20,13 +20,6 @@ BlaBlaBlocks Slider Block is a WordPress plugin built specifically for the Block
 * **Ready-to-use Templates** – ship with multiple prebuilt layouts you can insert and customize.  
 * **Editor Compatibility** – fully integrated with the Block Editor’s UI and server-side rendering pipeline.
 
-== Installation ==
-1. Download the latest zip from GitHub or WordPress.org.  
-2. In your dashboard, go to **Plugins &rarr; Add New** and click **Upload Plugin**.  
-3. Upload `blablablocks-slider-block.zip` and click **Install Now**.  
-4. Activate **BlaBlaBlocks Slider Block** from your **Plugins** list.  
-5. Add a **Slider** block to any post or page, configure settings in the sidebar, and publish.
-
 == Screenshots ==
 1. **Editor & Settings** – tweak your slider’s layout and behavior right in the sidebar.
 2. **Responsive** – previews showing the slider auto‑adjusting across viewports.
