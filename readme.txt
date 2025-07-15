@@ -26,6 +26,20 @@ BlaBlaBlocks Slider Block is a WordPress plugin built specifically for the Block
 3. **Template Library** – modal showcasing multiple ready‑to‑use slider designs.
 4. **Frontend** – See exactly how your slider looks on your site.
 
+== Installation ==
+You can install this plugin either automatically through the WordPress admin or manually via FTP.
+
+= Automatic Installation =
+
+1. Log in to your WordPress dashboard.
+2. Navigate to Plugins > Add New.
+3. In the search field, type “BlaBlaBlocks Slider Block”, then hit Enter or click Search Plugins.
+4. Click Install Now, then Activate.
+
+= Manual Installation =
+
+Manual installation method requires downloading the BlaBlaBlocks Slider Block plugin and uploading it to your web server via your favorite FTP application. The WordPress codex contains [instructions on how to do this here](https://wordpress.org/support/article/managing-plugins/#manual-plugin-installation).
+
 == Changelog ==
 = 1.1.0 =
 * Added Position Configuration options for pagination and navigation placement.  
@@ -44,4 +58,4 @@ BlaBlaBlocks Slider Block is a WordPress plugin built specifically for the Block
 * Improved slider accessibility and refined default styling. :contentReference[oaicite:2]{index=2}
 
 = 1.0.0 =
-* Initial release 🎉
+Initial release 🎉
