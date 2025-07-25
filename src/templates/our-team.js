@@ -3,6 +3,8 @@
  */
 import { __ } from '@wordpress/i18n';
 
+const baseImageUrl = typeof BlablablocksData !== 'undefined' ? BlablablocksData.assetsUrl : '';
+
 const OurTeam = {
     name: 'our-team',
     title: __('Our Team', 'blablablocks-slider-block'),
@@ -22,17 +24,17 @@ const OurTeam = {
             <div style="height:var(--wp--preset--spacing--30)" aria-hidden="true" class="wp-block-spacer"></div>
             <!-- /wp:spacer -->
 
-            <!-- wp:blablablocks/slider {"slidesPerView":{"desktop":3,"tablet":1,"mobile":1,"activeDevice":"mobile"},"slidesSpacing":{"desktop":30,"tablet":20,"mobile":10,"activeDevice":"mobile"},"navigation":{"desktop":true,"tablet":true,"mobile":true,"activeDevice":"mobile"},"pagination":{"desktop":false,"tablet":true,"mobile":false,"activeDevice":"mobile"},"navigationOffset":{"right":"-20px","left":"-20px"},"navigationPosition":"center center","align":"wide","style":{"spacing":{"padding":{"top":"0px","bottom":"0px","left":"5vw","right":"5vw"}}}} -->
+            <!-- wp:blablablocks/slider {"slidesPerView":{"desktop":3,"tablet":1,"mobile":1,"activeDevice":"desktop"},"pagination":{"desktop":false,"tablet":true,"mobile":false,"activeDevice":"desktop"},"navigationOffset":{"right":"-20px","left":"-20px"},"navigationPosition":"center center","align":"wide","style":{"spacing":{"padding":{"top":"0px","bottom":"0px","left":"5vw","right":"5vw"}}}} -->
             <!-- wp:blablablocks/slide -->
-            <div class="wp-block-blablablocks-slide swiper-slide"><!-- wp:image {"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","className":"is-style-rounded"} -->
-            <figure class="wp-block-image size-full is-style-rounded"><img alt="" style="aspect-ratio:1;object-fit:cover"/></figure>
+            <div class="wp-block-blablablocks-slide swiper-slide"><!-- wp:image {"id":582,"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","className":"is-style-rounded"} -->
+            <figure class="wp-block-image size-full is-style-rounded"><img src="${baseImageUrl}/templates/our-team/francesca.jpeg" alt="" class="wp-image-582" style="aspect-ratio:1;object-fit:cover"/></figure>
             <!-- /wp:image -->
 
             <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|0"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap","justifyContent":"center"}} -->
             <div class="wp-block-group"><!-- wp:paragraph {"align":"center","fontSize":"small"} -->
             <p class="has-text-align-center has-small-font-size">
-                                <strong>Francesca Piovani</strong>
-                            </p>
+                                            <strong>Francesca Piovani</strong>
+                                        </p>
             <!-- /wp:paragraph -->
 
             <!-- wp:paragraph {"align":"center","fontSize":"small"} -->
@@ -42,15 +44,15 @@ const OurTeam = {
             <!-- /wp:blablablocks/slide -->
 
             <!-- wp:blablablocks/slide -->
-            <div class="wp-block-blablablocks-slide swiper-slide"><!-- wp:image {"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","className":"is-style-rounded"} -->
-            <figure class="wp-block-image size-full is-style-rounded"><img alt="" style="aspect-ratio:1;object-fit:cover"/></figure>
+            <div class="wp-block-blablablocks-slide swiper-slide"><!-- wp:image {"id":581,"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","className":"is-style-rounded"} -->
+            <figure class="wp-block-image size-full is-style-rounded"><img src="${baseImageUrl}/templates/our-team/rhye.jpeg" alt="" class="wp-image-581" style="aspect-ratio:1;object-fit:cover"/></figure>
             <!-- /wp:image -->
 
             <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|0"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center","flexWrap":"nowrap"}} -->
             <div class="wp-block-group"><!-- wp:paragraph {"align":"center","fontSize":"small"} -->
             <p class="has-text-align-center has-small-font-size">
-                                <strong>Rhye Moore</strong>
-                            </p>
+                                            <strong>Rhye Moore</strong>
+                                        </p>
             <!-- /wp:paragraph -->
 
             <!-- wp:paragraph {"align":"center","fontSize":"small"} -->
@@ -60,15 +62,15 @@ const OurTeam = {
             <!-- /wp:blablablocks/slide -->
 
             <!-- wp:blablablocks/slide -->
-            <div class="wp-block-blablablocks-slide swiper-slide"><!-- wp:image {"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","className":"is-style-rounded"} -->
-            <figure class="wp-block-image size-full is-style-rounded"><img alt="" style="aspect-ratio:1;object-fit:cover"/></figure>
+            <div class="wp-block-blablablocks-slide swiper-slide"><!-- wp:image {"id":579,"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","className":"is-style-rounded"} -->
+            <figure class="wp-block-image size-full is-style-rounded"><img src="${baseImageUrl}/templates/our-team/helga.jpeg" alt="" class="wp-image-579" style="aspect-ratio:1;object-fit:cover"/></figure>
             <!-- /wp:image -->
 
             <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|0"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center","flexWrap":"nowrap"}} -->
             <div class="wp-block-group"><!-- wp:paragraph {"align":"center","fontSize":"small"} -->
             <p class="has-text-align-center has-small-font-size">
-                                <strong>Helga Steiner</strong>
-                            </p>
+                                            <strong>Helga Steiner</strong>
+                                        </p>
             <!-- /wp:paragraph -->
 
             <!-- wp:paragraph {"align":"center","fontSize":"small"} -->
@@ -78,15 +80,15 @@ const OurTeam = {
             <!-- /wp:blablablocks/slide -->
 
             <!-- wp:blablablocks/slide -->
-            <div class="wp-block-blablablocks-slide swiper-slide"><!-- wp:image {"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","className":"is-style-rounded"} -->
-            <figure class="wp-block-image size-full is-style-rounded"><img alt="" style="aspect-ratio:1;object-fit:cover"/></figure>
+            <div class="wp-block-blablablocks-slide swiper-slide"><!-- wp:image {"id":580,"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","className":"is-style-rounded"} -->
+            <figure class="wp-block-image size-full is-style-rounded"><img src="${baseImageUrl}/templates/our-team/ivan.jpeg" alt="" class="wp-image-580" style="aspect-ratio:1;object-fit:cover"/></figure>
             <!-- /wp:image -->
 
             <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|0"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap","justifyContent":"center"}} -->
             <div class="wp-block-group"><!-- wp:paragraph {"align":"center","fontSize":"small"} -->
             <p class="has-text-align-center has-small-font-size">
-                                <strong>Ivan Lawrence</strong>
-                            </p>
+                                            <strong>Ivan Lawrence</strong>
+                                        </p>
             <!-- /wp:paragraph -->
 
             <!-- wp:paragraph {"align":"center","fontSize":"small"} -->
