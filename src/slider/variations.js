@@ -11,8 +11,8 @@ import { cover, gallery, mediaAndText } from '@wordpress/icons';
 const variations = [
 	{
 		name: 'blank-carousel',
-		title: __( 'Blank Carousel', 'blablablocks-slider-block' ),
-		description: __( 'Blank Carousel', 'blablablocks-slider-block' ),
+		title: __('Blank Carousel', 'blablablocks-slider-block'),
+		description: __('Blank Carousel', 'blablablocks-slider-block'),
 		icon: (
 			<SVG
 				xmlns="http://www.w3.org/2000/svg"
@@ -32,29 +32,29 @@ const variations = [
 			},
 		},
 		innerBlocks: [
-			[ 'blablablocks/slide' ],
-			[ 'blablablocks/slide' ],
-			[ 'blablablocks/slide' ],
-			[ 'blablablocks/slide' ],
+			['blablablocks/slide'],
+			['blablablocks/slide'],
+			['blablablocks/slide'],
+			['blablablocks/slide'],
 		],
-		scope: [ 'block' ],
+		scope: ['block'],
 	},
 	{
 		name: 'hero-slider',
-		title: __( 'Hero', 'blablablocks-slider-block' ),
-		description: __( 'Hero', 'blablablocks-slider-block' ),
+		title: __('Hero', 'blablablocks-slider-block'),
+		description: __('Hero', 'blablablocks-slider-block'),
 		icon: cover,
 		innerBlocks: [
-			[ 'blablablocks/slide', {}, [ [ 'core/cover' ] ] ],
-			[ 'blablablocks/slide', {}, [ [ 'core/cover' ] ] ],
-			[ 'blablablocks/slide', {}, [ [ 'core/cover' ] ] ],
+			['blablablocks/slide', {}, [['core/cover']]],
+			['blablablocks/slide', {}, [['core/cover']]],
+			['blablablocks/slide', {}, [['core/cover']]],
 		],
-		scope: [ 'block' ],
+		scope: ['block'],
 	},
 	{
 		name: 'images-slider',
-		title: __( 'Image Slider', 'blablablocks-slider-block' ),
-		description: __( 'Image Slider', 'blablablocks-slider-block' ),
+		title: __('Image Slider', 'blablablocks-slider-block'),
+		description: __('Image Slider', 'blablablocks-slider-block'),
 		icon: gallery,
 		attributes: {
 			slidesPerView: {
@@ -71,9 +71,6 @@ const variations = [
 				[
 					[
 						'core/image',
-						{
-							url: `https://picsum.photos/seed/${ Math.random() }/800/600`,
-						},
 					],
 				],
 			],
@@ -83,9 +80,6 @@ const variations = [
 				[
 					[
 						'core/image',
-						{
-							url: `https://picsum.photos/seed/${ Math.random() }/800/600`,
-						},
 					],
 				],
 			],
@@ -95,9 +89,6 @@ const variations = [
 				[
 					[
 						'core/image',
-						{
-							url: `https://picsum.photos/seed/${ Math.random() }/800/600`,
-						},
 					],
 				],
 			],
@@ -107,26 +98,23 @@ const variations = [
 				[
 					[
 						'core/image',
-						{
-							url: `https://picsum.photos/seed/${ Math.random() }/800/600`,
-						},
 					],
 				],
 			],
 		],
-		scope: [ 'block' ],
+		scope: ['block'],
 	},
 	{
 		name: 'media-text-slider',
-		title: __( 'Media and Text', 'blablablocks-slider-block' ),
-		description: __( 'Media & Text', 'blablablocks-slider-block' ),
+		title: __('Media and Text', 'blablablocks-slider-block'),
+		description: __('Media & Text', 'blablablocks-slider-block'),
 		icon: mediaAndText,
 		innerBlocks: [
-			[ 'blablablocks/slide', {}, [ [ 'core/media-text' ] ] ],
-			[ 'blablablocks/slide', {}, [ [ 'core/media-text' ] ] ],
-			[ 'blablablocks/slide', {}, [ [ 'core/media-text' ] ] ],
+			['blablablocks/slide', {}, [['core/media-text']]],
+			['blablablocks/slide', {}, [['core/media-text']]],
+			['blablablocks/slide', {}, [['core/media-text']]],
 		],
-		scope: [ 'block' ],
+		scope: ['block'],
 	},
 ];
 

@@ -10,6 +10,10 @@
  * @package blablablocks-slider-block
  */
 
+if (! defined('ABSPATH')) {
+    exit; // Exit if accessed directly.
+}
+
 /**
  * Resolves a spacing size value into a usable CSS value.
  *
@@ -17,8 +21,8 @@
  * @param mixed $defaultValue The default value.
  * @return string A valid CSS spacing size value.
  */
-if (!function_exists('bbb_resolve_spacing_size_value')) {
-    function bbb_resolve_spacing_size_value($value, $defaultValue = '0px')
+if (!function_exists('blabslbl_resolve_spacing_size_value')) {
+    function blabslbl_resolve_spacing_size_value($value, $defaultValue = '0px')
     {
         if (is_string($value)) {
             if (strpos($value, 'var:') === 0) {
@@ -46,8 +50,8 @@ if (!function_exists('bbb_resolve_spacing_size_value')) {
  * @param mixed $default_value The default value.
  * @return string A valid CSS border-radius value.
  */
-if (!function_exists('bbb_get_border_radius_styles')) {
-    function bbb_get_border_radius_styles($border_radius, $default_value = '0px')
+if (!function_exists('blabslbl_get_border_radius_styles')) {
+    function blabslbl_get_border_radius_styles($border_radius, $default_value = '0px')
     {
         if (is_string($border_radius)) {
             return $border_radius;
@@ -68,8 +72,8 @@ if (!function_exists('bbb_get_border_radius_styles')) {
  * @param array $attributes The attributes used to customize navigation styles.
  * @return array An associative array with CSS variable definitions for the navigation.
  */
-if (!function_exists('bbb_generate_navigation_styles')) {
-    function bbb_generate_navigation_styles($attributes = [])
+if (!function_exists('blabslbl_generate_navigation_styles')) {
+    function blabslbl_generate_navigation_styles($attributes = [])
     {
         $styles = [];
 
@@ -91,14 +95,14 @@ if (!function_exists('bbb_generate_navigation_styles')) {
 
         // Navigation sizing
         $add_style('--swiper-navigation-size', $attributes['navigationSize'] ?? null, '40px');
-        $add_style('--navigation-border-radius', bbb_get_border_radius_styles($attributes['navigationBorderRadius'] ?? null, '4px'));
+        $add_style('--navigation-border-radius', blabslbl_get_border_radius_styles($attributes['navigationBorderRadius'] ?? null, '4px'));
 
         // Navigation padding
         $navigation_padding = $attributes['navigationPadding'] ?? [];
-        $add_style('--navigation-padding-top', bbb_resolve_spacing_size_value($navigation_padding['top'] ?? null, '0px'));
-        $add_style('--navigation-padding-right', bbb_resolve_spacing_size_value($navigation_padding['right'] ?? null, '0px'));
-        $add_style('--navigation-padding-bottom', bbb_resolve_spacing_size_value($navigation_padding['bottom'] ?? null, '0px'));
-        $add_style('--navigation-padding-left', bbb_resolve_spacing_size_value($navigation_padding['left'] ?? null, '0px'));
+        $add_style('--navigation-padding-top', blabslbl_resolve_spacing_size_value($navigation_padding['top'] ?? null, '0px'));
+        $add_style('--navigation-padding-right', blabslbl_resolve_spacing_size_value($navigation_padding['right'] ?? null, '0px'));
+        $add_style('--navigation-padding-bottom', blabslbl_resolve_spacing_size_value($navigation_padding['bottom'] ?? null, '0px'));
+        $add_style('--navigation-padding-left', blabslbl_resolve_spacing_size_value($navigation_padding['left'] ?? null, '0px'));
 
         // Pagination styles
         $pagination_color = $attributes['paginationColor'] ?? [];
@@ -108,27 +112,27 @@ if (!function_exists('bbb_generate_navigation_styles')) {
 
         // Pagination offset
         $pagination_offset = $attributes['paginationOffset'] ?? [];
-        $add_style('--pagination-offset-top', bbb_resolve_spacing_size_value($pagination_offset['top'] ?? null, '0px'));
-        $add_style('--pagination-offset-right', bbb_resolve_spacing_size_value($pagination_offset['right'] ?? null));
-        $add_style('--pagination-offset-bottom', bbb_resolve_spacing_size_value($pagination_offset['bottom'] ?? null, '0px'));
-        $add_style('--pagination-offset-left', bbb_resolve_spacing_size_value($pagination_offset['left'] ?? null));
+        $add_style('--pagination-offset-top', blabslbl_resolve_spacing_size_value($pagination_offset['top'] ?? null, '0px'));
+        $add_style('--pagination-offset-right', blabslbl_resolve_spacing_size_value($pagination_offset['right'] ?? null));
+        $add_style('--pagination-offset-bottom', blabslbl_resolve_spacing_size_value($pagination_offset['bottom'] ?? null, '0px'));
+        $add_style('--pagination-offset-left', blabslbl_resolve_spacing_size_value($pagination_offset['left'] ?? null));
 
         // Navigation offset
         $navigation_offset = $attributes['navigationOffset'] ?? [];
         $navigationSpacing = $attributes['navigationSpacing'] ?? [];
-        $add_style('--navigation-offset-top', bbb_resolve_spacing_size_value($navigation_offset['top'] ?? null, '0px'));
-        $add_style('--navigation-offset-right', bbb_resolve_spacing_size_value($navigation_offset['right'] ?? null, '0px'));
-        $add_style('--navigation-offset-bottom', bbb_resolve_spacing_size_value($navigation_offset['bottom'] ?? null));
-        $add_style('--navigation-offset-left', bbb_resolve_spacing_size_value($navigation_offset['left'] ?? null, '0px'));
-       
-        $add_style('--navigation-spacing', bbb_resolve_spacing_size_value($navigationSpacing['left'] ?? null, '20px'));
+        $add_style('--navigation-offset-top', blabslbl_resolve_spacing_size_value($navigation_offset['top'] ?? null, '0px'));
+        $add_style('--navigation-offset-right', blabslbl_resolve_spacing_size_value($navigation_offset['right'] ?? null, '0px'));
+        $add_style('--navigation-offset-bottom', blabslbl_resolve_spacing_size_value($navigation_offset['bottom'] ?? null));
+        $add_style('--navigation-offset-left', blabslbl_resolve_spacing_size_value($navigation_offset['left'] ?? null, '0px'));
+
+        $add_style('--navigation-spacing', blabslbl_resolve_spacing_size_value($navigationSpacing['left'] ?? null, '20px'));
 
         return $styles;
     }
 }
 
 // Generate navigation styles
-$navigation_styles = bbb_generate_navigation_styles($attributes);
+$navigation_styles = blabslbl_generate_navigation_styles($attributes);
 
 // Convert styles array to inline style string
 $style_string = '';

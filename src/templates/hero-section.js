@@ -3,14 +3,16 @@
  */
 import { __ } from '@wordpress/i18n';
 
+const baseImageUrl = typeof BlablablocksData !== 'undefined' ? BlablablocksData.assetsUrl : '';
+
 const HeroSection = {
-	name: 'hero-section',
-	title: __( 'Hero Section', 'blablablocks-slider-block' ),
-	content: `
+    name: 'hero-section',
+    title: __('Hero Section', 'blablablocks-slider-block'),
+    content: `
             <!-- wp:blablablocks/slider {"navigation":{"desktop":true,"tablet":false,"mobile":false,"activeDevice":"desktop"},"loop":true,"navigationColor":{"arrowColor":{"default":"#fbfbfb","hover":"#ffffff"}},"navigationOffset":{"right":"var:preset|spacing|20","left":"var:preset|spacing|20"},"paginationSize":"0.7rem","paginationOffset":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20"},"paginationPosition":"bottom center","paginationColor":{"activeColor":{"default":"#ffffff"}},"metadata":{"name":"Hero Section"},"align":"full","className":"wp-block-blablablocks-slider alignfull wp-block-lubus-slider","style":{"spacing":{"padding":{"top":"0px","bottom":"0px","left":"0px","right":"0px"}}}} -->
             <!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
-            <div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:cover {"url":"https://dotcompatterns.files.wordpress.com/2024/01/paint-wide-3.jpg","id":13691,"dimRatio":50,"isUserOverlayColor":false,"minHeight":500,"className":"alignfull is-style-default","style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
-            <div class="wp-block-cover alignfull is-style-default" style="margin-top:0;margin-bottom:0;padding-right:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50);min-height:500px"><img class="wp-block-cover__image-background wp-image-13691" alt="" src="https://dotcompatterns.files.wordpress.com/2024/01/paint-wide-3.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"var:preset|spacing|70"} -->
+            <div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:cover {"url":"${baseImageUrl}/templates/hero-section/paint-wide-3.jpeg","id":13691,"dimRatio":50,"isUserOverlayColor":false,"minHeight":500,"className":"alignfull is-style-default","style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
+            <div class="wp-block-cover alignfull is-style-default" style="margin-top:0;margin-bottom:0;padding-right:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50);min-height:500px"><img class="wp-block-cover__image-background wp-image-13691" alt="" src="${baseImageUrl}/templates/hero-section/paint-wide-3.jpeg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"var:preset|spacing|70"} -->
             <div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
             <!-- /wp:spacer -->
 
@@ -37,8 +39,8 @@ const HeroSection = {
             <!-- /wp:blablablocks/slide -->
 
             <!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
-            <div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:cover {"url":"https://dotcompatterns.files.wordpress.com/2024/01/paint-wide-3.jpg","id":13691,"dimRatio":50,"isUserOverlayColor":false,"minHeight":500,"className":"alignfull is-style-default","style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
-            <div class="wp-block-cover alignfull is-style-default" style="margin-top:0;margin-bottom:0;padding-right:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50);min-height:500px"><img class="wp-block-cover__image-background wp-image-13691" alt="" src="https://dotcompatterns.files.wordpress.com/2024/01/paint-wide-3.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"var:preset|spacing|70"} -->
+            <div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:cover {"url":"${baseImageUrl}/templates/hero-section/paint-wide-3.jpeg","id":13691,"dimRatio":50,"isUserOverlayColor":false,"minHeight":500,"className":"alignfull is-style-default","style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
+            <div class="wp-block-cover alignfull is-style-default" style="margin-top:0;margin-bottom:0;padding-right:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50);min-height:500px"><img class="wp-block-cover__image-background wp-image-13691" alt="" src="${baseImageUrl}/templates/hero-section/paint-wide-3.jpeg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"var:preset|spacing|70"} -->
             <div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
             <!-- /wp:spacer -->
 

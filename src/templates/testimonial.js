@@ -3,9 +3,11 @@
  */
 import { __ } from '@wordpress/i18n';
 
+const baseImageUrl = typeof BlablablocksData !== 'undefined' ? BlablablocksData.assetsUrl : '';
+
 const Testimonial = {
 	name: 'testimonial',
-	title: __( 'Testimonial', 'blablablocks-slider-block' ),
+	title: __('Testimonial', 'blablablocks-slider-block'),
 	content: `
         	<!-- wp:group {"metadata":{"name":"Testimonial"},"align":"full","style":{"spacing":{"blockGap":"0px","padding":{"left":"2vw","right":"2vw","top":"8vw","bottom":"8vw"}}},"layout":{"type":"default"}} -->
 			<div class="wp-block-group alignfull" style="padding-top:8vw;padding-right:2vw;padding-bottom:8vw;padding-left:2vw"><!-- wp:blablablocks/slider {"loop":true,"navigationSize":"2.15rem","navigationSpacing":{"right":"var:preset|spacing|30","left":"var:preset|spacing|30"},"navigationPosition":"center center","paginationOffset":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"className":"wp-block-blablablocks-slider wp-block-lubus-slider","style":{"spacing":{"padding":{"top":"40px","bottom":"40px","right":"10vw","left":"10vw"}}}} -->
@@ -16,11 +18,11 @@ const Testimonial = {
 			<!-- /wp:heading -->
 
 			<!-- wp:image {"id":2510,"sizeSlug":"full","linkDestination":"none","align":"center"} -->
-			<figure class="wp-block-image aligncenter size-full"><img src="https://rollingnames.com/wp-content/uploads/2023/08/quote.png" alt="" class="wp-image-2510"/></figure>
+			<figure class="wp-block-image aligncenter size-full"><img src="${baseImageUrl}/templates/testimonial/quote.png" alt="" class="wp-image-2510"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:image {"width":"100px","height":"100px","scale":"cover","sizeSlug":"large","align":"center","style":{"border":{"radius":"100px"}}} -->
-			<figure class="wp-block-image aligncenter size-large is-resized has-custom-border"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/01/paint-small.jpg" alt="" style="border-radius:100px;object-fit:cover;width:100px;height:100px"/></figure>
+			<figure class="wp-block-image aligncenter size-large is-resized has-custom-border"><img src="${baseImageUrl}/templates/testimonial/nakamura.jpeg" alt="" style="border-radius:100px;object-fit:cover;width:100px;height:100px"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#8a8a8a"},"typography":{"fontSize":"20px","fontStyle":"normal","fontWeight":"300","lineHeight":2,"letterSpacing":"0px"}},"fontFamily":"montserrat"} -->
@@ -40,11 +42,11 @@ const Testimonial = {
 			<!-- /wp:heading -->
 
 			<!-- wp:image {"id":2510,"sizeSlug":"full","linkDestination":"none","align":"center"} -->
-			<figure class="wp-block-image aligncenter size-full"><img src="https://rollingnames.com/wp-content/uploads/2023/08/quote.png" alt="" class="wp-image-2510"/></figure>
+			<figure class="wp-block-image aligncenter size-full"><img src="${baseImageUrl}/templates/testimonial/quote.png" alt="" class="wp-image-2510"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:image {"width":"100px","height":"100px","scale":"cover","sizeSlug":"large","align":"center","style":{"border":{"radius":"100px"}}} -->
-			<figure class="wp-block-image aligncenter size-large is-resized has-custom-border"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/01/paint-small.jpg" alt="" style="border-radius:100px;object-fit:cover;width:100px;height:100px"/></figure>
+			<figure class="wp-block-image aligncenter size-large is-resized has-custom-border"><img src="${baseImageUrl}/templates/testimonial/mateo.jpeg" alt="" style="border-radius:100px;object-fit:cover;width:100px;height:100px"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#8a8a8a"},"typography":{"fontSize":"20px","fontStyle":"normal","fontWeight":"300","lineHeight":2,"letterSpacing":"0px"}},"fontFamily":"montserrat"} -->
@@ -64,11 +66,11 @@ const Testimonial = {
 			<!-- /wp:heading -->
 
 			<!-- wp:image {"id":2510,"sizeSlug":"full","linkDestination":"none","align":"center"} -->
-			<figure class="wp-block-image aligncenter size-full"><img src="https://rollingnames.com/wp-content/uploads/2023/08/quote.png" alt="" class="wp-image-2510"/></figure>
+			<figure class="wp-block-image aligncenter size-full"><img src="${baseImageUrl}/templates/testimonial/quote.png" alt="" class="wp-image-2510"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:image {"width":"100px","height":"100px","scale":"cover","sizeSlug":"large","align":"center","style":{"border":{"radius":"100px"}}} -->
-			<figure class="wp-block-image aligncenter size-large is-resized has-custom-border"><img src="https://dotcompatterns.wordpress.com/wp-content/uploads/2024/01/paint-small.jpg" alt="" style="border-radius:100px;object-fit:cover;width:100px;height:100px"/></figure>
+			<figure class="wp-block-image aligncenter size-large is-resized has-custom-border"><img src="${baseImageUrl}/templates/testimonial/lila-patel.jpeg" alt="" style="border-radius:100px;object-fit:cover;width:100px;height:100px"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#8a8a8a"},"typography":{"fontSize":"20px","fontStyle":"normal","fontWeight":"300","lineHeight":2,"letterSpacing":"0px"}},"fontFamily":"montserrat"} -->

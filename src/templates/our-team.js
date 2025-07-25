@@ -4,9 +4,9 @@
 import { __ } from '@wordpress/i18n';
 
 const OurTeam = {
-	name: 'our-team',
-	title: __( 'Our Team', 'blablablocks-slider-block' ),
-	content: `
+    name: 'our-team',
+    title: __('Our Team', 'blablablocks-slider-block'),
+    content: `
             <!-- wp:group {"metadata":{"name":"Our Team","categories":["about"],"patternName":"twentytwentyfour/team-4-col"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}}},"layout":{"type":"constrained"}} -->
             <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)"><!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
             <div class="wp-block-group"><!-- wp:heading {"textAlign":"center","fontSize":"xx-large"} -->

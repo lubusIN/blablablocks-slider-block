@@ -3,9 +3,11 @@
  */
 import { __ } from '@wordpress/i18n';
 
+const baseImageUrl = typeof BlablablocksData !== 'undefined' ? BlablablocksData.assetsUrl : '';
+
 const Features = {
 	name: 'features',
-	title: __( 'Features', 'blablablocks-slider-block' ),
+	title: __('Features', 'blablablocks-slider-block'),
 	content: `
 			<!-- wp:group {"metadata":{"categories":["services"],"name":"Features","patternName":"assembler/services-2"},"align":"full","className":"alignfull is-style-default","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|30","padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"15px","right":"15px"}}},"layout":{"type":"constrained","contentSize":"1280px"}} -->
 			<div class="wp-block-group alignfull is-style-default" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--40);padding-right:15px;padding-bottom:var(--wp--preset--spacing--40);padding-left:15px"><!-- wp:heading {"textAlign":"center","level":1,"align":"wide","style":{"layout":{"selfStretch":"fixed","flexSize":"100%"},"typography":{"fontStyle":"normal","fontWeight":"600"}}} -->
@@ -16,7 +18,7 @@ const Features = {
 			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
 			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
 			<div class="wp-block-group"><!-- wp:image {"scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
-			<figure class="wp-block-image size-large"><img src="https://i0.wp.com/wordpress.org/files/2024/10/design-visual-6-7.png?w=720&amp;ssl=1" alt="" style="object-fit:cover"/></figure>
+			<figure class="wp-block-image size-large"><img src="${baseImageUrl}/templates/features/design.jpeg" alt="" style="object-fit:cover"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
@@ -40,7 +42,7 @@ const Features = {
 			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
 			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
 			<div class="wp-block-group"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
-			<figure class="wp-block-image size-large"><img src="https://i0.wp.com/wordpress.org/files/2024/10/build-visual-6-7.png?w=720&amp;ssl=1" alt=""/></figure>
+			<figure class="wp-block-image size-large"><img src="${baseImageUrl}/templates/features/build.jpeg" alt=""/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
@@ -64,7 +66,7 @@ const Features = {
 			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
 			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
 			<div class="wp-block-group"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
-			<figure class="wp-block-image size-large"><img src="https://i0.wp.com/wordpress.org/files/2024/10/extend-visual-6-7.png?w=720&amp;ssl=1" alt=""/></figure>
+			<figure class="wp-block-image size-large"><img src="${baseImageUrl}/templates/features/extend.jpeg" alt=""/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
@@ -88,7 +90,7 @@ const Features = {
 			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
 			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
 			<div class="wp-block-group"><!-- wp:image {"scale":"cover","sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
-			<figure class="wp-block-image size-large"><img src="https://i0.wp.com/wordpress.org/files/2024/10/design-visual-6-7.png?w=720&amp;ssl=1" alt="" style="object-fit:cover"/></figure>
+			<figure class="wp-block-image size-large"><img src="${baseImageUrl}/templates/features/design.jpeg" alt="" style="object-fit:cover"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
@@ -112,7 +114,7 @@ const Features = {
 			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
 			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
 			<div class="wp-block-group"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
-			<figure class="wp-block-image size-large"><img src="https://i0.wp.com/wordpress.org/files/2024/10/build-visual-6-7.png?w=720&amp;ssl=1" alt=""/></figure>
+			<figure class="wp-block-image size-large"><img src="${baseImageUrl}/templates/features/build.jpeg" alt=""/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
@@ -136,7 +138,7 @@ const Features = {
 			<!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
 			<div class="wp-block-blablablocks-slide swiper-slide wp-block-lubus-slide"><!-- wp:group {"style":{"spacing":{"blockGap":"42px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
 			<div class="wp-block-group"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":"unset"}}} -->
-			<figure class="wp-block-image size-large"><img src="https://i0.wp.com/wordpress.org/files/2024/10/extend-visual-6-7.png?w=720&amp;ssl=1" alt=""/></figure>
+			<figure class="wp-block-image size-large"><img src="${baseImageUrl}/templates/features/extend.jpeg" alt=""/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
