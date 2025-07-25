@@ -43,4 +43,4 @@ function blabslbl_slider_enqueue_editor_assets()
 		]
 	);
 }
-add_action('enqueue_block_editor_assets', 'blabslbl_enqueue_editor_assets');
+add_action('enqueue_block_editor_assets', 'blabslbl_slider_enqueue_editor_assets');
