@@ -20,6 +20,15 @@ BlaBlaBlocks Slider Block is a WordPress plugin built specifically for the Block
 * **Ready-to-use Templates** – ship with multiple prebuilt layouts you can insert and customize.  
 * **Editor Compatibility** – fully integrated with the Block Editor’s UI and server-side rendering pipeline.
 
+=== Open Source and Free ===
+The BlaBlaBlocks Slider Block is open source. Not only is it free to use, but you are also welcome to collaborate and contribute to its development.
+
+- **Source Code:**  
+  [https://github.com/lubusIN/blablablocks-slider-block](https://github.com/lubusIN/blablablocks-slider-block)
+
+- **Report Issues:**  
+  [https://github.com/lubusIN/blablablocks-slider-block/issues](https://github.com/lubusIN/blablablocks-slider-block/issues)
+
 == Screenshots ==
 1. **Editor & Settings** – tweak your slider’s layout and behavior right in the sidebar.
 2. **Responsive** – previews showing the slider auto‑adjusting across viewports.
