@@ -23,9 +23,24 @@ if (! defined('ABSPATH')) {
  * Behind the scenes, it registers also all assets so they can be enqueued
  * through the block editor in the corresponding context.
  */
-function bbb_slider_block_init()
+function blabslbl_slider_block_init()
 {
 	register_block_type(__DIR__ . '/build/slider');
 	register_block_type(__DIR__ . '/build/slide');
 }
-add_action('init', 'bbb_slider_block_init');
+add_action('init', 'blabslbl_slider_block_init');
+
+/**
+ * Enqueue editor assets for the slider block.
+ */
+function blabslbl_slider_enqueue_editor_assets()
+{
+	wp_localize_script(
+		'blablablocks-slider-editor-script',
+		'BlablablocksData',
+		[
+			'assetsUrl' => plugin_dir_url(__FILE__) . 'assets/',
+		]
+	);
+}
+add_action('enqueue_block_editor_assets', 'blabslbl_enqueue_editor_assets');
