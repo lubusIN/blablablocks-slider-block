@@ -5,7 +5,8 @@
 [![Playground Demo Link](https://img.shields.io/badge/Playground_Demo-blue?logo=wordpress&logoColor=%23fff&labelColor=%233858e9&color=%233858e9)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/lubusIN/blablablocks-slider-block/playground/_playground/blueprint-github.json)
 
 ## Overview
-BlaBlaBlocks Slider Block is a WordPress plugin built specifically for the Block Editor, allowing you to create responsive sliders effortlessly. 
+
+BlaBlaBlocks Slider Block is a WordPress plugin built specifically for the Block Editor, allowing you to create responsive sliders effortlessly.
 
 ## Requirements
 
@@ -14,7 +15,7 @@ BlaBlaBlocks Slider Block is a WordPress plugin built specifically for the Block
 
 ## Installation
 
-1. [Download](https://github.com/lubusIN/blablablocks-slider-block/archive/refs/tags/v1.1.0.zip) latest release from GitHub
+1. [Download](https://github.com/lubusIN/blablablocks-slider-block/archive/refs/tags/v1.1.1.zip) latest release from GitHub
 2. Visit `Plugins > Add New`
 3. Upload `blablablocks-slider-block.zip` file
 4. Activate `BlaBlaBlocks Slider Block` from plugins page
@@ -22,10 +23,11 @@ BlaBlaBlocks Slider Block is a WordPress plugin built specifically for the Block
 ## Development
 
 ### 1. Clone the Repository
+
 Clone the repository to your local system:
 
 ```bash
-git clone git@github.com:lubusIN/blablablocks-slider-block.git 
+git clone git@github.com:lubusIN/blablablocks-slider-block.git
 ```
 
 ### 2. Go to plugin folder
@@ -41,6 +43,7 @@ npm install
 ```
 
 ### 4. Build Plugin
+
 Build or start the development environment:
 
 ```bash
@@ -50,11 +53,13 @@ npm run start       # Watch for changes and auto-compile
 ```
 
 ### 5. Launch Playground
+
 Start a local WordPress playground using wp-now:
 
 ```bash
 npx @wp-now/wp-now start
 ```
+
 > [!NOTE]
 > Refer to `package.json` for additional available npm commands.
 
