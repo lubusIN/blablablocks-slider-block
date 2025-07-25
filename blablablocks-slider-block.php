@@ -39,7 +39,7 @@ function blabslbl_slider_enqueue_editor_assets()
 		'blablablocks-slider-editor-script',
 		'BlablablocksData',
 		[
-			'assetsUrl' => plugin_dir_url(__FILE__) . 'assets/',
+			'assetsUrl' => plugin_dir_url(__FILE__) . 'assets',
 		]
 	);
 }
