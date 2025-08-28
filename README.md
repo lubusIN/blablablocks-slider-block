@@ -14,11 +14,16 @@ BlaBlaBlocks Slider Block is a WordPress plugin built specifically for the Block
 - PHP 7.4+
 
 ## Installation
+### Automatic
+1. Go to Plugins → Add New in your WordPress dashboard.
+2. Search for Blablablocks Slider Block.
+3. Click Install Now and then Activate.
 
-1. [Download](https://github.com/lubusIN/blablablocks-slider-block/archive/refs/tags/v1.1.1.zip) latest release from GitHub
-2. Visit `Plugins > Add New`
+### Manual
+1. [Download](https://github.com/lubusIN/blablablocks-slider-block/releases) latest release from GitHub
+2. Visit `Plugins → Add New`
 3. Upload `blablablocks-slider-block.zip` file
-4. Activate `BlaBlaBlocks Slider Block` from plugins page
+4. Activate `BlaBlaBlocks Slider Block` from the plugins page
 
 ## Development
 
