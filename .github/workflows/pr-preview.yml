@@ -5,7 +5,7 @@ on:
     types: [opened, synchronize, closed]
 
 permissions:
-  contents: read
+  contents: write
   pull-requests: write
 
 env:
@@ -34,7 +34,12 @@ jobs:
       - name: Install dependencies
         run: |
           if [ -f "composer.json" ]; then
-            composer install --no-dev --no-interaction --prefer-dist
+            if [ ! -d "vendor" ]; then
+              echo "No vendor directory found. Running composer install..."
+              composer install --no-dev --no-interaction --prefer-dist
+            else
+              echo "Vendor directory already exists. Skipping composer install."
+            fi
           fi
           if [ -f "package.json" ]; then
             npm ci
@@ -62,12 +67,21 @@ jobs:
           # Configure git
           git config --global user.name "$GIT_USER_NAME"
           git config --global user.email "$GIT_USER_EMAIL"
-          # Commit build files
-          git add -f build/ vendor/ || true
+          # Add build artifacts only if they exist
+          if [ -d "build" ]; then
+            git add -f build
+          fi
+
+          if [ -d "vendor" ]; then
+            git add -f vendor
+          fi
+          # Commit & push only if there are changes
           if ! git diff --cached --quiet; then
             git commit -m "Add build files for playground preview"
+            git push origin "$PR_BUILD_BRANCH" --force
+          else
+            echo "Nothing to commit, skipping push."
           fi
-          git push origin "$PR_BUILD_BRANCH" --force
       # R2-based storage (for private repos)
       - name: Setup R2 storage
         if: env.STORAGE_METHOD == 'r2'
