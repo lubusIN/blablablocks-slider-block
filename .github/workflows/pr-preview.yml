@@ -34,7 +34,12 @@ jobs:
       - name: Install dependencies
         run: |
           if [ -f "composer.json" ]; then
-            composer install --no-dev --no-interaction --prefer-dist
+            if [ ! -d "vendor" ]; then
+              echo "No vendor directory found. Running composer install..."
+              composer install --no-dev --no-interaction --prefer-dist
+            else
+              echo "Vendor directory already exists. Skipping composer install."
+            fi
           fi
           if [ -f "package.json" ]; then
             npm ci
