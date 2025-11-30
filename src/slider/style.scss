@@ -9,6 +9,8 @@
 
 .wp-block-blablablocks-slider {
 	position: relative;
+	box-sizing: border-box;
+	contain: inline-size;
 }
 
 // Navigation Position
