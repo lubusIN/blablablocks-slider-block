@@ -18,13 +18,13 @@
 			},
 			"properties": {
 				"desktop": {
-					"type": "integer"
+					"type": "number"
 				},
 				"tablet": {
-					"type": "integer"
+					"type": "number"
 				},
 				"mobile": {
-					"type": "integer"
+					"type": "number"
 				},
 				"activeDevice": {
 					"type": "string"
