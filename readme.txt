@@ -2,9 +2,9 @@
 Contributors:      lubus,ajitbohra,punitv342
 Tags:              slider, slider block, carousel, image slider, gutenberg block
 Requires at least: 6.6
-Tested up to:      6.8
+Tested up to:      6.9
 Requires PHP:      7.4
-Stable tag:        1.1.1
+Stable tag:        1.1.2
 License:           MIT
 License URI:       https://www.gnu.org/licenses/MIT
 
@@ -197,6 +197,11 @@ Yes! BlaBlaBlocks Slider Block is open source and free under the MIT license.
 3. Activate through the **Plugins** screen in WordPress.
 
 == Changelog ==
+
+= 1.1.2 =
+* Added decimal support to `slidesPerView` setting.
+* Bump plugin version to 1.1.2.
+* Update "Tested up to" to 6.9.
 
 = 1.1.1 =
 * Enhanced **Gutenberg slider** performance and transition smoothness.  

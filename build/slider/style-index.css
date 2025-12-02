@@ -865,6 +865,8 @@ button.swiper-pagination-bullet {
 
 .wp-block-blablablocks-slider {
   position: relative;
+  box-sizing: border-box;
+  contain: inline-size;
 }
 
 .bbb-slider-nav-position-top-left .bbb-slider-nav-container {
