@@ -53,6 +53,10 @@ function Placeholder( { clientId, setAttributes } ) {
 	const { createErrorNotice } = useDispatch( noticesStore );
 	const blockProps = useBlockProps();
 
+	const defaultVariation =
+		variations.find( ( variation ) => variation.name === 'hero-slider' ) ||
+		variations[ 0 ];
+
 	const [ step, setStep ] = useState( null );
 	const [ isModalOpen, setIsModalOpen ] = useState( false );
 
@@ -88,7 +92,7 @@ function Placeholder( { clientId, setAttributes } ) {
 
 		if ( validFiles.length === 0 ) {
 			createErrorNotice(
-				__( 'Only image files are allowed.', 'slider-block' ),
+				__( 'Only image files are allowed.', 'blablablocks-slider-block' ),
 				{
 					isDismissible: true,
 				}
@@ -146,7 +150,7 @@ function Placeholder( { clientId, setAttributes } ) {
 				},
 				onError: () => {
 					createErrorNotice(
-						__( 'File upload failed.', 'slider-block' ),
+						__( 'File upload failed.', 'blablablocks-slider-block' ),
 						{
 							isDismissible: true,
 						}
@@ -195,8 +199,8 @@ function Placeholder( { clientId, setAttributes } ) {
 						'blablablocks-slider-block'
 					) }
 					variations={ variations }
-					onSelect={ ( variation = variations[ 1 ] ) => {
-						onSelectVariation( variation );
+					onSelect={ ( variation ) => {
+						onSelectVariation( variation ?? defaultVariation );
 					} }
 					allowSkip
 				/>

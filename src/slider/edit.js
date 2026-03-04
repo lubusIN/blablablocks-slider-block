@@ -3,8 +3,10 @@
  */
 import { __ } from '@wordpress/i18n';
 import { useDispatch, useSelect } from '@wordpress/data';
-import { createBlock } from '@wordpress/blocks';
+import { useEffect } from '@wordpress/element';
+import { createBlock, createBlocksFromInnerBlocksTemplate } from '@wordpress/blocks';
 import {
+	useBlockProps,
 	useInnerBlocksProps,
 	InspectorControls,
 	FontSizePicker,
@@ -15,6 +17,7 @@ import {
 } from '@wordpress/block-editor';
 import {
 	RangeControl,
+	Notice,
 	ToggleControl,
 	ToolbarButton,
 	ToolbarGroup,
@@ -34,11 +37,15 @@ import {
 import Slider from './slider';
 import Placeholder from './placeholder';
 import { ColorControlDropdown, ResponsiveDropdown } from '../components';
+import { generateNavigationStyles } from '../utils/style';
+import { QUERY_TEMPLATE } from './query-template';
 import './editor.scss';
 
 const DEFAULT_BLOCK = {
 	name: 'blablablocks/slide',
 };
+
+// QUERY_TEMPLATE is shared with the Posts Carousel variation.
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -52,16 +59,26 @@ const DEFAULT_BLOCK = {
  * @return {JSX.Element} The component rendering for the block editor.
  */
 export default function Edit({ clientId, attributes, setAttributes }) {
-	const { allowedBlocks } = attributes;
-	const { insertBlock, selectBlock } = useDispatch(blockEditorStore);
+	const isQuerySource = attributes.contentSource === 'query';
+	const { insertBlock, selectBlock, replaceInnerBlocks, updateBlockAttributes } =
+		useDispatch(blockEditorStore);
 
-	const innerBlocksProps = useInnerBlocksProps(
+	const slideInnerBlocksProps = useInnerBlocksProps(
 		{ className: 'swiper-wrapper' },
 		{
 			defaultBlock: DEFAULT_BLOCK,
 			directInsert: true,
 			orientation: 'horizontal',
-			allowedBlocks,
+			allowedBlocks: ['blablablocks/slide'],
+		}
+	);
+
+	const queryInnerBlocksProps = useInnerBlocksProps(
+		{ className: 'bbb-slider-query-inner' },
+		{
+			allowedBlocks: ['core/query'],
+			template: QUERY_TEMPLATE,
+			renderAppender: false,
 		}
 	);
 
@@ -71,7 +88,138 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 		[clientId]
 	);
 
+	const editorDeviceType = useSelect(
+		(wpSelect) => wpSelect('core/editor').getDeviceType(),
+		[]
+	);
+
 	const hasInnerBlocks = innerBlocks.length > 0;
+
+		const queryBlock = innerBlocks.find((block) => block.name === 'core/query');
+		const queryPerPage = queryBlock?.attributes?.query?.perPage;
+		const deviceKey = (editorDeviceType || 'Desktop').toLowerCase();
+		const navigationEnabled = !!attributes?.navigation?.[deviceKey];
+		const paginationEnabled = !!attributes?.pagination?.[deviceKey];
+		const slidesPerViewPreview =
+			attributes.effects === 'fade'
+				? 1
+				: attributes?.slidesPerView?.[deviceKey] ?? 1;
+		const slidesSpacingPreview = attributes?.slidesSpacing?.[deviceKey] ?? 0;
+		const slidesPerViewNumber = Math.max(
+			Number.parseFloat(slidesPerViewPreview) || 1,
+			1
+		);
+		const slidesPerViewInverse = 1 / slidesPerViewNumber;
+		const slidesPerViewGapCount = Math.max(slidesPerViewNumber - 1, 0);
+
+	const slidesPerViewMax = isQuerySource
+		? Math.max(Number.parseInt(queryPerPage, 10) || 10, 1)
+		: Math.max(innerBlocks.length, 1);
+
+	const {
+		children: queryInnerBlocksChildren,
+		...queryInnerBlocksWrapperProps
+	} = queryInnerBlocksProps;
+
+	const navigationStyles = generateNavigationStyles(attributes);
+	const applyPadding =
+		(Number.parseInt(queryPerPage, 10) || 0) >= 2 ? '100px' : '';
+
+	const navPositionClass =
+		'bbb-slider-nav-position-' +
+		(attributes.navigationPosition?.replace(/\s+/g, '-') ?? 'center');
+	const pagPositionClass =
+		'bbb-slider-pag-position-' +
+		(attributes.paginationPosition?.replace(/\s+/g, '-') ??
+			'bottom-center');
+
+		const paginationBulletCount = Math.min(
+			6,
+			Math.max(
+				3,
+				Math.ceil(
+					(Number.parseInt(queryPerPage, 10) || 6) /
+						Math.max(
+							1,
+							attributes?.slidesPerView?.[deviceKey] ?? 1
+						)
+				)
+			)
+		);
+
+		const queryWrapperBlockProps = useBlockProps({
+			className: ['bbb-slider-source-query', navPositionClass, pagPositionClass].join(
+				' '
+			),
+			role: 'region',
+			'aria-roledescription': 'carousel',
+			'aria-label': 'Slider block',
+			style: {
+				...navigationStyles,
+				padding: applyPadding,
+				'--bbb-editor-slides-per-view': slidesPerViewNumber,
+				'--bbb-editor-slides-per-view-inverse': slidesPerViewInverse,
+				'--bbb-editor-slides-per-view-gap-count': slidesPerViewGapCount,
+				'--bbb-editor-space-between': `${slidesSpacingPreview}px`,
+			},
+		});
+
+	useEffect(() => {
+		if (!isQuerySource) {
+			return;
+		}
+
+		const hasExactlyOneQueryChild =
+			innerBlocks.length === 1 && innerBlocks[0]?.name === 'core/query';
+		if (hasExactlyOneQueryChild) {
+			return;
+		}
+
+		const nextBlocks = queryBlock
+			? [queryBlock]
+			: createBlocksFromInnerBlocksTemplate(QUERY_TEMPLATE);
+
+		replaceInnerBlocks(clientId, nextBlocks, true);
+	}, [isQuerySource, clientId, innerBlocks, queryBlock, replaceInnerBlocks]);
+
+	// If a Query Loop is pasted/inserted into a slide-based slider, automatically switch the mode.
+	// This handles the case where the user didn't pick the Posts Carousel variation.
+	useEffect(() => {
+		if (isQuerySource) {
+			return;
+		}
+
+		if (innerBlocks.length !== 1 || innerBlocks[0]?.name !== 'core/query') {
+			return;
+		}
+
+		setAttributes({ contentSource: 'query' });
+	}, [isQuerySource, innerBlocks, setAttributes]);
+
+	useEffect(() => {
+		if (!isQuerySource || !queryBlock?.clientId) {
+			return;
+		}
+
+		const currentLock = queryBlock?.attributes?.lock || {};
+		if (currentLock.move === true && currentLock.remove === true) {
+			return;
+		}
+
+		updateBlockAttributes(queryBlock.clientId, {
+			lock: {
+				...currentLock,
+				move: true,
+				remove: true,
+			},
+		});
+	}, [
+		isQuerySource,
+		queryBlock?.clientId,
+		queryBlock?.attributes?.lock?.move,
+		queryBlock?.attributes?.lock?.remove,
+		updateBlockAttributes,
+	]);
 
 	const addSlide = () => {
 		const block = createBlock('blablablocks/slide');
@@ -113,20 +261,67 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 
 	return hasInnerBlocks ? (
 		<>
-			<Slider
-				clientId={clientId}
-				attributes={attributes}
-				innerBlocksProps={innerBlocksProps}
-				innerBlocks={innerBlocks}
-				setAttributes={setAttributes}
-			/>
-			<BlockControls>
-				<ToolbarGroup>
-					<ToolbarButton onClick={addSlide}>
-						{__('Add Slide', 'blablablocks-slider-block')}
-					</ToolbarButton>
-				</ToolbarGroup>
-			</BlockControls>
+			{isQuerySource ? (
+				<div {...queryWrapperBlockProps}>
+					<Notice status="info" isDismissible={false}>
+						{__(
+							'This carousel is driven by Query Loop. Swiping is available on the front end.',
+							'blablablocks-slider-block'
+						)}
+					</Notice>
+					<div className="swiper">
+						<div {...queryInnerBlocksWrapperProps}>
+							{queryInnerBlocksChildren}
+						</div>
+
+						{navigationEnabled && (
+							<div className="bbb-slider-nav-container">
+								<div className="swiper-button-prev"></div>
+								<div className="swiper-button-next"></div>
+							</div>
+						)}
+
+						{paginationEnabled && (
+							<div className="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal">
+								{Array.from({
+									length: paginationBulletCount,
+								}).map((_, index) => (
+									<span
+										// eslint-disable-next-line react/no-array-index-key
+										key={index}
+										className={
+											'swiper-pagination-bullet' +
+											(index === 0
+												? ' swiper-pagination-bullet-active'
+												: '')
+										}
+									/>
+								))}
+							</div>
+						)}
+					</div>
+				</div>
+			) : (
+				<>
+					<Slider
+						clientId={clientId}
+						attributes={attributes}
+						innerBlocksProps={slideInnerBlocksProps}
+						innerBlocks={innerBlocks}
+						setAttributes={setAttributes}
+					/>
+					<BlockControls>
+						<ToolbarGroup>
+							<ToolbarButton onClick={addSlide}>
+								{__(
+									'Add Slide',
+									'blablablocks-slider-block'
+								)}
+							</ToolbarButton>
+						</ToolbarGroup>
+					</BlockControls>
+				</>
+			)}
 			<InspectorControls>
 				<ToolsPanel
 					label={__('Settings', 'blablablocks-slider-block')}
@@ -171,7 +366,7 @@ export default function Edit({ clientId, attributes, setAttributes }) {
 								}
 								min={1}
 								step={0.1}
-								max={Math.max(innerBlocks.length - 1, 1)}
+								max={slidesPerViewMax}
 								onChange={(value) =>
 									setAttributes({
 										slidesPerView: {

@@ -3,7 +3,9 @@
  */
 import { __ } from '@wordpress/i18n';
 import { Path, SVG } from '@wordpress/components';
-import { cover, gallery, mediaAndText } from '@wordpress/icons';
+import { cover, gallery, mediaAndText, postList } from '@wordpress/icons';
+
+import { QUERY_TEMPLATE } from './query-template';
 
 /**
  * Template option choices for predefined slider layouts.
@@ -38,6 +40,23 @@ const variations = [
 			['blablablocks/slide'],
 		],
 		scope: ['block'],
+	},
+	{
+		name: 'posts-carousel',
+		title: __( 'Posts Carousel', 'blablablocks-slider-block' ),
+		description: __( 'Display posts from a Query Loop as slides.', 'blablablocks-slider-block' ),
+		icon: postList,
+		attributes: {
+			contentSource: 'query',
+			slidesPerView: {
+				desktop: 3,
+				tablet: 1,
+				mobile: 1,
+				activeDevice: 'desktop',
+			},
+		},
+		innerBlocks: QUERY_TEMPLATE,
+		scope: [ 'block' ],
 	},
 	{
 		name: 'hero-slider',

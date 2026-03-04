@@ -4,7 +4,7 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.slide_effects > .components-base-control {
+.slide_effects>.components-base-control {
 	width: 100%;
 }
 
@@ -38,7 +38,7 @@
 	transform: rotate(-90deg);
 }
 
-.slider_color_popover .components-popover__content > div {
+.slider_color_popover .components-popover__content>div {
 	margin: -8px;
 	width: 260px;
 }
@@ -100,7 +100,7 @@
 	margin-top: 2px;
 }
 
-.bbb-slider-navigation-position > div[role="row"]:nth-child(2) > span:not(:nth-child(2)) {
+.bbb-slider-navigation-position>div[role="row"]:nth-child(2)>span:not(:nth-child(2)) {
 	visibility: hidden;
 }
 
@@ -108,6 +108,57 @@
 	grid-template-rows: repeat(2, 1fr) !important;
 }
 
-.bbb-slider-pagination-position > div[role="row"]:nth-child(2) {
+.bbb-slider-pagination-position>div[role="row"]:nth-child(2) {
 	display: none;
+}
+
+// Query Loop editor preview: visually approximate slides-per-view + spacing (no Swiper init)
+.wp-block-blablablocks-slider.bbb-slider-source-query {
+	// The Slider block declares a `layout` support (flex nowrap). When we render a Notice + Swiper
+	// in query mode, that layout can place them side-by-side and shrink the swiper area.
+	// Force a vertical stack and full-width query preview.
+	flex-direction: column !important;
+	align-items: stretch !important;
+
+	>.components-notice {
+		width: 100% !important;
+	}
+
+	>.swiper {
+		width: 100% !important;
+		flex: 1 1 auto !important;
+	}
+
+	.bbb-slider-query-inner,
+	.bbb-slider-query-inner .wp-block-query,
+	.bbb-slider-query-inner .block-editor-block-list__block.wp-block-query {
+		width: 100% !important;
+		max-width: 100% !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+
+	.swiper {
+		overflow: hidden;
+	}
+
+	.bbb-slider-query-inner .wp-block-post-template {
+		display: flex !important;
+		flex-direction: row !important;
+		flex-wrap: nowrap !important;
+		gap: var(--bbb-editor-space-between, 0px) !important;
+		grid-template-columns: none !important;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.bbb-slider-query-inner .wp-block-post-template>* {
+		// Avoid dividing by a CSS variable (some editor contexts can drop the whole value).
+		// We precompute inverse + gap count in JS and only multiply here.
+		$bbb-editor-slide-size: calc((100% - (var(--bbb-editor-slides-per-view-gap-count, 0) * var(--bbb-editor-space-between, 0px))) * var(--bbb-editor-slides-per-view-inverse, 1));
+
+		flex: 0 0 $bbb-editor-slide-size !important;
+		max-width: $bbb-editor-slide-size !important;
+	}
 }

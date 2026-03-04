@@ -182,3 +182,19 @@
 		background: var(--pagination-active-color, var(--swiper-theme-color)) !important;
 	}
 }
+
+// Query Loop (Posts Carousel) compatibility
+.wp-block-blablablocks-slider.bbb-slider-source-query {
+	.wp-block-post-template.swiper-wrapper {
+		display: flex !important;
+		flex-wrap: nowrap !important;
+		gap: 0 !important;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.wp-block-post-template.swiper-wrapper > .swiper-slide {
+		width: auto;
+	}
+}

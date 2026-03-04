@@ -129,7 +129,7 @@ const Slider = memo(
 							( device ) => {
 								const current = updated[ device ] ?? 1;
 								const maxAllowed = Math.max(
-									totalSlides - 1,
+									totalSlides,
 									1
 								); // always minimum of 1
 								const newVal = Math.min( current, maxAllowed ); // auto-restrict if over limit

@@ -105,13 +105,6 @@ export function SwiperInit(
 
 	// Add breakpoints and universal settings if not in the editor
 	if (!isEditor) {
-		parameters.pagination = { enabled: true, clickable: true };
-		parameters.navigation = {
-			enabled: true,
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		};
-
 		parameters.breakpoints = {
 			320: getDeviceSettings(
 				options,
