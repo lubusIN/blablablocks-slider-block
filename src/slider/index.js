@@ -15,7 +15,7 @@ import './style.scss';
 /**
  * Register a slider block
  */
-registerBlockType(metadata.name, {
+registerBlockType( metadata.name, {
 	icon: SliderLogo,
 	/**
 	 * @see ./edit.js
@@ -26,4 +26,4 @@ registerBlockType(metadata.name, {
 	 * @see ./save.js
 	 */
 	save,
-});
+} );

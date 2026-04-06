@@ -35,4 +35,3 @@ export const QUERY_TEMPLATE = [
 		],
 	],
 ];
-

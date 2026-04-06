@@ -92,7 +92,10 @@ function Placeholder( { clientId, setAttributes } ) {
 
 		if ( validFiles.length === 0 ) {
 			createErrorNotice(
-				__( 'Only image files are allowed.', 'blablablocks-slider-block' ),
+				__(
+					'Only image files are allowed.',
+					'blablablocks-slider-block'
+				),
 				{
 					isDismissible: true,
 				}
@@ -150,7 +153,10 @@ function Placeholder( { clientId, setAttributes } ) {
 				},
 				onError: () => {
 					createErrorNotice(
-						__( 'File upload failed.', 'blablablocks-slider-block' ),
+						__(
+							'File upload failed.',
+							'blablablocks-slider-block'
+						),
 						{
 							isDismissible: true,
 						}

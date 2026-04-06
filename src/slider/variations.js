@@ -13,8 +13,8 @@ import { QUERY_TEMPLATE } from './query-template';
 const variations = [
 	{
 		name: 'blank-carousel',
-		title: __('Blank Carousel', 'blablablocks-slider-block'),
-		description: __('Blank Carousel', 'blablablocks-slider-block'),
+		title: __( 'Blank Carousel', 'blablablocks-slider-block' ),
+		description: __( 'Blank Carousel', 'blablablocks-slider-block' ),
 		icon: (
 			<SVG
 				xmlns="http://www.w3.org/2000/svg"
@@ -34,17 +34,20 @@ const variations = [
 			},
 		},
 		innerBlocks: [
-			['blablablocks/slide'],
-			['blablablocks/slide'],
-			['blablablocks/slide'],
-			['blablablocks/slide'],
+			[ 'blablablocks/slide' ],
+			[ 'blablablocks/slide' ],
+			[ 'blablablocks/slide' ],
+			[ 'blablablocks/slide' ],
 		],
-		scope: ['block'],
+		scope: [ 'block' ],
 	},
 	{
 		name: 'posts-carousel',
 		title: __( 'Posts Carousel', 'blablablocks-slider-block' ),
-		description: __( 'Display posts from a Query Loop as slides.', 'blablablocks-slider-block' ),
+		description: __(
+			'Display posts from a Query Loop as slides.',
+			'blablablocks-slider-block'
+		),
 		icon: postList,
 		attributes: {
 			contentSource: 'query',
@@ -60,20 +63,20 @@ const variations = [
 	},
 	{
 		name: 'hero-slider',
-		title: __('Hero', 'blablablocks-slider-block'),
-		description: __('Hero', 'blablablocks-slider-block'),
+		title: __( 'Hero', 'blablablocks-slider-block' ),
+		description: __( 'Hero', 'blablablocks-slider-block' ),
 		icon: cover,
 		innerBlocks: [
-			['blablablocks/slide', {}, [['core/cover']]],
-			['blablablocks/slide', {}, [['core/cover']]],
-			['blablablocks/slide', {}, [['core/cover']]],
+			[ 'blablablocks/slide', {}, [ [ 'core/cover' ] ] ],
+			[ 'blablablocks/slide', {}, [ [ 'core/cover' ] ] ],
+			[ 'blablablocks/slide', {}, [ [ 'core/cover' ] ] ],
 		],
-		scope: ['block'],
+		scope: [ 'block' ],
 	},
 	{
 		name: 'images-slider',
-		title: __('Image Slider', 'blablablocks-slider-block'),
-		description: __('Image Slider', 'blablablocks-slider-block'),
+		title: __( 'Image Slider', 'blablablocks-slider-block' ),
+		description: __( 'Image Slider', 'blablablocks-slider-block' ),
 		icon: gallery,
 		attributes: {
 			slidesPerView: {
@@ -84,56 +87,24 @@ const variations = [
 			},
 		},
 		innerBlocks: [
-			[
-				'blablablocks/slide',
-				{},
-				[
-					[
-						'core/image',
-					],
-				],
-			],
-			[
-				'blablablocks/slide',
-				{},
-				[
-					[
-						'core/image',
-					],
-				],
-			],
-			[
-				'blablablocks/slide',
-				{},
-				[
-					[
-						'core/image',
-					],
-				],
-			],
-			[
-				'blablablocks/slide',
-				{},
-				[
-					[
-						'core/image',
-					],
-				],
-			],
+			[ 'blablablocks/slide', {}, [ [ 'core/image' ] ] ],
+			[ 'blablablocks/slide', {}, [ [ 'core/image' ] ] ],
+			[ 'blablablocks/slide', {}, [ [ 'core/image' ] ] ],
+			[ 'blablablocks/slide', {}, [ [ 'core/image' ] ] ],
 		],
-		scope: ['block'],
+		scope: [ 'block' ],
 	},
 	{
 		name: 'media-text-slider',
-		title: __('Media and Text', 'blablablocks-slider-block'),
-		description: __('Media & Text', 'blablablocks-slider-block'),
+		title: __( 'Media and Text', 'blablablocks-slider-block' ),
+		description: __( 'Media & Text', 'blablablocks-slider-block' ),
 		icon: mediaAndText,
 		innerBlocks: [
-			['blablablocks/slide', {}, [['core/media-text']]],
-			['blablablocks/slide', {}, [['core/media-text']]],
-			['blablablocks/slide', {}, [['core/media-text']]],
+			[ 'blablablocks/slide', {}, [ [ 'core/media-text' ] ] ],
+			[ 'blablablocks/slide', {}, [ [ 'core/media-text' ] ] ],
+			[ 'blablablocks/slide', {}, [ [ 'core/media-text' ] ] ],
 		],
-		scope: ['block'],
+		scope: [ 'block' ],
 	},
 ];
 
