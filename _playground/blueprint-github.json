@@ -23,8 +23,13 @@
         {
             "step": "installPlugin",
             "pluginData": {
-                "resource": "url",
-                "url": "https://github-proxy.com/proxy/?repo=lubusIN/blablablocks-slider-block&branch=playground"
+                "resource": "git:directory",
+                "url": "https://github.com/lubusIN/blablablocks-slider-block.git",
+                "ref": "playground",
+                "refType": "branch"
+            },
+            "options": {
+                "targetFolderName": "blablablocks-slider-block"
             }
         },
         {
