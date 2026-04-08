@@ -31,6 +31,11 @@
     "extra": {
         "installer-name": "blablablocks-slider-block"
     },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    },
     "require": {
         "php": ">=7.4",
         "composer/installers": "^2.3"
