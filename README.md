@@ -25,6 +25,15 @@ BlaBlaBlocks Slider Block is a WordPress plugin built specifically for the Block
 3. Upload `blablablocks-slider-block.zip` file
 4. Activate `BlaBlaBlocks Slider Block` from the plugins page
 
+### Composer
+For Composer-based WordPress projects, require the plugin as a `wordpress-plugin` package:
+
+```bash
+composer require lubusin/blablablocks-slider-block
+```
+
+If your project installs WordPress plugins outside the default `wp-content/plugins` path, configure that in the consuming project's Composer installer paths.
+
 ## Development
 
 ### 1. Clone the Repository
@@ -74,12 +83,6 @@ npm run serve
 
 <a href="https://cal.com/lubus">
 <img src="https://raw.githubusercontent.com/lubusIN/.github/refs/heads/main/profile/banner.png" />
-</a>
-
-## Credits
-
-<a href="https://github.com/lubusIN/blablablocks-slider-block/graphs/contributors">
-  <img height="36px" src="https://contrib.rocks/image?repo=lubusIN/blablablocks-slider-block"/>
 </a>
 
 ## License

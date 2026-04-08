@@ -1,0 +1,43 @@
+{
+    "name": "lubusin/blablablocks-slider-block",
+    "description": "Responsive slider and carousel blocks for the WordPress Block Editor.",
+    "keywords": [
+        "wordpress",
+        "plugin",
+        "block",
+        "slider",
+        "carousel",
+        "blablablocks"
+    ],
+    "homepage": "https://lubus.in",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Punit Verma",
+            "email": "punit@lubus.in",
+            "homepage": "https://lubus.in"
+        },
+        {
+            "name": "Ajit Bohra",
+            "email": "ajit@lubus.in",
+            "homepage": "https://lubus.in"
+        }
+    ],
+    "type": "wordpress-plugin",
+    "support": {
+        "issues": "https://github.com/lubusIN/blablablocks-slider-block/issues",
+        "source": "https://github.com/lubusIN/blablablocks-slider-block"
+    },
+    "extra": {
+        "installer-name": "blablablocks-slider-block"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "composer/installers": "^2.3"
+    }
+}
