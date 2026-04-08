@@ -85,12 +85,6 @@ npx @wp-now/wp-now start
 <img src="https://raw.githubusercontent.com/lubusIN/.github/refs/heads/main/profile/banner.png" />
 </a>
 
-## Credits
-
-<a href="https://github.com/lubusIN/blablablocks-slider-block/graphs/contributors">
-  <img height="36px" src="https://contrib.rocks/image?repo=lubusIN/blablablocks-slider-block"/>
-</a>
-
 ## License
 
 BlaBlaBlocks Slider Block is an open-sourced plugin licensed under the [MIT license](LICENSE)
