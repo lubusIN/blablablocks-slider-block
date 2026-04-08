@@ -1,0 +1,12 @@
+name: Plugin Check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - 1.x
+
+jobs:
+  plugin-check:
+    uses: lubusIN/.github/.github/workflows/reusable-plugin-check.yml@main
+    secrets: inherit
