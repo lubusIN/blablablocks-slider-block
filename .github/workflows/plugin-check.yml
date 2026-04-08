@@ -8,5 +8,5 @@ on:
 
 jobs:
   plugin-check:
-    uses: lubusIN/.github/.github/workflows/reusable-plugin-check.yml@main
+    uses: lubusIN/.github/.github/workflows/plugin-check.yml@main
     secrets: inherit

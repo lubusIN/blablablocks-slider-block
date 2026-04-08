@@ -17,7 +17,7 @@ on:
 
 jobs:
   build-and-push:
-    uses: lubusIN/.github/.github/workflows/reusable-sync-playground.yml@main
+    uses: lubusIN/.github/.github/workflows/sync-playground.yml@main
     with:
       target-branch: ${{ github.event_name == 'workflow_call' && inputs.target-branch || 'playground' }}
       force-folder: ${{ github.event_name == 'workflow_call' && inputs.force-folder || 'build/' }}
