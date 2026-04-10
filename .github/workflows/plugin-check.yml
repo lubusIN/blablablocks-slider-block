@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - 1.x
+  workflow_dispatch:
 
 jobs:
   plugin-check:
