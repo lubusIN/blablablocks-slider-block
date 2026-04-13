@@ -10,4 +10,6 @@ on:
 jobs:
   plugin-check:
     uses: lubusIN/.github/.github/workflows/plugin-check.yml@main
+    with:
+      plugin-slug: blablablocks-slider-block
     secrets: inherit
