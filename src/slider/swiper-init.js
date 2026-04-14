@@ -20,7 +20,7 @@ import {
  * @param {Element} container    - The HTML container element for the Swiper.
  * @return {Object} Device-specific Swiper settings.
  */
-function getDeviceSettings(options, deviceType, isFadeEffect, container) {
+function getDeviceSettings( options, deviceType, isFadeEffect, container ) {
 	const defaultSettings = {
 		Desktop: { slidesPerView: 3, spaceBetween: 30 },
 		Tablet: { slidesPerView: 2, spaceBetween: 20 },
@@ -28,24 +28,24 @@ function getDeviceSettings(options, deviceType, isFadeEffect, container) {
 	};
 
 	const deviceSettings =
-		defaultSettings[deviceType] || defaultSettings.Desktop;
+		defaultSettings[ deviceType ] || defaultSettings.Desktop;
 
 	return {
 		slidesPerView: isFadeEffect
 			? 1
-			: options?.slidesPerView?.[deviceType.toLowerCase()] ??
-			deviceSettings.slidesPerView,
+			: options?.slidesPerView?.[ deviceType.toLowerCase() ] ??
+			  deviceSettings.slidesPerView,
 		spaceBetween:
-			options?.slidesSpacing?.[deviceType.toLowerCase()] ??
+			options?.slidesSpacing?.[ deviceType.toLowerCase() ] ??
 			deviceSettings.spaceBetween,
 		pagination: {
-			enabled: options?.pagination?.[deviceType.toLowerCase()] ?? false,
+			enabled: options?.pagination?.[ deviceType.toLowerCase() ] ?? false,
 			clickable: true,
 		},
 		navigation: {
-			enabled: options?.navigation?.[deviceType.toLowerCase()] ?? false,
-			nextEl: container.querySelector('.swiper-button-next'),
-			prevEl: container.querySelector('.swiper-button-prev'),
+			enabled: options?.navigation?.[ deviceType.toLowerCase() ] ?? false,
+			nextEl: container.querySelector( '.swiper-button-next' ),
+			prevEl: container.querySelector( '.swiper-button-prev' ),
 		},
 	};
 }
@@ -104,14 +104,7 @@ export function SwiperInit(
 	};
 
 	// Add breakpoints and universal settings if not in the editor
-	if (!isEditor) {
-		parameters.pagination = { enabled: true, clickable: true };
-		parameters.navigation = {
-			enabled: true,
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		};
-
+	if ( ! isEditor ) {
 		parameters.breakpoints = {
 			320: getDeviceSettings(
 				options,
@@ -140,16 +133,16 @@ export function SwiperInit(
 		};
 	}
 
-	const swiperInstance = new Swiper(container, parameters);
+	const swiperInstance = new Swiper( container, parameters );
 
-	if (!isEditor) {
-		container.addEventListener('focusin', () => {
+	if ( ! isEditor ) {
+		container.addEventListener( 'focusin', () => {
 			swiperInstance?.keyboard?.enable();
-		});
+		} );
 
-		container.addEventListener('focusout', () => {
+		container.addEventListener( 'focusout', () => {
 			swiperInstance?.keyboard?.disable();
-		});
+		} );
 	}
 
 	return swiperInstance;

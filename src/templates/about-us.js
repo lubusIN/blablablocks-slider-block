@@ -3,12 +3,13 @@
  */
 import { __ } from '@wordpress/i18n';
 
-const baseImageUrl = typeof BlablablocksData !== 'undefined' ? BlablablocksData.assetsUrl : '';
+const baseImageUrl =
+	typeof BlablablocksData !== 'undefined' ? BlablablocksData.assetsUrl : '';
 
 const AboutUs = {
-    name: 'about-us',
-    title: __('About Us', 'blablablocks-slider-block'),
-    content: `
+	name: 'about-us',
+	title: __( 'About Us', 'blablablocks-slider-block' ),
+	content: `
            <!-- wp:group {"metadata":{"name":"About Us"},"align":"full","style":{"spacing":{"blockGap":"0px","padding":{"left":"2vw","right":"2vw","top":"8vw","bottom":"8vw"}}},"backgroundColor":"contrast","layout":{"type":"constrained","contentSize":"1000px"}} -->
             <div class="wp-block-group alignfull has-contrast-background-color has-background" style="padding-top:8vw;padding-right:2vw;padding-bottom:8vw;padding-left:2vw"><!-- wp:blablablocks/slider {"pagination":{"desktop":false,"tablet":true,"mobile":false,"activeDevice":"desktop"},"loop":true,"navigationColor":{"arrowColor":{"default":"#ffffff","hover":"#ffffff"},"backgroundColor":{"default":"#000000","hover":"#000000"}},"navigationPadding":{"top":"8px","right":"12px","bottom":"8px","left":"12px"},"navigationSize":"20px","navigationSpacing":{"right":"24px","left":"24px"},"navigationOffset":{"left":"-30px","bottom":"30px","right":"30px"},"navigationPosition":"bottom right","navigationBorderRadius":"50%","style":{"spacing":{"padding":{"top":"40px","bottom":"80px","right":"5vw","left":"5vw"}},"color":{"background":"#fff"}}} -->
             <!-- wp:blablablocks/slide {"className":"wp-block-lubus-slide"} -->
@@ -29,7 +30,7 @@ const AboutUs = {
             <div class="wp-block-buttons has-custom-font-size has-text-color has-montserrat-font-family" style="color:#8a8a8a;font-size:20px;font-style:normal;font-weight:300;letter-spacing:0px;line-height:2"><!-- wp:button {"textColor":"contrast","className":"is-style-outline","style":{"border":{"radius":"5px"},"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}},"typography":{"fontStyle":"normal","fontWeight":"800"}},"fontSize":"medium"} -->
             <div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-contrast-color has-text-color has-link-color has-medium-font-size has-custom-font-size wp-element-button" style="border-radius:5px;font-style:normal;font-weight:800">Get Started</a></div>
             <!-- /wp:button --></div>
-            <!-- /wp:buttons --></div><figure class="wp-block-media-text__media"><img src="${baseImageUrl}/templates/about-us/blocks.png" alt="" class="wp-image-569 size-full"/></figure></div>
+            <!-- /wp:buttons --></div><figure class="wp-block-media-text__media"><img src="${ baseImageUrl }/templates/about-us/blocks.png" alt="" class="wp-image-569 size-full"/></figure></div>
             <!-- /wp:media-text --></div>
             <!-- /wp:blablablocks/slide -->
 
@@ -51,7 +52,7 @@ const AboutUs = {
             <div class="wp-block-buttons has-custom-font-size has-text-color has-montserrat-font-family" style="color:#8a8a8a;font-size:20px;font-style:normal;font-weight:300;letter-spacing:0px;line-height:2"><!-- wp:button {"textColor":"contrast","className":"is-style-outline","style":{"border":{"radius":"5px"},"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}},"typography":{"fontStyle":"normal","fontWeight":"800"}},"fontSize":"medium"} -->
             <div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-contrast-color has-text-color has-link-color has-medium-font-size has-custom-font-size wp-element-button" style="border-radius:5px;font-style:normal;font-weight:800">Try Gutenberg</a></div>
             <!-- /wp:button --></div>
-            <!-- /wp:buttons --></div><figure class="wp-block-media-text__media"><img src="${baseImageUrl}/templates/about-us/editor.png" alt="" class="wp-image-571 size-full"/></figure></div>
+            <!-- /wp:buttons --></div><figure class="wp-block-media-text__media"><img src="${ baseImageUrl }/templates/about-us/editor.png" alt="" class="wp-image-571 size-full"/></figure></div>
             <!-- /wp:media-text --></div>
             <!-- /wp:blablablocks/slide -->
             <!-- /wp:blablablocks/slider --></div>

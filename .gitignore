@@ -140,6 +140,6 @@ dist
 # dotenv environment variables file
 .env
 
-# # Build
-# build/
+# Build
+build/
 vendor/

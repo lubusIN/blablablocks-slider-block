@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name:       BlaBlaBlocks Slider Block
+ * Plugin Name:       Slider and Carousel Block – Responsive, Accessible
  * Description:       Slider Block is a WordPress plugin built specifically for the Block Editor, allowing you to create responsive sliders effortlessly.
  * Requires at least: 6.6
  * Requires PHP:      7.4

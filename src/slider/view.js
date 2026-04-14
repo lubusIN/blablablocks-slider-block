@@ -4,7 +4,9 @@
 import { SwiperInit } from './swiper-init';
 
 document.addEventListener( 'DOMContentLoaded', () => {
-	const containers = document.querySelectorAll( '.swiper' );
+	const containers = document.querySelectorAll(
+		'.wp-block-blablablocks-slider .swiper[data-swiper]'
+	);
 
 	// Return early, and often.
 	if ( ! containers.length ) {

@@ -131,41 +131,278 @@ if (!function_exists('blabslbl_generate_navigation_styles')) {
     }
 }
 
+/**
+ * Removes Query Loop pagination blocks from a parsed block tree while
+ * preserving all other Query Loop content and nesting.
+ *
+ * @param array $parsed_block Parsed `core/query` block.
+ * @return array
+ */
+if (!function_exists('blabslbl_slider_prune_query_pagination_blocks')) {
+    function blabslbl_slider_prune_query_pagination_blocks($parsed_block)
+    {
+        if (
+            !is_array($parsed_block) ||
+            empty($parsed_block['innerBlocks']) ||
+            !is_array($parsed_block['innerBlocks'])
+        ) {
+            return $parsed_block;
+        }
+
+        $pagination_blocks = [
+            'core/query-pagination',
+            'core/query-pagination-next',
+            'core/query-pagination-numbers',
+            'core/query-pagination-previous',
+        ];
+
+        $original_inner_blocks = $parsed_block['innerBlocks'];
+        $filtered_inner_blocks = [];
+
+        if (isset($parsed_block['innerContent']) && is_array($parsed_block['innerContent'])) {
+            $filtered_inner_content = [];
+            $child_index = 0;
+
+            foreach ($parsed_block['innerContent'] as $chunk) {
+                if (null !== $chunk) {
+                    $filtered_inner_content[] = $chunk;
+                    continue;
+                }
+
+                $child_block = $original_inner_blocks[$child_index] ?? null;
+                $child_index++;
+
+                if (!is_array($child_block)) {
+                    continue;
+                }
+
+                $child_name = $child_block['blockName'] ?? '';
+                if (in_array($child_name, $pagination_blocks, true)) {
+                    continue;
+                }
+
+                $filtered_inner_blocks[] = blabslbl_slider_prune_query_pagination_blocks($child_block);
+                $filtered_inner_content[] = null;
+            }
+
+            $parsed_block['innerContent'] = $filtered_inner_content;
+        } else {
+            foreach ($original_inner_blocks as $child_block) {
+                if (!is_array($child_block)) {
+                    continue;
+                }
+
+                $child_name = $child_block['blockName'] ?? '';
+                if (in_array($child_name, $pagination_blocks, true)) {
+                    continue;
+                }
+
+                $filtered_inner_blocks[] = blabslbl_slider_prune_query_pagination_blocks($child_block);
+            }
+        }
+
+        $parsed_block['innerBlocks'] = $filtered_inner_blocks;
+
+        return $parsed_block;
+    }
+}
+
+/**
+ * Extracts the Post Template subtree with the WordPress HTML API and adapts it to Swiper.
+ *
+ * @param string $query_html Rendered HTML for a core/query block.
+ * @return array{0:?string,1:int} [post_template_html, slide_count]
+ */
+if (!function_exists('blabslbl_slider_extract_post_template_with_html_api')) {
+    function blabslbl_slider_extract_post_template_with_html_api($query_html)
+    {
+        if (!is_string($query_html) || $query_html === '' || !class_exists('WP_HTML_Processor')) {
+            return [null, 0];
+        }
+
+        $processor = WP_HTML_Processor::create_fragment($query_html);
+        if (!$processor) {
+            return [null, 0];
+        }
+
+        $capturing = false;
+        $captured_html = '';
+        $slide_count = 0;
+        $wrapper_tag = null;
+        $nested_depth = 0;
+
+        while ($processor->next_token()) {
+            if (!$capturing) {
+                if (
+                    '#tag' !== $processor->get_token_type() ||
+                    $processor->is_tag_closer() ||
+                    !$processor->has_class('wp-block-post-template')
+                ) {
+                    continue;
+                }
+
+                $processor->add_class('swiper-wrapper');
+                $wrapper_tag = $processor->get_tag();
+                $capturing = true;
+                $captured_html .= $processor->serialize_token();
+
+                if ($processor->expects_closer()) {
+                    continue;
+                }
+
+                return [$captured_html, 0];
+            }
+
+            if ('#tag' === $processor->get_token_type()) {
+                if ($processor->is_tag_closer()) {
+                    $captured_html .= $processor->serialize_token();
+
+                    if (0 === $nested_depth && $processor->get_tag() === $wrapper_tag) {
+                        return [$captured_html, $slide_count];
+                    }
+
+                    if ($nested_depth > 0) {
+                        $nested_depth--;
+                    }
+
+                    continue;
+                }
+
+                if (0 === $nested_depth) {
+                    $processor->add_class('swiper-slide');
+                    $slide_count++;
+                }
+
+                $captured_html .= $processor->serialize_token();
+
+                if ($processor->expects_closer()) {
+                    $nested_depth++;
+                }
+
+                continue;
+            }
+
+            $captured_html .= $processor->serialize_token();
+        }
+
+        return [null, 0];
+    }
+}
+
+/**
+ * Extracts the core/query Post Template markup and adapts it to Swiper.
+ *
+ * Uses the WordPress HTML API. If extraction fails, the caller should fall back
+ * to the original Query Loop HTML instead of trying to force carousel markup.
+ *
+ * @param string $query_html Rendered HTML for a core/query block.
+ * @return array{0:?string,1:int} [post_template_html, slide_count]
+ */
+if (!function_exists('blabslbl_slider_extract_post_template_swiper')) {
+    function blabslbl_slider_extract_post_template_swiper($query_html)
+    {
+        return blabslbl_slider_extract_post_template_with_html_api($query_html);
+    }
+}
+
 // Generate navigation styles
-$navigation_styles = blabslbl_generate_navigation_styles($attributes);
+$blabslbl_navigation_styles = blabslbl_generate_navigation_styles($attributes);
 
 // Convert styles array to inline style string
-$style_string = '';
-foreach ($navigation_styles as $property => $value) {
-    $style_string .= "$property:$value;";
+$blabslbl_style_string = '';
+foreach ($blabslbl_navigation_styles as $blabslbl_property => $blabslbl_value) {
+    $blabslbl_style_string .= "$blabslbl_property:$blabslbl_value;";
 }
 
-// Add padding if there are at least 2 slides
-$slide_count = count($block->inner_blocks);
-if ($slide_count >= 2) {
-    $style_string .= 'padding:100px;';
-}
+$blabslbl_nav_position = isset($attributes['navigationPosition']) ? str_replace(' ', '-', $attributes['navigationPosition']) : 'center';
+$blabslbl_pag_position = isset($attributes['paginationPosition']) ? str_replace(' ', '-', $attributes['paginationPosition']) : 'bottom-center';
 
-$nav_position = isset($attributes['navigationPosition']) ? str_replace(' ', '-', $attributes['navigationPosition']) : 'center';
-$pag_position = isset($attributes['paginationPosition']) ? str_replace(' ', '-', $attributes['paginationPosition']) : 'bottom-center';
-
-$wrapper_classes = [
-    "bbb-slider-nav-position-$nav_position",
-    "bbb-slider-pag-position-$pag_position"
+$blabslbl_wrapper_classes = [
+    "bbb-slider-nav-position-$blabslbl_nav_position",
+    "bbb-slider-pag-position-$blabslbl_pag_position"
 ];
 
-$wrapper_attributes = get_block_wrapper_attributes(
+$blabslbl_is_query_source = ($attributes['contentSource'] ?? 'slides') === 'query';
+$blabslbl_first_inner_name = $block->inner_blocks[0]->name ?? '';
+if (!$blabslbl_is_query_source && $blabslbl_first_inner_name === 'core/query') {
+    $blabslbl_is_query_source = true;
+}
+
+if ($blabslbl_is_query_source) {
+    $blabslbl_wrapper_classes[] = 'bbb-slider-source-query';
+}
+
+$blabslbl_slide_count_for_padding = 0;
+if ($blabslbl_is_query_source) {
+    $blabslbl_query_block = null;
+    foreach ($block->inner_blocks as $blabslbl_inner) {
+        if (($blabslbl_inner->name ?? '') === 'core/query') {
+            $blabslbl_query_block = $blabslbl_inner;
+            break;
+        }
+    }
+
+    $blabslbl_query_html = null;
+    if ($blabslbl_query_block && isset($blabslbl_query_block->parsed_block)) {
+        $blabslbl_query_html = render_block(
+            blabslbl_slider_prune_query_pagination_blocks($blabslbl_query_block->parsed_block)
+        );
+    }
+    if (!is_string($blabslbl_query_html) || $blabslbl_query_html === '') {
+        $blabslbl_query_html = $content;
+    }
+
+    [$blabslbl_post_template_html, $blabslbl_slide_count_for_padding] = blabslbl_slider_extract_post_template_swiper($blabslbl_query_html);
+
+    if ($blabslbl_slide_count_for_padding >= 2) {
+        $blabslbl_style_string .= 'padding:100px;';
+    }
+
+    $blabslbl_wrapper_attributes = get_block_wrapper_attributes(
+        [
+            'class' => implode(' ', $blabslbl_wrapper_classes),
+            'style' => $blabslbl_style_string,
+        ]
+    );
+
+?>
+    <div <?php echo wp_kses_data($blabslbl_wrapper_attributes); ?> role="region" aria-roledescription="carousel" aria-label="Slider block">
+        <div class="swiper" <?php echo 'data-swiper="' . esc_attr(wp_json_encode($attributes)) . '"'; ?>>
+            <?php
+            if (is_string($blabslbl_post_template_html) && $blabslbl_post_template_html !== '' && $blabslbl_slide_count_for_padding > 0) {
+                echo $blabslbl_post_template_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+            } else {
+                echo $blabslbl_query_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+            }
+            ?>
+            <div class="bbb-slider-nav-container">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+<?php
+    return;
+}
+
+// Add padding if there are at least 2 slides (manual slide mode)
+$blabslbl_slide_count_for_padding = count($block->inner_blocks);
+if ($blabslbl_slide_count_for_padding >= 2) {
+    $blabslbl_style_string .= 'padding:100px;';
+}
+
+$blabslbl_wrapper_attributes = get_block_wrapper_attributes(
     [
-        'class' => implode(' ', $wrapper_classes),
-        'style' => $style_string,
+        'class' => implode(' ', $blabslbl_wrapper_classes),
+        'style' => $blabslbl_style_string,
     ]
 );
 
 ?>
-<div <?php echo wp_kses_data($wrapper_attributes); ?> role="region" aria-roledescription="carousel" aria-label="Slider block">
+<div <?php echo wp_kses_data($blabslbl_wrapper_attributes); ?> role="region" aria-roledescription="carousel" aria-label="Slider block">
     <div class="swiper" <?php echo 'data-swiper="' . esc_attr(wp_json_encode($attributes)) . '"'; ?>>
         <div class="swiper-wrapper">
-            <?php echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped  
+            <?php echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
             ?>
         </div>
         <div class="bbb-slider-nav-container">

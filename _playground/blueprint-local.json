@@ -21,22 +21,10 @@
             }
         },
         {
-            "step": "installPlugin",
-            "pluginData": {
-                "resource": "git:directory",
-                "url": "https://github.com/lubusIN/blablablocks-slider-block.git",
-                "ref": "playground",
-                "refType": "branch"
-            },
-            "options": {
-                "targetFolderName": "blablablocks-slider-block"
-            }
-        },
-        {
             "step": "importWxr",
             "file": {
-                "resource": "url",
-                "url": "https://raw.githubusercontent.com/lubusIN/blablablocks-slider-block/playground/_playground/demo-content.xml"
+                "resource": "bundled",
+                "path": "/demo-content.xml"
             }
         }
     ]

@@ -8,6 +8,14 @@
 	"description": "A customizable slider block to display multiple slides with smooth transitions, ideal for showcasing images or content in a dynamic carousel format.",
 	"example": {},
 	"attributes": {
+		"contentSource": {
+			"type": "string",
+			"enum": [
+				"slides",
+				"query"
+			],
+			"default": "slides"
+		},
 		"slidesPerView": {
 			"type": "object",
 			"default": {
@@ -235,9 +243,10 @@
 		}
 	},
 	"allowedBlocks": [
-		"blablablocks/slide"
+		"blablablocks/slide",
+		"core/query"
 	],
-	"textdomain": "blablablocks-slider",
+	"textdomain": "blablablocks-slider-block",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
