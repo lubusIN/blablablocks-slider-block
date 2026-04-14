@@ -4,7 +4,7 @@ Tags:              slider, slider block, carousel, image slider, gutenberg block
 Requires at least: 6.6
 Tested up to:      6.9
 Requires PHP:      7.4
-Stable tag:        1.1.2
+Stable tag:        1.2.0
 License:           MIT
 License URI:       https://www.gnu.org/licenses/MIT
 
@@ -21,6 +21,7 @@ This block gives you an intuitive, visual way to add sliders to your pages, post
 * **Accessible by Design** – WCAG-compliant with ARIA roles, keyboard navigation, and screen-reader support.
 * **Responsive and Fluid** – Automatically adapts to mobile, tablet, and desktop breakpoints.
 * **Gutenberg-Native Experience** – Seamlessly integrated into the Block Editor.
+* **Query Loop Support** – Turn WordPress posts into a dynamic carousel using the native Query Loop block.
 * **Template Library** – Insert pre-built slider layouts: hero sections, testimonials, image carousels, and more.
 * **Server-Side Rendering** – Ensures your editor preview always matches the frontend output.
 * **Lightweight and Fast** – Minimal scripts, optimized rendering, and no frontend bloat.
@@ -48,6 +49,13 @@ Built entirely for the **WordPress Block Editor**, this plugin uses the latest R
 * Drag and drop slides directly in the editor.
 * Use nested blocks for advanced layouts.
 * Adjust all options in the right sidebar no shortcodes or widgets.
+
+#### **Posts Carousel with Query Loop**
+Build dynamic carousels from your latest or filtered posts using the native **Query Loop** block. You can:
+
+* Insert the **Posts Carousel** variation directly from the Slider block.
+* Use WordPress query controls to choose post type, order, and posts per page.
+* Customize the post template with core blocks like featured image, title, excerpt, date, and read more.
 
 #### **Pre-Made Templates**
 
@@ -197,6 +205,11 @@ Yes! BlaBlaBlocks Slider Block is open source and free under the MIT license.
 3. Activate through the **Plugins** screen in WordPress.
 
 == Changelog ==
+
+= 1.2.0 =
+* Added Query Loop support for Posts Carousel in the Slider block.
+* Updated Plugin Name.
+* Bump plugin version to 1.2.0.
 
 = 1.1.2 =
 * Added decimal support to `slidesPerView` setting.
