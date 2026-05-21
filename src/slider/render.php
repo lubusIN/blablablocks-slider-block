@@ -355,7 +355,13 @@ if ($blabslbl_is_query_source) {
     [$blabslbl_post_template_html, $blabslbl_slide_count_for_padding] = blabslbl_slider_extract_post_template_swiper($blabslbl_query_html);
 
     if ($blabslbl_slide_count_for_padding >= 2) {
-        $blabslbl_style_string .= 'padding:100px;';
+        $blabslbl_user_padding = $attributes['style']['spacing']['padding'] ?? [];
+        $blabslbl_padding_sides = ['top' => 'padding-top', 'right' => 'padding-right', 'bottom' => 'padding-bottom', 'left' => 'padding-left'];
+        foreach ($blabslbl_padding_sides as $blabslbl_side => $blabslbl_property) {
+            if (!isset($blabslbl_user_padding[$blabslbl_side])) {
+                $blabslbl_style_string .= "$blabslbl_property:100px;";
+            }
+        }
     }
 
     $blabslbl_wrapper_attributes = get_block_wrapper_attributes(
@@ -388,7 +394,13 @@ if ($blabslbl_is_query_source) {
 // Add padding if there are at least 2 slides (manual slide mode)
 $blabslbl_slide_count_for_padding = count($block->inner_blocks);
 if ($blabslbl_slide_count_for_padding >= 2) {
-    $blabslbl_style_string .= 'padding:100px;';
+    $blabslbl_user_padding = $attributes['style']['spacing']['padding'] ?? [];
+    $blabslbl_padding_sides = ['top' => 'padding-top', 'right' => 'padding-right', 'bottom' => 'padding-bottom', 'left' => 'padding-left'];
+    foreach ($blabslbl_padding_sides as $blabslbl_side => $blabslbl_property) {
+        if (!isset($blabslbl_user_padding[$blabslbl_side])) {
+            $blabslbl_style_string .= "$blabslbl_property:100px;";
+        }
+    }
 }
 
 $blabslbl_wrapper_attributes = get_block_wrapper_attributes(
