@@ -206,6 +206,9 @@ Yes! BlaBlaBlocks Slider Block is open source and free under the MIT license.
 
 == Changelog ==
 
+= 1.2.1 =
+* Fix use per-side padding longhand to prevent WP 7.0 override
+
 = 1.2.0 =
 * Added Query Loop support for Posts Carousel in the Slider block.
 * Updated Plugin Name.
