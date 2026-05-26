@@ -4,7 +4,7 @@ Tags:              slider, slider block, carousel, image slider, gutenberg block
 Requires at least: 6.6
 Tested up to:      7.0
 Requires PHP:      7.4
-Stable tag:        1.2.0
+Stable tag:        1.2.1
 License:           MIT
 License URI:       https://www.gnu.org/licenses/MIT
 

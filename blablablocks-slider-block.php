@@ -5,7 +5,7 @@
  * Description:       Slider Block is a WordPress plugin built specifically for the Block Editor, allowing you to create responsive sliders effortlessly.
  * Requires at least: 6.6
  * Requires PHP:      7.4
- * Version:           1.2.0
+ * Version:           1.2.1
  * Author:            Lubus
  * License:           MIT
  * License URI:       https://www.gnu.org/licenses/MIT
