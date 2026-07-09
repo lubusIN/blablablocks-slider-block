@@ -4,7 +4,7 @@ Tags:              slider, slider block, carousel, image slider, gutenberg block
 Requires at least: 6.6
 Tested up to:      7.0
 Requires PHP:      7.4
-Stable tag:        1.2.1
+Stable tag:        1.3.0
 License:           MIT
 License URI:       https://www.gnu.org/licenses/MIT
 
@@ -205,6 +205,15 @@ Yes! BlaBlaBlocks Slider Block is open source and free under the MIT license.
 3. Activate through the **Plugins** screen in WordPress.
 
 == Changelog ==
+
+= 1.3.0 =
+* Added transforms from Gallery, multiple Image blocks, and Columns into Slider.
+* Added Auto/Custom slides-per-view support with responsive custom sizing.
+* Improved Image Slider variation with multi-image media selection.
+* Added theme palette and custom color support for navigation and pagination.
+* Allowed autoplay delay to be set to 0.
+* Added unit and end-to-end test coverage.
+* Improved release packaging to include runtime template assets and exclude development files.
 
 = 1.2.1 =
 * Fix use per-side padding longhand to prevent WP 7.0 override
