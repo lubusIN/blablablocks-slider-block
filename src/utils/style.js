@@ -1,4 +1,9 @@
 /**
+ * Internal dependencies.
+ */
+import { resolveColorValue } from './color';
+
+/**
  * Resolves a spacing size value into a usable CSS value.
  *
  * @param {string|number} value        - The input spacing size value.
@@ -67,22 +72,26 @@ export const generateNavigationStyles = ( attributes = {} ) => {
 
 	addVar(
 		'--navigation-arrow-color',
-		attributes?.navigationColor?.arrowColor?.default,
+		resolveColorValue( attributes?.navigationColor?.arrowColor?.default ),
 		'#000'
 	);
 	addVar(
 		'--navigation-background-color',
-		attributes?.navigationColor?.backgroundColor?.default,
+		resolveColorValue(
+			attributes?.navigationColor?.backgroundColor?.default
+		),
 		'transparent'
 	);
 	addVar(
 		'--navigation-arrow-hover-color',
-		attributes?.navigationColor?.arrowColor?.hover,
+		resolveColorValue( attributes?.navigationColor?.arrowColor?.hover ),
 		'#333'
 	);
 	addVar(
 		'--navigation-background-hover-color',
-		attributes?.navigationColor?.backgroundColor?.hover,
+		resolveColorValue(
+			attributes?.navigationColor?.backgroundColor?.hover
+		),
 		'transparent'
 	);
 	addVar( '--swiper-navigation-size', attributes?.navigationSize, '40px' );
@@ -122,12 +131,14 @@ export const generateNavigationStyles = ( attributes = {} ) => {
 	addVar( '--pagination-size', attributes?.paginationSize, '8px' );
 	addVar(
 		'--pagination-active-color',
-		attributes?.paginationColor?.activeColor?.default,
+		resolveColorValue( attributes?.paginationColor?.activeColor?.default ),
 		'#000'
 	);
 	addVar(
 		'--pagination-inactive-color',
-		attributes?.paginationColor?.inactiveColor?.default,
+		resolveColorValue(
+			attributes?.paginationColor?.inactiveColor?.default
+		),
 		'#ccc'
 	);
 

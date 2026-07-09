@@ -164,4 +164,10 @@
 		flex: 0 0 $bbb-editor-slide-size !important;
 		max-width: $bbb-editor-slide-size !important;
 	}
+
+	&.bbb-slider-slides-per-view-auto .bbb-slider-query-inner .wp-block-post-template > * {
+		flex-basis: auto !important;
+		max-width: none !important;
+		width: auto !important;
+	}
 }

@@ -68,14 +68,36 @@ npm run start       # Watch for changes and auto-compile
 
 ### 5. Launch Playground
 
-Start a local WordPress playground using wp-now:
+Start a local WordPress Playground instance:
 
 ```bash
 npm run serve 
 ```
 
+Local Playground requires Node.js 20.18 or newer.
+
 > [!NOTE]
 > Refer to `package.json` for additional available npm commands.
+
+### 6. Run Tests
+
+Run unit tests and static checks:
+
+```bash
+npm run test:unit
+npm run lint:js
+npm run lint:css
+```
+
+End-to-end tests target an existing WordPress installation with this plugin
+active. Provide its URL and administrator credentials:
+
+```bash
+WP_BASE_URL=http://localhost:10017 \
+WP_USERNAME=admin \
+WP_PASSWORD=password \
+npm run test:e2e
+```
 
 ## Meet Your Artisans
 

@@ -86,12 +86,6 @@ const variations = [
 				activeDevice: 'desktop',
 			},
 		},
-		innerBlocks: [
-			[ 'blablablocks/slide', {}, [ [ 'core/image' ] ] ],
-			[ 'blablablocks/slide', {}, [ [ 'core/image' ] ] ],
-			[ 'blablablocks/slide', {}, [ [ 'core/image' ] ] ],
-			[ 'blablablocks/slide', {}, [ [ 'core/image' ] ] ],
-		],
 		scope: [ 'block' ],
 	},
 	{

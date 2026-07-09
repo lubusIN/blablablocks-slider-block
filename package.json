@@ -13,12 +13,16 @@
 		"lint:css:fix": "wp-scripts lint-style --fix",
 		"lint:js": "wp-scripts lint-js",
 		"lint:js:fix": "wp-scripts lint-js --fix",
+		"test:unit": "wp-scripts test-unit-js",
+		"test:e2e": "wp-scripts test-playwright",
 		"packages-update": "wp-scripts packages-update",
-		"plugin-zip": "wp-scripts plugin-zip",
+		"plugin-zip": "wp-scripts plugin-zip && cd .. && zip -qr blablablocks-slider-block/blablablocks-slider-block.zip blablablocks-slider-block/LICENSE blablablocks-slider-block/assets -x \"*/.DS_Store\" \"*/__MACOSX/*\" && zip -dq blablablocks-slider-block/blablablocks-slider-block.zip blablablocks-slider-block/README.md",
 		"start": "wp-scripts start",
 		"serve": "npx @wp-playground/cli@latest server --auto-mount --blueprint=./_playground/blueprint-local.json --blueprint-may-read-adjacent-files"
 	},
 	"devDependencies": {
+		"@playwright/test": "^1.48.2",
+		"@wordpress/e2e-test-utils-playwright": "^1.11.0",
 		"@wordpress/scripts": "^30.4.0"
 	},
 	"dependencies": {

@@ -2,7 +2,7 @@
  * Wordpress dependencies
  */
 import clsx from 'clsx';
-import { memo, useEffect, useRef } from '@wordpress/element';
+import { memo, useCallback, useEffect, useRef } from '@wordpress/element';
 import { useSelect, subscribe, select } from '@wordpress/data';
 import {
 	useBlockProps,
@@ -67,7 +67,7 @@ const Slider = memo(
 		/**
 		 * Initialize the Swiper slider instance.
 		 */
-		const initializeSwiper = () => {
+		const initializeSwiper = useCallback( () => {
 			if ( swiperContainerRef.current && innerBlocks.length > 0 ) {
 				swiperContainerRef.current.className = 'swiper';
 
@@ -85,76 +85,91 @@ const Slider = memo(
 					true
 				);
 			}
-		};
+		}, [ attributes, editorDeviceType, innerBlocks.length ] );
 
 		/**
 		 * Update the Swiper instance when slides are added, removed, or reordered.
 		 *
 		 * @param {string[]} slideOrder - Array of block client IDs representing the slide order.
 		 */
-		const manageSwiperUpdates = ( slideOrder ) => {
-			const currentSlidesOrder =
-				select( blockEditorStore ).getBlockOrder( clientId );
+		const manageSwiperUpdates = useCallback(
+			( slideOrder ) => {
+				const currentSlidesOrder =
+					select( blockEditorStore ).getBlockOrder( clientId );
 
-			if ( currentSlidesOrder.toString() !== slideOrder.toString() ) {
-				const selectedBlock =
-					select( blockEditorStore ).getSelectedBlock();
-				const slideAdded =
-					currentSlidesOrder.length > slideOrder.length;
-				const slideRemoved =
-					currentSlidesOrder.length < slideOrder.length;
-				const slideMoved =
-					currentSlidesOrder.length === slideOrder.length;
+				if ( currentSlidesOrder.toString() !== slideOrder.toString() ) {
+					const selectedBlock =
+						select( blockEditorStore ).getSelectedBlock();
+					const slideAdded =
+						currentSlidesOrder.length > slideOrder.length;
+					const slideRemoved =
+						currentSlidesOrder.length < slideOrder.length;
+					const slideMoved =
+						currentSlidesOrder.length === slideOrder.length;
 
-				// Save the active slide index.
-				const activeIndex = swiperInstanceRef.current?.activeIndex || 0;
-				slideOrder = currentSlidesOrder;
+					// Save the active slide index.
+					const activeIndex =
+						swiperInstanceRef.current?.activeIndex || 0;
+					slideOrder = currentSlidesOrder;
 
-				// Destroy and reinitialize the Swiper instance.
-				swiperInstanceRef.current?.destroy();
-				window.requestAnimationFrame( () => {
-					initializeSwiper();
+					// Destroy and reinitialize the Swiper instance.
+					swiperInstanceRef.current?.destroy();
+					window.requestAnimationFrame( () => {
+						initializeSwiper();
 
-					let slideToIndex = activeIndex;
+						let slideToIndex = activeIndex;
 
-					if ( slideAdded ) {
-						slideToIndex = slideOrder.length - 1;
-					} else if ( slideRemoved ) {
-						slideToIndex = Math.max( activeIndex - 1, 0 );
-						const totalSlides = slideOrder.length;
-						const updated = { ...attributes.slidesPerView };
-						let hasChanges = false;
+						if ( slideAdded ) {
+							slideToIndex = slideOrder.length - 1;
+						} else if ( slideRemoved ) {
+							slideToIndex = Math.max( activeIndex - 1, 0 );
+							const totalSlides = slideOrder.length;
+							const updated = { ...attributes.slidesPerView };
+							let hasChanges = false;
 
-						[ 'desktop', 'tablet', 'mobile' ].forEach(
-							( device ) => {
-								const current = updated[ device ] ?? 1;
-								const maxAllowed = Math.max( totalSlides, 1 ); // always minimum of 1
-								const newVal = Math.min( current, maxAllowed ); // auto-restrict if over limit
+							[ 'desktop', 'tablet', 'mobile' ].forEach(
+								( device ) => {
+									const current = updated[ device ] ?? 1;
+									const maxAllowed = Math.max(
+										totalSlides,
+										1
+									); // always minimum of 1
+									const newVal = Math.min(
+										current,
+										maxAllowed
+									); // auto-restrict if over limit
 
-								if ( newVal !== current ) {
-									updated[ device ] = newVal;
-									hasChanges = true;
+									if ( newVal !== current ) {
+										updated[ device ] = newVal;
+										hasChanges = true;
+									}
 								}
+							);
+
+							if ( hasChanges ) {
+								setAttributes( { slidesPerView: updated } );
 							}
-						);
-
-						if ( hasChanges ) {
-							setAttributes( { slidesPerView: updated } );
+						} else if ( slideMoved ) {
+							slideToIndex = slideOrder.findIndex(
+								( blockClientId ) =>
+									blockClientId === selectedBlock?.clientId
+							);
 						}
-					} else if ( slideMoved ) {
-						slideToIndex = slideOrder.findIndex(
-							( blockClientId ) =>
-								blockClientId === selectedBlock?.clientId
-						);
-					}
 
-					swiperInstanceRef.current?.slideTo(
-						slideToIndex >= 0 ? slideToIndex : 0,
-						0
-					);
-				} );
-			}
-		};
+						swiperInstanceRef.current?.slideTo(
+							slideToIndex >= 0 ? slideToIndex : 0,
+							0
+						);
+					} );
+				}
+			},
+			[
+				attributes.slidesPerView,
+				clientId,
+				initializeSwiper,
+				setAttributes,
+			]
+		);
 
 		useEffect( () => {
 			initializeSwiper();
@@ -172,7 +187,7 @@ const Slider = memo(
 				unsubscribe();
 				swiperInstanceRef.current?.destroy( true, true );
 			};
-		}, [ editorDeviceType, attributes, innerBlocks.length ] );
+		}, [ clientId, initializeSwiper, manageSwiperUpdates ] );
 
 		useEffect( () => {
 			const swiper = swiperInstanceRef.current;
@@ -184,7 +199,7 @@ const Slider = memo(
 			} else if ( attributes.autoplay ) {
 				swiper.autoplay.start();
 			}
-		}, [ isAnySlideFocused, attributes ] );
+		}, [ isAnySlideFocused, attributes.autoplay ] );
 
 		const navigationStyles = generateNavigationStyles( attributes );
 		const applyPadding = innerBlocks.length >= 2 ? '100px' : '';
@@ -193,6 +208,11 @@ const Slider = memo(
 			<div
 				{ ...useBlockProps( {
 					className: clsx(
+						{
+							'bbb-slider-slides-per-view-auto':
+								attributes.slidesPerViewMode === 'auto' &&
+								attributes.effects !== 'fade',
+						},
 						'bbb-slider-nav-position-' +
 							( attributes.navigationPosition?.replace(
 								/\s+/g,

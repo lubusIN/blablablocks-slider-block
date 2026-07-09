@@ -12,6 +12,7 @@ import {
 import {
 	Placeholder as PlaceholderComponent,
 	Button,
+	FormFileUpload,
 	Modal,
 	DropZone,
 	__experimentalGrid as Grid, // eslint-disable-line
@@ -21,6 +22,8 @@ import {
 import {
 	useBlockProps,
 	BlockPreview,
+	MediaUpload,
+	MediaUploadCheck,
 	__experimentalBlockVariationPicker as BlockVariationPicker, // eslint-disable-line
 	store as blockEditorStore,
 } from '@wordpress/block-editor';
@@ -64,6 +67,10 @@ function Placeholder( { clientId, setAttributes } ) {
 		if ( variation?.attributes ) {
 			setAttributes( variation.attributes );
 		}
+		if ( variation?.name === 'images-slider' ) {
+			setStep( 'images' );
+			return;
+		}
 		if ( variation?.innerBlocks ) {
 			replaceInnerBlocks(
 				clientId,
@@ -71,6 +78,42 @@ function Placeholder( { clientId, setAttributes } ) {
 				true
 			);
 		}
+	};
+
+	const onSelectImages = ( selectedImages ) => {
+		const images = Array.isArray( selectedImages )
+			? selectedImages
+			: [ selectedImages ];
+		const imageSlides = images
+			.filter(
+				( image ) => image?.url || image?.source_url || image?.blob
+			)
+			.map( ( image ) => {
+				const caption = image.caption?.raw ?? image.caption;
+
+				return createBlock( 'blablablocks/slide', {}, [
+					createBlock( 'core/image', {
+						id: image.id,
+						url: image.url ?? image.source_url,
+						blob: image.blob,
+						alt: image.alt ?? image.alt_text ?? '',
+						caption: typeof caption === 'string' ? caption : '',
+					} ),
+				] );
+			} );
+
+		if ( imageSlides.length === 0 ) {
+			createErrorNotice(
+				__(
+					'Please select at least one image.',
+					'blablablocks-slider-block'
+				),
+				{ isDismissible: true }
+			);
+			return;
+		}
+
+		replaceInnerBlocks( clientId, imageSlides, true );
 	};
 
 	const openTemplatesModal = () => {
@@ -210,6 +253,56 @@ function Placeholder( { clientId, setAttributes } ) {
 					} }
 					allowSkip
 				/>
+			) }
+
+			{ step === 'images' && (
+				<PlaceholderComponent
+					icon={ SliderLogo }
+					label={ __( 'Image Slider', 'blablablocks-slider-block' ) }
+					instructions={ __(
+						'Select multiple images to create one slide for each image.',
+						'blablablocks-slider-block'
+					) }
+				>
+					<FormFileUpload
+						accept="image/*"
+						multiple
+						onChange={ ( event ) =>
+							handleFilesUpload( event.target.files )
+						}
+						render={ ( { openFileDialog } ) => (
+							<Button
+								variant="primary"
+								onClick={ openFileDialog }
+							>
+								{ __( 'Upload', 'blablablocks-slider-block' ) }
+							</Button>
+						) }
+					/>
+					<MediaUploadCheck>
+						<MediaUpload
+							allowedTypes={ [ 'image' ] }
+							multiple
+							gallery={ false }
+							onSelect={ onSelectImages }
+							render={ ( { open } ) => (
+								<Button variant="secondary" onClick={ open }>
+									{ __(
+										'Media Library',
+										'blablablocks-slider-block'
+									) }
+								</Button>
+							) }
+						/>
+					</MediaUploadCheck>
+					<Button
+						variant="tertiary"
+						onClick={ () => setStep( 'variations' ) }
+					>
+						{ __( 'Cancel', 'blablablocks-slider-block' ) }
+					</Button>
+					<DropZone onFilesDrop={ onFilesDrop } accept="image/*" />
+				</PlaceholderComponent>
 			) }
 
 			{ isModalOpen && (

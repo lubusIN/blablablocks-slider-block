@@ -13,6 +13,10 @@
 	contain: inline-size;
 }
 
+.wp-block-blablablocks-slider.bbb-slider-slides-per-view-auto .swiper-wrapper > .swiper-slide {
+	width: auto;
+}
+
 // Navigation Position
 .bbb-slider-nav-position-top-left .bbb-slider-nav-container {
 	top: 0;

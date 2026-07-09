@@ -29,12 +29,14 @@ function getDeviceSettings( options, deviceType, isFadeEffect, container ) {
 
 	const deviceSettings =
 		defaultSettings[ deviceType ] || defaultSettings.Desktop;
+	const slidesPerView =
+		options.slidesPerViewMode === 'auto'
+			? 'auto'
+			: options?.slidesPerView?.[ deviceType.toLowerCase() ] ??
+			  deviceSettings.slidesPerView;
 
 	return {
-		slidesPerView: isFadeEffect
-			? 1
-			: options?.slidesPerView?.[ deviceType.toLowerCase() ] ??
-			  deviceSettings.slidesPerView,
+		slidesPerView: isFadeEffect ? 1 : slidesPerView,
 		spaceBetween:
 			options?.slidesSpacing?.[ deviceType.toLowerCase() ] ??
 			deviceSettings.spaceBetween,

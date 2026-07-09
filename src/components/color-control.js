@@ -3,15 +3,23 @@
  */
 import { __ } from '@wordpress/i18n';
 import {
+	ColorPalette,
+	__experimentalUseMultipleOriginColorsAndGradients as useMultipleOriginColorsAndGradients, // eslint-disable-line
+} from '@wordpress/block-editor';
+import {
 	Button,
 	Dropdown,
 	ColorIndicator,
 	__experimentalZStack as ZStack, // eslint-disable-line
 	__experimentalHStack as HStack, // eslint-disable-line
 	__experimentalText as Text, // eslint-disable-line
-	ColorPalette,
 	TabPanel,
 } from '@wordpress/components';
+
+/**
+ * Internal dependencies.
+ */
+import { getColorPaletteValue, resolveColorSelection } from '../utils/color';
 
 /**
  * Renders a color control dropdown for selecting colors.
@@ -30,6 +38,14 @@ function ColorControlDropdown( {
 	onChangeColor,
 	hasHover = false,
 } ) {
+	const colorGradientSettings = useMultipleOriginColorsAndGradients();
+	const handleChange = ( state, color ) => {
+		onChangeColor( {
+			...colorValue,
+			[ state ]: resolveColorSelection( color, colorGradientSettings ),
+		} );
+	};
+
 	return (
 		<Dropdown
 			popoverProps={ {
@@ -48,10 +64,16 @@ function ColorControlDropdown( {
 				>
 					<HStack justify="left">
 						<ZStack offset={ 10 }>
-							<ColorIndicator colorValue={ colorValue.default } />
+							<ColorIndicator
+								colorValue={ getColorPaletteValue(
+									colorValue.default
+								) }
+							/>
 							{ hasHover && (
 								<ColorIndicator
-									colorValue={ colorValue.hover }
+									colorValue={ getColorPaletteValue(
+										colorValue.hover
+									) }
 								/>
 							) }
 						</ZStack>
@@ -82,14 +104,14 @@ function ColorControlDropdown( {
 						{ ( tab ) => (
 							<ColorPalette
 								__experimentalIsRenderedInSidebar
-								value={ colorValue[ tab.name ] || '' }
-								onChange={ ( color ) => {
-									onChangeColor( {
-										...colorValue,
-										[ tab.name ]: color,
-									} );
-								} }
+								value={ getColorPaletteValue(
+									colorValue[ tab.name ]
+								) }
+								onChange={ ( color ) =>
+									handleChange( tab.name, color )
+								}
 								enableAlpha
+								{ ...colorGradientSettings }
 							/>
 						) }
 					</TabPanel>
@@ -97,11 +119,12 @@ function ColorControlDropdown( {
 					<ColorPalette
 						className="ls-color-pallete-container"
 						__experimentalIsRenderedInSidebar
-						value={ colorValue.default || '' }
-						onChange={ ( color ) => {
-							onChangeColor( { ...colorValue, default: color } );
-						} }
+						value={ getColorPaletteValue( colorValue.default ) }
+						onChange={ ( color ) =>
+							handleChange( 'default', color )
+						}
 						enableAlpha
+						{ ...colorGradientSettings }
 					/>
 				)
 			}

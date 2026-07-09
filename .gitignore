@@ -1,6 +1,7 @@
 # Logs
 logs
 *.log
+.DS_Store
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -143,3 +144,6 @@ dist
 # Build
 build/
 vendor/
+
+# End-to-end test artifacts
+artifacts/

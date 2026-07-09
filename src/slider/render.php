@@ -67,6 +67,38 @@ if (!function_exists('blabslbl_get_border_radius_styles')) {
 }
 
 /**
+ * Resolves a stored color to a value suitable for CSS.
+ *
+ * Supports legacy string values and the new color/preset-slug object format.
+ *
+ * @param mixed $value Stored color value.
+ * @return string|null CSS color or preset variable.
+ */
+if (!function_exists('blabslbl_resolve_color_value')) {
+    function blabslbl_resolve_color_value($value)
+    {
+        if (is_string($value)) {
+            return $value;
+        }
+
+        if (!is_array($value)) {
+            return null;
+        }
+
+        if (isset($value['slug']) && is_string($value['slug'])) {
+            $slug = preg_replace('/[^a-zA-Z0-9_-]/', '', $value['slug']);
+            if (!empty($slug)) {
+                return "var(--wp--preset--color--{$slug})";
+            }
+        }
+
+        return isset($value['color']) && is_string($value['color'])
+            ? $value['color']
+            : null;
+    }
+}
+
+/**
  * Generates a set of CSS variable mappings for navigation styles based on provided attributes.
  *
  * @param array $attributes The attributes used to customize navigation styles.
@@ -88,10 +120,10 @@ if (!function_exists('blabslbl_generate_navigation_styles')) {
 
         // Navigation colors
         $navigation_color = $attributes['navigationColor'] ?? [];
-        $add_style('--navigation-arrow-color', $navigation_color['arrowColor']['default'] ?? null, '#000');
-        $add_style('--navigation-background-color', $navigation_color['backgroundColor']['default'] ?? null, 'transparent');
-        $add_style('--navigation-arrow-hover-color', $navigation_color['arrowColor']['hover'] ?? null, '#333');
-        $add_style('--navigation-background-hover-color', $navigation_color['backgroundColor']['hover'] ?? null, 'transparent');
+        $add_style('--navigation-arrow-color', blabslbl_resolve_color_value($navigation_color['arrowColor']['default'] ?? null), '#000');
+        $add_style('--navigation-background-color', blabslbl_resolve_color_value($navigation_color['backgroundColor']['default'] ?? null), 'transparent');
+        $add_style('--navigation-arrow-hover-color', blabslbl_resolve_color_value($navigation_color['arrowColor']['hover'] ?? null), '#333');
+        $add_style('--navigation-background-hover-color', blabslbl_resolve_color_value($navigation_color['backgroundColor']['hover'] ?? null), 'transparent');
 
         // Navigation sizing
         $add_style('--swiper-navigation-size', $attributes['navigationSize'] ?? null, '40px');
@@ -107,8 +139,8 @@ if (!function_exists('blabslbl_generate_navigation_styles')) {
         // Pagination styles
         $pagination_color = $attributes['paginationColor'] ?? [];
         $add_style('--pagination-size', $attributes['paginationSize'] ?? null, '8px');
-        $add_style('--pagination-active-color', $pagination_color['activeColor']['default'] ?? null, '#000');
-        $add_style('--pagination-inactive-color', $pagination_color['inactiveColor']['default'] ?? null, '#ccc');
+        $add_style('--pagination-active-color', blabslbl_resolve_color_value($pagination_color['activeColor']['default'] ?? null), '#000');
+        $add_style('--pagination-inactive-color', blabslbl_resolve_color_value($pagination_color['inactiveColor']['default'] ?? null), '#ccc');
 
         // Pagination offset
         $pagination_offset = $attributes['paginationOffset'] ?? [];
@@ -321,6 +353,10 @@ $blabslbl_wrapper_classes = [
     "bbb-slider-nav-position-$blabslbl_nav_position",
     "bbb-slider-pag-position-$blabslbl_pag_position"
 ];
+
+if (($attributes['slidesPerViewMode'] ?? 'custom') === 'auto' && ($attributes['effects'] ?? 'slide') !== 'fade') {
+    $blabslbl_wrapper_classes[] = 'bbb-slider-slides-per-view-auto';
+}
 
 $blabslbl_is_query_source = ($attributes['contentSource'] ?? 'slides') === 'query';
 $blabslbl_first_inner_name = $block->inner_blocks[0]->name ?? '';

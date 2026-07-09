@@ -42,6 +42,7 @@ import Placeholder from './placeholder';
 import { ColorControlDropdown, ResponsiveDropdown } from '../components';
 import { generateNavigationStyles } from '../utils/style';
 import { QUERY_TEMPLATE } from './query-template';
+import { getEmptyNavigationColors, getEmptyPaginationColors } from './settings';
 import './editor.scss';
 
 const DEFAULT_BLOCK = {
@@ -105,8 +106,12 @@ export default function Edit( { clientId, attributes, setAttributes } ) {
 	const queryBlock = innerBlocks.find(
 		( block ) => block.name === 'core/query'
 	);
+	const queryBlockLock = queryBlock?.attributes?.lock;
 	const queryPerPage = queryBlock?.attributes?.query?.perPage;
 	const deviceKey = ( editorDeviceType || 'Desktop' ).toLowerCase();
+	const isAutoSlidesPerView = attributes.slidesPerViewMode === 'auto';
+	const usesAutoSlidesPerView =
+		isAutoSlidesPerView && attributes.effects !== 'fade';
 	const navigationEnabled = !! attributes?.navigation?.[ deviceKey ];
 	const paginationEnabled = !! attributes?.pagination?.[ deviceKey ];
 	const slidesPerViewPreview =
@@ -156,6 +161,7 @@ export default function Edit( { clientId, attributes, setAttributes } ) {
 	const queryWrapperBlockProps = useBlockProps( {
 		className: [
 			'bbb-slider-source-query',
+			usesAutoSlidesPerView ? 'bbb-slider-slides-per-view-auto' : '',
 			navPositionClass,
 			pagPositionClass,
 		].join( ' ' ),
@@ -218,7 +224,7 @@ export default function Edit( { clientId, attributes, setAttributes } ) {
 			return;
 		}
 
-		const currentLock = queryBlock?.attributes?.lock || {};
+		const currentLock = queryBlockLock || {};
 		if ( currentLock.move === true && currentLock.remove === true ) {
 			return;
 		}
@@ -233,8 +239,7 @@ export default function Edit( { clientId, attributes, setAttributes } ) {
 	}, [
 		isQuerySource,
 		queryBlock?.clientId,
-		queryBlock?.attributes?.lock?.move,
-		queryBlock?.attributes?.lock?.remove,
+		queryBlockLock,
 		updateBlockAttributes,
 	] );
 
@@ -245,6 +250,7 @@ export default function Edit( { clientId, attributes, setAttributes } ) {
 	};
 
 	const defaultSettings = {
+		slidesPerViewMode: 'custom',
 		slidesPerView: {
 			...attributes.slidesPerView,
 			desktop: 1,
@@ -351,11 +357,14 @@ export default function Edit( { clientId, attributes, setAttributes } ) {
 						) }
 						isShownByDefault
 						hasValue={ () =>
+							( attributes.slidesPerViewMode ?? 'custom' ) !==
+								defaultSettings.slidesPerViewMode ||
 							JSON.stringify( attributes.slidesPerView ) !==
-							JSON.stringify( defaultSettings.slidesPerView )
+								JSON.stringify( defaultSettings.slidesPerView )
 						}
 						onDeselect={ () =>
 							setAttributes( {
+								slidesPerViewMode: 'custom',
 								slidesPerView: {
 									...defaultSettings.slidesPerView,
 								},
@@ -363,37 +372,78 @@ export default function Edit( { clientId, attributes, setAttributes } ) {
 						}
 					>
 						<VStack>
-							<ResponsiveDropdown
-								label="Slides Per View"
-								attributes={ attributes }
-								setAttributes={ setAttributes }
-								responsiveKey="slidesPerView"
-							/>
-							<RangeControl
+							<ToggleGroupControl
 								__nextHasNoMarginBottom
 								__next40pxDefaultSize
+								isBlock
+								label={ __(
+									'Slides Per View',
+									'blablablocks-slider-block'
+								) }
 								help={ __(
-									"Number of slides visible at the same time on slider's container.",
+									'Automatically size slides based on their content, or set a custom responsive count.',
 									'blablablocks-slider-block'
 								) }
 								value={
-									attributes.slidesPerView[
-										attributes.slidesPerView.activeDevice
-									]
+									attributes.slidesPerViewMode ?? 'custom'
 								}
-								min={ 1 }
-								step={ 0.1 }
-								max={ slidesPerViewMax }
 								onChange={ ( value ) =>
 									setAttributes( {
-										slidesPerView: {
-											...attributes.slidesPerView,
-											[ attributes.slidesPerView
-												.activeDevice ]: value,
-										},
+										slidesPerViewMode: value,
 									} )
 								}
-							/>
+							>
+								<ToggleGroupControlOption
+									label={ __(
+										'Auto',
+										'blablablocks-slider-block'
+									) }
+									value="auto"
+								/>
+								<ToggleGroupControlOption
+									label={ __(
+										'Custom',
+										'blablablocks-slider-block'
+									) }
+									value="custom"
+								/>
+							</ToggleGroupControl>
+							{ ! isAutoSlidesPerView && (
+								<>
+									<ResponsiveDropdown
+										label="Slides Per View"
+										attributes={ attributes }
+										setAttributes={ setAttributes }
+										responsiveKey="slidesPerView"
+									/>
+									<RangeControl
+										__nextHasNoMarginBottom
+										__next40pxDefaultSize
+										help={ __(
+											"Number of slides visible at the same time on slider's container.",
+											'blablablocks-slider-block'
+										) }
+										value={
+											attributes.slidesPerView[
+												attributes.slidesPerView
+													.activeDevice
+											]
+										}
+										min={ 1 }
+										step={ 0.1 }
+										max={ slidesPerViewMax }
+										onChange={ ( value ) =>
+											setAttributes( {
+												slidesPerView: {
+													...attributes.slidesPerView,
+													[ attributes.slidesPerView
+														.activeDevice ]: value,
+												},
+											} )
+										}
+									/>
+								</>
+							) }
 						</VStack>
 					</ToolsPanelItem>
 					<ToolsPanelItem
@@ -676,14 +726,14 @@ export default function Edit( { clientId, attributes, setAttributes } ) {
 									__nextHasNoMarginBottom
 									__next40pxDefaultSize
 									help={ __(
-										'Set the delay between slides in milliseconds.',
+										'Set the delay between slides in milliseconds. Use 0 for no delay.',
 										'blablablocks-slider-block'
 									) }
 									label={ __(
 										'Delay (ms)',
 										'blablablocks-slider-block'
 									) }
-									min={ 100 } // minimum delay in ms
+									min={ 0 } // Allow continuous autoplay with no delay.
 									max={ 10000 } // maximum delay in ms
 									step={ 100 }
 									value={ attributes.delay }
@@ -702,13 +752,7 @@ export default function Edit( { clientId, attributes, setAttributes } ) {
 					resetAll={ () =>
 						setAttributes( {
 							navigationSize: undefined,
-							navigationColor: {
-								arrow: { default: undefined, hover: undefined },
-								background: {
-									default: undefined,
-									hover: undefined,
-								},
-							},
+							navigationColor: getEmptyNavigationColors(),
 							navigationPadding: undefined,
 							navigationOffset: undefined,
 							navigationPosition: undefined,
@@ -749,16 +793,7 @@ export default function Edit( { clientId, attributes, setAttributes } ) {
 						}
 						onDeselect={ () =>
 							setAttributes( {
-								navigationColor: {
-									arrow: {
-										default: undefined,
-										hover: undefined,
-									},
-									background: {
-										default: undefined,
-										hover: undefined,
-									},
-								},
+								navigationColor: getEmptyNavigationColors(),
 							} )
 						}
 					>
@@ -931,10 +966,7 @@ export default function Edit( { clientId, attributes, setAttributes } ) {
 					resetAll={ () =>
 						setAttributes( {
 							paginationSize: undefined,
-							paginationColor: {
-								activeColor: undefined,
-								inactiveColor: undefined,
-							},
+							paginationColor: getEmptyPaginationColors(),
 							paginationOffset: undefined,
 							paginationPosition: undefined,
 						} )
@@ -967,10 +999,7 @@ export default function Edit( { clientId, attributes, setAttributes } ) {
 						}
 						onDeselect={ () =>
 							setAttributes( {
-								paginationColor: {
-									activeColor: undefined,
-									inactiveColor: undefined,
-								},
+								paginationColor: getEmptyPaginationColors(),
 							} )
 						}
 					>

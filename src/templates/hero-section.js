@@ -4,7 +4,9 @@
 import { __ } from '@wordpress/i18n';
 
 const baseImageUrl =
-	typeof BlablablocksData !== 'undefined' ? BlablablocksData.assetsUrl : '';
+	typeof window !== 'undefined'
+		? window.BlablablocksData?.assetsUrl ?? ''
+		: '';
 
 const HeroSection = {
 	name: 'hero-section',

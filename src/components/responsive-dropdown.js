@@ -55,17 +55,21 @@ const ResponsiveDropdown = ( {
 	// Default to `desktop` if `editorDeviceType` is unavailable
 	const deviceType = editorDeviceType?.toLowerCase() || 'desktop';
 
-	const responsiveSettings = attributes[ responsiveKey ] || {};
-
 	// Update the `activeDevice` attribute when `editorDeviceType` changes
 	useEffect( () => {
+		const responsiveSettings = attributes[ responsiveKey ] || {};
+
+		if ( responsiveSettings.activeDevice === deviceType ) {
+			return;
+		}
+
 		setAttributes( {
 			[ responsiveKey ]: {
 				...responsiveSettings,
 				activeDevice: deviceType,
 			},
 		} );
-	}, [ deviceType ] );
+	}, [ attributes, deviceType, responsiveKey, setAttributes ] );
 
 	// Get the current device object based on the type, default to desktop if not found
 	const currentDevice =

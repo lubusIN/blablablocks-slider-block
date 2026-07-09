@@ -10,8 +10,9 @@ src/
 test/
 .git
 .github
-\_playground
+_playground/
 .wordpress-org
+artifacts/
 .browserslistrc
 .distignore
 .editorconfig
@@ -30,8 +31,11 @@ babel.config.js
 composer.json
 composer.lock
 package-lock.json
+playwright.config.js
+playwright-report/
 webpack.config.js
 phpcs.xml.dist
 phpunit.xml.dist
+test-results/
 tests/
 bin/
