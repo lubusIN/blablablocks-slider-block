@@ -116,8 +116,17 @@ jobs:
 
       - name: Run end-to-end tests
         env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
           WP_BASE_URL: http://localhost:8880
         run: npm run test:e2e
+
+      - name: Upload end-to-end test artifacts
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tested-up-to-e2e-artifacts
+          path: artifacts/test-results
+          if-no-files-found: ignore
 
       - name: Stop the WordPress test environment
         if: always()

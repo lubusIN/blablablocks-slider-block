@@ -264,23 +264,29 @@ test( 'creates slides from multiple Media Library images without Gallery mode', 
 
 	const mediaModal = page.locator( '.media-modal' );
 	await expect( mediaModal ).toBeVisible();
-	const multiSelectModifier =
-		process.platform === 'darwin' ? 'Meta' : 'Control';
-	for ( const [ index, mediaId ] of mediaIds.entries() ) {
-		await mediaModal
-			.locator( `.attachment[data-id="${ mediaId }"]` )
-			.click( {
-				modifiers: index === 0 ? [] : [ multiSelectModifier ],
-			} );
-	}
-	await expect( mediaModal.locator( '.attachment.selected' ) ).toHaveCount(
-		2
-	);
+	// The media grid is lazy-rendered, so select the freshly uploaded models
+	// directly instead of waiting for their thumbnail elements.
+	const selectedMediaIds = await page.evaluate( async ( ids ) => {
+		const selection = window.wp.media.frame.state().get( 'selection' );
+		const attachments = ids.map( ( id ) =>
+			window.wp.media.attachment( id )
+		);
+
+		await Promise.all(
+			attachments.map( ( attachment ) => attachment.fetch() )
+		);
+		selection.reset( attachments );
+
+		return selection.pluck( 'id' );
+	}, mediaIds );
+	expect( selectedMediaIds ).toEqual( mediaIds );
 
 	await expect(
 		mediaModal.getByRole( 'button', { name: 'Create a new gallery' } )
 	).toHaveCount( 0 );
-	await mediaModal.locator( '.media-button-select' ).click();
+	const selectMedia = mediaModal.locator( '.media-button-select' );
+	await expect( selectMedia ).toBeEnabled();
+	await selectMedia.click();
 
 	let blocks = await editor.getBlocks();
 	expect( blocks[ 0 ].name ).toBe( 'blablablocks/slider' );
